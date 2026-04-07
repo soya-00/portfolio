@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Nova</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Reset & Global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            background-color: #f8f8f8; /* Off-white background for lower sections */
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, .serif-text {
+            font-family: 'Instrument Serif', serif;
+            font-weight: 400;
+            color: #333;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .underlined-link {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;
+            transition: color 0.2s ease;
+        }
+
+        .underlined-link:hover {
+            color: #000;
+        }
+
+        .small-note {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        /* === HERO SECTION (Section 1) === */
+        .hero-section {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 2.5rem 4rem;
+        }
+
+        .background-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://i.pinimg.com/736x/f5/ca/6e/f5ca6ed451c93d6382466357fd07b947.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+
+        .glass-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.3) 100%);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            z-index: -1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1rem;
+            color: #555;
+            font-weight: 300;
+        }
+
+        nav a:hover { color: #000; }
+        .nav-right { display: flex; gap: 2.5rem; }
+
+        .hero-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            margin-top: 8vh;
+        }
+
+        .hero-content h1 {
+            font-size: 2.6rem;
+            margin-bottom: 2rem;
+            letter-spacing: -0.01em;
+        }
+
+        .hero-content p {
+            font-size: 1.85rem;
+            line-height: 1.15;
+            margin-bottom: 6rem;
+            letter-spacing: -0.02em;
+        }
+
+        .center-image {
+            width: 110px;
+            height: 110px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06); 
+        }
+
+        .center-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .scroll-arrow {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #444;
+            padding-bottom: 2rem;
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(5px); }
+        }
+
+        /* === ABOUT SECTION (Section 2) === */
+        .about-section {
+            padding: 8rem 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-intro {
+            margin-bottom: 8rem;
+        }
+
+        .about-intro h2 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            color: #555;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            min-height: 160px; /* Prevents layout shift during typing */
+        }
+
+        .about-intro .location {
+            font-size: 1.5rem;
+        }
+
+        /* Typing cursor */
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            height: 3.2rem;
+            background-color: #555;
+            vertical-align: text-bottom;
+            animation: blink 0.8s infinite;
+            margin-left: 2px;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .text-block p {
+            font-size: 1.8rem;
+            line-height: 1.2;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .text-block .link-wrapper {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-block {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .image-block img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+        }
+
+        .right-align {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        /* === CTA SECTION (Section 3) === */
+        .cta-section {
+            /* Baby blue pastel muted gradient */
+            background: linear-gradient(180deg, #f8f8f8 0%, #e3f0f4 50%, #d1e8ec 100%);
+            padding: 8rem 10%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Fades back to the background color at the very bottom smoothly */
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(180deg, rgba(248,248,248,0) 0%, #f8f8f8 100%);
+            z-index: -1;
+        }
+
+        .cta-section h2 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-section p {
+            font-size: 1.6rem;
+            line-height: 1.2;
+            color: #333;
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .btn {
+            border: 1px solid #777;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #555;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #333;
+            color: #fff;
+            border-color: #333;
+        }
+
+        /* === FOOTER === */
+        footer {
+            padding: 6rem 10% 4rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            background-color: #f8f8f8;
+        }
+
+        .footer-logo {
+            font-size: 5rem;
+            line-height: 1;
+            color: #222;
+        }
+
+        .footer-links {
+            text-align: left;
+            font-size: 0.85rem;
+            color: #666;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .footer-links div {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .copyright {
+            font-size: 0.7rem;
+            color: #999;
+            margin-top: 1rem;
+        }
+
+        /* === ANIMATIONS (Scroll triggered) === */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-on-scroll.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section { padding: 2rem; }
+            .hero-content h1 { font-size: 2rem; }
+            .hero-content p { font-size: 1.5rem; }
+            .nav-right { gap: 1rem; }
+            
+            .grid-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .right-align { justify-content: flex-start; }
+            .image-block { max-width: 100%; }
+            
+            .cta-section h2 { font-size: 3rem; }
+            .cta-section p { font-size: 1.3rem; }
+            
+            footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 3rem;
+            }
+            .footer-logo { font-size: 3.5rem; }
+        }
+
+        .orb {
+            position: fixed; border-radius: 50%; filter: blur(100px);
+            z-index: -1; opacity: 0.4; transition: transform 0.2s linear;
+        }
+        .orb-1 { width: 500px; height: 500px; background: #fff9c4; top: -10%; right: -10%; }
+        .orb-2 { width: 400px; height: 400px; background: #e1f5fe; bottom: 5%; left: -5%; }
+    </style>
+</head>
+<body>
+    <div class="orb orb-1" id="o1"></div>
+    <div class="orb orb-2" id="o2"></div>
+    <section class="hero-section">
+        <div class="background-wrapper">
+            <div class="glass-overlay"></div>
+        </div>
+
+        <nav>
+            <div class="nav-left">
+                <a href="#" class="underlined-link">Portfolio Website</a>
+            </div>
+            <div class="nav-right">
+                <a href="projects.html">Projects</a>
+                <a href="letter.html">My Credentials</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <h1 class="serif-text">Welcome to my portfolio (Nova).</h1>
+            <p class="serif-text">
+                I think best when something is compiling, a deep<br>
+                house mix is running, and three too many tabs are<br>
+                open. Here I tell you what gets made in that state.
+            </p>
+
+            <div class="center-image">
+                <img src="https://i.pinimg.com/736x/52/bd/80/52bd8081801a7bbe10eb5d7efa9f9a7d.jpg" alt="Aesthetic Flower Detail">
+            </div>
+        </div>
+
+        <div class="scroll-arrow">↓</div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="about-intro">
+            <h2 id="typing-text-container"><span id="typing-text"></span><span class="cursor"></span></h2>
+            
+            <div class="location animate-on-scroll">
+                <a href="#" class="serif-text underlined-link">Based in hanoi.</a>
+                <span class="small-note">Hey! Thanks for visiting :)</span>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="text-block serif-text animate-on-scroll">
+                <p>In my free time, I'm often busy reading, soldering and baking.</p>
+                <div class="link-wrapper">
+                    <a href="#" class="underlined-link">Check out my curated 2026<br>reading list &nbsp;&rarr;</a>
+                </div>
+                <span class="small-note" style="font-family: 'Inter', sans-serif;">My blog is, somewhat, public to read!</span>
+            </div>
+            <div class="image-block right-align animate-on-scroll">
+                <img src="https://i.pinimg.com/736x/7a/71/82/7a7182b328cabb8a6d2a6e9080a9587a.jpg" alt="White flower aesthetic">
+            </div>
+
+            <div class="image-block animate-on-scroll">
+                <img src="https://i.pinimg.com/736x/36/4c/ce/364cce0bf3b179190ad13c84642a62b6.jpg" alt="Pink orchids aesthetic">
+            </div>
+            <div class="text-block serif-text animate-on-scroll">
+                <p>I am obsessed with building projects, renovating old techs, and modding objects.</p>
+                <div class="link-wrapper">
+                    <a href="#" class="underlined-link">See what I've created &nbsp;&rarr;</a>
+                </div>
+                <span class="small-note" style="font-family: 'Inter', sans-serif;">A long, tedious list of things I put a part of my soul into...</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2 class="serif-text animate-on-scroll">Something catch your eye?</h2>
+        <p class="serif-text animate-on-scroll">
+            I'm always thinking about the next thing.<br>
+            If you want to collaborate, commission, or<br>
+            just argue about terminals or keyboards &mdash;<br>
+            look for me on earth.
+        </p>
+        <button class="btn animate-on-scroll">Get Connected</button>
+    </section>
+
+    <footer>
+        <div class="footer-logo serif-text animate-on-scroll">
+            Nova's<br>Portfolio
+        </div>
+        <div class="footer-links animate-on-scroll">
+            <div>
+                <span>Connect with me (as humans, together)?</span>
+                <span>novasanctuary.com</span>
+            </div>
+            <div>
+                <span>Instagram</span>
+                <span>Twitter</span>
+            </div>
+            <div class="copyright">
+                Nova &copy; 2026 All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. Intersection Observer for fade-up elements
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    // Add class when in view, remove when out of view to loop the animation
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    } else {
+                        entry.target.classList.remove('in-view');
+                    }
+                });
+            }, observerOptions);
+
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+            animatedElements.forEach(el => observer.observe(el));
+
+
+            // 2. Custom Typing Effect Logic for specific text
+            const fullText = "Hi I'm Nova, a high school student, builder, and aspiring researcher.";
+            const typingElement = document.getElementById("typing-text");
+            const typingContainer = document.getElementById("typing-text-container");
+            let typingInterval;
+            let isTyping = false;
+
+            function typeWriter() {
+                let i = 0;
+                typingElement.innerHTML = '';
+                isTyping = true;
+                
+                clearInterval(typingInterval);
+                typingInterval = setInterval(() => {
+                    if (i < fullText.length) {
+                        typingElement.innerHTML += fullText.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(typingInterval);
+                        isTyping = false;
+                    }
+                }, 50); // Speed of typing in ms
+            }
+
+            // Observer specifically for the typing text
+            const typingObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Start typing only if it's not already typing
+                        if (!isTyping) {
+                            typeWriter();
+                        }
+                    } else {
+                        // Reset text when it leaves the screen to create the loop effect
+                        clearInterval(typingInterval);
+                        typingElement.innerHTML = '';
+                        isTyping = false;
+                    }
+                });
+            }, { threshold: 0.5 }); // Triggers when 50% of the container is visible
+
+            typingObserver.observe(typingContainer);
+        });
+        // Parallax Orbs
+        window.addEventListener('scroll', () => {
+            const s = window.scrollY;
+            document.getElementById('o1').style.transform = `translate(${-s*0.1}px, ${s*0.2}px)`;
+            document.getElementById('o2').style.transform = `translate(${s*0.1}px, ${-s*0.1}px)`;
+        });
+    </script>
+</body>
+</html>
