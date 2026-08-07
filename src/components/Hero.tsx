@@ -3,7 +3,7 @@ export default function Hero() {
     <section className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 py-32 text-center">
       <h1 className="animate-fade-rise font-display max-w-6xl text-5xl font-normal leading-[1.05] tracking-tight sm:text-7xl md:text-8xl">
         I build instruments for thinking,{" "}
-        <em className="not-italic text-foreground/60">and I write down why.</em>
+        <em className="not-italic text-foreground/60">down to the kernel.</em>
       </h1>
 
       <p className="animate-fade-rise-delay mt-10 max-w-xl text-base leading-relaxed text-foreground/80 sm:text-lg">

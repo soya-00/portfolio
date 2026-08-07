@@ -7,8 +7,7 @@ export default function Intro() {
         <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
           <p>
             I&apos;m seventeen, in my final year of the IB Diploma in Vietnam,
-            and bilingual in Vietnamese and English. Three projects are below,
-            at very different stages of finished.
+            and bilingual in Vietnamese and English.
           </p>
           <p>
             What connects them is not the subject matter — a journal, a career

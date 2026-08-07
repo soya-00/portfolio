@@ -6,11 +6,7 @@ function zulu(d: Date) {
   return `${p(d.getUTCHours())}${p(d.getUTCMinutes())}${p(d.getUTCSeconds())}Z`;
 }
 
-const FIELDS = [
-  "3 INSTRUMENTS",
-  "3 OPEN PROBLEMS",
-  "1 RETRACTION",
-];
+const FIELDS = ["3 INSTRUMENTS", "3 OPEN PROBLEMS", "1 KERNEL"];
 
 export default function StatusStrip() {
   const [time, setTime] = useState(() => zulu(new Date()));
@@ -21,28 +17,33 @@ export default function StatusStrip() {
   }, []);
 
   return (
-    <div className="border-y border-border/60 bg-surface/30">
-      <div className="mx-auto flex w-full max-w-3xl flex-wrap items-center gap-x-5 gap-y-2 px-6 py-3">
-        <span className="font-display text-xs tracking-[0.18em] text-accent">
-          ◈ SOYA
-        </span>
-        <span className="font-display text-xs tracking-[0.18em] text-muted-foreground">
-          HANOI
-        </span>
-        <span
-          className="font-display text-xs tabular-nums tracking-[0.18em] text-muted-foreground"
-          aria-hidden="true"
-        >
-          {time}
-        </span>
-        {FIELDS.map((f) => (
-          <span
-            key={f}
-            className="font-display text-xs tracking-[0.18em] text-muted-foreground"
-          >
-            {f}
+    <div className="absolute inset-x-0 bottom-0 z-20">
+      {/* Same width and edges as the console below, so the two read as one box. */}
+      <div className="mx-auto w-full max-w-4xl border-x border-t border-white/[0.07] bg-background/45 backdrop-blur-md">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 px-6 py-3.5">
+          <span className="font-display text-xs tracking-[0.18em] text-accent">
+            ◈ SOYA
           </span>
-        ))}
+          <span className="font-display text-xs tracking-[0.18em] text-foreground/70">
+            HANOI
+          </span>
+          <span
+            className="font-display text-xs tabular-nums tracking-[0.18em] text-foreground/70"
+            aria-hidden="true"
+          >
+            {time}
+          </span>
+          <span className="ml-auto flex flex-wrap items-center gap-x-6 gap-y-2">
+            {FIELDS.map((f) => (
+              <span
+                key={f}
+                className="font-display text-xs tracking-[0.18em] text-foreground/50"
+              >
+                {f}
+              </span>
+            ))}
+          </span>
+        </div>
       </div>
     </div>
   );

@@ -119,6 +119,59 @@
   animation: fade-rise 0.8s ease-out 0.4s both;
 }
 
+/* Directory tree. The connectors are drawn with borders rather than box
+   characters: OffBit is proportional, so literal ASCII would drift out of
+   alignment at every nesting level. */
+.tree {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tree-node {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+/* Elbow into the row, plus the trunk continuing past it. */
+.tree-node::before {
+  content: '';
+  position: absolute;
+  left: 0.35rem;
+  top: 0;
+  bottom: 0;
+  width: 0.85rem;
+  border-left: 1px solid hsl(var(--border));
+  border-bottom: 1px solid hsl(var(--border));
+  height: 1em;
+  margin-top: 0.05em;
+}
+
+/* The last child stops the trunk at its own elbow. */
+.tree-node--last::before {
+  bottom: auto;
+}
+
+.tree-node:not(.tree-node--last)::after {
+  content: '';
+  position: absolute;
+  left: 0.35rem;
+  top: 1.05em;
+  bottom: 0;
+  border-left: 1px solid hsl(var(--border));
+}
+
+/* Horizontal scrolling without the bar showing — the status line scrolls
+   sideways on narrow screens rather than hiding its items. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* Scroll reveal. The hidden state is applied by JS only (see useReveal),
    so content is never left invisible if the observer or JS fails. */
 .reveal {
@@ -134,28 +187,32 @@
   transform: none;
 }
 
-/* Dissolves the hero image into the page background instead of cutting hard.
-   Eased multi-stop ramp — a two-stop linear fade leaves a visible edge where
-   the gradient starts. */
-.hero-fade::after {
+/* The console: a dark panel that scrolls up over the fixed photograph, the
+   way kernel output scrolls in a terminal. Nearly opaque so long-form text
+   stays readable, but never fully — the image reads through it. */
+/* No backdrop-filter here: at this opacity it buys almost nothing, and a
+   backdrop root on the scrolling panel stops the fixed navigation's own
+   backdrop-filter from compositing over it. */
+.console {
+  background: hsl(var(--background) / 0.88);
+  box-shadow: 0 0 80px 20px hsl(var(--background) / 0.55);
+}
+
+/* Softens the panel's leading edge so it enters the frame rather than
+   cutting on. */
+.console::before {
   content: '';
   position: absolute;
   inset-inline: 0;
-  bottom: 0;
-  height: 42vh;
+  top: 0;
+  height: 18vh;
   background: linear-gradient(
     to bottom,
     hsl(var(--background) / 0) 0%,
-    hsl(var(--background) / 0.08) 18%,
-    hsl(var(--background) / 0.22) 34%,
-    hsl(var(--background) / 0.45) 50%,
-    hsl(var(--background) / 0.68) 64%,
-    hsl(var(--background) / 0.86) 78%,
-    hsl(var(--background) / 0.96) 90%,
-    hsl(var(--background)) 100%
+    hsl(var(--background) / 0.35) 45%,
+    hsl(var(--background) / 0.75) 100%
   );
   pointer-events: none;
-  z-index: 5;
 }
 
 /* Unlayered so it outranks the animation classes above, which are also

@@ -19,27 +19,21 @@ export default function Colophon() {
             it counts.
           </p>
           <p>
-            Alongside that, and more slowly, computer science properly — in
-            depth-sprints rather than for completion. Nand2Tetris for computer
-            architecture, Mathematical Thinking through Stanford, and algorithms
-            and data structures now. Reading runs in parallel and does not stay
-            in one lane: operating systems, epistemic injustice, human factors
-            on the flight deck, the philosophy of solitude.
+            I am also teaching myself computer science from the foundations. I
+            work on one subject at a time, in short and deep bursts, rather than
+            trying to finish a syllabus: Nand2Tetris for computer architecture,
+            Mathematical Thinking through Stanford, and algorithms and data
+            structures now.
+          </p>
+          <p>
+            Operating systems runs alongside all of it, studied in C — OSTEP,
+            Operating System Concepts, and the human factors literature on the
+            flight deck, which is where BLOC&apos;s interface comes from.
           </p>
         </div>
       </Reveal>
 
       <Reveal delay={0.08}>
-        <p className="mt-10 border-l border-accent/40 pl-6 lowercase leading-relaxed text-muted-foreground">
-          i keep two registers. one is this one — precise, instrumented, sized
-          to what actually runs. the other is softer and lives elsewhere:
-          lowercase, seasonal, given to metaphor. i don&apos;t think rigor and
-          tenderness are opposites, and holding both is deliberate rather than
-          unresolved.
-        </p>
-      </Reveal>
-
-      <Reveal delay={0.12}>
         <div className="mt-16 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-border/60 pt-8 text-sm">
           <a
             href="https://github.com/soya-00"
