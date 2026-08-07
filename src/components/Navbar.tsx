@@ -19,7 +19,7 @@ export default function Navbar() {
         // Frosted rather than opaque: the background stays visible and tinted,
         // which is what reads as glass. Saturation lifts what shows through.
         scrolled
-          ? "border-b border-white/[0.08] bg-background/55 backdrop-blur-2xl backdrop-saturate-150"
+          ? "border-b border-white/[0.08] bg-background/80 backdrop-blur-2xl backdrop-saturate-150"
           : "border-b border-transparent bg-transparent"
       )}
     >
