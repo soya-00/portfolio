@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Figure from "@/components/Figure";
 import LinkChip from "@/components/LinkChip";
 import ProjectTree from "@/components/ProjectTree";
 import PullQuote from "@/components/PullQuote";
@@ -22,10 +23,19 @@ type ProjectProps = {
   kicker: string;
   stack: string;
   status: string;
+  checked: string;
   children: ReactNode;
 };
 
-function Project({ bay, name, kicker, stack, status, children }: ProjectProps) {
+function Project({
+  bay,
+  name,
+  kicker,
+  stack,
+  status,
+  checked,
+  children,
+}: ProjectProps) {
   return (
     <article className="[&+&]:mt-28">
       <Reveal>
@@ -59,6 +69,10 @@ function Project({ bay, name, kicker, stack, status, children }: ProjectProps) {
             Status
           </dt>
           <dd className="text-foreground/90">{status}</dd>
+          <dt className="font-display text-xs uppercase tracking-[0.16em] text-muted-foreground">
+            Checked by
+          </dt>
+          <dd className="text-foreground/90">{checked}</dd>
         </dl>
       </Reveal>
 
@@ -85,7 +99,8 @@ export default function Work() {
         name="Tilt"
         kicker="A thinking instrument for macOS."
         stack="Python · FastAPI · SQLite · React · Tauri"
-        status="Early but real. Not distributed — no signed build, no installer."
+        status="Early but real. Unsigned — notarization needs a paid Apple Developer account, so there is no installer yet."
+        checked="486 tests across the core service, run by CI on every push."
       >
         <p>
           Tilt is a journal that notices things. You write into one stream — no
@@ -97,6 +112,13 @@ export default function Work() {
             design.
           </span>
         </p>
+
+        <Figure
+          src="constellationdark.png"
+          alt="Tilt showing a stream of journal entries linked by 'builds on' and 'echoes' relations, with a constellation graph of 29 connected thoughts beside it."
+          caption="The constellation, and two entries the app connected on its own"
+        />
+
         <p>
           Markdown files on disk are the source of truth, and the database is
           treated as a cache that can be deleted and rebuilt. Before demoing it,
@@ -133,6 +155,7 @@ export default function Work() {
         kicker="Try out a career before you have to choose one."
         stack="FastAPI · Jinja · HTMX · Tailwind · Render"
         status="Deployed prototype. Shared accounts, no per-student privacy yet."
+        checked="63 tests, run by CI on every push."
       >
         <p>
           A web application for Vietnamese high-school students. Instead of
@@ -143,6 +166,13 @@ export default function Work() {
             it only asks questions back; it does not solve anything for you.
           </span>
         </p>
+
+        <Figure
+          src="04khonggiantuduy.png"
+          alt="A GALS scenario in Vietnamese: the student is an epidemiologist investigating 38 sick boarding-school students. The assistant replies by asking which parts of the student's reasoning are known and which are being guessed."
+          caption="The assistant answering a student with a question, not a solution"
+        />
+
         <p>
           GALS deliberately has no scores, no rankings, and no model answers.
           Grading would turn career exploration into a test, and a test is the
@@ -165,6 +195,16 @@ export default function Work() {
           .
         </p>
 
+        <Figure
+          src="02trangcanhan.png"
+          alt="A GALS student home page in Vietnamese showing counts of journal entries, portfolio items and badges, two written notes from a teacher, and four unordered entry points into the app."
+          caption="A student's page: a teacher's notes, and four ways in with no required order"
+        />
+
+        <p className="text-muted-foreground/80">
+          Screens are in Vietnamese because the students are.
+        </p>
+
         <div className="flex flex-wrap gap-3 pt-2">
           <LinkChip href="https://steam-mvp.onrender.com">Live demo</LinkChip>
           <LinkChip href="https://github.com/soya-00/steam-mvp">
@@ -182,6 +222,7 @@ export default function Work() {
         kicker="A kernel, and the prototype that specified it."
         stack="C · AArch64 assembly · QEMU · Raspberry Pi 5"
         status="A few milestones in. Boots under QEMU; far from the interface."
+        checked="Every milestone has to run under QEMU before the next one starts."
       >
         <p>
           I built the first version entirely in Python, on purpose.{" "}
