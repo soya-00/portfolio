@@ -51,8 +51,8 @@ export default function Research() {
         delay={0.06}
       >
         A paper on how banking technology serves, and fails to serve, people
-        with vision disabilities in Vietnam. I am the main author. Targeted for
-        submission in November.
+        with vision disabilities in Vietnam. Targeted for submission in
+        November.
       </Entry>
 
       <Entry title="Extended Essay" state="In progress" delay={0.12}>

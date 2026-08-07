@@ -135,10 +135,8 @@ export default function Work() {
           It records what held, seven findings that did not and were fixed, four
           more that a second review found after the first had missed them, and
           two that testing withdrew — kept in the document so they are not
-          raised again by the next reader. One passage corrects an earlier
-          version of itself for having been{" "}
-          <span className="text-foreground">too kind to itself</span>. The
-          security document is the artifact I would point a reader at first.
+          raised again by the next reader. The security document is the artifact
+          I would point a reader at first.
         </p>
 
         <div className="flex flex-wrap gap-3 pt-2">
@@ -186,13 +184,7 @@ export default function Work() {
           It was built for a competition and its documentation is in Vietnamese.
           Because it is aimed at minors, I wrote its limits down at length
           rather than leaving them to be discovered. That document separates
-          what the design intends from what the prototype actually does. The
-          promise that a teacher cannot see a student who has not entered a
-          class code is named there as{" "}
-          <span className="text-foreground">
-            a design intention, not something the prototype achieves
-          </span>
-          .
+          what the design intends from what the prototype actually does.
         </p>
 
         <Figure
@@ -248,9 +240,7 @@ export default function Work() {
           <span className="text-foreground">
             It is a long way from the interface it is being built for, and the
             roadmap says so.
-          </span>{" "}
-          The rule I hold myself to there: a session ends with something that
-          runs, or it was scoped wrong.
+          </span>
         </p>
         <p>
           That interface is designed after analog flight decks — annunciator

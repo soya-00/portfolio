@@ -27,8 +27,8 @@ export default function Colophon() {
           </p>
           <p>
             Operating systems runs alongside all of it, studied in C — OSTEP,
-            Operating System Concepts, and the human factors literature on the
-            flight deck, which is where BLOC&apos;s interface comes from.
+            Operating System Concepts, and human factors on the flight deck,
+            which is where BLOC&apos;s interface comes from.
           </p>
         </div>
       </Reveal>
