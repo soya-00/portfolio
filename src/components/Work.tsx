@@ -137,17 +137,10 @@ export default function Work() {
         <p>
           It was built for a competition and its documentation is in Vietnamese.
           Because it is aimed at minors, I wrote its limits down at length
-          rather than leaving them to be discovered:
-        </p>
-
-        <PullQuote cite="GALS — LEGAL.md, translated">
-          Read this page before letting any real student use GALS.
-        </PullQuote>
-
-        <p>
-          The document separates what the design intends from what the prototype
-          actually does. The promise that a teacher cannot see a student who has
-          not entered a class code is named there as{" "}
+          rather than leaving them to be discovered. That document separates
+          what the design intends from what the prototype actually does. The
+          promise that a teacher cannot see a student who has not entered a
+          class code is named there as{" "}
           <span className="text-foreground">
             a design intention, not something the prototype achieves
           </span>
@@ -168,28 +161,25 @@ export default function Work() {
       <Project
         index="03"
         name="BLOC OS"
-        kicker="A kernel, and the mistake that preceded it."
+        kicker="A kernel, and the prototype that specified it."
         stack="C · AArch64 assembly · QEMU · Raspberry Pi 5"
         status="A few milestones in. Boots under QEMU; far from the interface."
       >
         <p>
-          For three months I had a Python application with a boot sequence,
-          flight strips, and a live traffic scope, and I called it an operating
-          system. It ran on top of Linux as an ordinary process. Every
-          &ldquo;systems check&rdquo; in its boot sequence was a function call,
-          not a probe. The first entry in the decision log for the rewrite is
-          the retraction:
+          I built the first version entirely in Python, on purpose.{" "}
+          <span className="text-foreground">
+            The question was whether the interface was worth committing to
+          </span>{" "}
+          — flight strips, single-key commands, the thermal printer, the Whisper
+          dispatch call. Python answered that in weeks. Answering it in C would
+          have cost months before I learned anything about the design.
         </p>
-
-        <PullQuote cite="BLOC OS — DECISIONS.md, entry 0">
-          It was called an operating system and it was not one.
-        </PullQuote>
-
         <p>
-          About ten thousand lines of Python and tests did not carry across.
-          Four specification documents did. The lesson I wrote down for myself
-          was that the error was letting the prototype become the project —
-          code that has drifted from its intent still describes itself loudly.
+          It did what a prototype is for. Four specification documents came out
+          of it and carried into this repository: the design system, the record
+          format, the interaction contract, and the status vocabulary. About ten
+          thousand lines of Python did not carry across, and were never meant
+          to.
         </p>
         <p>
           What exists now is a bare-metal AArch64 kernel for the Raspberry Pi 5.
@@ -218,17 +208,17 @@ export default function Work() {
 
         <p>
           The rule that anything conveyed by color is also conveyed by something
-          else is marked non-negotiable. The predecessor is still public — it is
-          the evidence for the retraction above, not a portfolio piece:{" "}
+          else is marked non-negotiable. The prototype is still public, and the
+          specifications above are what it was built to produce:{" "}
           <a
             href="https://github.com/soya-00/bloc-os-beta"
             target="_blank"
             rel="noreferrer"
             className="text-foreground underline decoration-accent/50 underline-offset-4 transition-colors hover:decoration-accent"
           >
-            the Python version I abandoned
+            the Python version
           </a>
-          , with the log of why.
+          , with the log of what it settled.
         </p>
 
         <div className="flex flex-wrap gap-3 pt-2">

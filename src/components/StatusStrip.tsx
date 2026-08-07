@@ -6,11 +6,7 @@ function zulu(d: Date) {
   return `${p(d.getUTCHours())}${p(d.getUTCMinutes())}${p(d.getUTCSeconds())}Z`;
 }
 
-const FIELDS = [
-  "3 INSTRUMENTS",
-  "3 OPEN PROBLEMS",
-  "1 RETRACTION",
-];
+const FIELDS = ["3 INSTRUMENTS", "3 OPEN PROBLEMS", "1 KERNEL"];
 
 export default function StatusStrip() {
   const [time, setTime] = useState(() => zulu(new Date()));
