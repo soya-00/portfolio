@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* OffBit (trial) — subsetted to Latin and converted to woff2.
+   Five faces are used; the rest of the family is not shipped. */
+@font-face {
+  font-family: 'OffBit';
+  src: url('/fonts/OffBit-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'OffBit';
+  src: url('/fonts/OffBit-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    /* Two faces only: OffBit for display and labels, Helvetica Neue for text. */
+    --font-display: 'OffBit', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    /* Sampled from landing-image.png: global average hsl(60 7% 20%),
+       cockpit shadow hsl(50 20% 12%), horizon glow hsl(31 11% 39%). */
+    --background: 48 9% 8%;
+    --foreground: 45 20% 96%;
+
+    --surface: 48 8% 12%;
+    --muted: 48 8% 12%;
+    --muted-foreground: 45 7% 62%;
+
+    --primary: 45 20% 96%;
+    --primary-foreground: 48 9% 8%;
+
+    --secondary: 48 8% 12%;
+    --secondary-foreground: 45 20% 96%;
+
+    --accent: 33 28% 68%;
+    --accent-foreground: 48 9% 8%;
+
+    --card: 48 8% 12%;
+    --card-foreground: 45 20% 96%;
+
+    --border: 45 7% 20%;
+    --input: 45 7% 20%;
+    --ring: 33 28% 68%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+}
+
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.01);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg,
+    rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.15) 20%,
+    rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0.15) 80%, rgba(255, 255, 255, 0.45) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-rise {
+  animation: fade-rise 0.8s ease-out both;
+}
+
+.animate-fade-rise-delay {
+  animation: fade-rise 0.8s ease-out 0.2s both;
+}
+
+.animate-fade-rise-delay-2 {
+  animation: fade-rise 0.8s ease-out 0.4s both;
+}
+
+/* Scroll reveal. The hidden state is applied by JS only (see useReveal),
+   so content is never left invisible if the observer or JS fails. */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Dissolves the hero image into the page background instead of cutting hard.
+   Eased multi-stop ramp — a two-stop linear fade leaves a visible edge where
+   the gradient starts. */
+.hero-fade::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 42vh;
+  background: linear-gradient(
+    to bottom,
+    hsl(var(--background) / 0) 0%,
+    hsl(var(--background) / 0.08) 18%,
+    hsl(var(--background) / 0.22) 34%,
+    hsl(var(--background) / 0.45) 50%,
+    hsl(var(--background) / 0.68) 64%,
+    hsl(var(--background) / 0.86) 78%,
+    hsl(var(--background) / 0.96) 90%,
+    hsl(var(--background)) 100%
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Unlayered so it outranks the animation classes above, which are also
+   unlayered — the same rules inside @layer base would lose the cascade. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-rise,
+  .animate-fade-rise-delay,
+  .animate-fade-rise-delay-2 {
+    animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
