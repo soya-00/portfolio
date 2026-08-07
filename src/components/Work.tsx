@@ -1,27 +1,61 @@
 import type { ReactNode } from "react";
 import LinkChip from "@/components/LinkChip";
 import PullQuote from "@/components/PullQuote";
+import Reveal from "@/components/Reveal";
 import Section from "@/components/Section";
 
 type ProjectProps = {
+  index: string;
   name: string;
   kicker: string;
+  stack: string;
+  status: string;
   children: ReactNode;
 };
 
-function Project({ name, kicker, children }: ProjectProps) {
+function Project({
+  index,
+  name,
+  kicker,
+  stack,
+  status,
+  children,
+}: ProjectProps) {
   return (
-    <article className="border-t border-border/60 pt-12 first:border-t-0 first:pt-0 [&+&]:mt-20">
-      <h3
-        className="text-3xl font-normal tracking-tight sm:text-4xl"
-        style={{ fontFamily: "'Instrument Serif', serif" }}
-      >
-        {name}
-      </h3>
-      <p className="mt-2 text-base text-muted-foreground">{kicker}</p>
-      <div className="mt-8 space-y-6 leading-relaxed text-muted-foreground">
-        {children}
-      </div>
+    <article className="[&+&]:mt-28">
+      <Reveal>
+        <div className="flex items-center gap-4">
+          <span className="font-mono text-xs tracking-[0.2em] text-accent">
+            {index}
+          </span>
+          <span className="h-px flex-1 bg-border" aria-hidden="true" />
+        </div>
+
+        <h3
+          className="mt-6 text-3xl font-normal tracking-tight sm:text-4xl"
+          style={{ fontFamily: "'Instrument Serif', serif" }}
+        >
+          {name}
+        </h3>
+        <p className="mt-2 text-base text-muted-foreground">{kicker}</p>
+
+        <dl className="mt-8 grid gap-x-6 gap-y-3 border-y border-border/60 py-5 text-sm sm:grid-cols-[7rem_1fr]">
+          <dt className="text-xs uppercase tracking-[0.16em] text-muted-foreground">
+            Built with
+          </dt>
+          <dd className="text-foreground/90">{stack}</dd>
+          <dt className="text-xs uppercase tracking-[0.16em] text-muted-foreground">
+            Status
+          </dt>
+          <dd className="text-foreground/90">{status}</dd>
+        </dl>
+      </Reveal>
+
+      <Reveal delay={0.08}>
+        <div className="mt-8 space-y-6 leading-relaxed text-muted-foreground">
+          {children}
+        </div>
+      </Reveal>
     </article>
   );
 }
@@ -29,7 +63,13 @@ function Project({ name, kicker, children }: ProjectProps) {
 export default function Work() {
   return (
     <Section id="work" label="Work" title="Three instruments">
-      <Project name="Tilt" kicker="A thinking instrument for macOS.">
+      <Project
+        index="01"
+        name="Tilt"
+        kicker="A thinking instrument for macOS."
+        stack="Python · FastAPI · SQLite · React · Tauri"
+        status="Early but real. Not distributed — no signed build, no installer."
+      >
         <p>
           Tilt is a journal that notices things. You write into one stream — no
           folders, no filing — and the app gives back understanding: what you
@@ -41,16 +81,10 @@ export default function Work() {
           </span>
         </p>
         <p>
-          A Python service behind a Tauri desktop shell, with Markdown files on
-          disk as the source of truth and the database treated as a cache that
-          can be deleted and rebuilt. Status, stated the way the repository
-          states it: early but real, and feature-complete against the roadmap it
-          was written to. What is not done is distribution — there is no signed
-          build and no installer.
-        </p>
-        <p>
-          Before demoing it, I audited it and wrote down the result. The
-          document opens by refusing to posture:
+          Markdown files on disk are the source of truth, and the database is
+          treated as a cache that can be deleted and rebuilt. Before demoing it,
+          I audited it and wrote down the result. The document opens by refusing
+          to posture:
         </p>
 
         <PullQuote cite="Tilt — SECURITY.md">
@@ -77,8 +111,11 @@ export default function Work() {
       </Project>
 
       <Project
+        index="02"
         name="GALS"
         kicker="Try out a career before you have to choose one."
+        stack="FastAPI · Jinja · HTMX · Tailwind · Render"
+        status="Deployed prototype. Shared accounts, no per-student privacy yet."
       >
         <p>
           A web application for Vietnamese high-school students. Instead of
@@ -99,12 +136,9 @@ export default function Work() {
           app,&rdquo; the learner has misunderstood what professions are.
         </p>
         <p>
-          FastAPI, Jinja and HTMX, deployed and live. It was built for a
-          competition and its documentation is in Vietnamese. It is also a
-          prototype with three shared accounts, no real per-student privacy, and
-          a database that resets when the free server sleeps. Because it is
-          aimed at minors, I wrote that down at length rather than leaving it to
-          be discovered:
+          It was built for a competition and its documentation is in Vietnamese.
+          Because it is aimed at minors, I wrote its limits down at length
+          rather than leaving them to be discovered:
         </p>
 
         <PullQuote cite="GALS — LEGAL.md, translated">
@@ -132,7 +166,13 @@ export default function Work() {
         </div>
       </Project>
 
-      <Project name="BLOC OS" kicker="A kernel, and the mistake that preceded it.">
+      <Project
+        index="03"
+        name="BLOC OS"
+        kicker="A kernel, and the mistake that preceded it."
+        stack="C · AArch64 assembly · QEMU · Raspberry Pi 5"
+        status="A few milestones in. Boots under QEMU; far from the interface."
+      >
         <p>
           For three months I had a Python application with a boot sequence,
           flight strips, and a live traffic scope, and I called it an operating
@@ -153,11 +193,10 @@ export default function Work() {
           code that has drifted from its intent still describes itself loudly.
         </p>
         <p>
-          What exists now is a bare-metal AArch64 kernel for the Raspberry Pi 5,
-          in C and assembly, a few milestones in. It builds for three boards,
-          boots under QEMU, prints over UART, drops from EL2 to EL1, and
-          deliberately faults itself three times to prove the exception vector
-          table works.{" "}
+          What exists now is a bare-metal AArch64 kernel for the Raspberry Pi 5.
+          It builds for three boards, boots under QEMU, prints over UART, drops
+          from EL2 to EL1, and deliberately faults itself three times to prove
+          the exception vector table works.{" "}
           <span className="text-foreground">
             It is a long way from the interface it is being built for, and the
             roadmap says so.
@@ -186,7 +225,7 @@ export default function Work() {
             href="https://github.com/soya-00/bloc-os-beta"
             target="_blank"
             rel="noreferrer"
-            className="text-foreground underline underline-offset-4 transition-colors hover:text-muted-foreground"
+            className="text-foreground underline decoration-accent/50 underline-offset-4 transition-colors hover:decoration-accent"
           >
             the Python version I abandoned
           </a>

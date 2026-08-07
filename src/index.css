@@ -7,27 +7,30 @@
     --font-display: 'Instrument Serif', serif;
     --font-body: 'Inter', sans-serif;
 
-    --background: 201 100% 13%;
-    --foreground: 0 0% 100%;
+    /* Sampled from landing-image.png: global average hsl(60 7% 20%),
+       cockpit shadow hsl(50 20% 12%), horizon glow hsl(31 11% 39%). */
+    --background: 48 9% 8%;
+    --foreground: 45 20% 96%;
 
-    --muted: 0 0% 10%;
-    --muted-foreground: 240 4% 66%;
+    --surface: 48 8% 12%;
+    --muted: 48 8% 12%;
+    --muted-foreground: 45 7% 62%;
 
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 4%;
+    --primary: 45 20% 96%;
+    --primary-foreground: 48 9% 8%;
 
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 48 8% 12%;
+    --secondary-foreground: 45 20% 96%;
 
-    --accent: 0 0% 10%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 33 28% 68%;
+    --accent-foreground: 48 9% 8%;
 
-    --card: 201 100% 13%;
-    --card-foreground: 0 0% 100%;
+    --card: 48 8% 12%;
+    --card-foreground: 45 20% 96%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 0 0% 18%;
+    --border: 45 7% 20%;
+    --input: 45 7% 20%;
+    --ring: 33 28% 68%;
 
     --radius: 0.5rem;
   }
@@ -98,6 +101,45 @@
   animation: fade-rise 0.8s ease-out 0.4s both;
 }
 
+/* Scroll reveal. The hidden state is applied by JS only (see useReveal),
+   so content is never left invisible if the observer or JS fails. */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Dissolves the hero image into the page background instead of cutting hard.
+   Eased multi-stop ramp — a two-stop linear fade leaves a visible edge where
+   the gradient starts. */
+.hero-fade::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 42vh;
+  background: linear-gradient(
+    to bottom,
+    hsl(var(--background) / 0) 0%,
+    hsl(var(--background) / 0.08) 18%,
+    hsl(var(--background) / 0.22) 34%,
+    hsl(var(--background) / 0.45) 50%,
+    hsl(var(--background) / 0.68) 64%,
+    hsl(var(--background) / 0.86) 78%,
+    hsl(var(--background) / 0.96) 90%,
+    hsl(var(--background)) 100%
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+
 /* Unlayered so it outranks the animation classes above, which are also
    unlayered — the same rules inside @layer base would lose the cascade. */
 @media (prefers-reduced-motion: reduce) {
@@ -109,5 +151,11 @@
   .animate-fade-rise-delay,
   .animate-fade-rise-delay-2 {
     animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
