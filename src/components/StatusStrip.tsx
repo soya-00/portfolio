@@ -18,7 +18,8 @@ export default function StatusStrip() {
 
   return (
     <div className="absolute inset-x-0 bottom-0 z-20 border-t border-white/10 bg-background/40 backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-6 py-3.5 sm:px-8">
+      {/* max-w-4xl matches the console panel, so the strip reads as its top edge. */}
+      <div className="mx-auto flex w-full max-w-4xl flex-wrap items-center gap-x-6 gap-y-2 px-6 py-3.5">
         <span className="font-display text-xs tracking-[0.18em] text-accent">
           ◈ SOYA
         </span>

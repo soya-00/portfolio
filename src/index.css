@@ -119,6 +119,59 @@
   animation: fade-rise 0.8s ease-out 0.4s both;
 }
 
+/* Directory tree. The connectors are drawn with borders rather than box
+   characters: OffBit is proportional, so literal ASCII would drift out of
+   alignment at every nesting level. */
+.tree {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tree-node {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+/* Elbow into the row, plus the trunk continuing past it. */
+.tree-node::before {
+  content: '';
+  position: absolute;
+  left: 0.35rem;
+  top: 0;
+  bottom: 0;
+  width: 0.85rem;
+  border-left: 1px solid hsl(var(--border));
+  border-bottom: 1px solid hsl(var(--border));
+  height: 1em;
+  margin-top: 0.05em;
+}
+
+/* The last child stops the trunk at its own elbow. */
+.tree-node--last::before {
+  bottom: auto;
+}
+
+.tree-node:not(.tree-node--last)::after {
+  content: '';
+  position: absolute;
+  left: 0.35rem;
+  top: 1.05em;
+  bottom: 0;
+  border-left: 1px solid hsl(var(--border));
+}
+
+/* Horizontal scrolling without the bar showing — the status line scrolls
+   sideways on narrow screens rather than hiding its items. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* Scroll reveal. The hidden state is applied by JS only (see useReveal),
    so content is never left invisible if the observer or JS fails. */
 .reveal {

@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import LinkChip from "@/components/LinkChip";
+import ProjectTree from "@/components/ProjectTree";
 import PullQuote from "@/components/PullQuote";
 import Reveal from "@/components/Reveal";
 import Section from "@/components/Section";
@@ -73,6 +74,12 @@ function Project({ bay, name, kicker, stack, status, children }: ProjectProps) {
 export default function Work() {
   return (
     <Section id="work" label="Work" title="Three instruments">
+      <Reveal>
+        <div className="mb-24 border-y border-border/60 py-8">
+          <ProjectTree />
+        </div>
+      </Reveal>
+
       <Project
         bay="HOLDING"
         name="Tilt"

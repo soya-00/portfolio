@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
 
-/**
- * Tracks whether the page has scrolled past the top, and which section is
- * currently in view.
- */
+/** Reports which section is currently in view. */
 export function useScrollSpy(ids: string[]) {
-  const [scrolled, setScrolled] = useState(false);
   const [activeId, setActiveId] = useState<string | null>(null);
 
   useEffect(() => {
@@ -15,14 +11,9 @@ export function useScrollSpy(ids: string[]) {
       if (frame) return;
       frame = requestAnimationFrame(() => {
         frame = 0;
-        const y = window.scrollY;
-        // Glass backing appears as soon as the page moves, so content never
-        // scrolls under a fully transparent bar.
-        setScrolled(y > 80);
-
-        // Active section: the last one whose top has passed the upper third.
-        // Measured against the viewport — offsetTop would be relative to the
-        // nearest positioned ancestor, not the document.
+        // The last section whose top has passed the upper third. Measured
+        // against the viewport — offsetTop would be relative to the nearest
+        // positioned ancestor, not the document.
         const line = window.innerHeight / 3;
         let current: string | null = null;
         for (const id of ids) {
@@ -43,5 +34,5 @@ export function useScrollSpy(ids: string[]) {
     };
   }, [ids]);
 
-  return { scrolled, activeId };
+  return { activeId };
 }
