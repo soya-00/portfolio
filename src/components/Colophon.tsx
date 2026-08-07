@@ -29,8 +29,6 @@ export default function Colophon() {
             Operating systems runs alongside all of it, studied in C — OSTEP,
             Operating System Concepts, and the human factors literature on the
             flight deck, which is where BLOC&apos;s interface comes from.
-            Reading outside computer science does not stay in one lane either:
-            epistemic injustice, the philosophy of solitude.
           </p>
         </div>
       </Reveal>
