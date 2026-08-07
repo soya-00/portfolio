@@ -10,67 +10,55 @@ const NAV_LINKS = [
 const SECTION_IDS = NAV_LINKS.map((l) => l.id);
 
 export default function Navbar() {
-  const { scrolled, activeId, progress } = useScrollSpy(SECTION_IDS);
+  const { scrolled, activeId } = useScrollSpy(SECTION_IDS);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
-      <div
-        className={cn(
-          "transition-all duration-500",
-          scrolled
-            ? "border-b border-border/70 bg-background/80 backdrop-blur-md"
-            : "border-b border-transparent bg-transparent"
-        )}
-      >
-        <nav className="mx-auto flex w-full max-w-6xl flex-row items-center justify-between px-6 py-5 sm:px-8">
-          <a
-            href="#top"
-            className="font-display text-xl font-bold tracking-tight text-foreground transition-opacity hover:opacity-80 sm:text-2xl"
-          >
-            Soya
-          </a>
+    <header
+      className={cn(
+        "fixed inset-x-0 top-0 z-50 transition-colors duration-500",
+        // Frosted rather than opaque: the background stays visible and tinted,
+        // which is what reads as glass. Saturation lifts what shows through.
+        scrolled
+          ? "border-b border-white/[0.08] bg-background/55 backdrop-blur-2xl backdrop-saturate-150"
+          : "border-b border-transparent bg-transparent"
+      )}
+    >
+      <nav className="mx-auto flex w-full max-w-6xl flex-row items-center justify-between px-6 py-3.5 sm:px-8">
+        <a
+          href="#top"
+          className="font-display text-lg font-bold tracking-tight text-foreground transition-opacity hover:opacity-70 sm:text-xl"
+        >
+          Soya
+        </a>
 
-          <div className="hidden items-center gap-8 md:flex">
-            {NAV_LINKS.map(({ label, id }) => (
-              <a
-                key={id}
-                href={`#${id}`}
-                aria-current={activeId === id ? "true" : undefined}
-                className={cn(
-                  "font-display relative py-1 text-sm uppercase tracking-[0.1em] transition-colors",
-                  activeId === id
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                )}
-              >
-                {label}
-                <span
-                  aria-hidden="true"
-                  className={cn(
-                    "absolute inset-x-0 -bottom-0.5 h-px origin-left bg-accent transition-transform duration-300",
-                    activeId === id ? "scale-x-100" : "scale-x-0"
-                  )}
-                />
-              </a>
-            ))}
-          </div>
+        {/* Utility type recedes: body face, sentence case, no tracking. */}
+        <div className="hidden items-center gap-9 md:flex">
+          {NAV_LINKS.map(({ label, id }) => (
+            <a
+              key={id}
+              href={`#${id}`}
+              aria-current={activeId === id ? "true" : undefined}
+              className={cn(
+                "text-[13px] transition-colors duration-200",
+                activeId === id
+                  ? "text-foreground"
+                  : "text-foreground/55 hover:text-foreground"
+              )}
+            >
+              {label}
+            </a>
+          ))}
+        </div>
 
-          <a
-            href="https://github.com/soya-00"
-            target="_blank"
-            rel="noreferrer"
-            className="liquid-glass rounded-full px-5 py-2 text-sm text-foreground hover:scale-[1.03] sm:px-6 sm:py-2.5"
-          >
-            GitHub
-          </a>
-        </nav>
-      </div>
-
-      <div
-        aria-hidden="true"
-        className="h-px origin-left bg-accent/70 transition-transform duration-150"
-        style={{ transform: `scaleX(${progress})` }}
-      />
+        <a
+          href="https://github.com/soya-00"
+          target="_blank"
+          rel="noreferrer"
+          className="text-[13px] text-foreground/55 transition-colors duration-200 hover:text-foreground"
+        >
+          GitHub
+        </a>
+      </nav>
     </header>
   );
 }

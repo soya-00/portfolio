@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 
 /**
- * Tracks whether the page has scrolled past the hero, which section is
- * currently in view, and how far down the document the reader is.
+ * Tracks whether the page has scrolled past the top, and which section is
+ * currently in view.
  */
 export function useScrollSpy(ids: string[]) {
   const [scrolled, setScrolled] = useState(false);
   const [activeId, setActiveId] = useState<string | null>(null);
-  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     let frame = 0;
@@ -20,9 +19,6 @@ export function useScrollSpy(ids: string[]) {
         // Glass backing appears as soon as the page moves, so content never
         // scrolls under a fully transparent bar.
         setScrolled(y > 80);
-
-        const max = document.documentElement.scrollHeight - window.innerHeight;
-        setProgress(max > 0 ? Math.min(1, y / max) : 0);
 
         // Active section: the last one whose top has passed the upper third.
         // Measured against the viewport — offsetTop would be relative to the
@@ -47,5 +43,5 @@ export function useScrollSpy(ids: string[]) {
     };
   }, [ids]);
 
-  return { scrolled, activeId, progress };
+  return { scrolled, activeId };
 }
