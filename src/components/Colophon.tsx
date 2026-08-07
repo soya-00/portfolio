@@ -23,9 +23,14 @@ export default function Colophon() {
             work on one subject at a time, in short and deep bursts, rather than
             trying to finish a syllabus: Nand2Tetris for computer architecture,
             Mathematical Thinking through Stanford, and algorithms and data
-            structures now. Reading runs alongside it and does not stay in one
-            lane — operating systems, epistemic injustice, human factors on the
-            flight deck, the philosophy of solitude.
+            structures now.
+          </p>
+          <p>
+            Operating systems runs alongside all of it, studied in C — OSTEP,
+            Operating System Concepts, and the human factors literature on the
+            flight deck, which is where BLOC&apos;s interface comes from.
+            Reading outside computer science does not stay in one lane either:
+            epistemic injustice, the philosophy of solitude.
           </p>
         </div>
       </Reveal>
