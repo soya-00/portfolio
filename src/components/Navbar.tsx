@@ -1,9 +1,7 @@
 const NAV_LINKS = [
-  { label: "Home", href: "#", active: true },
-  { label: "Studio", href: "#" },
-  { label: "About", href: "#" },
-  { label: "Journal", href: "#" },
-  { label: "Reach Us", href: "#" },
+  { label: "Work", href: "#work" },
+  { label: "Research", href: "#research" },
+  { label: "How I work", href: "#colophon" },
 ];
 
 export default function Navbar() {
@@ -11,32 +9,33 @@ export default function Navbar() {
     <header className="relative z-10">
       <nav className="mx-auto flex w-full max-w-7xl flex-row items-center justify-between px-8 py-6">
         <a
-          href="/"
+          href="#"
           className="text-3xl tracking-tight text-foreground"
           style={{ fontFamily: "'Instrument Serif', serif" }}
         >
-          Velorah<sup className="text-xs">®</sup>
+          Soya
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
-          {NAV_LINKS.map(({ label, href, active }) => (
+          {NAV_LINKS.map(({ label, href }) => (
             <a
               key={label}
               href={href}
-              className={
-                active
-                  ? "text-sm text-foreground transition-colors"
-                  : "text-sm text-muted-foreground transition-colors hover:text-foreground"
-              }
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               {label}
             </a>
           ))}
         </div>
 
-        <button className="liquid-glass rounded-full px-6 py-2.5 text-sm text-foreground hover:scale-[1.03]">
-          Begin Journey
-        </button>
+        <a
+          href="https://github.com/soya-00"
+          target="_blank"
+          rel="noreferrer"
+          className="liquid-glass rounded-full px-6 py-2.5 text-sm text-foreground hover:scale-[1.03]"
+        >
+          GitHub
+        </a>
       </nav>
     </header>
   );
