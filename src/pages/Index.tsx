@@ -1,3 +1,4 @@
+import BootSequence from "@/components/BootSequence";
 import Colophon from "@/components/Colophon";
 import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
@@ -19,12 +20,13 @@ export default function Index() {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <Hero />
+        <StatusStrip />
+        <BootSequence />
       </div>
 
       <Navbar />
 
       <main className="relative z-10 bg-background pb-24">
-        <StatusStrip />
         <Intro />
         <Work />
         <Research />

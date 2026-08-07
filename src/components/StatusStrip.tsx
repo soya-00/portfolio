@@ -17,28 +17,30 @@ export default function StatusStrip() {
   }, []);
 
   return (
-    <div className="border-y border-border/60 bg-surface/30">
-      <div className="mx-auto flex w-full max-w-3xl flex-wrap items-center gap-x-5 gap-y-2 px-6 py-3">
+    <div className="absolute inset-x-0 bottom-0 z-20 border-t border-white/10 bg-background/40 backdrop-blur-md">
+      <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-6 py-3.5 sm:px-8">
         <span className="font-display text-xs tracking-[0.18em] text-accent">
           ◈ SOYA
         </span>
-        <span className="font-display text-xs tracking-[0.18em] text-muted-foreground">
+        <span className="font-display text-xs tracking-[0.18em] text-foreground/70">
           HANOI
         </span>
         <span
-          className="font-display text-xs tabular-nums tracking-[0.18em] text-muted-foreground"
+          className="font-display text-xs tabular-nums tracking-[0.18em] text-foreground/70"
           aria-hidden="true"
         >
           {time}
         </span>
-        {FIELDS.map((f) => (
-          <span
-            key={f}
-            className="font-display text-xs tracking-[0.18em] text-muted-foreground"
-          >
-            {f}
-          </span>
-        ))}
+        <span className="ml-auto flex flex-wrap items-center gap-x-6 gap-y-2">
+          {FIELDS.map((f) => (
+            <span
+              key={f}
+              className="font-display text-xs tracking-[0.18em] text-foreground/50"
+            >
+              {f}
+            </span>
+          ))}
+        </span>
       </div>
     </div>
   );

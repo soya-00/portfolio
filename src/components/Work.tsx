@@ -4,8 +4,19 @@ import PullQuote from "@/components/PullQuote";
 import Reveal from "@/components/Reveal";
 import Section from "@/components/Section";
 
+/**
+ * Strip bays, per BLOC's DESIGN.md: INCOMING · ACTIVE · HOLDING · LANDED.
+ * Emphasis encodes where the work is, so the bay never depends on color
+ * alone — the word carries it, the treatment reinforces it.
+ */
+const BAY_STYLES: Record<string, string> = {
+  ACTIVE: "border border-accent bg-accent text-background",
+  HOLDING: "border border-accent/70 text-accent",
+  LANDED: "border border-border text-muted-foreground",
+};
+
 type ProjectProps = {
-  index: string;
+  bay: keyof typeof BAY_STYLES | string;
   name: string;
   kicker: string;
   stack: string;
@@ -13,22 +24,22 @@ type ProjectProps = {
   children: ReactNode;
 };
 
-function Project({
-  index,
-  name,
-  kicker,
-  stack,
-  status,
-  children,
-}: ProjectProps) {
+function Project({ bay, name, kicker, stack, status, children }: ProjectProps) {
   return (
     <article className="[&+&]:mt-28">
       <Reveal>
-        <div className="flex items-center gap-4">
-          <span className="font-display text-sm tracking-[0.2em] text-accent">
-            {index}
+        <div className="flex items-stretch">
+          <span
+            className={`font-display px-3 py-1.5 text-xs tracking-[0.18em] ${
+              BAY_STYLES[bay] ?? BAY_STYLES.LANDED
+            }`}
+          >
+            {bay}
           </span>
-          <span className="h-px flex-1 bg-border" aria-hidden="true" />
+          <span
+            className="ml-4 flex-1 self-center border-t border-border"
+            aria-hidden="true"
+          />
         </div>
 
         <h3 className="font-display mt-6 text-3xl font-bold tracking-tight sm:text-4xl">
@@ -63,7 +74,7 @@ export default function Work() {
   return (
     <Section id="work" label="Work" title="Three instruments">
       <Project
-        index="01"
+        bay="HOLDING"
         name="Tilt"
         kicker="A thinking instrument for macOS."
         stack="Python · FastAPI · SQLite · React · Tauri"
@@ -110,7 +121,7 @@ export default function Work() {
       </Project>
 
       <Project
-        index="02"
+        bay="LANDED"
         name="GALS"
         kicker="Try out a career before you have to choose one."
         stack="FastAPI · Jinja · HTMX · Tailwind · Render"
@@ -159,7 +170,7 @@ export default function Work() {
       </Project>
 
       <Project
-        index="03"
+        bay="ACTIVE"
         name="BLOC OS"
         kicker="A kernel, and the prototype that specified it."
         stack="C · AArch64 assembly · QEMU · Raspberry Pi 5"
