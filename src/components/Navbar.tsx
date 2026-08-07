@@ -25,8 +25,7 @@ export default function Navbar() {
         <nav className="mx-auto flex w-full max-w-6xl flex-row items-center justify-between px-6 py-5 sm:px-8">
           <a
             href="#top"
-            className="text-2xl tracking-tight text-foreground transition-opacity hover:opacity-80 sm:text-3xl"
-            style={{ fontFamily: "'Instrument Serif', serif" }}
+            className="font-display text-xl font-bold tracking-tight text-foreground transition-opacity hover:opacity-80 sm:text-2xl"
           >
             Soya
           </a>
@@ -38,7 +37,7 @@ export default function Navbar() {
                 href={`#${id}`}
                 aria-current={activeId === id ? "true" : undefined}
                 className={cn(
-                  "relative py-1 text-sm transition-colors",
+                  "font-label relative py-1 text-sm uppercase tracking-[0.1em] transition-colors",
                   activeId === id
                     ? "text-foreground"
                     : "text-muted-foreground hover:text-foreground"

@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
 import Navbar from "@/components/Navbar";
 import Research from "@/components/Research";
+import StatusStrip from "@/components/StatusStrip";
 import Work from "@/components/Work";
 
 export default function Index() {
@@ -10,7 +11,7 @@ export default function Index() {
     <div id="top" className="relative">
       <div className="hero-fade relative flex min-h-screen flex-col overflow-hidden">
         <img
-          src="/landing-image.png"
+          src="/landing-page.png"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover"
@@ -21,6 +22,7 @@ export default function Index() {
       <Navbar />
 
       <main className="relative z-10 bg-background pb-24">
+        <StatusStrip />
         <Intro />
         <Work />
         <Research />

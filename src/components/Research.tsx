@@ -14,8 +14,10 @@ function Entry({ title, state, delay, children }: EntryProps) {
     <Reveal delay={delay}>
       <article className="border-t border-border/60 pt-8 [&+&]:mt-10">
         <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
-          <h3 className="text-lg text-foreground">{title}</h3>
-          <span className="rounded-full border border-accent/30 px-3 py-1 text-xs uppercase tracking-[0.16em] text-accent">
+          <h3 className="font-display text-lg text-foreground sm:text-xl">
+            {title}
+          </h3>
+          <span className="font-label rounded-full border border-accent/30 px-3 py-1 text-xs uppercase tracking-[0.16em] text-accent">
             {state}
           </span>
         </div>
