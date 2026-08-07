@@ -23,14 +23,14 @@ export default function StatusStrip() {
   return (
     <div className="border-y border-border/60 bg-surface/30">
       <div className="mx-auto flex w-full max-w-3xl flex-wrap items-center gap-x-5 gap-y-2 px-6 py-3">
-        <span className="font-label text-xs tracking-[0.18em] text-accent">
+        <span className="font-display text-xs tracking-[0.18em] text-accent">
           ◈ SOYA
         </span>
-        <span className="font-label text-xs tracking-[0.18em] text-muted-foreground">
+        <span className="font-display text-xs tracking-[0.18em] text-muted-foreground">
           HANOI
         </span>
         <span
-          className="font-label text-xs tabular-nums tracking-[0.18em] text-muted-foreground"
+          className="font-display text-xs tabular-nums tracking-[0.18em] text-muted-foreground"
           aria-hidden="true"
         >
           {time}
@@ -38,7 +38,7 @@ export default function StatusStrip() {
         {FIELDS.map((f) => (
           <span
             key={f}
-            className="font-label text-xs tracking-[0.18em] text-muted-foreground"
+            className="font-display text-xs tracking-[0.18em] text-muted-foreground"
           >
             {f}
           </span>

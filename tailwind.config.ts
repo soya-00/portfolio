@@ -8,8 +8,6 @@ export default {
     extend: {
       fontFamily: {
         display: ["var(--font-display)"],
-        label: ["var(--font-label)"],
-        serif: ["var(--font-serif)"],
         body: ["var(--font-body)"],
       },
       colors: {

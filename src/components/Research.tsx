@@ -17,7 +17,7 @@ function Entry({ title, state, delay, children }: EntryProps) {
           <h3 className="font-display text-lg text-foreground sm:text-xl">
             {title}
           </h3>
-          <span className="font-label rounded-full border border-accent/30 px-3 py-1 text-xs uppercase tracking-[0.16em] text-accent">
+          <span className="font-display rounded-full border border-accent/30 px-3 py-1 text-xs uppercase tracking-[0.16em] text-accent">
             {state}
           </span>
         </div>

@@ -28,7 +28,7 @@ export default function Section({
       <Reveal>
         <div className="flex items-center gap-4">
           <span className="h-px w-8 bg-accent/60" aria-hidden="true" />
-          <p className="font-label text-xs uppercase tracking-[0.22em] text-accent">
+          <p className="font-display text-xs uppercase tracking-[0.22em] text-accent">
             {label}
           </p>
         </div>

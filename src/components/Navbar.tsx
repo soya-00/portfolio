@@ -37,7 +37,7 @@ export default function Navbar() {
                 href={`#${id}`}
                 aria-current={activeId === id ? "true" : undefined}
                 className={cn(
-                  "font-label relative py-1 text-sm uppercase tracking-[0.1em] transition-colors",
+                  "font-display relative py-1 text-sm uppercase tracking-[0.1em] transition-colors",
                   activeId === id
                     ? "text-foreground"
                     : "text-muted-foreground hover:text-foreground"

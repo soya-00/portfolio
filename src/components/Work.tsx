@@ -25,7 +25,7 @@ function Project({
     <article className="[&+&]:mt-28">
       <Reveal>
         <div className="flex items-center gap-4">
-          <span className="font-label text-sm tracking-[0.2em] text-accent">
+          <span className="font-display text-sm tracking-[0.2em] text-accent">
             {index}
           </span>
           <span className="h-px flex-1 bg-border" aria-hidden="true" />
@@ -34,16 +34,16 @@ function Project({
         <h3 className="font-display mt-6 text-3xl font-bold tracking-tight sm:text-4xl">
           {name}
         </h3>
-        <p className="mt-3 font-serif text-xl text-muted-foreground sm:text-2xl">
+        <p className="mt-3 text-lg text-muted-foreground sm:text-xl">
           {kicker}
         </p>
 
         <dl className="mt-8 grid gap-x-6 gap-y-3 border-y border-border/60 py-5 text-sm sm:grid-cols-[7rem_1fr]">
-          <dt className="font-label text-xs uppercase tracking-[0.16em] text-muted-foreground">
+          <dt className="font-display text-xs uppercase tracking-[0.16em] text-muted-foreground">
             Built with
           </dt>
           <dd className="text-foreground/90">{stack}</dd>
-          <dt className="font-label text-xs uppercase tracking-[0.16em] text-muted-foreground">
+          <dt className="font-display text-xs uppercase tracking-[0.16em] text-muted-foreground">
             Status
           </dt>
           <dd className="text-foreground/90">{status}</dd>
