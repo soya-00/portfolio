@@ -24,6 +24,8 @@ type ProjectProps = {
   stack: string;
   status: string;
   checked: string;
+  /** Directory of the project's long-form page, under BASE_URL. */
+  writeup: string;
   children: ReactNode;
 };
 
@@ -34,6 +36,7 @@ function Project({
   stack,
   status,
   checked,
+  writeup,
   children,
 }: ProjectProps) {
   return (
@@ -80,6 +83,16 @@ function Project({
         <div className="mt-8 space-y-6 leading-relaxed text-muted-foreground">
           {children}
         </div>
+
+        <a
+          href={`${import.meta.env.BASE_URL}${writeup}/`}
+          className="liquid-glass font-display mt-10 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm text-foreground hover:scale-[1.03]"
+        >
+          Read more on {name}
+          <span aria-hidden="true" className="text-accent">
+            →
+          </span>
+        </a>
       </Reveal>
     </article>
   );
@@ -87,7 +100,7 @@ function Project({
 
 export default function Work() {
   return (
-    <Section id="work" label="Work" title="Three instruments">
+    <Section id="work" label="Projects" title="Three instruments">
       <Reveal>
         <div className="mb-24 border-y border-border/60 py-8">
           <ProjectTree />
@@ -101,6 +114,7 @@ export default function Work() {
         stack="Python · FastAPI · SQLite · React · Tauri"
         status="Early but real. Unsigned — notarization needs a paid Apple Developer account, so there is no installer yet."
         checked="486 tests across the core service, run by CI on every push."
+        writeup="tilt"
       >
         <p>
           Tilt is a journal that notices things. You write into one stream — no
@@ -154,6 +168,7 @@ export default function Work() {
         stack="FastAPI · Jinja · HTMX · Tailwind · Render"
         status="Deployed prototype. Shared accounts, no per-student privacy yet."
         checked="63 tests, run by CI on every push."
+        writeup="gals"
       >
         <p>
           A web application for Vietnamese high-school students. Instead of
@@ -215,6 +230,7 @@ export default function Work() {
         stack="C · AArch64 assembly · QEMU · Raspberry Pi 5"
         status="A few milestones in. Boots under QEMU; far from the interface."
         checked="Every milestone has to run under QEMU before the next one starts."
+        writeup="bloc"
       >
         <p>
           I built the first version entirely in Python, on purpose.{" "}

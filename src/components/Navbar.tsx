@@ -2,7 +2,7 @@ import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { label: "Work", id: "work" },
+  { label: "Projects", id: "work" },
   { label: "Research", id: "research" },
   { label: "How I work", id: "colophon" },
 ];
