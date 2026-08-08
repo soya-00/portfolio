@@ -56,8 +56,9 @@ export default function Research() {
       </Entry>
 
       <Entry title="Extended Essay" state="In progress" delay={0.12}>
-        On the reproducibility and accuracy of pseudorandom number generators in
-        Monte Carlo estimation of pi.
+        Whether a Monte Carlo estimate of pi reproduces exactly and whether it is correct are separate properties.
+        A generator with a structural defect returns bit-identical results on every run and converges at the expected
+        rate to the wrong value. Reproducibility is often treated as evidence of validity.
       </Entry>
     </Section>
   );
