@@ -10,9 +10,6 @@ import Work from "@/components/Work";
 export default function Index() {
   return (
     <div id="top" className="relative">
-      {/* Fixed rather than scrolling: the photograph stays in frame for the
-          whole page and the console travels over it. A fixed <img> is used
-          instead of background-attachment, which iOS Safari ignores. */}
       <img
         src={`${import.meta.env.BASE_URL}landing-page.png`}
         alt=""
