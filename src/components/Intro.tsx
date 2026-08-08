@@ -10,17 +10,18 @@ export default function Intro() {
             and bilingual in Vietnamese and English.
           </p>
           <p>
-            What connects them is not the subject matter — a journal, a career
-            tool, a kernel have little in common on paper.{" "}
+            On paper, a journal, a learning tool, and a kernel have little in common. 
+            {" "}
             <span className="text-foreground">
-              Each one carries a log of what was decided and why, including the
-              decisions that turned out to be wrong.
+              Underneath, they are one thing.
             </span>{" "}
-            That record is the part I would want a reader to judge me on.
+          Each is an instrument for thinking — a tool that makes reasoning visible,
+            to the person doing it or to the machine underneath. And each carries a
+            log of what was decided and why, including the decisions that were wrong.
+            The instruments show what I build. The logs show how I think.
           </p>
           <p>
-            I&apos;m headed toward research: natural language processing and
-            machine learning, read alongside philosophy.
+            I want to do research in natural language processing and machine learning, and to keep studying philosophy while I do.
           </p>
         </div>
       </Reveal>
