@@ -203,18 +203,14 @@
 }
 
 /* The console: the panel that scrolls up over the fixed photograph, the way
-   kernel output scrolls in a terminal.
+   kernel output scrolls in a terminal. Translucent, so the image reads
+   through it.
 
-   Opaque, deliberately. At 0.88 the photograph read through it, and because
-   the photograph is fixed, its bright horizon sat at one screen position as a
-   permanent lighter stripe across whatever text happened to be there. The
-   image stays visible in the hero and down both sides of the panel; the
-   reading surface itself is one flat colour.
-
-   No backdrop-filter either: a backdrop root here stops the fixed
-   navigation's own blur from compositing over the panel. */
+   The leading-edge gradient that used to sit on top of this is gone: it
+   ramped up to 0.75 and then stopped dead, which put a hard horizontal step
+   across the panel wherever it ended. */
 .console {
-  background: hsl(var(--background));
+  background: hsl(var(--background) / 0.88);
   box-shadow: 0 0 80px 20px hsl(var(--background) / 0.55);
 }
 
