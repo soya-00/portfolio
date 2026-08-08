@@ -119,6 +119,21 @@
   animation: fade-rise 0.8s ease-out 0.4s both;
 }
 
+@keyframes caret {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  55%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-caret {
+  animation: caret 1s step-end infinite;
+}
+
 /* Directory tree. The connectors are drawn with borders rather than box
    characters: OffBit is proportional, so literal ASCII would drift out of
    alignment at every nesting level. */
@@ -187,32 +202,20 @@
   transform: none;
 }
 
-/* The console: a dark panel that scrolls up over the fixed photograph, the
-   way kernel output scrolls in a terminal. Nearly opaque so long-form text
-   stays readable, but never fully — the image reads through it. */
-/* No backdrop-filter here: at this opacity it buys almost nothing, and a
-   backdrop root on the scrolling panel stops the fixed navigation's own
-   backdrop-filter from compositing over it. */
-.console {
-  background: hsl(var(--background) / 0.88);
-  box-shadow: 0 0 80px 20px hsl(var(--background) / 0.55);
-}
+/* The console: the panel that scrolls up over the fixed photograph, the way
+   kernel output scrolls in a terminal.
 
-/* Softens the panel's leading edge so it enters the frame rather than
-   cutting on. */
-.console::before {
-  content: '';
-  position: absolute;
-  inset-inline: 0;
-  top: 0;
-  height: 18vh;
-  background: linear-gradient(
-    to bottom,
-    hsl(var(--background) / 0) 0%,
-    hsl(var(--background) / 0.35) 45%,
-    hsl(var(--background) / 0.75) 100%
-  );
-  pointer-events: none;
+   Opaque, deliberately. At 0.88 the photograph read through it, and because
+   the photograph is fixed, its bright horizon sat at one screen position as a
+   permanent lighter stripe across whatever text happened to be there. The
+   image stays visible in the hero and down both sides of the panel; the
+   reading surface itself is one flat colour.
+
+   No backdrop-filter either: a backdrop root here stops the fixed
+   navigation's own blur from compositing over the panel. */
+.console {
+  background: hsl(var(--background));
+  box-shadow: 0 0 80px 20px hsl(var(--background) / 0.55);
 }
 
 /* Unlayered so it outranks the animation classes above, which are also
@@ -224,7 +227,8 @@
 
   .animate-fade-rise,
   .animate-fade-rise-delay,
-  .animate-fade-rise-delay-2 {
+  .animate-fade-rise-delay-2,
+  .animate-caret {
     animation: none;
   }
 
