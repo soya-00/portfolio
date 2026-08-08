@@ -1,7 +1,7 @@
 export const BOOT_SEEN_KEY = "soya:boot-seen";
 
-/** Counter, hold and fade in BootSequence add up to roughly this. */
-export const BOOT_TOTAL_MS = 3450;
+/** The banner's steps, counter and fade in BootSequence add up to this. */
+export const BOOT_TOTAL_MS = 4370;
 
 export const prefersReducedMotion = () =>
   typeof window !== "undefined" &&

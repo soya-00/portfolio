@@ -2,28 +2,22 @@ import { useEffect, useState } from "react";
 import { BOOT_SEEN_KEY, bootWillPlay } from "@/lib/boot";
 import { cn } from "@/lib/utils";
 
-/** Each line resolves once the counter passes its mark. */
-const LINES = [
-  { label: "INSTRUMENTS", value: "OK", at: 28 },
-  { label: "RESEARCH", value: "OK", at: 56 },
-  { label: "DISPLAY", value: "READY", at: 84 },
-];
+/* Timings, in order. A workstation ROM banner: the machine names itself,
+   states what it has, counts its memory, then hands off. */
+const T_MARK = 0;
+const T_COPY = 420;
+const T_SPECS = 760;
+const T_CHECK = 1080;
+const COUNT_TICK = 17; // ms per percent
+const T_COUNT_END = T_CHECK + 100 * COUNT_TICK;
+const T_AUTO = T_COUNT_END + 320;
+const T_BOOT = T_AUTO + 420;
+const T_LEAVE = T_BOOT + 900;
+const FADE = 450;
 
-const TICK = 26; // ms per percent — 100 ticks ≈ 2.6s
-const HOLD = 400; // ms on 100 before leaving
-const FADE = 450; // ms of fade-out
-
-/**
- * A systems check over the hero, in the register of the boot sequence the
- * Python prototype had.
- *
- * Purely an overlay — the hero renders underneath from the first frame, so if
- * this never mounts, never advances, or throws, the page is unaffected.
- * Skipped for reduced motion and after the first visit in a session, and a
- * click or any key dismisses it.
- */
 export default function BootSequence() {
   const [skipped] = useState(() => !bootWillPlay());
+  const [step, setStep] = useState(0);
   const [count, setCount] = useState(0);
   const [leaving, setLeaving] = useState(false);
   const [done, setDone] = useState(false);
@@ -36,22 +30,34 @@ export default function BootSequence() {
       /* not essential */
     }
 
-    let n = 0;
     const timers: number[] = [];
-    const tick = window.setInterval(() => {
-      n += 1;
-      setCount(n);
-      if (n >= 100) {
-        window.clearInterval(tick);
-        timers.push(window.setTimeout(() => setLeaving(true), HOLD));
-        timers.push(window.setTimeout(() => setDone(true), HOLD + FADE));
-      }
-    }, TICK);
+    const at = (ms: number, fn: () => void) =>
+      timers.push(window.setTimeout(fn, ms));
 
-    return () => {
-      window.clearInterval(tick);
-      timers.forEach(clearTimeout);
-    };
+    at(T_MARK, () => setStep(1));
+    at(T_COPY, () => setStep(2));
+    at(T_SPECS, () => setStep(3));
+
+    at(T_CHECK, () => {
+      setStep(4);
+      let n = 0;
+      const tick = window.setInterval(() => {
+        n += 1;
+        setCount(n);
+        if (n >= 100) window.clearInterval(tick);
+      }, COUNT_TICK);
+      timers.push(tick);
+    });
+
+    at(T_AUTO, () => setStep(5));
+    at(T_BOOT, () => setStep(6));
+    at(T_LEAVE, () => setLeaving(true));
+    at(T_LEAVE + FADE, () => setDone(true));
+
+    return () => timers.forEach((t) => {
+      window.clearTimeout(t);
+      window.clearInterval(t);
+    });
   }, [skipped]);
 
   useEffect(() => {
@@ -70,45 +76,58 @@ export default function BootSequence() {
 
   if (skipped || done) return null;
 
+  const line = (n: number) => (step >= n ? "opacity-100" : "opacity-0");
+
   return (
     <div
       aria-hidden="true"
       className={cn(
-        // Above the fixed nav (z-50) so the check reads as a whole screen.
+        // Above the fixed nav (z-50) so the banner reads as the whole screen.
         "fixed inset-0 z-[60] flex items-center justify-center bg-background transition-opacity ease-out",
         leaving && "pointer-events-none opacity-0"
       )}
       style={{ transitionDuration: `${FADE}ms` }}
     >
-      <div className="font-display w-full max-w-sm px-6 text-sm tracking-[0.16em]">
-        {LINES.map((line) => (
-          <div
-            key={line.label}
-            className={cn(
-              "flex items-baseline justify-between py-1.5 transition-opacity duration-300",
-              count >= line.at ? "opacity-100" : "opacity-0"
+      {/* Centred as a block; the text inside stays flush left, the way a
+          console writes it. */}
+      <div className="font-display w-full max-w-xl px-6 text-left">
+        <p
+          className={cn(
+            "text-5xl font-bold tracking-tight text-foreground transition-opacity duration-300 sm:text-6xl",
+            line(1)
+          )}
+        >
+          SOYA-00
+        </p>
+
+        <div className="mt-6 space-y-1 text-xs leading-relaxed text-muted-foreground sm:text-sm">
+          <p className={cn("transition-opacity duration-300", line(2))}>
+            (C) Soya, Hanoi 2026
+          </p>
+          <p className={cn("pl-8 transition-opacity duration-300", line(3))}>
+            3 instruments, 3 open problems, 1 kernel
+          </p>
+          <p className={cn("pl-8 transition-opacity duration-300", line(4))}>
+            Memory check:{" "}
+            {count < 100 ? (
+              <span className="tabular-nums text-foreground">
+                {String(count).padStart(3, "0")}%
+              </span>
+            ) : (
+              <span className="text-foreground">
+                549 tests passed, 0 skipped
+              </span>
             )}
-          >
-            <span className="text-muted-foreground">{line.label}</span>
-            <span className="text-accent">[ {line.value} ]</span>
-          </div>
-        ))}
-
-        <div className="mt-6 flex items-baseline justify-between border-t border-border pt-4">
-          <span className="text-muted-foreground/70">
-            {count < 100 ? "CHECKING" : "READY"}
-          </span>
-          <span className="text-2xl tabular-nums text-foreground">
-            {String(count).padStart(3, "0")}
-          </span>
+          </p>
+          <p className={cn("transition-opacity duration-300", line(5))}>
+            Auto-booting...
+          </p>
+          <p className={cn("transition-opacity duration-300", line(6))}>
+            Booting portfolio(0,1,0) index
+          </p>
         </div>
 
-        <div className="mt-3 h-px w-full bg-border">
-          <div
-            className="h-px bg-accent transition-[width] duration-100 ease-linear"
-            style={{ width: `${count}%` }}
-          />
-        </div>
+        <span className="animate-caret mt-2 inline-block h-[1.1em] w-[0.6em] bg-foreground align-text-bottom" />
       </div>
     </div>
   );
