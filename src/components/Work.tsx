@@ -26,6 +26,8 @@ type ProjectProps = {
   checked: string;
   /** Directory of the project's long-form page, under BASE_URL. */
   writeup: string;
+  /** Rendered as chips on the left of the closing row. */
+  links: { label: string; href: string }[];
   children: ReactNode;
 };
 
@@ -37,6 +39,7 @@ function Project({
   status,
   checked,
   writeup,
+  links,
   children,
 }: ProjectProps) {
   return (
@@ -84,15 +87,26 @@ function Project({
           {children}
         </div>
 
-        <a
-          href={`${import.meta.env.BASE_URL}${writeup}/`}
-          className="liquid-glass font-display mt-10 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm text-foreground hover:scale-[1.03]"
-        >
-          Read more on {name}
-          <span aria-hidden="true" className="text-accent">
-            →
-          </span>
-        </a>
+        <div className="mt-10 flex flex-wrap items-center gap-3">
+          {links.map((l) => (
+            <LinkChip key={l.href} href={l.href}>
+              {l.label}
+            </LinkChip>
+          ))}
+
+          <a
+            href={`${import.meta.env.BASE_URL}${writeup}/`}
+            className="font-display group ml-auto inline-flex items-center gap-2 text-sm uppercase tracking-[0.16em] text-foreground underline decoration-border underline-offset-[6px] transition-colors hover:decoration-accent"
+          >
+            Read more
+            <span
+              aria-hidden="true"
+              className="text-accent transition-transform duration-200 group-hover:translate-x-1"
+            >
+              →
+            </span>
+          </a>
+        </div>
       </Reveal>
     </article>
   );
@@ -115,6 +129,13 @@ export default function Work() {
         status="Early but real. Unsigned — notarization needs a paid Apple Developer account, so there is no installer yet."
         checked="486 tests across the core service, run by CI on every push."
         writeup="tilt"
+        links={[
+          { label: "Repository", href: "https://github.com/soya-00/tilt" },
+          {
+            label: "SECURITY.md",
+            href: "https://github.com/soya-00/tilt/blob/main/SECURITY.md",
+          },
+        ]}
       >
         <p>
           Tilt is a journal that notices things. You write into one stream — no
@@ -152,13 +173,6 @@ export default function Work() {
           raised again by the next reader. The security document is the artifact
           I would point a reader at first.
         </p>
-
-        <div className="flex flex-wrap gap-3 pt-2">
-          <LinkChip href="https://github.com/soya-00/tilt">Repository</LinkChip>
-          <LinkChip href="https://github.com/soya-00/tilt/blob/main/SECURITY.md">
-            SECURITY.md
-          </LinkChip>
-        </div>
       </Project>
 
       <Project
@@ -169,6 +183,14 @@ export default function Work() {
         status="Deployed prototype. Shared accounts, no per-student privacy yet."
         checked="63 tests, run by CI on every push."
         writeup="gals"
+        links={[
+          { label: "Live demo", href: "https://steam-mvp.onrender.com" },
+          { label: "Repository", href: "https://github.com/soya-00/steam-mvp" },
+          {
+            label: "LEGAL.md",
+            href: "https://github.com/soya-00/steam-mvp/blob/main/LEGAL.md",
+          },
+        ]}
       >
         <p>
           A web application for Vietnamese high-school students. Instead of
@@ -211,16 +233,6 @@ export default function Work() {
         <p className="text-muted-foreground/80">
           Screens are in Vietnamese because the students are.
         </p>
-
-        <div className="flex flex-wrap gap-3 pt-2">
-          <LinkChip href="https://steam-mvp.onrender.com">Live demo</LinkChip>
-          <LinkChip href="https://github.com/soya-00/steam-mvp">
-            Repository
-          </LinkChip>
-          <LinkChip href="https://github.com/soya-00/steam-mvp/blob/main/LEGAL.md">
-            LEGAL.md
-          </LinkChip>
-        </div>
       </Project>
 
       <Project
@@ -231,6 +243,17 @@ export default function Work() {
         status="A few milestones in. Boots under QEMU; far from the interface."
         checked="Every milestone has to run under QEMU before the next one starts."
         writeup="bloc"
+        links={[
+          { label: "Repository", href: "https://github.com/soya-00/bloc-os" },
+          {
+            label: "DECISIONS.md",
+            href: "https://github.com/soya-00/bloc-os/blob/main/docs/DECISIONS.md",
+          },
+          {
+            label: "DESIGN.md",
+            href: "https://github.com/soya-00/bloc-os/blob/main/docs/DESIGN.md",
+          },
+        ]}
       >
         <p>
           I built the first version entirely in Python, on purpose.{" "}
@@ -285,18 +308,6 @@ export default function Work() {
           </a>
           , with the log of what it settled.
         </p>
-
-        <div className="flex flex-wrap gap-3 pt-2">
-          <LinkChip href="https://github.com/soya-00/bloc-os">
-            Repository
-          </LinkChip>
-          <LinkChip href="https://github.com/soya-00/bloc-os/blob/main/docs/DECISIONS.md">
-            DECISIONS.md
-          </LinkChip>
-          <LinkChip href="https://github.com/soya-00/bloc-os/blob/main/docs/DESIGN.md">
-            DESIGN.md
-          </LinkChip>
-        </div>
       </Project>
     </Section>
   );
