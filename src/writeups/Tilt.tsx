@@ -105,7 +105,7 @@ export default function TiltWriteup() {
       <p>
         The document records four things. What held — SQL and FTS5 injection,
         YAML loading, layered escaping on rendered diagrams, the key never
-        serialised out. Seven findings that did not hold and were fixed,
+        serialized out. Seven findings that did not hold and were fixed,
         including request forgery in feed fetching, a token check that only
         engaged when a token already existed, and path traversal. Four more that
         a second review found after the first had missed them. And two that

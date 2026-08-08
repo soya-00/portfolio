@@ -56,7 +56,7 @@ export default function GalsWriteup() {
       <p>
         The reason is that grading converts exploration into examination, and
         examination is the thing these students already have too much of. A
-        student who is being marked optimises for the mark. A student who is not
+        student who is being marked optimizes for the mark. A student who is not
         being marked can afford to write down a wrong idea, which is the only
         way to find out it was wrong.
       </p>

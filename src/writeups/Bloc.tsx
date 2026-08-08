@@ -75,9 +75,9 @@ export default function BlocWriteup() {
 
       <H2>The design is a system, not a theme</H2>
       <p>
-        The interface is modelled on analog flight decks — annunciator panels,
+        The interface is modeled on analog flight decks — annunciator panels,
         information you read at a glance rather than parse. The rule that keeps
-        that from being decoration is that colours are named for what they mean:
+        that from being decoration is that colors are named for what they mean:
       </p>
 
       <PullQuote cite="BLOC OS — DESIGN.md">
@@ -87,7 +87,7 @@ export default function BlocWriteup() {
       </PullQuote>
 
       <p>
-        A palette with a colour called amber rots, because the next screen
+        A palette with a color called amber rots, because the next screen
         reaches for &ldquo;the orange one&rdquo; and invents a meaning nobody
         else knows about. A palette with a role called{" "}
         <code className="font-mono text-[0.9em]">attention</code> forces the
@@ -95,7 +95,7 @@ export default function BlocWriteup() {
         person.
       </p>
       <p>
-        The related rule is marked non-negotiable: anything conveyed by colour
+        The related rule is marked non-negotiable: anything conveyed by color
         is also conveyed by something else. That one came from a real failure —
         an early contrast check summed RGB channels, and a phosphor green summed
         lower than a muted mint while reading considerably brighter, so the
