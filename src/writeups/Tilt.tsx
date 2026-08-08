@@ -1,5 +1,6 @@
 import Figure from "@/components/Figure";
 import PullQuote from "@/components/PullQuote";
+import RepoTree from "@/components/RepoTree";
 import WriteupPage, { H2 } from "@/components/WriteupPage";
 
 export default function TiltWriteup() {
@@ -45,6 +46,38 @@ export default function TiltWriteup() {
         </>
       }
     >
+      <RepoTree
+        root="tilt"
+        caption="The repository at 1d1af4e"
+        nodes={[
+          {
+            name: "core/",
+            note: "the service — Markdown in, structure out",
+            children: [
+              { name: "tilt/", note: "journal, store, embed, agents, api" },
+              { name: "tests/", note: "486 tests" },
+              { name: "pyproject.toml" },
+            ],
+          },
+          {
+            name: "apps/",
+            children: [{ name: "desktop/", note: "Tauri shell, React front end" }],
+          },
+          {
+            name: "docs/",
+            children: [
+              { name: "architecture.md" },
+              { name: "design.md" },
+              { name: "install.md" },
+              { name: "tour.md" },
+            ],
+          },
+          { name: "scripts/", note: "sidecar build, icons, install" },
+          { name: "SECURITY.md", note: "the audit" },
+          { name: "README.md" },
+        ]}
+      />
+
       <Figure
         src="constellationdark.png"
         alt="Tilt showing a stream of journal entries linked by 'builds on' and 'echoes' relations, with a constellation graph of 29 connected thoughts beside it."

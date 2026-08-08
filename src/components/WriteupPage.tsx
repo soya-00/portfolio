@@ -38,21 +38,22 @@ export default function WriteupPage({
         className="fixed inset-0 z-0 h-full w-full object-cover"
       />
 
-      <main className="console relative z-10 mx-auto w-full max-w-6xl border-x border-white/[0.07]">
-        <div className="px-5 pt-10 sm:px-8">
+      {/* Same panel and text column as the index page. */}
+      <main className="console relative z-10 mx-auto w-full max-w-4xl border-x border-white/[0.07]">
+        <div className="mx-auto w-full max-w-3xl px-6 pt-10">
           {/*
             Sized so the longest name reaches the full measure and none of them
             overflow it; the cap holds once the console stops growing.
           */}
           <h1
             className="font-display font-bold uppercase leading-[0.8] tracking-[-0.03em] text-foreground"
-            style={{ fontSize: "min(20vw, 300px)" }}
+            style={{ fontSize: "min(20vw, 195px)" }}
           >
             {name}
           </h1>
 
           <div className="mt-8 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2 border-t border-border pt-2 text-[11px] uppercase tracking-[0.14em] sm:text-xs">
-            <span className="text-muted-foreground">{kicker}</span>
+            <span className="font-display text-muted-foreground">{kicker}</span>
             <nav className="font-display flex gap-5">
               <a href={home} className="text-foreground/70 hover:text-foreground">
                 Index
@@ -97,11 +98,11 @@ export default function WriteupPage({
           </div>
 
           {/* The opening, set large. */}
-          <div className="mt-10 max-w-5xl space-y-5 text-xl leading-[1.25] tracking-[-0.01em] text-foreground sm:text-2xl md:text-[28px]">
+          <div className="mt-10 space-y-5 text-xl leading-[1.25] tracking-[-0.01em] text-foreground sm:text-2xl md:text-[28px]">
             {lead}
           </div>
 
-          <div className="mt-14 max-w-3xl space-y-6 pb-24 leading-relaxed text-muted-foreground">
+          <div className="mt-14 space-y-6 pb-24 leading-relaxed text-muted-foreground">
             {children}
 
             <p className="pt-6 text-sm">

@@ -1,4 +1,5 @@
 import Figure from "@/components/Figure";
+import RepoTree from "@/components/RepoTree";
 import WriteupPage, { H2 } from "@/components/WriteupPage";
 
 export default function GalsWriteup() {
@@ -44,6 +45,51 @@ export default function GalsWriteup() {
         </>
       }
     >
+      <RepoTree
+        root="steam-mvp"
+        caption="The repository at 78f9af7"
+        nodes={[
+          {
+            name: "app/",
+            note: "FastAPI application",
+            children: [
+              { name: "routers/", note: "auth, chat, student, teacher" },
+              { name: "templates/", note: "Jinja, server-rendered" },
+              { name: "moderation.py", note: "what the assistant may not do" },
+              { name: "gemini.py", note: "the assistant, offline-safe" },
+            ],
+          },
+          {
+            name: "data/",
+            children: [
+              { name: "scenarios.json", note: "the professions" },
+              { name: "resources.json" },
+            ],
+          },
+          {
+            name: "tests/",
+            note: "63 tests",
+            children: [
+              { name: "test_no_grading.py", note: "the refusal, enforced" },
+              { name: "test_privacy.py" },
+              { name: "test_a11y_markers.py" },
+            ],
+          },
+          {
+            name: "docs/",
+            note: "Vietnamese",
+            children: [
+              { name: "KY-THUAT.md" },
+              { name: "NHAT-KY-THIET-KE.md" },
+              { name: "VIEC-CAN-LAM.md" },
+            ],
+          },
+          { name: "static/", note: "self-hosted typefaces, built CSS" },
+          { name: "LEGAL.md", note: "the limits, in full" },
+          { name: "README.md" },
+        ]}
+      />
+
       <Figure
         src="04khonggiantuduy.png"
         alt="A GALS scenario in Vietnamese: the student is an epidemiologist investigating 38 sick boarding-school students. The assistant replies by asking which parts of the student's reasoning are known and which are being guessed."

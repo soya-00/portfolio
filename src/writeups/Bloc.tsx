@@ -1,4 +1,5 @@
 import PullQuote from "@/components/PullQuote";
+import RepoTree from "@/components/RepoTree";
 import WriteupPage, { H2 } from "@/components/WriteupPage";
 
 export default function BlocWriteup() {
@@ -83,15 +84,16 @@ export default function BlocWriteup() {
 
       <PullQuote cite="BLOC — DESIGN.md">
         Every palette entry is named for what it means. There is no{" "}
-        <code className="font-mono text-[0.9em]">amber</code> in the codebase;
-        there is <code className="font-mono text-[0.9em]">attention</code>.
+        <code className="font-display text-[0.95em]">amber</code> in the
+        codebase; there is{" "}
+        <code className="font-display text-[0.95em]">attention</code>.
       </PullQuote>
 
       <p>
         A palette with a color called amber rots. The next screen reaches for
         &ldquo;the orange one&rdquo; and invents a meaning nobody else knows. A
         palette with a role called{" "}
-        <code className="font-mono text-[0.9em]">attention</code> forces the
+        <code className="font-display text-[0.95em]">attention</code> forces the
         question of whether this thing genuinely needs a decision from the
         person.
       </p>
@@ -104,6 +106,54 @@ export default function BlocWriteup() {
       </p>
 
       <H2>What actually runs</H2>
+
+      <RepoTree
+        root="bloc-os"
+        caption="The repository at b86db4a — the documents outnumber the kernel"
+        nodes={[
+          {
+            name: "boot/",
+            children: [
+              { name: "boot.S", note: "EL2 to EL1, then C" },
+              { name: "vectors.S", note: "the exception table" },
+              { name: "link.ld.in", note: "generated per board" },
+            ],
+          },
+          {
+            name: "kernel/",
+            children: [
+              { name: "main.c" },
+              { name: "uart.c", note: "PL011, the first character" },
+              { name: "exception.c" },
+            ],
+          },
+          {
+            name: "board/",
+            note: "three targets",
+            children: [
+              { name: "pi5.h" },
+              { name: "raspi4b.h" },
+              { name: "virt.h", note: "QEMU" },
+            ],
+          },
+          {
+            name: "docs/",
+            note: "carried over from the prototype",
+            children: [
+              { name: "DESIGN.md", note: "the design system" },
+              { name: "FORMAT.md", note: "the record format" },
+              { name: "INTERACTION.md", note: "the interaction contract" },
+              { name: "VOCAB.md", note: "the status vocabulary" },
+              { name: "DECISIONS.md", note: "the log" },
+              { name: "HARDWARE.md" },
+              { name: "ROADMAP.md", note: "fifteen milestones" },
+            ],
+          },
+          { name: "Makefile" },
+          { name: "README.md" },
+        ]}
+      />
+
       <p>
         A bare-metal AArch64 kernel for the Raspberry Pi 5, in C and assembly.
         It builds for three boards through a generated linker script. It boots

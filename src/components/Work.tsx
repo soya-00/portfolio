@@ -290,8 +290,9 @@ export default function Work() {
 
         <PullQuote cite="BLOC — DESIGN.md">
           Every palette entry is named for what it means. There is no{" "}
-          <code className="font-mono text-[0.9em]">amber</code> in the codebase;
-          there is <code className="font-mono text-[0.9em]">attention</code>.
+          <code className="font-display text-[0.95em]">amber</code> in the
+          codebase; there is{" "}
+          <code className="font-display text-[0.95em]">attention</code>.
         </PullQuote>
 
         <p>
