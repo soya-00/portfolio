@@ -28,8 +28,8 @@ const TREE: Branch[] = [
     bay: "ACTIVE",
     stack: "C · AArch64 assembly · QEMU · Raspberry Pi 5",
     leaves: [
-      { label: "DECISIONS.md", href: "https://github.com/soya-00/bloc-os/blob/main/docs/DECISIONS.md", note: "the log" },
-      { label: "DESIGN.md", href: "https://github.com/soya-00/bloc-os/blob/main/docs/DESIGN.md", note: "the flight deck" },
+      { label: "DECISIONS.md", href: "https://github.com/soya-00/bloc-os-beta/blob/main/docs/DECISIONS.md", note: "the log" },
+      { label: "DESIGN.md", href: "https://github.com/soya-00/bloc-os-beta/blob/main/docs/DESIGN.md", note: "the flight deck" },
       { label: "repository", href: "https://github.com/soya-00/bloc-os" },
       { label: "bloc-os-beta", href: "https://github.com/soya-00/bloc-os-beta", note: "the prototype" },
     ],

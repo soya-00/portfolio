@@ -65,6 +65,12 @@
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-body);
   }
+
+  /* Terminals invert the cell block on select. */
+  ::selection {
+    background: hsl(var(--accent));
+    color: hsl(var(--background));
+  }
 }
 
 .liquid-glass {
@@ -117,6 +123,21 @@
 
 .animate-fade-rise-delay-2 {
   animation: fade-rise 0.8s ease-out 0.4s both;
+}
+
+@keyframes caret {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  55%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-caret {
+  animation: caret 1s step-end infinite;
 }
 
 /* Directory tree. The connectors are drawn with borders rather than box
@@ -187,32 +208,16 @@
   transform: none;
 }
 
-/* The console: a dark panel that scrolls up over the fixed photograph, the
-   way kernel output scrolls in a terminal. Nearly opaque so long-form text
-   stays readable, but never fully — the image reads through it. */
-/* No backdrop-filter here: at this opacity it buys almost nothing, and a
-   backdrop root on the scrolling panel stops the fixed navigation's own
-   backdrop-filter from compositing over it. */
+/* The console: the panel that scrolls up over the fixed photograph, the way
+   kernel output scrolls in a terminal. Translucent, so the image reads
+   through it.
+
+   The leading-edge gradient that used to sit on top of this is gone: it
+   ramped up to 0.75 and then stopped dead, which put a hard horizontal step
+   across the panel wherever it ended. */
 .console {
   background: hsl(var(--background) / 0.88);
   box-shadow: 0 0 80px 20px hsl(var(--background) / 0.55);
-}
-
-/* Softens the panel's leading edge so it enters the frame rather than
-   cutting on. */
-.console::before {
-  content: '';
-  position: absolute;
-  inset-inline: 0;
-  top: 0;
-  height: 18vh;
-  background: linear-gradient(
-    to bottom,
-    hsl(var(--background) / 0) 0%,
-    hsl(var(--background) / 0.35) 45%,
-    hsl(var(--background) / 0.75) 100%
-  );
-  pointer-events: none;
 }
 
 /* Unlayered so it outranks the animation classes above, which are also
@@ -224,7 +229,8 @@
 
   .animate-fade-rise,
   .animate-fade-rise-delay,
-  .animate-fade-rise-delay-2 {
+  .animate-fade-rise-delay-2,
+  .animate-caret {
     animation: none;
   }
 
