@@ -3,17 +3,18 @@ import { BOOT_SEEN_KEY, bootWillPlay } from "@/lib/boot";
 import { cn } from "@/lib/utils";
 
 /* Timings, in order. A workstation ROM banner: the machine names itself,
-   states what it has, counts its memory, then hands off. */
+   states what it has, counts its memory, then hands off. The whole run is
+   about 2.2s including the fade — long enough to read, short enough not to
+   stand between a visitor and the page. */
 const T_MARK = 0;
-const T_COPY = 420;
-const T_SPECS = 760;
-const T_CHECK = 1080;
-const COUNT_TICK = 17; // ms per percent
-const T_COUNT_END = T_CHECK + 100 * COUNT_TICK;
-const T_AUTO = T_COUNT_END + 320;
-const T_BOOT = T_AUTO + 420;
-const T_LEAVE = T_BOOT + 900;
-const FADE = 450;
+const T_COPY = 170;
+const T_SPECS = 320;
+const T_CHECK = 470;
+const COUNT_MS = 820;
+const T_AUTO = 1400;
+const T_BOOT = 1540;
+const T_LEAVE = 1880;
+const FADE = 300;
 
 export default function BootSequence() {
   const [skipped] = useState(() => !bootWillPlay());
@@ -38,15 +39,18 @@ export default function BootSequence() {
     at(T_COPY, () => setStep(2));
     at(T_SPECS, () => setStep(3));
 
+    // Frame-driven rather than a fast interval: at this duration a tick per
+    // percent would be 100 renders in under a second, and would drift.
+    let frame = 0;
     at(T_CHECK, () => {
       setStep(4);
-      let n = 0;
-      const tick = window.setInterval(() => {
-        n += 1;
-        setCount(n);
-        if (n >= 100) window.clearInterval(tick);
-      }, COUNT_TICK);
-      timers.push(tick);
+      const started = performance.now();
+      const step = () => {
+        const progress = (performance.now() - started) / COUNT_MS;
+        setCount(Math.min(100, Math.round(progress * 100)));
+        if (progress < 1) frame = requestAnimationFrame(step);
+      };
+      frame = requestAnimationFrame(step);
     });
 
     at(T_AUTO, () => setStep(5));
@@ -54,10 +58,10 @@ export default function BootSequence() {
     at(T_LEAVE, () => setLeaving(true));
     at(T_LEAVE + FADE, () => setDone(true));
 
-    return () => timers.forEach((t) => {
-      window.clearTimeout(t);
-      window.clearInterval(t);
-    });
+    return () => {
+      timers.forEach(clearTimeout);
+      if (frame) cancelAnimationFrame(frame);
+    };
   }, [skipped]);
 
   useEffect(() => {
