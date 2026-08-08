@@ -7,20 +7,31 @@ export const prefersReducedMotion = () =>
   typeof window !== "undefined" &&
   window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
 
+let decided: boolean | null = null;
+
 /**
- * Whether the boot check will run this page load.
+ * Whether the boot banner runs this page load.
  *
- * Read during render by both BootSequence and the hero, so the headline can
- * wait for the check to clear instead of typing itself behind it. Hero renders
- * first, so it reads the flag before BootSequence's effect sets it.
+ * Decided once, on the first call, and cached for the life of the module.
+ * BootSequence and the hero both depend on this answer, and BootSequence
+ * writes the session flag the answer is derived from — so recomputing it
+ * later returns a different result. That is a real race: under StrictMode the
+ * banner mounts twice, the flag is set by the first mount, and the headline
+ * then reads "already seen", starts typing immediately, and finishes behind
+ * the banner where nobody sees it. Caching removes the ordering dependency.
  */
 export const bootWillPlay = () => {
+  if (decided !== null) return decided;
   if (typeof window === "undefined") return false;
-  if (prefersReducedMotion()) return false;
-  try {
-    return window.sessionStorage.getItem(BOOT_SEEN_KEY) !== "1";
-  } catch {
-    // Blocked storage: assume it plays rather than desynchronising.
-    return true;
+  if (prefersReducedMotion()) {
+    decided = false;
+    return decided;
   }
+  try {
+    decided = window.sessionStorage.getItem(BOOT_SEEN_KEY) !== "1";
+  } catch {
+    // Blocked storage: play it rather than desynchronising the two.
+    decided = true;
+  }
+  return decided;
 };
