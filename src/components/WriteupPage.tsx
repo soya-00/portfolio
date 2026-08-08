@@ -1,111 +1,118 @@
 import type { ReactNode } from "react";
-import LinkChip from "@/components/LinkChip";
 
+export type MetaCol = { label: string; value: string };
 export type WriteupLink = { label: string; href: string };
 
 type WriteupPageProps = {
-  bay: string;
   name: string;
   kicker: string;
-  meta: { label: string; value: string }[];
+  /** Rendered as labelled columns under the wordmark. Keep values short. */
+  meta: MetaCol[];
   links: WriteupLink[];
+  /** The opening, set large. */
+  lead: ReactNode;
   children: ReactNode;
 };
 
 /**
- * Layout for a project's long-form page. Same console over the same fixed
- * photograph as the index, so a deep link does not feel like another site.
+ * Editorial layout: the name at full width, dense metadata bands beneath it,
+ * then the opening set large and the body stepping down. Everything is flush
+ * left and the rules are hairlines.
  */
 export default function WriteupPage({
-  bay,
   name,
   kicker,
   meta,
   links,
+  lead,
   children,
 }: WriteupPageProps) {
+  const home = import.meta.env.BASE_URL;
+
   return (
     <div className="relative">
       <img
-        src={`${import.meta.env.BASE_URL}landing-page.png`}
+        src={`${home}landing-page.png`}
         alt=""
         aria-hidden="true"
         className="fixed inset-0 z-0 h-full w-full object-cover"
       />
 
-      <header className="fixed inset-x-0 top-0 z-50">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-background/90 via-background/45 to-transparent"
-        />
-        <nav className="relative mx-auto flex w-full max-w-4xl items-center gap-6 px-6 py-4">
-          <a
-            href={import.meta.env.BASE_URL}
-            className="font-display shrink-0 text-lg font-bold tracking-tight text-foreground transition-opacity hover:opacity-70 sm:text-xl"
+      <main className="console relative z-10 mx-auto w-full max-w-6xl border-x border-white/[0.07]">
+        <div className="px-5 pt-10 sm:px-8">
+          {/*
+            Sized so the longest name reaches the full measure and none of them
+            overflow it; the cap holds once the console stops growing.
+          */}
+          <h1
+            className="font-display font-bold uppercase leading-[0.8] tracking-[-0.03em] text-foreground"
+            style={{ fontSize: "min(20vw, 300px)" }}
           >
-            Soya
-          </a>
-          <a
-            href={`${import.meta.env.BASE_URL}#work`}
-            className="text-[13px] text-foreground/60 transition-colors hover:text-foreground"
-          >
-            ← Back to projects
-          </a>
-        </nav>
-      </header>
+            {name}
+          </h1>
 
-      <main className="relative z-10 pt-24">
-        <div className="console relative mx-auto w-full max-w-4xl border-x border-white/[0.07] pb-24">
-          <article className="mx-auto w-full max-w-3xl px-6 py-20 md:py-28">
-            <div className="flex items-stretch">
-              <span className="font-display border border-accent/70 px-3 py-1.5 text-xs tracking-[0.18em] text-accent">
-                {bay}
-              </span>
-              <span
-                className="ml-4 flex-1 self-center border-t border-border"
-                aria-hidden="true"
-              />
-            </div>
-
-            <h1 className="font-display mt-6 text-4xl font-bold tracking-tight sm:text-5xl">
-              {name}
-            </h1>
-            <p className="mt-3 text-lg text-muted-foreground sm:text-xl">
-              {kicker}
-            </p>
-
-            <dl className="mt-8 grid gap-x-6 gap-y-3 border-y border-border/60 py-5 text-sm sm:grid-cols-[7rem_1fr]">
-              {meta.map((row) => (
-                <div key={row.label} className="contents">
-                  <dt className="font-display text-xs uppercase tracking-[0.16em] text-muted-foreground">
-                    {row.label}
-                  </dt>
-                  <dd className="text-foreground/90">{row.value}</dd>
-                </div>
-              ))}
-            </dl>
-
-            <div className="mt-12 space-y-6 leading-relaxed text-muted-foreground">
-              {children}
-            </div>
-
-            <div className="mt-14 flex flex-wrap gap-3 border-t border-border/60 pt-8">
-              {links.map((l) => (
-                <LinkChip key={l.href} href={l.href}>
-                  {l.label}
-                </LinkChip>
-              ))}
-            </div>
-
-            <p className="mt-12 text-sm">
+          <div className="mt-8 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2 border-t border-border pt-2 text-[11px] uppercase tracking-[0.14em] sm:text-xs">
+            <span className="text-muted-foreground">{kicker}</span>
+            <nav className="font-display flex gap-5">
+              <a href={home} className="text-foreground/70 hover:text-foreground">
+                Index
+              </a>
               <a
-                href={`${import.meta.env.BASE_URL}#work`}
-                className="text-foreground underline decoration-accent/50 underline-offset-4 transition-colors hover:decoration-accent"
+                href={`${home}#work`}
+                className="text-foreground/70 hover:text-foreground"
+              >
+                Projects
+              </a>
+            </nav>
+          </div>
+
+          <dl className="grid grid-cols-1 gap-x-8 border-t border-border sm:grid-cols-3">
+            {meta.map((c) => (
+              <div
+                key={c.label}
+                className="border-b border-border/60 py-3 last:border-b-0 sm:border-b-0"
+              >
+                <dt className="font-display text-[10px] uppercase tracking-[0.16em] text-muted-foreground/70">
+                  {c.label}
+                </dt>
+                <dd className="mt-1 text-[13px] leading-snug text-foreground/90">
+                  {c.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+
+          <div className="flex flex-wrap gap-x-6 gap-y-1 border-y border-border py-2">
+            {links.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                target="_blank"
+                rel="noreferrer"
+                className="font-display text-[11px] uppercase tracking-[0.14em] text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-accent"
+              >
+                {l.label}
+              </a>
+            ))}
+          </div>
+
+          {/* The opening, set large. */}
+          <div className="mt-10 max-w-5xl space-y-5 text-xl leading-[1.25] tracking-[-0.01em] text-foreground sm:text-2xl md:text-[28px]">
+            {lead}
+          </div>
+
+          <div className="mt-14 max-w-3xl space-y-6 pb-24 leading-relaxed text-muted-foreground">
+            {children}
+
+            <p className="pt-6 text-sm">
+              <a
+                href={`${home}#work`}
+                className="font-display uppercase tracking-[0.16em] text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-accent"
               >
                 ← Back to projects
               </a>
             </p>
-          </article>
+          </div>
         </div>
       </main>
     </div>
@@ -115,7 +122,7 @@ export default function WriteupPage({
 /** A section heading inside a writeup. */
 export function H2({ children }: { children: ReactNode }) {
   return (
-    <h2 className="font-display pt-8 text-2xl font-bold tracking-tight text-foreground">
+    <h2 className="font-display pt-8 text-xl font-bold uppercase tracking-[0.06em] text-foreground">
       {children}
     </h2>
   );
