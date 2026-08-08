@@ -34,7 +34,7 @@ export default function BlocWriteup() {
           href: "https://github.com/soya-00/bloc-os-beta/blob/main/docs/DESIGN.md",
         },
         {
-          label: "The Python prototype",
+          label: "bloc-os-beta",
           href: "https://github.com/soya-00/bloc-os-beta",
         },
       ]}
