@@ -247,11 +247,11 @@ export default function Work() {
           { label: "Repository", href: "https://github.com/soya-00/bloc-os" },
           {
             label: "DECISIONS.md",
-            href: "https://github.com/soya-00/bloc-os/blob/main/docs/DECISIONS.md",
+            href: "https://github.com/soya-00/bloc-os-beta/blob/main/docs/DECISIONS.md",
           },
           {
             label: "DESIGN.md",
-            href: "https://github.com/soya-00/bloc-os/blob/main/docs/DESIGN.md",
+            href: "https://github.com/soya-00/bloc-os-beta/blob/main/docs/DESIGN.md",
           },
         ]}
       >
@@ -288,10 +288,10 @@ export default function Work() {
           prototypes and comparing them, not before:
         </p>
 
-        <PullQuote cite="BLOC OS — DESIGN.md">
+        <PullQuote cite="BLOC — DESIGN.md">
           Every palette entry is named for what it means. There is no{" "}
-          <code className="font-mono text-[0.9em]">amber</code>; there is{" "}
-          <code className="font-mono text-[0.9em]">attention</code>.
+          <code className="font-mono text-[0.9em]">amber</code> in the codebase;
+          there is <code className="font-mono text-[0.9em]">attention</code>.
         </PullQuote>
 
         <p>
