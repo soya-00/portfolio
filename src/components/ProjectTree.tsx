@@ -16,7 +16,7 @@ const TREE: Branch[] = [
   {
     name: "gals",
     bay: "ACTIVE",
-    stack: "FastAPI · Jinja2 · HTMX · Tailwind v4 · SQLite · Gemini",
+    stack: "FastAPI · Jinja2 · HTMX · Tailwind v4 · Postgres · OpenAI",
     leaves: [
       { label: "steam-mvp.onrender.com", href: "https://steam-mvp.onrender.com", note: "live" },
       { label: "LEGAL.md", href: "https://github.com/soya-00/steam-mvp/blob/main/LEGAL.md", note: "limits, in full" },

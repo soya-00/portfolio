@@ -483,7 +483,7 @@ const SECTIONS: CaseSection[] = [
         <Decision
           title="The product is complete with the model switched off"
           chose="A scripted mode covering every screen, with the interface saying outright when it is active."
-          why="Built for resilience on a school network. It turned out to be the legally viable configuration for a first pilot — see the compliance section."
+          why="Built for resilience on a school network, and it doubles as the answer when a computer room's connection fails mid-lesson. A scripted path that covers every screen is also what lets the offline mode stay a real fallback rather than a degraded one."
         />
         <Decision
           title="The AI proposes, the student decides"
@@ -496,21 +496,22 @@ const SECTIONS: CaseSection[] = [
           why="A prompt is a request; code is a guarantee. Inputs that are only emoji or text smileys get their own honest reply instead."
         />
         <Decision
-          title="Explicit safety thresholds, not vendor defaults"
-          chose="All harm categories set explicitly on every call."
+          title="Safety configured explicitly"
+          chose="The provider's moderation step is an explicit call in our own pipeline, stacked on the phrase filter, rather than relying on model-side defaults."
           why="A product for minors should not inherit whatever configuration the vendor happens to ship this quarter."
         />
         <Decision
-          title="Model name discovered, never hard-coded"
-          chose="Probe models.list() at startup against a priority order, overridable by environment variable. Migrated from the deprecated google-generativeai to google-genai."
-          why="Model IDs churn. A remembered version string has already caused two defects in this project."
+          title="Model name resolved at startup, never hard-coded"
+          chose="Resolve the model against a priority order when the process boots, overridable by environment variable, with the vendor SDK behind one module."
+          why="Model IDs churn and SDKs get deprecated. A remembered version string has already caused two defects in this project, and keeping the boundary thin is what made changing vendor a contained job rather than a rewrite."
         />
 
         <Note label="Minimum viable payload">
-          Only the current question and the current answer go to the API — never
-          the whole journal. Chat is capped at 30 messages per session and input
-          at 2,000 characters. The key lives in the deploy environment, never in
-          the repository, and never reaches the browser.
+          What crosses the boundary is bounded at both ends, since chat is
+          capped at 30 messages per session and input at 2,000 characters, so a
+          single session cannot quietly accumulate into a corpus. The key lives
+          in the deploy environment, never in the repository, and never reaches
+          the browser.
         </Note>
       </>
     ),
@@ -615,32 +616,34 @@ const SECTIONS: CaseSection[] = [
           as an open question rather than assumed to be a safe harbor.
         </p>
 
-        <H3>A vendor term that decides the pilot architecture</H3>
+        <H3>What the vendor choice has to satisfy</H3>
         <p>
-          The Gemini API additional terms require the developer to be 18+ and
-          commit to not using the service in an application &ldquo;directed
-          towards or likely to be accessed by individuals under the age of
-          18.&rdquo; GALS is aimed at 16–18-year-olds in Vietnamese secondary
-          schools, some of them under 16. On the free tier, prompts are also
-          used to improve Google’s products; only paid-tier access carries the
-          no-training commitment and the processor-role addendum.
+          Sending a student’s sentence to a model is a cross-border transfer of
+          a minor’s data, so the vendor decision is a compliance decision before
+          it is a quality one. Three conditions were non-negotiable: terms that
+          contemplate minors in a school deployment, a no-training commitment —
+          several providers’ free tiers use prompts to improve their products —
+          and zero data retention, so the transfer leaves nothing behind on the
+          other side.
         </p>
         <p>
-          Five routes were mapped — enterprise terms, a different vendor,
-          teacher-mediated calls, a Vietnam-hosted model, or no model at all.
-          The chosen configuration for a first pilot is the scripted mode that
-          already ships.
+          The settled vendor is OpenAI, on a paid account with Zero Data
+          Retention enabled, owned by the named responsible adult, under a hard
+          spend cap. Only the current question and the current answer are sent,
+          and only from the role-play store, Kho A — the reflective store never
+          leaves the country at all.
         </p>
 
-        <Note label="Why that is the right answer, not the cheap one">
-          Running the pilot without the model removes four separate compliance
-          workstreams from the critical path: no vendor negotiation, no
-          cross-border transfer assessment, no transfer at all, and no exposure
-          on the age term. It also matches what a first pilot is testing —
-          whether role-play career scenarios work on real students, not whether
-          the language model is any good. The scripted mode was built for
-          network resilience; it turned out to be the launch-viable
-          configuration.
+        <Note label="Why the split store is what makes this work">
+          Because only Kho A crosses the border, the transfer dossier describes
+          anonymous role-play professional writing and nothing else. Had
+          reflective journals been in scope, the same filing would have had to
+          cover minors’ personal writing — a materially harder document to write
+          and a materially worse one to defend. The architecture decision and
+          the compliance decision are the same decision. The scripted offline
+          mode stays as a first-class fallback: it was built for network
+          resilience, and it means a class can run a full lesson with no
+          transfer at all.
         </Note>
 
         <H3>The tension the architecture has to resolve</H3>
@@ -925,6 +928,14 @@ const SECTIONS: CaseSection[] = [
           ]}
         />
 
+        <p>
+          One name in that list is historical rather than descriptive:{" "}
+          <span className="text-foreground/90">test_gemini_offline</span> is
+          named for the demo&apos;s use of the Gemini API, and what it actually
+          guards is the offline path, which does not depend on which vendor sits
+          behind it.
+        </p>
+
         <H3>Performance work with a number attached</H3>
         <p>
           The teacher export looked instant on small data. Measured against a
@@ -992,8 +1003,8 @@ const SECTIONS: CaseSection[] = [
             ],
             [
               "AI answers cut off mid-sentence",
-              "The scripted fallback masked it completely",
-              "Flash models bill thinking against the output budget — measured 381 of 400 tokens. Leave the budget wide",
+              "A working fallback answered every time, so nothing looked broken",
+              "Reasoning tokens ate 381 of a 400-token output budget. Two rules: leave the budget wide, and make fallbacks announce themselves in logs — a silent fallback is an outage you cannot see",
             ],
             [
               "Vowel class missing Vietnamese diacritics",
@@ -1023,7 +1034,8 @@ const SECTIONS: CaseSection[] = [
     body: (
       <>
         <p>
-          The data layer is done, and so are accounts and consent capture. The
+          The data layer is done, and so are accounts and consent capture — in
+          the codebase; the public demo still runs the shared-account build. The
           filings, the school agreement and hosting are not. That work is
           administrative rather than technical, but the pilot cannot start
           without it.
@@ -1035,7 +1047,7 @@ const SECTIONS: CaseSection[] = [
 
         <Decision
           title="Supervised testing with real students"
-          chose="A supervised pilot with two classes at one partner school, assistant in scripted mode, teacher in the room throughout."
+          chose="A supervised pilot with two classes at one partner school, the assistant live, teacher in the room throughout."
           why="Every design decision here was made against a model of how a 16-year-old reads a screen. That model has not met thirty of them at once. Watching for where students stall inside a stage, whether the facts rail actually gets read, and whether “no grades” survives contact with pupils who have been graded on everything else."
         />
 
@@ -1074,7 +1086,7 @@ export default function GalsWriteup() {
         },
         {
           label: "Stack",
-          value: "FastAPI · Jinja2 · HTMX · Tailwind v4 · SQLite · Gemini",
+          value: "FastAPI · Jinja2 · HTMX · Tailwind v4 · Postgres · OpenAI",
         },
         {
           label: "Scope",

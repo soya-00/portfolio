@@ -351,7 +351,7 @@ const SECTIONS: CaseSection[] = [
     label: "Defect ledger",
     title: "Defect ledger",
     kicker:
-      "Bugs whose interest is in how long they stayed invisible. Every fix is covered by a regression test; the suite went 494 → 511 across the review.",
+      "Bugs whose interest is in how long they stayed invisible. Every fix is covered by a regression test; the pytest suite went 494 → 511 across the review.",
     body: (
       <>
         <DataTable
@@ -460,7 +460,7 @@ const SECTIONS: CaseSection[] = [
               "Closing it means giving up article reading or scoping the tool to one URL — a decision about what the app is, not a patch.",
             ],
             [
-              "No signed build, no installer.",
+              "Nothing here can be handed to someone who will not build it themselves.",
               "Open",
               "The .dmg is something you compile on your own Mac; the container is how you’d hand it to anyone else. This is the honest gap between this and a shipped product.",
             ],
@@ -526,7 +526,6 @@ export default function TiltWriteup() {
             ["Rust (Tauri shell)", "498 lines"],
             ["Tests", "697 — 511 pytest, 186 vitest"],
             ["Commits on main", "71"],
-            ["Distribution", "None. No signed build, no installer."],
           ]}
         />
       }

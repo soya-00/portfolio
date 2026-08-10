@@ -186,8 +186,8 @@ export default function Work() {
         bay="ACTIVE"
         name="GALS"
         kicker="Try out a career before you have to choose one."
-        stack="FastAPI · Jinja2 · HTMX · Tailwind v4 · SQLite · Gemini"
-        status="Built and compliance-ready. Accounts and consent capture done; preparing for a supervised school pilot."
+        stack="FastAPI · Jinja2 · HTMX · Tailwind v4 · Postgres · OpenAI"
+        status="Built and compliance-ready. Accounts and consent capture done in the codebase; the public demo still runs the shared-account build. Preparing for a supervised school pilot."
         checked="222 tests, run by CI on every push."
         writeup="gals"
         links={[
