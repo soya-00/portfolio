@@ -12,7 +12,7 @@ export type { MetaCol, PageLink as WriteupLink };
 type WriteupPageProps = {
   name: string;
   kicker: string;
-  /** Rendered as labelled columns under the wordmark. Keep values short. */
+  /** Rendered as labeled columns under the wordmark. Keep values short. */
   meta: MetaCol[];
   links: PageLink[];
   /** The opening, set large. */

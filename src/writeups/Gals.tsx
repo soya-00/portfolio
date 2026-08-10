@@ -62,10 +62,20 @@ const SECTIONS: CaseSection[] = [
           pull.
         </p>
 
+        <p>
+          The home screen is where that framing has to survive contact with a
+          student, so it opens on whatever they left unfinished rather than on a
+          menu of everything available, and the five branches sit underneath it
+          carrying only their state — one done, one in progress, three not yet
+          opened. A teacher&apos;s note sits beside them marked as readable by
+          that student alone, which is the same privacy rule the rest of the
+          product is built around, stated where it can actually be seen.
+        </p>
+
         <Figure
-          src="02trangcanhan.png"
-          alt="A GALS student home page in Vietnamese: a scenario in progress asking how to divide 900 million across 240 applications, the five STEAM branches with their state, a private note from a teacher, tasks set by the teacher, and upcoming sessions."
-          caption="A student's home: five branches, one scenario open, and a teacher's note marked readable only by them"
+          src="01homepage.png"
+          alt="A GALS student home page in Vietnamese: an unfinished scenario asking how to divide 900 million across 240 applications, the five STEAM branches with their state, a private note from a teacher, tasks set by the teacher, and upcoming sessions."
+          caption="Prototype interface, not final — a student's home: five branches, one scenario open, and a teacher's note marked readable only by them"
         />
       </>
     ),
@@ -282,7 +292,7 @@ const SECTIONS: CaseSection[] = [
         <Figure
           src="05hoso.png"
           alt="A GALS competency profile in Vietnamese: counts of scenarios entered and answers written, a private message from a teacher, the app's reflection on how the student reasoned, and a portfolio entry with its own separate sharing control."
-          caption="The profile: a teacher's private message, the student's own words, and sharing as a separate control"
+          caption="Prototype interface, not final — the profile: a teacher's private message, the student's own words, and sharing as a separate control"
         />
 
         <H3>Export designed around what it must not contain</H3>
@@ -406,7 +416,7 @@ const SECTIONS: CaseSection[] = [
         <Note label="Stated in the product, not just internally">
           This is not a safety feature and is not described as one. It is phrase
           matching, so it misses. GALS does not detect crisis, does not notify a
-          teacher, a parent or a school, and is not a counselling service.
+          teacher, a parent or a school, and is not a counseling service.
           Building a detector creates a duty simply by existing — the control
           for that sits in how the product is described far more than in the
           code, and that language is carried verbatim into the school agreement
@@ -452,7 +462,7 @@ const SECTIONS: CaseSection[] = [
 
         <Decision
           title="The product is complete with the model switched off"
-          chose="A scripted mode covering every screen, with the interface stating plainly when it is active."
+          chose="A scripted mode covering every screen, with the interface saying outright when it is active."
           why="Built for resilience on a school network. It turned out to be the legally viable configuration for a first pilot — see the compliance section."
         />
         <Decision
@@ -462,7 +472,7 @@ const SECTIONS: CaseSection[] = [
         />
         <Decision
           title="No emoji, enforced in code"
-          chose="The system prompt forbids emoji, and every response is additionally stripped of emoji before rendering."
+          chose="The system prompt forbids emoji, and every response is stripped of emoji again before rendering."
           why="A prompt is a request; code is a guarantee. Inputs that are only emoji or text smileys get their own honest reply instead."
         />
         <Decision
@@ -542,7 +552,7 @@ const SECTIONS: CaseSection[] = [
             [
               "Decree 147/2024/NĐ-CP",
               "25 Dec 2024",
-              "Under-16 accounts, social-network licence thresholds, account verification, retention.",
+              "Under-16 accounts, social-network license thresholds, account verification, retention.",
             ],
             [
               "Law on Children 2016 + Decree 56/2017",
@@ -680,6 +690,20 @@ const SECTIONS: CaseSection[] = [
           rather than accepting an arbitrary URL behind a{" "}
           <span className="text-foreground/90">javascript:</span> block.
         </p>
+        <p>
+          None of that counts for much if a student cannot find it, so the
+          rights the law grants them — seeing what the product holds, taking a
+          copy of it, and leaving — sit in the account menu next to the ordinary
+          settings rather than behind a support request, on the reasoning that a
+          right you have to ask an adult for is not one a sixteen-year-old will
+          ever use.
+        </p>
+
+        <Figure
+          src="02trangcanhan.png"
+          alt="The GALS account menu open in Vietnamese, listing personal profile, display and accessibility, privacy, download my data, and log out."
+          caption="Prototype interface, not final — privacy and data download sit in the ordinary account menu"
+        />
 
         <Note label="Scope of that work">
           The compliance document was written by the product side, not by a
@@ -810,10 +834,13 @@ const SECTIONS: CaseSection[] = [
       <>
         <p>
           The suite is not coverage theater. Most files exist because something
-          specific broke, or because a rule would rot without a guard.
+          specific broke, or because a rule would rot without a guard, and the
+          suites below are the ones where that origin is worth writing down
+          rather than the whole list.
         </p>
 
         <DataTable
+          caption="Some of the suites"
           head={["Suite", "Tests", "Guards"]}
           minWidth="40rem"
           rows={[

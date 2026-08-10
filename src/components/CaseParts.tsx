@@ -111,7 +111,7 @@ export function Decision({
   );
 }
 
-/** A labelled aside — the rule behind a decision, or the cost of one. */
+/** A labeled aside — the rule behind a decision, or the cost of one. */
 export function Note({
   label,
   children,

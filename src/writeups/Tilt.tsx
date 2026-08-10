@@ -425,15 +425,14 @@ const SECTIONS: CaseSection[] = [
         </p>
         <p>
           <span className="text-foreground/90">
-            I wrote a security document making four claims the code didn’t
-            support.
+            I trusted my own documentation over the code it described.
           </span>{" "}
-          It described path traversal as fixed, feeds as size-capped before
-          reading, the body limit as inside the auth gate, and prompt injection
-          as bounded to a misleading card. Each was true of some part of the
-          system and not the part the sentence named. Documentation that
-          describes intent rather than behavior is worse than none, because it
-          stops the next reader from checking.
+          Writing a claim down makes it feel settled, and once it is written the
+          next reader has no reason to go and check, which means a document
+          describing what I intended rather than what the system does is worse
+          than having written nothing at all. The rule I took from it is that a
+          sentence about behavior has to be traceable to the line that produces
+          it, or it does not go in.
         </p>
       </>
     ),
@@ -449,7 +448,7 @@ const SECTIONS: CaseSection[] = [
           minWidth="46rem"
           rows={[
             [
-              "Connector precision is unmeasured. Gate I set is ≥0.8 on hand-labelled pairs.",
+              "Connector precision is unmeasured. Gate I set is ≥0.8 on hand-labeled pairs.",
               "Open",
               "Needs a real corpus and a real key — the offline provider matches keywords and would only measure itself. Dismissals are kept as tombstones rather than deleted, so the rate per link kind is recoverable whenever there’s a corpus worth measuring.",
             ],

@@ -14,6 +14,7 @@ import Section from "@/components/Section";
 const BAY_STYLES: Record<string, string> = {
   ACTIVE: "border border-accent bg-accent text-background",
   HOLDING: "border border-accent/70 text-accent",
+  INCOMING: "border border-accent/35 text-accent/70",
   LANDED: "border border-border text-muted-foreground",
 };
 
@@ -140,13 +141,15 @@ export default function Work() {
         ]}
       >
         <p>
-          Tilt is a journal that notices things. You write into one stream — no
-          folders, no filing — and the app gives back understanding: what you
-          were circling, where today echoes something from March, where you now
-          contradict yourself.{" "}
+          Tilt is a journal that notices things, which in practice means you
+          write into a single stream with no folders to choose and no filing to
+          keep up with, and what the application hands back is understanding
+          rather than organization — what you were circling, where today echoes
+          something you wrote in March, where you now contradict yourself.{" "}
           <span className="text-foreground">
-            There are no todos, no boards, and no due dates anywhere in it, by
-            design.
+            There are no todos, no boards and no due dates anywhere in it,
+            because anything carrying a deadline outranks everything that does
+            not.
           </span>
         </p>
 
@@ -157,10 +160,11 @@ export default function Work() {
         />
 
         <p>
-          Markdown files on disk are the source of truth, and the database is
-          treated as a cache that can be deleted and rebuilt. Before demoing it,
-          I audited it and wrote down the result. The document opens by refusing
-          to posture:
+          Markdown files on disk are the source of truth and the database is
+          treated as a cache I have to be able to delete, which costs real work
+          on every feature but means the journal outlives the application
+          holding it. Before I demoed it to anyone I audited it and wrote the
+          result down, and the document opens by refusing to posture:
         </p>
 
         <PullQuote cite="Tilt — SECURITY.md">
@@ -169,19 +173,20 @@ export default function Work() {
         </PullQuote>
 
         <p>
-          It records what held, seven findings that did not and were fixed, four
-          more that a second review found after the first had missed them, and
-          two that testing withdrew — kept in the document so they are not
-          raised again by the next reader. The security document is the artifact
-          I would point a reader at first.
+          What follows is what held, six defects that did not and were fixed,
+          and two findings that testing withdrew — kept in the document rather
+          than deleted, so the next reader does not spend an afternoon raising
+          them again. Each of the six is interesting less for being hard than
+          for how long it stayed invisible, which is why that document is the
+          artifact I would point a reader at first.
         </p>
       </Project>
 
       <Project
-        bay="LANDED"
+        bay="ACTIVE"
         name="GALS"
         kicker="Try out a career before you have to choose one."
-        stack="FastAPI · Jinja · HTMX · Tailwind · Render"
+        stack="FastAPI · Jinja2 · HTMX · Tailwind v4 · SQLite · Gemini"
         status="Built and compliance-ready. Accounts and consent capture done; preparing for a supervised school pilot."
         checked="222 tests, run by CI on every push."
         writeup="gals"
@@ -195,41 +200,43 @@ export default function Work() {
         ]}
       >
         <p>
-          A web application for Vietnamese high-school students. Instead of
-          reading about careers, you take the role of someone doing the job and
-          work through a real situation from it. An AI assistant sits alongside,
-          but{" "}
+          A web application for Vietnamese high-school students, built on the
+          observation that reading a description of a career tells you almost
+          nothing about whether you would want to do it, so instead you take the
+          role of someone holding the job and work through a real situation from
+          it, with an AI assistant sitting alongside you that{" "}
           <span className="text-foreground">
-            it only asks questions back; it does not solve anything for you.
+            only ever asks questions back and never solves anything for you.
           </span>
+        </p>
+
+        <Figure
+          src="01homepage.png"
+          alt="A GALS student home page in Vietnamese: an unfinished scenario asking how to divide 900 million across 240 applications, the five STEAM branches with their state, a private note from a teacher, tasks set by the teacher, and upcoming sessions."
+          caption="Prototype interface, not final — a student's home, opening on what they left unfinished"
+        />
+
+        <p>
+          GALS has no scores, no rankings and no model answers, since grading
+          would turn career exploration into an examination and an examination
+          is the thing these students already have too much of. Each profession
+          also gets its own shape of evidence and its own output, so that an
+          energy engineer produces a system plan where an epidemiologist
+          produces an investigation plan, because if every job resolves into
+          &ldquo;interview users, then design an app&rdquo; then the student has
+          quietly learned that all professions are product design.
+        </p>
+        <p>
+          It was built for a competition and its documentation is in Vietnamese,
+          and because it is aimed at minors I wrote its limits down at length
+          rather than leaving them to be found later, in a document that keeps
+          what the design intends separate from what the build actually does.
         </p>
 
         <Figure
           src="05hoso.png"
           alt="A GALS competency profile in Vietnamese: counts of scenarios entered and answers written, a private message from a teacher, the app's reflection on how the student reasoned, and a portfolio entry with its own separate sharing control."
-          caption="The profile: a teacher's private message, and sharing as a separate control"
-        />
-
-        <p>
-          GALS deliberately has no scores, no rankings, and no model answers.
-          Grading would turn career exploration into a test, and a test is the
-          thing these students already have too many of. Each profession also
-          gets its own shape of evidence and its own output — an energy engineer
-          produces a system plan, an epidemiologist an investigation plan —
-          because if every job reduces to &ldquo;interview users, then design an
-          app,&rdquo; the learner has misunderstood what professions are.
-        </p>
-        <p>
-          It was built for a competition and its documentation is in Vietnamese.
-          Because it is aimed at minors, I wrote its limits down at length
-          rather than leaving them to be discovered. That document separates
-          what the design intends from what the prototype actually does.
-        </p>
-
-        <Figure
-          src="02trangcanhan.png"
-          alt="A GALS student home page in Vietnamese: a scenario in progress asking how to divide 900 million across 240 applications, the five STEAM branches with their state, a private note from a teacher, tasks set by the teacher, and upcoming sessions."
-          caption="A student's home: five branches, one scenario open, and a teacher's note marked readable only by them"
+          caption="Prototype interface, not final — the profile: a teacher's private message, and sharing as a separate control"
         />
 
         <p className="text-muted-foreground/80">
@@ -238,7 +245,7 @@ export default function Work() {
       </Project>
 
       <Project
-        bay="ACTIVE"
+        bay="INCOMING"
         name="BLOC OS"
         kicker="A kernel, and the prototype that specified it."
         stack="C · AArch64 assembly · QEMU · Raspberry Pi 5"
@@ -257,36 +264,38 @@ export default function Work() {
         ]}
       >
         <p>
-          I built the first version entirely in Python, on purpose.{" "}
+          I built the first version entirely in Python, on purpose, because{" "}
           <span className="text-foreground">
-            The question was whether the interface was worth committing to
+            the question I needed answered was whether the interface was worth
+            committing to at all
           </span>{" "}
-          — flight strips, single-key commands, the thermal printer, the Whisper
-          dispatch call. Python answered that in weeks. Answering it in C would
-          have cost months before I learned anything about the design.
+          — flight strips, single-key commands, a thermal printer, a dispatch
+          call routed through Whisper — and Python answered that in weeks where
+          asking the same question in C would have cost months before I learned
+          anything about the design.
         </p>
         <p>
           It did what a prototype is for. Four specification documents came out
-          of it and carried into this repository: the design system, the record
-          format, the interaction contract, and the status vocabulary. About ten
-          thousand lines of Python did not carry across, and were never meant
-          to.
+          of it and carried into this repository, covering the design system,
+          the record format, the interaction contract and the status vocabulary,
+          while about ten thousand lines of Python did not carry across and were
+          never meant to.
         </p>
         <p>
-          What exists now is a bare-metal AArch64 kernel for the Raspberry Pi 5.
-          It builds for three boards, boots under QEMU, prints over UART, drops
-          from EL2 to EL1, and deliberately faults itself three times to prove
-          the exception vector table works.{" "}
+          What exists now is a bare-metal AArch64 kernel for the Raspberry Pi 5,
+          which builds for three boards, boots under QEMU, prints over UART,
+          drops from EL2 to EL1 and then deliberately faults itself three times
+          to prove the exception vector table catches what it should.{" "}
           <span className="text-foreground">
             It is a long way from the interface it is being built for, and the
-            roadmap says so.
+            roadmap says so rather than implying otherwise.
           </span>
         </p>
         <p>
-          That interface is designed after analog flight decks — annunciator
-          panels, information hierarchy you read at a glance. It is a design
-          system rather than a theme, and it was written after building three
-          prototypes and comparing them, not before:
+          That interface follows analog flight decks, with annunciator panels
+          and an information hierarchy you read at a glance instead of parsing,
+          and it counts as a design system rather than a theme because it was
+          written after building three prototypes and comparing them:
         </p>
 
         <PullQuote cite="BLOC — DESIGN.md">
@@ -297,18 +306,18 @@ export default function Work() {
         </PullQuote>
 
         <p>
-          The rule that anything conveyed by color is also conveyed by something
-          else is marked non-negotiable. The prototype is still public, and the
-          specifications above are what it was built to produce:{" "}
+          The related rule, that anything conveyed by color is also conveyed by
+          something else, is marked non-negotiable. The prototype that produced
+          these specifications is still public as{" "}
           <a
             href="https://github.com/soya-00/bloc-os-beta"
             target="_blank"
             rel="noreferrer"
             className="text-foreground underline decoration-accent/50 underline-offset-4 transition-colors hover:decoration-accent"
           >
-            the Python version
+            bloc-os-beta
           </a>
-          , with the log of what it settled.
+          , together with the log of what it settled.
         </p>
       </Project>
     </Section>

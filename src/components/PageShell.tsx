@@ -45,7 +45,7 @@ export function PageShell({ children }: { children: ReactNode }) {
 }
 
 /**
- * Masthead, kicker, labelled metadata band and source links — the fixed
+ * Masthead, kicker, labeled metadata band and source links — the fixed
  * furniture at the head of any long-form page.
  */
 export function PageHeader({

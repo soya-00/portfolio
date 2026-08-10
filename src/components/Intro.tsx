@@ -6,22 +6,27 @@ export default function Intro() {
       <Reveal>
         <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
           <p>
-            I&apos;m seventeen, in my final year of the IB Diploma in Vietnam,
-            and bilingual in Vietnamese and English.
+            I am seventeen, in my final year of the IB Diploma in Vietnam, and
+            bilingual in Vietnamese and English.
           </p>
           <p>
-            On paper, a journal, a learning tool, and a kernel have little in common. 
-            {" "}
+            A journal, a learning tool and a kernel do not obviously belong on
+            the same page, but the reason I keep returning to all three is
+            that{" "}
             <span className="text-foreground">
-              Underneath, they are one thing.
+              each one is an instrument for thinking
             </span>{" "}
-          Each is an instrument for thinking — a tool that makes reasoning visible,
-            to the person doing it or to the machine underneath. And each carries a
-            log of what was decided and why, including the decisions that were wrong.
-            The instruments show what I build. The logs show how I think.
+            — a tool built to make reasoning visible, either to the person doing
+            it or to the machine underneath. Because I cannot trust my own
+            account of a decision several months after making it, each project
+            also carries a log of what was decided and why, including the
+            decisions that turned out to be wrong. The instruments are the part
+            you can run, while the logs are the part that shows how I got there.
           </p>
           <p>
-            I want to do research in natural language processing and machine learning, and to keep studying philosophy while I do.
+            What I want to do next is research in natural language processing
+            and machine learning, and to carry on studying philosophy alongside
+            it rather than after it.
           </p>
         </div>
       </Reveal>
