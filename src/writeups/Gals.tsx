@@ -483,7 +483,7 @@ const SECTIONS: CaseSection[] = [
         <Decision
           title="The product is complete with the model switched off"
           chose="A scripted mode covering every screen, with the interface saying outright when it is active."
-          why="Built for resilience on a school network. It turned out to be the legally viable configuration for a first pilot — see the compliance section."
+          why="Built for resilience on a school network, and it doubles as the answer when a computer room's connection fails mid-lesson. A scripted path that covers every screen is also what lets the offline mode stay a real fallback rather than a degraded one."
         />
         <Decision
           title="The AI proposes, the student decides"
@@ -507,10 +507,11 @@ const SECTIONS: CaseSection[] = [
         />
 
         <Note label="Minimum viable payload">
-          Only the current question and the current answer go to the API — never
-          the whole journal. Chat is capped at 30 messages per session and input
-          at 2,000 characters. The key lives in the deploy environment, never in
-          the repository, and never reaches the browser.
+          What crosses the boundary is bounded at both ends, since chat is
+          capped at 30 messages per session and input at 2,000 characters, so a
+          single session cannot quietly accumulate into a corpus. The key lives
+          in the deploy environment, never in the repository, and never reaches
+          the browser.
         </Note>
       </>
     ),
@@ -927,6 +928,14 @@ const SECTIONS: CaseSection[] = [
           ]}
         />
 
+        <p>
+          One name in that list is historical rather than descriptive:{" "}
+          <span className="text-foreground/90">test_gemini_offline</span> is
+          named for the demo&apos;s use of the Gemini API, and what it actually
+          guards is the offline path, which does not depend on which vendor sits
+          behind it.
+        </p>
+
         <H3>Performance work with a number attached</H3>
         <p>
           The teacher export looked instant on small data. Measured against a
@@ -1025,7 +1034,8 @@ const SECTIONS: CaseSection[] = [
     body: (
       <>
         <p>
-          The data layer is done, and so are accounts and consent capture. The
+          The data layer is done, and so are accounts and consent capture — in
+          the codebase; the public demo still runs the shared-account build. The
           filings, the school agreement and hosting are not. That work is
           administrative rather than technical, but the pilot cannot start
           without it.
@@ -1037,7 +1047,7 @@ const SECTIONS: CaseSection[] = [
 
         <Decision
           title="Supervised testing with real students"
-          chose="A supervised pilot with two classes at one partner school, assistant in scripted mode, teacher in the room throughout."
+          chose="A supervised pilot with two classes at one partner school, the assistant live, teacher in the room throughout."
           why="Every design decision here was made against a model of how a 16-year-old reads a screen. That model has not met thirty of them at once. Watching for where students stall inside a stage, whether the facts rail actually gets read, and whether “no grades” survives contact with pupils who have been graded on everything else."
         />
 
