@@ -129,7 +129,7 @@ export default function Work() {
         kicker="A thinking instrument for macOS."
         stack="Python · FastAPI · SQLite · React · Tauri"
         status="Early but real. Unsigned — notarization needs a paid Apple Developer account, so there is no installer yet."
-        checked="486 tests across the core service, run by CI on every push."
+        checked="697 tests — 511 pytest, 186 vitest — run by CI on every push."
         writeup="tilt"
         links={[
           { label: "Repository", href: "https://github.com/soya-00/tilt" },
@@ -183,7 +183,7 @@ export default function Work() {
         kicker="Try out a career before you have to choose one."
         stack="FastAPI · Jinja · HTMX · Tailwind · Render"
         status="Deployed prototype. Shared accounts, no per-student privacy yet."
-        checked="63 tests, run by CI on every push."
+        checked="222 tests, run by CI on every push."
         writeup="gals"
         links={[
           { label: "Live demo", href: "https://steam-mvp.onrender.com" },

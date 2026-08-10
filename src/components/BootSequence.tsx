@@ -119,7 +119,7 @@ export default function BootSequence() {
               </span>
             ) : (
               <span className="text-foreground">
-                549 tests passed, 0 skipped
+                919 tests passed, 0 skipped
               </span>
             )}
           </p>
