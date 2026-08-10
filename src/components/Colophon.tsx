@@ -7,28 +7,28 @@ export default function Colophon() {
       <Reveal>
         <div className="space-y-6 leading-relaxed text-muted-foreground">
           <p>
-            My interest is research, not shipping software. The projects here
-            are instruments — things built to make a question answerable — and
-            they are AI-assisted at the implementation level.{" "}
+            My interest is in research rather than in shipping software, so the
+            projects here are instruments — things built to make a question
+            answerable — and at the implementation level they are AI-assisted.{" "}
             <span className="text-foreground">
-              I am deliberate about that distinction because attribution is the
-              part of research practice you cannot be casual about:
+              I say that outright because attribution is the part of research
+              practice nobody can afford to be casual about,
             </span>{" "}
-            what is yours, what is borrowed, what a tool produced. Getting it
-            right on a personal project is practice for getting it right where
-            it counts.
+            and keeping track of what is mine, what is borrowed and what a tool
+            produced is a habit that only holds up later if it is practiced
+            somewhere the stakes are low.
           </p>
           <p>
-            I am also teaching myself computer science from the foundations. I
-            work on one subject at a time, in short and deep bursts, rather than
-            trying to finish a syllabus: Nand2Tetris for computer architecture,
-            Mathematical Thinking through Stanford, and algorithms and data
-            structures now.
+            Alongside that I am teaching myself computer science from the
+            foundations, working on one subject at a time in short and deep
+            bursts rather than marching through a syllabus, which so far has
+            meant Nand2Tetris for computer architecture, Mathematical Thinking
+            through Stanford, and algorithms and data structures now.
           </p>
           <p>
-            Operating systems runs alongside all of it, studied in C — OSTEP,
-            Operating System Concepts, and human factors on the flight deck,
-            which is where BLOC&apos;s interface comes from.
+            Operating systems runs underneath all of it, studied in C through
+            OSTEP and Operating System Concepts, together with human factors on
+            the flight deck, which is where BLOC&apos;s interface comes from.
           </p>
         </div>
       </Reveal>

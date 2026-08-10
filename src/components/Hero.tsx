@@ -13,9 +13,9 @@ export default function Hero() {
       </h1>
 
       <p className="animate-fade-rise-delay mt-10 max-w-xl text-base leading-relaxed text-foreground/80 sm:text-lg">
-Seventeen, final year of the IB Diploma in Vietnam.
-        Operating systems, computational linguistics, and accessibility research. 
-        Heading toward machine learning, flight decks, and philosophy.
+        Seventeen and in my final year of the IB Diploma in Vietnam, I work
+        across operating systems, computational linguistics and accessibility
+        research, heading toward machine learning, flight decks and philosophy.
       </p>
 
       <a

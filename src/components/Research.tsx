@@ -32,17 +32,19 @@ export default function Research() {
     <Section id="research" label="Research" title="Open problems">
       <Reveal>
         <p className="mb-12 leading-relaxed text-muted-foreground">
-          Three things in progress. None are finished, and I would rather say
-          where they actually are than describe them as results.
+          Three things are in progress and none of them are finished, and
+          because an unfinished project is easy to write up as though it were
+          already a result, I would rather say where each one actually stands.
         </p>
       </Reveal>
 
       <Entry title="MentalFallacy" state="Mid-rescope" delay={0}>
-        Detecting logical fallacies and cognitive distortions in natural text —
-        Reddit corpus labeling, pilot model runs, structured failure analysis.
-        Published models still perform poorly on this, so the honest description
-        is an open problem rather than a finding I am reporting. I am currently
-        rescoping it.
+        I am working on detecting logical fallacies and cognitive distortions in
+        natural text, which so far has meant labeling a Reddit corpus, running
+        pilot models against it and going through where those models fail rather
+        than where they succeed. Published work still performs poorly on the
+        task, so what I have is an open problem rather than a finding, and I am
+        rescoping it on that basis.
       </Entry>
 
       <Entry
@@ -50,15 +52,18 @@ export default function Research() {
         state="November submission"
         delay={0.06}
       >
-        A paper on how banking technology serves, and fails to serve, people
-        with vision disabilities in Vietnam. Targeted for submission in
-        November.
+        A paper on how banking technology in Vietnam serves people with vision
+        disabilities, and where it fails them, which I am targeting for
+        submission in November.
       </Entry>
 
       <Entry title="Extended Essay" state="In progress" delay={0.12}>
-        Whether a Monte Carlo estimate of pi reproduces exactly and whether it is correct are separate properties.
-        A generator with a structural defect returns bit-identical results on every run and converges at the expected
-        rate to the wrong value. Reproducibility is often treated as evidence of validity.
+        Whether a Monte Carlo estimate of pi reproduces exactly and whether it
+        is correct turn out to be separate properties, since a generator
+        carrying a structural defect will return bit-identical results on every
+        run while converging, at the expected rate, on the wrong value.
+        Reproducibility gets treated as evidence of validity far more often than
+        it earns, and that gap is what the essay is about.
       </Entry>
     </Section>
   );

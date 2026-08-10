@@ -109,7 +109,7 @@ export default function BootSequence() {
             (C) Soya, Hanoi 2026
           </p>
           <p className={cn("pl-8 transition-opacity duration-300", line(3))}>
-            3 instruments, 3 open problems, 1 kernel
+            3 instruments, 3 open problems
           </p>
           <p className={cn("pl-8 transition-opacity duration-300", line(4))}>
             Memory check:{" "}
@@ -119,7 +119,7 @@ export default function BootSequence() {
               </span>
             ) : (
               <span className="text-foreground">
-                549 tests passed, 0 skipped
+                919 tests passed, 0 skipped
               </span>
             )}
           </p>

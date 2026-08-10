@@ -15,8 +15,8 @@ const TREE: Branch[] = [
   },
   {
     name: "gals",
-    bay: "LANDED",
-    stack: "FastAPI · Jinja · HTMX · Render",
+    bay: "ACTIVE",
+    stack: "FastAPI · Jinja2 · HTMX · Tailwind v4 · SQLite · Gemini",
     leaves: [
       { label: "steam-mvp.onrender.com", href: "https://steam-mvp.onrender.com", note: "live" },
       { label: "LEGAL.md", href: "https://github.com/soya-00/steam-mvp/blob/main/LEGAL.md", note: "limits, in full" },
@@ -25,7 +25,7 @@ const TREE: Branch[] = [
   },
   {
     name: "bloc-os",
-    bay: "ACTIVE",
+    bay: "INCOMING",
     stack: "C · AArch64 assembly · QEMU · Raspberry Pi 5",
     leaves: [
       { label: "DECISIONS.md", href: "https://github.com/soya-00/bloc-os-beta/blob/main/docs/DECISIONS.md", note: "the log" },
