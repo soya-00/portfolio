@@ -629,8 +629,8 @@ const SECTIONS: CaseSection[] = [
           The settled vendor is OpenAI, on a paid account with Zero Data
           Retention enabled, owned by the named responsible adult, under a hard
           spend cap. Only the current question and the current answer are sent,
-          and only from the role-play store — the reflective store never leaves
-          the country at all.
+          and only from the role-play store, Kho A — the reflective store never
+          leaves the country at all.
         </p>
 
         <Note label="Why the split store is what makes this work">
