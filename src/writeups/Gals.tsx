@@ -501,9 +501,9 @@ const SECTIONS: CaseSection[] = [
           why="A product for minors should not inherit whatever configuration the vendor happens to ship this quarter."
         />
         <Decision
-          title="Model name discovered, never hard-coded"
-          chose="Probe models.list() at startup against a priority order, overridable by environment variable. Migrated from the deprecated google-generativeai to google-genai."
-          why="Model IDs churn. A remembered version string has already caused two defects in this project."
+          title="Model name resolved at startup, never hard-coded"
+          chose="Resolve the model against a priority order when the process boots, overridable by environment variable, with the vendor SDK behind one module."
+          why="Model IDs churn and SDKs get deprecated. A remembered version string has already caused two defects in this project, and keeping the boundary thin is what made changing vendor a contained job rather than a rewrite."
         />
 
         <Note label="Minimum viable payload">
@@ -615,32 +615,34 @@ const SECTIONS: CaseSection[] = [
           as an open question rather than assumed to be a safe harbor.
         </p>
 
-        <H3>A vendor term that decides the pilot architecture</H3>
+        <H3>What the vendor choice has to satisfy</H3>
         <p>
-          The Gemini API additional terms require the developer to be 18+ and
-          commit to not using the service in an application &ldquo;directed
-          towards or likely to be accessed by individuals under the age of
-          18.&rdquo; GALS is aimed at 16–18-year-olds in Vietnamese secondary
-          schools, some of them under 16. On the free tier, prompts are also
-          used to improve Google’s products; only paid-tier access carries the
-          no-training commitment and the processor-role addendum.
+          Sending a student’s sentence to a model is a cross-border transfer of
+          a minor’s data, so the vendor decision is a compliance decision before
+          it is a quality one. Three conditions were non-negotiable: terms that
+          contemplate minors in a school deployment, a no-training commitment —
+          several providers’ free tiers use prompts to improve their products —
+          and zero data retention, so the transfer leaves nothing behind on the
+          other side.
         </p>
         <p>
-          Five routes were mapped — enterprise terms, a different vendor,
-          teacher-mediated calls, a Vietnam-hosted model, or no model at all.
-          The chosen configuration for a first pilot is the scripted mode that
-          already ships.
+          The settled vendor is OpenAI, on a paid account with Zero Data
+          Retention enabled, owned by the named responsible adult, under a hard
+          spend cap. Only the current question and the current answer are sent,
+          and only from the role-play store — the reflective store never leaves
+          the country at all.
         </p>
 
-        <Note label="Why that is the right answer, not the cheap one">
-          Running the pilot without the model removes four separate compliance
-          workstreams from the critical path: no vendor negotiation, no
-          cross-border transfer assessment, no transfer at all, and no exposure
-          on the age term. It also matches what a first pilot is testing —
-          whether role-play career scenarios work on real students, not whether
-          the language model is any good. The scripted mode was built for
-          network resilience; it turned out to be the launch-viable
-          configuration.
+        <Note label="Why the split store is what makes this work">
+          Because only Kho A crosses the border, the transfer dossier describes
+          anonymous role-play professional writing and nothing else. Had
+          reflective journals been in scope, the same filing would have had to
+          cover minors’ personal writing — a materially harder document to write
+          and a materially worse one to defend. The architecture decision and
+          the compliance decision are the same decision. The scripted offline
+          mode stays as a first-class fallback: it was built for network
+          resilience, and it means a class can run a full lesson with no
+          transfer at all.
         </Note>
 
         <H3>The tension the architecture has to resolve</H3>
@@ -1074,7 +1076,7 @@ export default function GalsWriteup() {
         },
         {
           label: "Stack",
-          value: "FastAPI · Jinja2 · HTMX · Tailwind v4 · SQLite · Gemini",
+          value: "FastAPI · Jinja2 · HTMX · Tailwind v4 · Postgres · OpenAI",
         },
         {
           label: "Scope",
