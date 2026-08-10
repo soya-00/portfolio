@@ -18,27 +18,27 @@ const SECTIONS: CaseSection[] = [
           pressed.
         </p>
         <p>
-          That sounds like a courtesy. It’s the load-bearing decision of the
-          project, and almost every hard problem below is downstream of it. An
-          agent that files, connects, merges and splits your writing while you
-          sleep is easy to build and impossible to trust. The failure I was most
-          afraid of was waking up to a reorganized journal — not because the
-          reorganization would be wrong, but because there’d be no way to tell
-          whether it was.
+          That reads as a courtesy, but it is the load-bearing decision of the
+          project and almost every hard problem below is downstream of it, since
+          an agent that files, connects, merges and splits your writing while
+          you sleep is easy to build and impossible to trust. The failure I was
+          most afraid of was waking up to a reorganized journal, less because
+          the reorganization would be wrong than because I would have no way of
+          telling whether it was.
         </p>
         <p>
-          So the agent never rearranges. It notices, proposes, and what you turn
-          down is written to{" "}
+          So the agent never rearranges anything on its own: it notices, it
+          proposes, and whatever you turn down gets written to{" "}
           <span className="text-foreground/90">folders.md</span> beside your
           entries, so a refusal survives deleting the database.
         </p>
         <p>
-          The cost lands in three places. Every proposal needs somewhere to live
-          in the interface and a durable record of being dismissed. Every
-          unattended pass has to produce something reviewable rather than
-          something done. And any statistic driving a proposal has to be good
-          enough to interrupt someone with — which forced the measurement work
-          below.
+          The cost of that lands in three places, because every proposal now
+          needs somewhere to live in the interface and a durable record of
+          having been dismissed, every unattended pass has to produce something
+          reviewable rather than something already done, and any statistic
+          driving a proposal has to be good enough to interrupt a person with,
+          which is what forced the measurement work below.
         </p>
 
         <PullQuote cite="Tilt — docs/design.md">
@@ -68,11 +68,12 @@ const SECTIONS: CaseSection[] = [
           nothing.
         </p>
         <p>
-          Cheap to state, expensive to keep. Every derived thing — folder
-          assignments, connections, dismissals, the record of a proposal you
-          refused — has to round-trip through frontmatter, not just a table. The
-          moment one lives only in SQLite, the database is a second source of
-          truth and the Markdown is a partial copy.
+          The rule is cheap to state and expensive to keep, because every derived
+          thing — folder assignments, connections, dismissals, the record of a
+          proposal you refused — then has to round-trip through frontmatter
+          rather than sitting in a table, and the moment one of them lives only
+          in SQLite the database has quietly become a second source of truth
+          with the Markdown as a partial copy.
         </p>
         <p>
           It also decided the shape of rebuilding. The obvious implementation
@@ -85,8 +86,9 @@ const SECTIONS: CaseSection[] = [
           then restore themes and links from each entry’s own frontmatter.
         </p>
         <p>
-          The payoff showed up somewhere unrelated. When I needed screenshots,
-          seeding a realistic journal meant writing Markdown files and calling{" "}
+          The payoff turned up somewhere I was not looking for it: when I needed
+          screenshots, seeding a realistic journal meant writing Markdown files
+          and calling{" "}
           <span className="text-foreground/90">rebuild()</span> — no API key, no
           model call, no network. 24 entries and 20 connections came back from
           files alone, which is the claim the constraint was making all along.

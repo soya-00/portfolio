@@ -211,9 +211,9 @@ export default function Work() {
         </p>
 
         <Figure
-          src="01homepage.png"
-          alt="A GALS student home page in Vietnamese: an unfinished scenario asking how to divide 900 million across 240 applications, the five STEAM branches with their state, a private note from a teacher, tasks set by the teacher, and upcoming sessions."
-          caption="Prototype interface, not final — a student's home, opening on what they left unfinished"
+          src="03scenario.png"
+          alt="A GALS scenario workspace in Vietnamese: the student is in role as Ngọc, a data analyst, on question 2 of 5 of the empathize stage, asked what in an application set reflects real circumstances and what reflects presentation skill. The assistant asks a question back, and a right-hand rail lists accumulated facts including twelve applications sharing one handwriting."
+          caption="Prototype interface, not final — one question at a time, with the evidence rail on the right"
         />
 
         <p>

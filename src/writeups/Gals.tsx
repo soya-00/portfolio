@@ -20,16 +20,16 @@ const SECTIONS: CaseSection[] = [
     body: (
       <>
         <p>
-          Vietnamese career guidance at high-school level tends to be a list of
-          professions with entry requirements attached. A student reads what an
-          epidemiologist is and has learned nothing about whether they would
-          enjoy being one.
+          Vietnamese career guidance at high-school level tends to arrive as a
+          list of professions with entry requirements attached, which means a
+          student can read what an epidemiologist is and come away knowing
+          nothing about whether they would want to be one.
         </p>
         <p>
-          GALS starts from the opposite end. A student is handed a live problem
-          and the role that owns it: 38 boarding-school pupils are sick in four
-          days, parents have already decided the canteen is to blame, and you
-          are the epidemiologist. Work it out.
+          GALS starts from the opposite end, handing a student a live problem
+          together with the role that owns it — 38 boarding-school pupils are
+          sick in four days, parents have already decided the canteen is to
+          blame, and you are the epidemiologist who has to work it out.
         </p>
         <p>
           The four stages are Design Thinking — understand, empathize, create,
@@ -63,19 +63,26 @@ const SECTIONS: CaseSection[] = [
         </p>
 
         <p>
-          The home screen is where that framing has to survive contact with a
-          student, so it opens on whatever they left unfinished rather than on a
-          menu of everything available, and the five branches sit underneath it
-          carrying only their state — one done, one in progress, three not yet
-          opened. A teacher&apos;s note sits beside them marked as readable by
-          that student alone, which is the same privacy rule the rest of the
-          product is built around, stated where it can actually be seen.
+          Ngọc&apos;s scenario hands her nine hundred million to divide across
+          two hundred and forty applications, and the question the app puts in
+          front of her is which parts of an application reflect a real situation
+          and which reflect a student&apos;s ability to describe one. The
+          evidence rail down the right is where that becomes answerable rather
+          than rhetorical, because among the lines accumulating there is the
+          fact that twelve applications share a single handwriting — a teacher
+          filled them in — and that those twelve read as markedly more
+          convincing than the rest.
+        </p>
+        <p>
+          Nothing in the interface tells her what to do with that. The
+          confounder is placed where she can find it, and finding it is the
+          exercise.
         </p>
 
         <Figure
-          src="01homepage.png"
-          alt="A GALS student home page in Vietnamese: an unfinished scenario asking how to divide 900 million across 240 applications, the five STEAM branches with their state, a private note from a teacher, tasks set by the teacher, and upcoming sessions."
-          caption="Prototype interface, not final — a student's home: five branches, one scenario open, and a teacher's note marked readable only by them"
+          src="03scenario.png"
+          alt="A GALS scenario workspace in Vietnamese: the student is in role as Ngọc, a data analyst, on question 2 of 5 of the empathize stage, asked what in an application set reflects real circumstances and what reflects presentation skill. The assistant asks a question back, and a right-hand rail lists accumulated facts including twelve applications sharing one handwriting."
+          caption="Prototype interface, not final — one question, the role on the left, and the evidence rail accumulating on the right"
         />
       </>
     ),
@@ -119,6 +126,18 @@ const SECTIONS: CaseSection[] = [
           ]}
         />
 
+        <p>
+          The second rule is the one that surfaces most often in the interface,
+          because once there is no lesson one and no prerequisite gate the home
+          screen cannot behave like a syllabus: it opens on whatever the student
+          left unfinished, and the five branches underneath it carry only their
+          state — one done, one in progress, three not yet opened — instead of
+          an order to work through. A teacher&apos;s note sits beside them
+          marked as readable by that student alone, which puts the
+          private-by-default rule in the one place a student is likely to
+          actually read it.
+        </p>
+
         <Note label="Enforcement">
           The no-grading rule is not a guideline in a doc.{" "}
           <span className="text-foreground/90">tests/test_no_grading.py</span>{" "}
@@ -137,9 +156,9 @@ const SECTIONS: CaseSection[] = [
     body: (
       <>
         <p>
-          A scenario is not a description with questions attached. It is an
-          ordered sequence of beats, and getting that shape right early is the
-          reason five very different careers could share one engine.
+          A scenario is an ordered sequence of beats rather than a description
+          with questions attached, and getting that shape right early is the
+          reason five very different careers were able to share one engine.
         </p>
         <p>
           Each scenario is four stages; each stage is an ordered array of beats
@@ -192,8 +211,9 @@ const SECTIONS: CaseSection[] = [
     body: (
       <>
         <p>
-          The thinking space used to scroll like a chat log. The fix was to show
-          less at once.
+          The thinking space used to scroll like a chat log, and the fix turned
+          out to be showing less of it at once rather than organizing more of
+          it.
         </p>
 
         <BeforeAfter
