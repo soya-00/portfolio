@@ -496,8 +496,8 @@ const SECTIONS: CaseSection[] = [
           why="A prompt is a request; code is a guarantee. Inputs that are only emoji or text smileys get their own honest reply instead."
         />
         <Decision
-          title="Explicit safety thresholds, not vendor defaults"
-          chose="All harm categories set explicitly on every call."
+          title="Safety configured explicitly"
+          chose="The provider's moderation step is an explicit call in our own pipeline, stacked on the phrase filter, rather than relying on model-side defaults."
           why="A product for minors should not inherit whatever configuration the vendor happens to ship this quarter."
         />
         <Decision
@@ -994,8 +994,8 @@ const SECTIONS: CaseSection[] = [
             ],
             [
               "AI answers cut off mid-sentence",
-              "The scripted fallback masked it completely",
-              "Flash models bill thinking against the output budget — measured 381 of 400 tokens. Leave the budget wide",
+              "A working fallback answered every time, so nothing looked broken",
+              "Reasoning tokens ate 381 of a 400-token output budget. Two rules: leave the budget wide, and make fallbacks announce themselves in logs — a silent fallback is an outage you cannot see",
             ],
             [
               "Vowel class missing Vietnamese diacritics",
