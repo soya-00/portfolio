@@ -63,9 +63,9 @@ const SECTIONS: CaseSection[] = [
         </p>
 
         <Figure
-          src="04khonggiantuduy.png"
-          alt="A GALS scenario in Vietnamese: the student is an epidemiologist investigating 38 sick boarding-school students. The assistant replies by asking which parts of the student's reasoning are known and which are being guessed."
-          caption="The assistant answering a student with a question, not a solution"
+          src="02trangcanhan.png"
+          alt="A GALS student home page in Vietnamese: a scenario in progress asking how to divide 900 million across 240 applications, the five STEAM branches with their state, a private note from a teacher, tasks set by the teacher, and upcoming sessions."
+          caption="A student's home: five branches, one scenario open, and a teacher's note marked readable only by them"
         />
       </>
     ),
@@ -280,9 +280,9 @@ const SECTIONS: CaseSection[] = [
         </p>
 
         <Figure
-          src="02trangcanhan.png"
-          alt="A GALS student home page in Vietnamese showing counts of journal entries, portfolio items and badges, two written notes from a teacher, and four unordered entry points into the app."
-          caption="A student's page: a teacher's notes, and four ways in with no required order"
+          src="05hoso.png"
+          alt="A GALS competency profile in Vietnamese: counts of scenarios entered and answers written, a private message from a teacher, the app's reflection on how the student reasoned, and a portfolio entry with its own separate sharing control."
+          caption="The profile: a teacher's private message, the student's own words, and sharing as a separate control"
         />
 
         <H3>Export designed around what it must not contain</H3>

@@ -205,9 +205,9 @@ export default function Work() {
         </p>
 
         <Figure
-          src="04khonggiantuduy.png"
-          alt="A GALS scenario in Vietnamese: the student is an epidemiologist investigating 38 sick boarding-school students. The assistant replies by asking which parts of the student's reasoning are known and which are being guessed."
-          caption="The assistant answering a student with a question, not a solution"
+          src="05hoso.png"
+          alt="A GALS competency profile in Vietnamese: counts of scenarios entered and answers written, a private message from a teacher, the app's reflection on how the student reasoned, and a portfolio entry with its own separate sharing control."
+          caption="The profile: a teacher's private message, and sharing as a separate control"
         />
 
         <p>

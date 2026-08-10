@@ -72,6 +72,7 @@ export default function CaseStudyPage({
   meta,
   links,
   lead,
+  preamble,
   sections,
 }: {
   name: string;
@@ -79,6 +80,8 @@ export default function CaseStudyPage({
   meta: MetaCol[];
   links: PageLink[];
   lead: ReactNode;
+  /** Optional fact sheet, set between the opening and the contents. */
+  preamble?: ReactNode;
   sections: CaseSection[];
 }) {
   const { active, progress } = useReadingPosition(sections);
@@ -95,6 +98,8 @@ export default function CaseStudyPage({
           <div className="mt-10 space-y-5 text-xl leading-[1.25] tracking-[-0.01em] text-foreground sm:text-2xl md:text-[28px]">
             {lead}
           </div>
+
+          {preamble}
 
           {/* Contents, in full, before the reader commits to the scroll. */}
           <nav
