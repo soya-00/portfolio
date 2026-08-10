@@ -182,7 +182,7 @@ export default function Work() {
         name="GALS"
         kicker="Try out a career before you have to choose one."
         stack="FastAPI · Jinja · HTMX · Tailwind · Render"
-        status="Deployed prototype. Shared accounts, no per-student privacy yet."
+        status="Built and compliance-ready. Accounts and consent capture done; entering a supervised school pilot."
         checked="222 tests, run by CI on every push."
         writeup="gals"
         links={[
@@ -228,8 +228,8 @@ export default function Work() {
 
         <Figure
           src="02trangcanhan.png"
-          alt="A GALS student home page in Vietnamese showing counts of journal entries, portfolio items and badges, two written notes from a teacher, and four unordered entry points into the app."
-          caption="A student's page: a teacher's notes, and four ways in with no required order"
+          alt="A GALS student home page in Vietnamese: a scenario in progress asking how to divide 900 million across 240 applications, the five STEAM branches with their state, a private note from a teacher, tasks set by the teacher, and upcoming sessions."
+          caption="A student's home: five branches, one scenario open, and a teacher's note marked readable only by them"
         />
 
         <p className="text-muted-foreground/80">
