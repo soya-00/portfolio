@@ -24,8 +24,8 @@ type ProjectProps = {
   stack: string;
   status: string;
   checked: string;
-  /** Directory of the project's long-form page, under BASE_URL. */
-  writeup: string;
+  /** Directory of the project's long-form page, under BASE_URL. Omit for a project without one. */
+  writeup?: string;
   /** Rendered as chips on the left of the closing row. */
   links: { label: string; href: string }[];
   children: ReactNode;
@@ -94,18 +94,20 @@ function Project({
             </LinkChip>
           ))}
 
-          <a
-            href={`${import.meta.env.BASE_URL}${writeup}/`}
-            className="font-display group ml-auto inline-flex items-center gap-2 text-sm uppercase tracking-[0.16em] text-foreground underline decoration-border underline-offset-[6px] transition-colors hover:decoration-accent"
-          >
-            Read more
-            <span
-              aria-hidden="true"
-              className="text-accent transition-transform duration-200 group-hover:translate-x-1"
+          {writeup && (
+            <a
+              href={`${import.meta.env.BASE_URL}${writeup}/`}
+              className="font-display group ml-auto inline-flex items-center gap-2 text-sm uppercase tracking-[0.16em] text-foreground underline decoration-border underline-offset-[6px] transition-colors hover:decoration-accent"
             >
-              →
-            </span>
-          </a>
+              Read more
+              <span
+                aria-hidden="true"
+                className="text-accent transition-transform duration-200 group-hover:translate-x-1"
+              >
+                →
+              </span>
+            </a>
+          )}
         </div>
       </Reveal>
     </article>
@@ -242,7 +244,6 @@ export default function Work() {
         stack="C · AArch64 assembly · QEMU · Raspberry Pi 5"
         status="A few milestones in. Boots under QEMU; far from the interface."
         checked="Every milestone has to run under QEMU before the next one starts."
-        writeup="bloc"
         links={[
           { label: "Repository", href: "https://github.com/soya-00/bloc-os" },
           {
