@@ -182,7 +182,7 @@ export default function Work() {
         name="GALS"
         kicker="Try out a career before you have to choose one."
         stack="FastAPI · Jinja · HTMX · Tailwind · Render"
-        status="Built and compliance-ready. Accounts and consent capture done; entering a supervised school pilot."
+        status="Built and compliance-ready. Accounts and consent capture done; preparing for a supervised school pilot."
         checked="222 tests, run by CI on every push."
         writeup="gals"
         links={[

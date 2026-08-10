@@ -1023,7 +1023,7 @@ export default function GalsWriteup() {
         },
         {
           label: "Stage",
-          value: "Built, compliance-ready, entering supervised school pilot",
+          value: "Built, compliance-ready, preparing for a supervised school pilot",
         },
         {
           label: "Stack",
