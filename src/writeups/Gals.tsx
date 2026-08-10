@@ -976,9 +976,14 @@ const SECTIONS: CaseSection[] = [
     body: (
       <>
         <p>
-          Everything else — the data layer, accounts and consent capture, the
-          filings, the school agreement, hosting — is done. What is left needs
-          people, not code, and both have a plan behind them.
+          The data layer is done, and so are accounts and consent capture. The
+          filings, the school agreement and hosting are not. That work is
+          administrative rather than technical, but the pilot cannot start
+          without it.
+        </p>
+        <p>
+          Past it sit two questions the build cannot answer on its own. Both
+          need people rather than code, and both have a plan behind them.
         </p>
 
         <Decision
