@@ -1112,8 +1112,8 @@ export default function GalsWriteup() {
             works through in role across four thinking stages.
           </p>
           <p>
-            No score, no ranking, no model answer — which turned out to be the
-            constraint that shaped almost every other decision.
+            No score, no ranking, no model answer — and how that shaped almost
+            every other decision.
           </p>
         </>
       }
