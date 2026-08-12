@@ -392,49 +392,11 @@ const SECTIONS: CaseSection[] = [
         />
 
         <p>
-          Two findings I withdrew after testing, recorded rather than quietly
-          dropped: feed XML entity expansion turned out bounded by the runtime’s
+          Two other discoveries that were withdrawn from my research:
+          feed XML entity expansion turned out bounded by the runtime’s
           own amplification guard with the error already caught, and a
           body-limit bypass was real but already documented with a compensating
           control I verified works.
-        </p>
-      </>
-    ),
-  },
-  {
-    id: "wrong",
-    label: "What I got wrong",
-    title: "What I got wrong",
-    body: (
-      <>
-        <p>
-          <span className="text-foreground/90">
-            I shipped a Dockerfile that could never have built.
-          </span>{" "}
-          Committed, reviewed by me, wrong in a way only running it reveals. The
-          rule: a build step that’s never executed is a comment. CI went in
-          shortly after, and I proved it would fail before trusting it to pass.
-        </p>
-        <p>
-          <span className="text-foreground/90">
-            I let the interface and the gate disagree about the same question.
-          </span>{" "}
-          Whether the process serves the web interface was derived in two places
-          from two slightly different conditions — one checked a static
-          directory was configured, the other that it existed. They agreed on
-          every machine I tested. The rule: when two pieces of code need the
-          same answer, they get one expression.
-        </p>
-        <p>
-          <span className="text-foreground/90">
-            I trusted my own documentation over the code it described.
-          </span>{" "}
-          Writing a claim down makes it feel settled, and once it is written the
-          next reader has no reason to go and check, which means a document
-          describing what I intended rather than what the system does is worse
-          than having written nothing at all. The rule I took from it is that a
-          sentence about behavior has to be traceable to the line that produces
-          it, or it does not go in.
         </p>
       </>
     ),
@@ -465,14 +427,9 @@ const SECTIONS: CaseSection[] = [
               "The .dmg is something you compile on your own Mac; the container is how you’d hand it to anyone else. This is the honest gap between this and a shipped product.",
             ],
             [
-              "Whether the brief is a queue — the closest thing in the app to a to-do list, the one shape I ruled out.",
-              "Open",
-              "The way to find out is to use it, not to reason harder. Offline the loop closes: the scout picked a paper because of a question written nine days earlier, and the sweep later linked one of its ideas back unprompted. That proves the plumbing, not the judgment.",
-            ],
-            [
               "The split statistic can’t separate “one subject that moved” from “two subjects”.",
               "Contained",
-              "Pinned in a test as a known limit. No threshold fixes it.",
+              "Pinned in a test as a known limit.",
             ],
           ]}
         />
@@ -510,8 +467,7 @@ export default function TiltWriteup() {
           <p>
             Tilt is a macOS thinking instrument I designed and built — a single
             stream you write into, and an agent whose job is to hand back
-            understanding rather than tasks. This is the record of what that
-            rule cost.
+            understanding rather than tasks.
           </p>
         </>
       }
