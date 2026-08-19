@@ -4,6 +4,7 @@ import { citationsFor } from "@/cvr/lib/citations";
 import { layers, sections, unmapped } from "@/cvr/lib/corpus";
 import { renderMarkdown } from "@/cvr/lib/markdown";
 import Divergence from "@/cvr/modules/Divergence";
+import OriginChain from "@/cvr/modules/OriginChain";
 import TheDocument from "@/cvr/modules/TheDocument";
 import Disclosure from "@/cvr/primitives/Disclosure";
 import LiveRegion, { useAnnouncer } from "@/cvr/primitives/LiveRegion";
@@ -240,6 +241,11 @@ export default function Piece() {
                       belongs inside it rather than in an appendix the
                       argument would then have to refer out to. */}
                   {s.slug === "divergence" && <Divergence announce={announce} />}
+
+                  {/* The chain belongs to the workshop section rather than to
+                      Portland: section 04 is where the second strand arrives,
+                      and the second strand is the argument. */}
+                  {s.slug === "the-workshop" && <OriginChain announce={announce} />}
 
                   {kids.map((l) => (
                     <Disclosure

@@ -437,3 +437,11 @@ html.js .no-js-only { display: none; }
     border: 1px dashed CanvasText;
   }
 }
+
+/* The chain's detail panels collapse behind a control that needs scripting.
+   Without scripting there is no control, so there is nothing to collapse
+   behind and every panel stands open. Tailwind's `hidden` is a utility on
+   the element, so this override has to outrank it. */
+html:not(.js) .chain-detail {
+  display: block !important;
+}
