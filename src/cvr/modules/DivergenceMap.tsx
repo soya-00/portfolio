@@ -38,11 +38,12 @@ const CIRC = 2 * Math.PI * R;
 
 export default function DivergenceMap() {
   const [armed, setArmed] = useState(false);
+  const [reduced, setReduced] = useState(false);
   const ref = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced) {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setReduced(true);
       setArmed(true);
       return;
     }
@@ -110,11 +111,17 @@ export default function DivergenceMap() {
             return (
               <g
                 key={r.id}
-                style={{
-                  opacity: armed ? 1 : 0,
-                  transition: "opacity 420ms ease-out",
-                  transitionDelay: `${i * 70}ms`,
-                }}
+                /* No transition at all under reduced motion, since a delayed
+                   arrival is still an arrival. */
+                style={
+                  reduced
+                    ? { opacity: 1 }
+                    : {
+                        opacity: armed ? 1 : 0,
+                        transition: "opacity 420ms ease-out",
+                        transitionDelay: `${i * 70}ms`,
+                      }
+                }
               >
                 {/* The ring: how much of this jurisdiction is established. */}
                 <circle

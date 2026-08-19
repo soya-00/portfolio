@@ -102,11 +102,14 @@ export default function OriginChain({
   announce: (message: string) => void;
 }) {
   const [armed, setArmed] = useState(false);
+  const [reduced, setReduced] = useState(false);
   const [open, setOpen] = useState<string | null>(null);
   const ref = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mq.matches) {
+      setReduced(true);
       setArmed(true);
       return;
     }
@@ -125,11 +128,18 @@ export default function OriginChain({
     return () => io.disconnect();
   }, []);
 
-  const step = (i: number) => ({
-    opacity: armed ? 1 : 0,
-    transition: "opacity 380ms ease-out",
-    transitionDelay: `${i * 200}ms`,
-  });
+  /* Under reduced motion there is no transition and no delay, not merely a
+     final state that arrives on schedule. Setting the end value while leaving
+     the delay in place still staggers the figure in, which is the thing the
+     preference asks not to happen. */
+  const step = (i: number) =>
+    reduced
+      ? { opacity: 1 }
+      : {
+          opacity: armed ? 1 : 0,
+          transition: "opacity 380ms ease-out",
+          transitionDelay: `${i * 200}ms`,
+        };
 
   return (
     <section
