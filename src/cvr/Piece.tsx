@@ -3,6 +3,11 @@ import { Column, PageFrame, PageHeader } from "@/components/PageShell";
 import { citationsFor } from "@/cvr/lib/citations";
 import { layers, sections, unmapped } from "@/cvr/lib/corpus";
 import { renderMarkdown } from "@/cvr/lib/markdown";
+import Divergence from "@/cvr/modules/Divergence";
+import { ApparatusExtras } from "@/cvr/modules/Apparatus";
+import Denominator from "@/cvr/modules/Denominator";
+import EvidenceMatrix from "@/cvr/modules/EvidenceMatrix";
+import OriginChain from "@/cvr/modules/OriginChain";
 import TheDocument from "@/cvr/modules/TheDocument";
 import Disclosure from "@/cvr/primitives/Disclosure";
 import LiveRegion, { useAnnouncer } from "@/cvr/primitives/LiveRegion";
@@ -235,6 +240,24 @@ export default function Piece() {
                     <TheDocument announce={announce} />
                   )}
 
+                  {/* The spine. This section is the comparison, so the grid
+                      belongs inside it rather than in an appendix the
+                      argument would then have to refer out to. */}
+                  {s.slug === "divergence" && <Divergence announce={announce} />}
+
+                  {/* The chain belongs to the workshop section rather than to
+                      Portland: section 04 is where the second strand arrives,
+                      and the second strand is the argument. */}
+                  {s.slug === "the-workshop" && <OriginChain announce={announce} />}
+
+                  {s.slug === "what-cannot-be-seen" && (
+                    <Denominator announce={announce} />
+                  )}
+
+                  {s.slug === "causes-we-cannot-evidence" && (
+                    <EvidenceMatrix announce={announce} />
+                  )}
+
                   {kids.map((l) => (
                     <Disclosure
                       key={l.slug}
@@ -268,6 +291,11 @@ export default function Piece() {
               >
                 What this does not say
               </h2>
+
+              {/* The two registers a reader is owed: what was refused, and
+                  what was used. The cut list says of itself that it renders
+                  to the reader rather than sitting in the repository. */}
+              <ApparatusExtras announce={announce} />
 
               {unmapped && (
                 <div id={unmapped.slug} className="prose-cvr mt-6 scroll-mt-24 leading-relaxed text-muted-foreground">
