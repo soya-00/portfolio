@@ -4,6 +4,7 @@ import { citationsFor } from "@/cvr/lib/citations";
 import { layers, sections, unmapped } from "@/cvr/lib/corpus";
 import { renderMarkdown } from "@/cvr/lib/markdown";
 import Divergence from "@/cvr/modules/Divergence";
+import Denominator from "@/cvr/modules/Denominator";
 import OriginChain from "@/cvr/modules/OriginChain";
 import TheDocument from "@/cvr/modules/TheDocument";
 import Disclosure from "@/cvr/primitives/Disclosure";
@@ -246,6 +247,10 @@ export default function Piece() {
                       Portland: section 04 is where the second strand arrives,
                       and the second strand is the argument. */}
                   {s.slug === "the-workshop" && <OriginChain announce={announce} />}
+
+                  {s.slug === "what-cannot-be-seen" && (
+                    <Denominator announce={announce} />
+                  )}
 
                   {kids.map((l) => (
                     <Disclosure
