@@ -240,3 +240,120 @@
     transition: none;
   }
 }
+
+/* ─── The case study ──────────────────────────────────────────────────────
+   Reader settings are applied as data attributes on <html> and read back
+   here, so the whole apparatus is one small script plus these rules. The
+   defaults are the safe ones, which makes the no-JavaScript state the
+   correct state rather than a degraded one. */
+
+/* Inline citation.
+   Phrasing content driven by :target, not <details>. A <details> is flow
+   content, so the HTML parser closes the surrounding <p> at every marker and
+   ejects the citation out of its own sentence. This opens with no script,
+   is keyboard operable, and gives every reference its own address. */
+.cite {
+  display: inline;
+}
+
+.cite-marker {
+  font-size: 0.72em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  /* Left inset only: a right pad puts a visible gap before a following
+     comma or full stop, since anchors routinely end mid-sentence. */
+  padding-left: 0.25em;
+  color: hsl(var(--accent));
+  text-decoration: underline;
+  text-decoration-color: hsl(var(--accent) / 0.45);
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+
+.cite-marker:hover {
+  text-decoration-color: hsl(var(--accent));
+}
+
+.cite-marker:focus-visible {
+  outline: 2px solid hsl(var(--accent));
+  outline-offset: 2px;
+}
+
+/* The reference itself. Hidden until addressed, then set as a block so a long
+   citation does not wreck the measure of the paragraph carrying it. */
+.cite-panel {
+  display: none;
+}
+
+.cite-panel:target {
+  display: block;
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 2px solid hsl(var(--accent) / 0.5);
+  background: hsl(var(--surface) / 0.6);
+  font-size: 0.82em;
+  line-height: 1.6;
+}
+
+.cite-close {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: hsl(var(--foreground) / 0.7);
+  text-decoration: underline;
+  text-decoration-color: hsl(var(--border));
+  text-underline-offset: 4px;
+}
+
+.disclosure > summary::-webkit-details-marker,
+.disclosure > summary::marker {
+  display: none;
+  content: "";
+}
+
+/* Long-form measure on body prose. Transcript and reference material may run
+   wider where the structure needs it. */
+.prose-cvr {
+  max-width: 68ch;
+}
+
+/* Text size: four steps, layout holding at the largest. Scoped to the piece
+   so the rest of the site is untouched. */
+html[data-text="s"] .prose-cvr { font-size: 0.9375rem; }
+html[data-text="m"] .prose-cvr { font-size: 1rem; }
+html[data-text="l"] .prose-cvr { font-size: 1.1875rem; }
+html[data-text="xl"] .prose-cvr {
+  font-size: 1.375rem;
+  max-width: none;
+}
+
+/* Density. Compact opens every deeper layer at once, for a reader who wants
+   the whole argument in a single pass. */
+html[data-density="compact"] .disclosure { border-left-color: hsl(var(--accent) / 0.6); }
+
+/* Motion off turns transitions into instant state changes. Nothing is
+   conveyed by motion, so nothing is lost. */
+html[data-motion="none"] *,
+html[data-motion="none"] *::before,
+html[data-motion="none"] *::after {
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}
+
+html[data-motion="none"] {
+  scroll-behavior: auto;
+}
+
+html[data-motion="reduced"] .progress-fill {
+  transition: none;
+}
+
+/* Under full motion the progress fill eases; it is decoration over a value
+   already exposed to assistive tech through aria-valuenow. */
+.progress-fill {
+  transition: width 150ms ease-out;
+}

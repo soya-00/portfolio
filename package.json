@@ -7,8 +7,9 @@
     "dev": "vite",
     "validate": "node scripts/validate.js",
     "timing": "node scripts/timing.js",
-    "build": "npm run validate && tsc --noEmit && vite build && node scripts/prerender.mjs",
-    "preview": "vite preview"
+    "build": "npm run validate && tsc --noEmit && vite build && node scripts/prerender.mjs && npm run drift",
+    "preview": "vite preview",
+    "drift": "node scripts/check-content.js"
   },
   "dependencies": {
     "clsx": "^2.1.1",

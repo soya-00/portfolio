@@ -105,6 +105,9 @@ export function PageHeader({
         ))}
       </dl>
 
+      {/* Omitted entirely when there are no links, rather than leaving an
+          empty ruled band under the metadata. */}
+      {links.length > 0 && (
       <div className="flex flex-wrap gap-x-6 gap-y-1 border-y border-border py-2">
         {links.map((l) => (
           <a
@@ -118,6 +121,7 @@ export function PageHeader({
           </a>
         ))}
       </div>
+      )}
     </>
   );
 }

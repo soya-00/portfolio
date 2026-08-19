@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import { Column, PageFrame, PageHeader } from "@/components/PageShell";
-import { corePath, layers, sections, unmapped } from "@/cvr/lib/corpus";
+import { citationsFor } from "@/cvr/lib/citations";
+import { layers, sections, unmapped } from "@/cvr/lib/corpus";
+import { renderMarkdown } from "@/cvr/lib/markdown";
+import Disclosure from "@/cvr/primitives/Disclosure";
+import LiveRegion, { useAnnouncer } from "@/cvr/primitives/LiveRegion";
+import Settings from "@/cvr/primitives/Settings";
 
 /**
  * PageHeader sets the name at min(20vw, 195px) inside a 768px column, so
@@ -18,13 +23,12 @@ const TITLE = "How different countries read the same evidence.";
 
 const num = (i: number) => String(i).padStart(2, "0");
 
-/** Layers grouped by the section they hang off. */
 const layersFor = (slug: string) => layers.filter((l) => l.parent?.includes(slug));
 
 /**
- * Reading position. Read from the viewport rather than offsetTop, because the
- * sections sit inside a positioned console — same reason CaseStudyPage does it.
- * Starts at zero on the server so the hydrated markup matches.
+ * Reading position, read from the viewport rather than offsetTop because the
+ * sections sit inside a positioned console. Starts at zero on the server so
+ * the hydrated markup matches what was prerendered.
  */
 function useReadingPosition(slugs: string[]) {
   const [active, setActive] = useState(0);
@@ -65,23 +69,25 @@ function useReadingPosition(slugs: string[]) {
 }
 
 /**
- * Skip links. Three targets rather than one, because the charter requires a
- * way past every interactive module as well as into the content. Visible on
- * focus only, and first in the tab order.
+ * Three targets rather than one: the charter requires a way into the content,
+ * into navigation, and past every interactive module. Visible on focus only,
+ * and first in the tab order.
  */
 function SkipLinks() {
+  const links = [
+    { href: "#main", label: "Skip to the piece" },
+    { href: "#contents", label: "Skip to contents" },
+    { href: "#reader-settings", label: "Skip to reading settings" },
+    { href: "#apparatus", label: "Skip to sources and apparatus" },
+  ];
   return (
-    <nav aria-label="Skip links" className="absolute left-0 top-0 z-50">
-      <ul className="flex">
-        {[
-          { href: "#main", label: "Skip to the piece" },
-          { href: "#contents", label: "Skip to contents" },
-          { href: "#apparatus", label: "Skip to sources and apparatus" },
-        ].map((l) => (
+    <nav aria-label="Skip links">
+      <ul>
+        {links.map((l) => (
           <li key={l.href}>
             <a
               href={l.href}
-              className="font-display sr-only rounded-none bg-accent px-4 py-2 text-[11px] uppercase tracking-[0.14em] text-accent-foreground focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50"
+              className="font-display sr-only bg-accent px-4 py-2 text-[11px] uppercase tracking-[0.14em] text-accent-foreground focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-[60]"
             >
               {l.label}
             </a>
@@ -95,11 +101,14 @@ function SkipLinks() {
 export default function Piece() {
   const slugs = sections.map((s) => s.slug);
   const { active, progress } = useReadingPosition(slugs);
+  const { message, announce } = useAnnouncer();
   const here = sections[active];
 
   return (
     <>
       <SkipLinks />
+      <LiveRegion message={message} />
+
       <PageFrame>
         <div className="pt-10">
           <Column>
@@ -107,37 +116,30 @@ export default function Piece() {
               name={WORDMARK}
               kicker={TITLE}
               meta={[
-                { label: "Subject", value: "Cockpit voice recorder evidence and Crew Resource Management" },
-                { label: "Research cutoff", value: "16 August 2026. Dated, not maintained." },
-                { label: "Corpus", value: "27 accidents · 14 jurisdictions · 62 sources" },
+                {
+                  label: "Subject",
+                  value:
+                    "Cockpit voice recorder evidence and Crew Resource Management",
+                },
+                {
+                  label: "Research cutoff",
+                  value: "16 August 2026. A dated publication, not maintained.",
+                },
+                {
+                  label: "Corpus",
+                  value: "27 accidents · 14 jurisdictions · 62 sources",
+                },
               ]}
               links={[]}
             />
 
-            <div className="mt-10 space-y-5 text-xl leading-[1.25] tracking-[-0.01em] text-foreground sm:text-2xl md:text-[28px]">
-              <p>
-                Investigators in a dozen countries listened to recordings of
-                people at work in the last minutes before an aircraft was
-                destroyed. They were listening for different things, they were
-                permitted to do different things with what they heard, and in
-                several countries they were forbidden by statute from letting
-                anyone else hear it at all.
-              </p>
-              <p className="text-muted-foreground">
-                What did investigators conclude the recordings meant, and how
-                much did those conclusions actually shape the training
-                discipline that followed? The question is open, and this does
-                not close it.
-              </p>
-            </div>
-
             <nav
               id="contents"
               aria-label="Contents"
-              className="mt-14 scroll-mt-20 border-t border-border pt-4"
+              className="mt-12 scroll-mt-24 border-t border-border pt-4"
             >
               <p className="font-display text-[10px] uppercase tracking-[0.16em] text-muted-foreground/70">
-                Contents
+                Contents · every section is readable cold, in any order
               </p>
               <ol className="mt-3 grid gap-x-8 sm:grid-cols-2">
                 {sections.map((s) => (
@@ -160,8 +162,12 @@ export default function Piece() {
           </Column>
         </div>
 
+        <div className="mt-10">
+          <Settings announce={announce} />
+        </div>
+
         {/* Reading position, spanning the console the way a status line does. */}
-        <div className="sticky top-0 z-20 mt-12 border-y border-border bg-background/95 py-2.5 backdrop-blur-sm">
+        <div className="sticky top-0 z-20 border-b border-border bg-background/95 py-2.5 backdrop-blur-sm">
           <Column>
             <div className="flex items-baseline gap-3">
               <span className="font-display text-[11px] uppercase tracking-[0.14em] text-accent">
@@ -184,26 +190,27 @@ export default function Piece() {
             aria-valuenow={Math.round(progress * 100)}
           >
             <div
-              className="h-px bg-accent transition-[width] duration-150 ease-out"
+              className="progress-fill h-px bg-accent"
               style={{ width: `${progress * 100}%` }}
             />
           </div>
         </div>
 
         <Column>
-          <main id="main" className="scroll-mt-20 pb-24">
+          <main id="main" className="scroll-mt-24 pb-24">
             {sections.map((s) => {
               const kids = layersFor(s.slug);
+              const cites = citationsFor(s.slug);
               return (
                 <section
                   key={s.slug}
                   id={s.slug}
                   aria-labelledby={`${s.slug}-heading`}
-                  className="scroll-mt-20 border-b border-border/40 py-12 last:border-b-0"
+                  className="scroll-mt-24 border-b border-border/40 py-12 last:border-b-0"
                 >
                   <p className="font-display text-[10px] uppercase tracking-[0.16em] text-muted-foreground/70">
                     {num(s.section ?? 0)}
-                    {s.corePath ? "" : " — apparatus"}
+                    {s.corePath ? "" : " · apparatus"}
                   </p>
                   <h2
                     id={`${s.slug}-heading`}
@@ -212,25 +219,25 @@ export default function Piece() {
                     {s.title}
                   </h2>
 
-                  <p className="mt-6 text-sm leading-relaxed text-muted-foreground/70">
-                    {s.words} words. Prose, citations and the four modules land
-                    in the content stage; this is the shell.
-                  </p>
+                  <div className="prose-cvr mt-6 leading-relaxed text-muted-foreground">
+                    {renderMarkdown(s.body, cites, { skipLeadingH1: true })}
+                  </div>
 
-                  {kids.length > 0 && (
-                    <ul className="mt-4 space-y-1">
-                      {kids.map((l) => (
-                        <li key={l.slug}>
-                          <a
-                            href={`#${l.slug}`}
-                            className="font-display text-[11px] uppercase tracking-[0.14em] text-foreground/70 underline decoration-border underline-offset-4 transition-colors hover:decoration-accent"
-                          >
-                            Layer — {l.title}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                  {kids.map((l) => (
+                    <Disclosure
+                      key={l.slug}
+                      id={l.slug}
+                      kicker="Optional layer"
+                      label={l.title}
+                      summary={`${l.words} words. Nothing the argument above depends on.`}
+                    >
+                      <div className="prose-cvr">
+                        {renderMarkdown(l.body, citationsFor(l.slug), {
+                          skipLeadingH1: true,
+                        })}
+                      </div>
+                    </Disclosure>
+                  ))}
                 </section>
               );
             })}
@@ -238,39 +245,25 @@ export default function Piece() {
             <section
               id="apparatus"
               aria-labelledby="apparatus-heading"
-              className="scroll-mt-20 border-t border-border pt-12"
+              className="scroll-mt-24 border-t border-border pt-12"
             >
+              <p className="font-display text-[10px] uppercase tracking-[0.16em] text-muted-foreground/70">
+                Apparatus
+              </p>
               <h2
                 id="apparatus-heading"
-                className="font-display text-2xl font-bold uppercase tracking-[0.04em] text-foreground"
+                className="font-display mt-3 text-2xl font-bold uppercase tracking-[0.04em] text-foreground"
               >
-                Apparatus
+                What this does not say
               </h2>
-              <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
-                {layers.map((l) => (
-                  <li key={l.slug} id={l.slug} className="scroll-mt-20">
-                    <span className="font-display text-[11px] uppercase tracking-[0.14em] text-foreground/80">
-                      Layer
-                    </span>{" "}
-                    {l.title}
-                  </li>
-                ))}
-                {unmapped && (
-                  <li id={unmapped.slug} className="scroll-mt-20">
-                    <span className="font-display text-[11px] uppercase tracking-[0.14em] text-foreground/80">
-                      Register
-                    </span>{" "}
-                    {unmapped.title}
-                  </li>
-                )}
-              </ul>
 
-              <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
-                Core path {corePath.length} sections,{" "}
-                {corePath.reduce((n, s) => n + s.words, 0)} words. Every section
-                and every layer is directly linkable and readable cold; nothing
-                is gated and no order is required.
-              </p>
+              {unmapped && (
+                <div id={unmapped.slug} className="prose-cvr mt-6 scroll-mt-24 leading-relaxed text-muted-foreground">
+                  {renderMarkdown(unmapped.body, citationsFor(unmapped.slug), {
+                    skipLeadingH1: true,
+                  })}
+                </div>
+              )}
             </section>
           </main>
         </Column>

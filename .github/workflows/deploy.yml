@@ -35,7 +35,8 @@ jobs:
       - name: Validate corpus
         run: npm run validate
 
-      # Type-checks and bundles; fails the run if either breaks.
+      # Type-checks, bundles, prerenders, and proves the rendered prose is
+      # word for word what content/ holds. Fails the run if any step breaks.
       - run: npm run build
 
       - uses: actions/configure-pages@v5
