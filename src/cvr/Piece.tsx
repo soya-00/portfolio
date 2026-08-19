@@ -198,7 +198,11 @@ export default function Piece() {
         </div>
 
         <Column>
-          <main id="main" className="scroll-mt-24 pb-24">
+          {/* A div, not a <main>: PageFrame already renders the console as
+              the page's <main>, and nesting a second one is invalid and hands
+              a screen reader two main landmarks. The skip link still targets
+              this id, which lands the reader at the first section. */}
+          <div id="main" className="scroll-mt-24 pb-24">
             {sections.map((s) => {
               const kids = layersFor(s.slug);
               const cites = citationsFor(s.slug);
@@ -273,7 +277,7 @@ export default function Piece() {
                 </div>
               )}
             </section>
-          </main>
+          </div>
         </Column>
       </PageFrame>
     </>
