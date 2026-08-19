@@ -5,6 +5,7 @@ import { layers, sections, unmapped } from "@/cvr/lib/corpus";
 import { renderMarkdown } from "@/cvr/lib/markdown";
 import Divergence from "@/cvr/modules/Divergence";
 import Denominator from "@/cvr/modules/Denominator";
+import EvidenceMatrix from "@/cvr/modules/EvidenceMatrix";
 import OriginChain from "@/cvr/modules/OriginChain";
 import TheDocument from "@/cvr/modules/TheDocument";
 import Disclosure from "@/cvr/primitives/Disclosure";
@@ -250,6 +251,10 @@ export default function Piece() {
 
                   {s.slug === "what-cannot-be-seen" && (
                     <Denominator announce={announce} />
+                  )}
+
+                  {s.slug === "causes-we-cannot-evidence" && (
+                    <EvidenceMatrix announce={announce} />
                   )}
 
                   {kids.map((l) => (

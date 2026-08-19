@@ -448,3 +448,24 @@ html:not(.js) .chain-detail {
 
 /* Collapsed behind a scripted control, so it stands open without scripting. */
 html.js .js-hidden { display: none; }
+
+/* Documentation strength, as an ordinal ramp.
+   Ordinal and not categorical: reordering these steps changes what they say,
+   so they take one hue with monotone lightness rather than four hues. The hue
+   is the portfolio's own accent, 33 degrees, so the ramp does not introduce a
+   colour the design system does not already hold.
+
+   Validated, not eyeballed:
+     node validate_palette.js "#836949,#a3835c,#b69c7c,#c8b59d" \
+       --ordinal --mode dark --surface "#161613"
+     Lightness monotone PASS · adjacent dL PASS · dim-end contrast 3.52:1 PASS
+     · single hue, spread 2 degrees PASS
+
+   Colour is still never the only channel: each step also carries a filled-block
+   glyph ramp and its own written label. */
+:root {
+  --doc-1: 33 28% 40%;
+  --doc-2: 33 28% 50%;
+  --doc-3: 33 28% 60%;
+  --doc-4: 33 28% 70%;
+}
