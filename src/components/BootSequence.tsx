@@ -109,7 +109,7 @@ export default function BootSequence() {
             (C) Soya, Hanoi 2026
           </p>
           <p className={cn("pl-8 transition-opacity duration-300", line(3))}>
-            3 instruments, 3 open problems
+            3 instruments, 4 open problems
           </p>
           <p className={cn("pl-8 transition-opacity duration-300", line(4))}>
             Memory check:{" "}

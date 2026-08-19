@@ -6,10 +6,12 @@ type EntryProps = {
   title: string;
   state: string;
   delay: number;
+  /** Directory of the entry's long-form page, under BASE_URL. Omit for an entry without one. */
+  writeup?: string;
   children: ReactNode;
 };
 
-function Entry({ title, state, delay, children }: EntryProps) {
+function Entry({ title, state, delay, writeup, children }: EntryProps) {
   return (
     <Reveal delay={delay}>
       <article className="border-t border-border/60 pt-8 [&+&]:mt-10">
@@ -22,6 +24,21 @@ function Entry({ title, state, delay, children }: EntryProps) {
           </span>
         </div>
         <p className="mt-4 leading-relaxed text-muted-foreground">{children}</p>
+
+        {writeup && (
+          <a
+            href={`${import.meta.env.BASE_URL}${writeup}/`}
+            className="font-display group mt-6 inline-flex items-center gap-2 text-sm uppercase tracking-[0.16em] text-foreground underline decoration-border underline-offset-[6px] transition-colors hover:decoration-accent"
+          >
+            Read more
+            <span
+              aria-hidden="true"
+              className="text-accent transition-transform duration-200 group-hover:translate-x-1"
+            >
+              →
+            </span>
+          </a>
+        )}
       </article>
     </Reveal>
   );
@@ -32,9 +49,11 @@ export default function Research() {
     <Section id="research" label="Research" title="Open problems">
       <Reveal>
         <p className="mb-12 leading-relaxed text-muted-foreground">
-          Three things are in progress and none of them are finished, and
-          because an unfinished project is easy to write up as though it were
-          already a result, I would rather say where each one actually stands.
+          Four things sit here and only one of them is finished, and because an
+          unfinished project is easy to write up as though it were already a
+          result, I would rather say where each one actually stands. The
+          finished one is dated rather than maintained, and it says so on the
+          page.
         </p>
       </Reveal>
 
@@ -64,6 +83,15 @@ export default function Research() {
         run while converging, at the expected rate, on the wrong value.
         Reproducibility gets treated as evidence of validity far more often than
         it earns, and that gap is what the essay is about.
+      </Entry>
+
+      <Entry title="CVR" state="Completed" delay={0.18} writeup="cvr">
+        An interactive case study on how investigators in a dozen countries read
+        cockpit voice recorder evidence, and how those readings became Crew
+        Resource Management. There is no single legal object called a cockpit
+        voice recording, and the conventional answer that the recordings
+        revealed the problem and CRM was the answer is widely repeated rather
+        than established, so the piece keeps that question open.
       </Entry>
     </Section>
   );
