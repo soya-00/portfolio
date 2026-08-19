@@ -4,6 +4,7 @@ import { citationsFor } from "@/cvr/lib/citations";
 import { layers, sections, unmapped } from "@/cvr/lib/corpus";
 import { renderMarkdown } from "@/cvr/lib/markdown";
 import Divergence from "@/cvr/modules/Divergence";
+import { ApparatusExtras } from "@/cvr/modules/Apparatus";
 import Denominator from "@/cvr/modules/Denominator";
 import EvidenceMatrix from "@/cvr/modules/EvidenceMatrix";
 import OriginChain from "@/cvr/modules/OriginChain";
@@ -290,6 +291,11 @@ export default function Piece() {
               >
                 What this does not say
               </h2>
+
+              {/* The two registers a reader is owed: what was refused, and
+                  what was used. The cut list says of itself that it renders
+                  to the reader rather than sitting in the repository. */}
+              <ApparatusExtras announce={announce} />
 
               {unmapped && (
                 <div id={unmapped.slug} className="prose-cvr mt-6 scroll-mt-24 leading-relaxed text-muted-foreground">
