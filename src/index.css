@@ -414,3 +414,26 @@ html[data-alternatives="text"] .module-equivalent > details {
 .js-only { display: none; }
 html.js .js-only { display: revert; }
 html.js .no-js-only { display: none; }
+
+/* An absence, marked so it cannot be mistaken for a documented negative.
+   Three channels carry it and none of them is hue: this hatch, the em-rule
+   glyph in the cell, and the words "not documented" in the cell's own label.
+   The section states the failure this guards against — "an empty cell reads
+   as no protection and that is not what is being reported" — so the cell is
+   never left empty and never merely tinted. */
+.hatch {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    hsl(var(--border) / 0.9) 0 1px,
+    transparent 1px 6px
+  );
+}
+
+/* Forced-colours mode discards the gradient, so the glyph and the label are
+   what survive there. Give the cell a real border so the hatch's absence
+   does not flatten it into an ordinary empty cell. */
+@media (forced-colors: active) {
+  .hatch {
+    border: 1px dashed CanvasText;
+  }
+}

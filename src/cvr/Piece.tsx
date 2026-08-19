@@ -3,6 +3,7 @@ import { Column, PageFrame, PageHeader } from "@/components/PageShell";
 import { citationsFor } from "@/cvr/lib/citations";
 import { layers, sections, unmapped } from "@/cvr/lib/corpus";
 import { renderMarkdown } from "@/cvr/lib/markdown";
+import Divergence from "@/cvr/modules/Divergence";
 import TheDocument from "@/cvr/modules/TheDocument";
 import Disclosure from "@/cvr/primitives/Disclosure";
 import LiveRegion, { useAnnouncer } from "@/cvr/primitives/LiveRegion";
@@ -234,6 +235,11 @@ export default function Piece() {
                   {s.slug === "the-instrument-arrives" && (
                     <TheDocument announce={announce} />
                   )}
+
+                  {/* The spine. This section is the comparison, so the grid
+                      belongs inside it rather than in an appendix the
+                      argument would then have to refer out to. */}
+                  {s.slug === "divergence" && <Divergence announce={announce} />}
 
                   {kids.map((l) => (
                     <Disclosure

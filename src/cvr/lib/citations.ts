@@ -50,6 +50,7 @@ export type Source = {
   licence: { status: "reproducible" | "cite-only" | "undetermined"; basis: string };
   verification: Verification;
   confidence: "high" | "medium" | "low";
+  _note?: string | null;
 };
 
 export const sources: Record<string, Source> = Object.fromEntries(
