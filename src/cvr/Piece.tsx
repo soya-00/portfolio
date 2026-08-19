@@ -3,12 +3,18 @@ import { Column, PageFrame, PageHeader } from "@/components/PageShell";
 import { corePath, layers, sections, unmapped } from "@/cvr/lib/corpus";
 
 /**
- * Working wordmark. PageHeader sets the name at min(20vw, 195px) inside a
- * 768px column, so anything past about six characters wraps. The full title
- * rides in the kicker instead.
+ * PageHeader sets the name at min(20vw, 195px) inside a 768px column, so
+ * anything past about six characters wraps; the descriptive line rides in the
+ * kicker instead.
+ *
+ * CVR rather than CRM deliberately. CRM is the contested consequence, and the
+ * charter's overriding constraint is that a draft resolving into "the
+ * recordings revealed the problem and CRM was the answer" has failed. Naming
+ * the piece after the conclusion would settle the argument on the masthead.
+ * CVR names the object under examination instead.
  */
 const WORDMARK = "CVR";
-const TITLE = "Who may listen, and for what purpose";
+const TITLE = "How different countries read the same evidence.";
 
 const num = (i: number) => String(i).padStart(2, "0");
 
