@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,12 @@
       content="How investigators in different countries read cockpit voice recorder evidence, and how those readings became Crew Resource Management. The causal question is presented as open."
     />
   </head>
+  <script>
+      /* Controls that only work with scripting are hidden until this runs, so
+         nothing on the page looks operable when it is not. Inline and first so
+         there is no flash of the wrong state. */
+      document.documentElement.className = "js";
+    </script>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/entries/cvr.tsx"></script>

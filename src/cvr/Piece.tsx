@@ -3,6 +3,7 @@ import { Column, PageFrame, PageHeader } from "@/components/PageShell";
 import { citationsFor } from "@/cvr/lib/citations";
 import { layers, sections, unmapped } from "@/cvr/lib/corpus";
 import { renderMarkdown } from "@/cvr/lib/markdown";
+import TheDocument from "@/cvr/modules/TheDocument";
 import Disclosure from "@/cvr/primitives/Disclosure";
 import LiveRegion, { useAnnouncer } from "@/cvr/primitives/LiveRegion";
 import Settings from "@/cvr/primitives/Settings";
@@ -222,6 +223,13 @@ export default function Piece() {
                   <div className="prose-cvr mt-6 leading-relaxed text-muted-foreground">
                     {renderMarkdown(s.body, cites, { skipLeadingH1: true })}
                   </div>
+
+                  {/* The recorder as a legal object is this section's subject,
+                      so what may be reproduced of one belongs here rather than
+                      in an appendix. */}
+                  {s.slug === "the-instrument-arrives" && (
+                    <TheDocument announce={announce} />
+                  )}
 
                   {kids.map((l) => (
                     <Disclosure

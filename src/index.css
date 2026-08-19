@@ -357,3 +357,60 @@ html[data-motion="reduced"] .progress-fill {
 .progress-fill {
   transition: width 150ms ease-out;
 }
+
+/* Reproduced document.
+   The third typographic register, after body prose and editorial annotation.
+   Statute and report text must read as something lifted from elsewhere rather
+   than as something written here — that distinction is the piece's central
+   epistemic claim, rendered typographically rather than asserted. */
+.reproduced {
+  margin: 1.5rem 0;
+  border: 1px solid hsl(var(--border));
+  border-left: 3px solid hsl(var(--accent) / 0.55);
+  background: hsl(var(--surface) / 0.5);
+}
+
+.reproduced-text {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: hsl(var(--foreground) / 0.92);
+  /* Hanging quotation marks would imply speech. This is a document. */
+  quotes: none;
+}
+
+.reproduced-source {
+  border-top: 1px solid hsl(var(--border));
+  padding: 0.75rem 1.5rem 1rem;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+}
+
+/* Modules sit apart from the prose measure, since a ledger needs the width. */
+.module {
+  max-width: none;
+}
+
+html[data-density="compact"] .module details:not([open]) > summary {
+  opacity: 0.85;
+}
+
+/* The alternatives setting swaps every module for its textual equivalent.
+   Keyed to an explicit class rather than a :not() chain over structure, which
+   would break silently the first time the markup moved. */
+html[data-alternatives="text"] .module-interactive {
+  display: none;
+}
+
+html[data-alternatives="text"] .module-equivalent > details {
+  /* The equivalent is the module now, so it opens rather than hiding. */
+  border-left-color: hsl(var(--accent) / 0.6);
+}
+
+/* Progressive enhancement. Controls that do nothing without scripting are
+   hidden rather than left inert; the module's textual equivalent carries the
+   same content in a form that needs no controls at all. */
+.js-only { display: none; }
+html.js .js-only { display: revert; }
+html.js .no-js-only { display: none; }
