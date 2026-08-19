@@ -1,0 +1,32 @@
+{
+  "_meta": { "description": "House rules that resolve conflicts the schema cannot. Each is stated to the reader in the piece, not only held internally." },
+
+  "fatality_counting": {
+    "rule": "The figure reported is the figure in the cited official report, as that report states it. Deaths occurring after the report's count are given in a separate sourced field and shown to the reader as a separate statement. Ground fatalities are included in the headline figure and identified as such wherever present.",
+    "rationale": "Any convention that harmonises figures across accidents requires arithmetic judgments the reports did not make, which is original analysis. Deferring to each report and showing the discrepancy is both more honest and consistent with the non-goal against second-guessing official findings.",
+    "affected": ["korean-air-801-1997", "kegworth-1989", "united-232", "colgan-3407", "air-florida-90", "air-india-171-2025"]
+  },
+
+  "redaction": {
+    "rule": "Only an identity may be redacted: a proper name, a rank-plus-name construction, a pronoun whose retention would identify an individual already named in the same passage, or a personal identifier. Nothing else is eligible. Substantive words are never altered. A passage requiring substantive alteration is not quoted at all.",
+    "notation": "Redactions render in square brackets carrying the role: [the Captain]. Elisions render as a spaced ellipsis. Brackets mean something was replaced; an ellipsis means something was removed. Square brackets are reserved exclusively for redaction and are never used for grammatical smoothing.",
+    "storage": "verbatim is stored and never rendered. rendered must be derivable from verbatim by applying only the declared redactions and elisions.",
+    "disclosure": "Stated to the reader at the first redacted quotation, in the flow rather than behind a disclosure control, and repeated in full in the methods section."
+  },
+
+  "ellipsis": {
+    "rule": "At most one internal elision per quotation. A passage requiring two is quoted as two separate quotations with the intervening material described, or paraphrased entirely. Elisions never remove qualifiers, conditions, or attributions.",
+    "rationale": "Two elisions inside one quoted passage is a reassembly, not an elision, and cannot be assessed for meaning-change without the source."
+  },
+
+  "quotation_necessity": {
+    "rule": "A quotation earns its place if and only if it meets at least one of: (a) the wording is the object of analysis; (b) paraphrase would alter legal or evidentiary meaning; (c) the wording is evidence of the author's own stance; (d) the formulation is contested and the piece must show the parties' own words. Failing all four, paraphrase with citation. Meeting one, quote at whatever length the analysis requires.",
+    "rationale": "Length is not the constraint. Necessity is. A word budget would cut the quotations that are doing evidentiary work and keep the ones that are decorative.",
+    "note": "Reproduction terms are a separate constraint and are not relaxed by this test. A quotation may be analytically necessary and still not reproducible; that outcome is citation-and-summary."
+  },
+
+  "absence_language": {
+    "rule": "Where a search failed, the piece says that a thing was not located, never that it does not exist. Applies to the Russian CRM mandate, the Japanese evidentiary bar, the aviation-specific Hofstede critique, and the insurer role.",
+    "rationale": "Documentation asymmetry tracks language access, not regulatory reality. Rendering an absence as a negative finding would convert a limitation of the research into a claim about the world."
+  }
+}

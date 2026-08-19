@@ -1,0 +1,1005 @@
+{
+  "_meta": {
+    "description": "Claim-to-source map. A sidecar so content/ stays untouched ground truth. anchor is a verbatim phrase appearing exactly once in its section; the build attaches the citation there. Gate rule R12 checks both halves: every anchor matches exactly once, and every source_ref resolves into sources.json.",
+    "status": "DRAFT — anchors and resolution are mechanical and verified by R12. Which source backs which sentence is editorial and needs ratification before publication. Assertions no source supports are registered separately in content/unmapped.md and referenced here by unmapped_ref.",
+    "ref_types": "source_ref resolves into sources.json. corpus_ref points at a data file or script where the claim is derived from the corpus itself rather than an external source. governance_ref points at the charter or overriding constraints, for claims that state the piece's own rules rather than facts about the world. unmapped_ref points at content/unmapped.md for assertions nothing supports."
+  },
+  "citations": [
+    {
+      "id": "C001",
+      "section": "before-the-recorder",
+      "anchor": "A former airline pilot turned writer, David Beaty, made the argument in 1969",
+      "source_ref": "beaty-1969",
+      "locator": null,
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C002",
+      "section": "before-the-recorder",
+      "anchor": "could not be traced to a page in either the 1969 edition or its 1991 revision",
+      "source_ref": "beaty-1969",
+      "locator": null,
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C003",
+      "section": "the-instrument-arrives",
+      "anchor": "Human factors entered the training and licensing standards of Annex 1 in 1989 and Annex 6 in 1995",
+      "source_ref": "icao-doc-9683",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C004",
+      "section": "the-instrument-arrives",
+      "anchor": "Annex 13's Standard 5.12 restricts the use of investigation records",
+      "source_ref": "icao-annex-13",
+      "locator": "Standard 5.12",
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C005",
+      "section": "the-instrument-arrives",
+      "anchor": "final rule published on 2 February 2026 extended required recording time from two hours to twenty-five",
+      "source_ref": "faa-cvr-25hr-2026",
+      "locator": "91 FR 4447",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C006",
+      "section": "portland",
+      "anchor": "a DC-8 with a landing gear indication problem held near Portland, Oregon",
+      "source_ref": "ntsb-aar-79-07",
+      "locator": "p. 29",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C007",
+      "section": "portland",
+      "anchor": "attributes the accident to the captain's failure to monitor the fuel state properly",
+      "source_ref": "ntsb-aar-79-07",
+      "locator": "p. 29, probable cause",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C008",
+      "section": "portland",
+      "anchor": "the failure of the other two flight crewmembers either to fully comprehend the criticality",
+      "source_ref": "ntsb-aar-79-07",
+      "locator": "p. 29, contributing factor",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C009",
+      "section": "portland",
+      "anchor": "numbered **A-79-47**, not the number carried in much of the secondary literature",
+      "source_ref": "ntsb-rec-a-79-047",
+      "locator": "Recommendation A-79-47",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C010",
+      "section": "portland",
+      "anchor": "urging that flight crews be indoctrinated in the principles of flight deck resource management",
+      "source_ref": "ntsb-rec-a-79-047",
+      "locator": "Recommendation A-79-47",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C011",
+      "section": "portland",
+      "anchor": "That attribution has not been traced to a primary NTSB document",
+      "source_ref": "ntsb-rec-a-79-047",
+      "locator": null,
+      "verification": "not-documented"
+    },
+    {
+      "id": "C012",
+      "section": "the-workshop",
+      "anchor": "Its proceedings were published as *Resource Management on the Flight Deck*",
+      "source_ref": "nasa-cp-2120",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C013",
+      "section": "the-workshop",
+      "anchor": "it is at that meeting that the label **Cockpit Resource Management** was applied",
+      "source_ref": "nasa-cp-2120",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C014",
+      "section": "the-workshop",
+      "anchor": "NASA published a simulator study by H. P. Ruffell Smith",
+      "source_ref": "nasa-tm-78482",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C015",
+      "section": "the-workshop",
+      "anchor": "crew coordination varied enormously between crews facing identical conditions",
+      "source_ref": "nasa-tm-78482",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C016",
+      "section": "the-workshop",
+      "anchor": "The first comprehensive US programme was launched by an airline in 1981",
+      "source_ref": "helmreich-merritt-wilhelm-1999",
+      "locator": "pp. 19-32",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C017",
+      "section": "the-workshop",
+      "anchor": "Two search rounds found no source asserting it",
+      "source_ref": "helmreich-merritt-wilhelm-1999",
+      "locator": null,
+      "verification": "not-documented"
+    },
+    {
+      "id": "C018",
+      "section": "divergence",
+      "anchor": "Article 359(1) of Law No. 1 of 2009 provides that investigation results cannot be used as evidence",
+      "source_ref": "indonesia-uu-1-2009",
+      "locator": "Pasal 359(1)",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C019",
+      "section": "divergence",
+      "anchor": "the law's own elucidation expressly names the cockpit voice recorder and its verbatim transcript",
+      "source_ref": "indonesia-uu-1-2009",
+      "locator": "Penjelasan, Pasal 359",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C020",
+      "section": "divergence",
+      "anchor": "There is no official English translation, which is part of why the strength of the Indonesian position",
+      "source_ref": "indonesia-uu-1-2009",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C021",
+      "section": "divergence",
+      "anchor": "Article 30, requires that accident investigation be conducted separately from judicial procedures",
+      "source_ref": "korea-arair-act",
+      "locator": "Article 30",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C022",
+      "section": "divergence",
+      "anchor": "Article 28 permits the investigating committee to withhold information at its discretion",
+      "source_ref": "korea-arair-act",
+      "locator": "Article 28",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C023",
+      "section": "divergence",
+      "anchor": "the Korean government's own English service is expressly non-official",
+      "source_ref": "korea-arair-act",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C024",
+      "section": "divergence",
+      "anchor": "no express evidentiary bar was located in the Japanese text",
+      "source_ref": "japan-jtsb-act",
+      "locator": null,
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C025",
+      "section": "divergence",
+      "anchor": "Under Article L1621-11 of the French Code des transports",
+      "source_ref": "france-code-transports",
+      "locator": "Art. L1621-11",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C026",
+      "section": "divergence",
+      "anchor": "technical investigators then take a copy of the contents under the supervision of a judicial police officer",
+      "source_ref": "france-code-transports",
+      "locator": "Art. L1621-11, I.1",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C027",
+      "section": "divergence",
+      "anchor": "Brazil's confidentiality provisions survived a constitutional challenge",
+      "source_ref": "brazil-stf-adi-5667",
+      "locator": "ADI 5667",
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C028",
+      "section": "divergence",
+      "anchor": "Canada, Brazil and the United States operate variants through different mechanisms",
+      "source_ref": "canada-ctaisb-act",
+      "locator": "s.28",
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C029",
+      "section": "six-readings",
+      "anchor": "taking off without clearance, disregarding an instruction to stand by",
+      "source_ref": "ciaiac-a-102-103-1977",
+      "locator": "Conclusiones 2.2",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C030",
+      "section": "six-readings",
+      "anchor": "the crew reacted to the initial engine problem prematurely and contrary to their training",
+      "source_ref": "aaib-4-1990",
+      "locator": "Analysis",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C031",
+      "section": "six-readings",
+      "anchor": "training patterns of the period made no specific provision for coordination between cabin and flight crew",
+      "source_ref": "aaib-4-1990",
+      "locator": "Analysis, cabin and flight crew coordination",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C032",
+      "section": "six-readings",
+      "anchor": "an inadequately briefed and executed non-precision approach",
+      "source_ref": "ntsb-aar-00-01",
+      "locator": "Probable cause",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C033",
+      "section": "six-readings",
+      "anchor": "the regulator's inhibition of a ground warning system",
+      "source_ref": "ntsb-aar-00-01",
+      "locator": "Probable cause, contributing factors",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C034",
+      "section": "six-readings",
+      "anchor": "the American and French authorities both dissented publicly, on what the recorded evidence showed",
+      "source_ref": "egypt-mca-flash-604",
+      "locator": null,
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C035",
+      "section": "six-readings",
+      "anchor": "the issuing authority publishes no reproduction terms",
+      "source_ref": "egypt-mca-flash-604",
+      "locator": null,
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C036",
+      "section": "six-readings",
+      "anchor": "placed crew conduct inside an organisational failure reaching scheduling, equipment, management and oversight",
+      "source_ref": "moshansky-1992",
+      "locator": null,
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C037",
+      "section": "generations",
+      "anchor": "comes from a 1999 paper by Helmreich, Merritt and Wilhelm",
+      "source_ref": "helmreich-merritt-wilhelm-1999",
+      "locator": "IJAP 9(1), pp. 19-32",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C038",
+      "section": "generations",
+      "anchor": "the origins are *usually traced* to the 1979 workshop",
+      "source_ref": "helmreich-merritt-wilhelm-1999",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C039",
+      "section": "generations",
+      "anchor": "comparing the lifespan of a CRM generation to a fruit fly's",
+      "source_ref": "helmreich-merritt-wilhelm-1999",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C040",
+      "section": "generations",
+      "anchor": "training delivered from the United States went badly where the concepts were incongruent",
+      "source_ref": "helmreich-merritt-wilhelm-1999",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C041",
+      "section": "generations",
+      "anchor": "no independent critical historiography of the generational schema was located",
+      "source_ref": "helmreich-merritt-wilhelm-1999",
+      "locator": null,
+      "verification": "not-documented"
+    },
+    {
+      "id": "C042",
+      "section": "generations",
+      "anchor": "On effectiveness the founding researchers were explicit",
+      "source_ref": "helmreich-et-al-1990",
+      "locator": "Flight Safety Digest 9(5)",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C043",
+      "section": "the-culture-argument",
+      "anchor": "identifies the captain's inadequate briefing and execution of a non-precision approach",
+      "source_ref": "ntsb-aar-00-01",
+      "locator": "Probable cause",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C044",
+      "section": "the-culture-argument",
+      "anchor": "the regulator's deliberate inhibition of a ground-proximity warning system",
+      "source_ref": "ntsb-aar-00-01",
+      "locator": "Probable cause, contributing factors",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C045",
+      "section": "the-culture-argument",
+      "anchor": "the first officer called for a missed approach",
+      "source_ref": "ntsb-aar-00-01",
+      "locator": "Cockpit voice recorder factual",
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C046",
+      "section": "the-culture-argument",
+      "anchor": "Book-length work on the collision between Western aviation concepts and East Asian value systems",
+      "source_ref": "jing-batteau-2015",
+      "locator": null,
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C047",
+      "section": "the-culture-argument",
+      "anchor": "the ecological fallacy of projecting a country-level score onto an individual's behaviour",
+      "source_ref": "brewer-venaik-2014",
+      "locator": "DOI 10.1177/0170840613517602",
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C048",
+      "section": "the-culture-argument",
+      "anchor": "the aviation replication study that tested the dimensions on flight crews concluded that they largely held",
+      "source_ref": "merritt-2000",
+      "locator": null,
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C049",
+      "section": "the-culture-argument",
+      "anchor": "searched for across two rounds and not located",
+      "source_ref": "brewer-venaik-2014",
+      "locator": null,
+      "verification": "not-documented"
+    },
+    {
+      "id": "C050",
+      "section": "what-cannot-be-seen",
+      "anchor": "The 1979 NASA study had what the accident record lacks",
+      "source_ref": "nasa-tm-78482",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C051",
+      "section": "what-cannot-be-seen",
+      "anchor": "a loss of hydraulic control in 1989",
+      "source_ref": "ntsb-aar-90-06",
+      "locator": null,
+      "verification": "brief-only"
+    },
+    {
+      "id": "C052",
+      "section": "what-cannot-be-seen",
+      "anchor": "Published analysis has credited coordination in some",
+      "source_ref": "lockwood-1985",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C053",
+      "section": "what-cannot-be-seen",
+      "anchor": "a dual engine rollback on approach in 2008",
+      "source_ref": "aaib-1-2010",
+      "locator": null,
+      "verification": "brief-only"
+    },
+    {
+      "id": "C054",
+      "section": "what-cannot-be-seen",
+      "anchor": "a single 1991 conference paper that microcoded communication in two such events",
+      "source_ref": "predmore-1991",
+      "locator": "NTRS 19920062326",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C055",
+      "section": "causes-we-cannot-evidence",
+      "anchor": "a 1979 recommendation to the regulator",
+      "source_ref": "ntsb-rec-a-79-047",
+      "locator": "Recommendation A-79-47",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C056",
+      "section": "causes-we-cannot-evidence",
+      "anchor": "a 1990 rule creating an optional qualification path",
+      "source_ref": "faa-sfar-58",
+      "locator": "SFAR 58, 55 FR 40275",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C057",
+      "section": "causes-we-cannot-evidence",
+      "anchor": "a 1995 final rule effective March 1996 making CRM binding for US scheduled operators",
+      "source_ref": "faa-final-rule-1995",
+      "locator": "60 FR 65940; 14 CFR 121.404",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C058",
+      "section": "causes-we-cannot-evidence",
+      "anchor": "The term itself was published in a pilots' union magazine by the NASA researcher who coined it",
+      "source_ref": null,
+      "locator": null,
+      "verification": "not-documented",
+      "unmapped_ref": "UM-04",
+      "note": "No source record for the union magazine. Previously mis-mapped to nasa-cp-2120, which is the workshop proceedings and a different document."
+    },
+    {
+      "id": "C059",
+      "section": "causes-we-cannot-evidence",
+      "anchor": "opposing cockpit image recorders on privacy, misinterpretation and litigation grounds",
+      "source_ref": "ifalpa-23pos28",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C060",
+      "section": "causes-we-cannot-evidence",
+      "anchor": "was searched for in Chinese-language regulatory sources and not found",
+      "source_ref": "caac-ac-121-fs-41r1",
+      "locator": null,
+      "verification": "not-documented"
+    },
+    {
+      "id": "C061",
+      "section": "causes-we-cannot-evidence",
+      "anchor": "never mention insurers, underwriters or premiums",
+      "source_ref": "helmreich-merritt-wilhelm-1999",
+      "locator": null,
+      "verification": "not-documented"
+    },
+    {
+      "id": "C062",
+      "section": "causes-we-cannot-evidence",
+      "anchor": "The management-grid lineage of the first programmes is documented",
+      "source_ref": "helmreich-merritt-wilhelm-1999",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C-cut-CL-01",
+      "section": "what-this-does-not-say",
+      "anchor": null,
+      "cut_ref": "CL-01",
+      "source_ref": null,
+      "locator": null,
+      "verification": "not-documented"
+    },
+    {
+      "id": "C-cut-CL-02",
+      "section": "what-this-does-not-say",
+      "anchor": null,
+      "cut_ref": "CL-02",
+      "source_ref": null,
+      "locator": null,
+      "verification": "not-documented"
+    },
+    {
+      "id": "C-cut-CL-03",
+      "section": "what-this-does-not-say",
+      "anchor": null,
+      "cut_ref": "CL-03",
+      "source_ref": null,
+      "locator": null,
+      "verification": "not-documented"
+    },
+    {
+      "id": "C-cut-CL-04",
+      "section": "what-this-does-not-say",
+      "anchor": null,
+      "cut_ref": "CL-04",
+      "source_ref": null,
+      "locator": null,
+      "verification": "not-documented"
+    },
+    {
+      "id": "C-cut-CL-05",
+      "section": "what-this-does-not-say",
+      "anchor": null,
+      "cut_ref": "CL-05",
+      "source_ref": null,
+      "locator": null,
+      "verification": "not-documented"
+    },
+    {
+      "id": "C-cut-CL-06",
+      "section": "what-this-does-not-say",
+      "anchor": null,
+      "cut_ref": "CL-06",
+      "source_ref": null,
+      "locator": null,
+      "verification": "not-documented"
+    },
+    {
+      "id": "C-cut-CL-07",
+      "section": "what-this-does-not-say",
+      "anchor": null,
+      "cut_ref": "CL-07",
+      "source_ref": null,
+      "locator": null,
+      "verification": "not-documented"
+    },
+    {
+      "id": "C-cut-CL-08",
+      "section": "what-this-does-not-say",
+      "anchor": null,
+      "cut_ref": "CL-08",
+      "source_ref": null,
+      "locator": null,
+      "verification": "not-documented"
+    },
+    {
+      "id": "C-cut-CL-09",
+      "section": "what-this-does-not-say",
+      "anchor": null,
+      "cut_ref": "CL-09",
+      "source_ref": null,
+      "locator": null,
+      "verification": "not-documented"
+    },
+    {
+      "id": "C-cut-CL-10",
+      "section": "what-this-does-not-say",
+      "anchor": null,
+      "cut_ref": "CL-10",
+      "source_ref": null,
+      "locator": null,
+      "verification": "not-documented"
+    },
+    {
+      "id": "C101",
+      "section": "methods",
+      "anchor": "investigators in a dozen countries listened to recordings",
+      "source_ref": null,
+      "locator": null,
+      "verification": "primary-verified",
+      "corpus_ref": "data/jurisdictions.json",
+      "note": "Derived from the corpus: 14 jurisdiction records, of which 10 carry a documented instrument or regime class."
+    },
+    {
+      "id": "C102",
+      "section": "methods",
+      "anchor": "in several countries they were forbidden, by statute, from letting anyone else hear it",
+      "source_ref": null,
+      "locator": null,
+      "verification": "primary-verified",
+      "corpus_ref": "data/jurisdictions.json",
+      "note": "Five jurisdictions classed express-bar."
+    },
+    {
+      "id": "C103",
+      "section": "methods",
+      "anchor": "Nothing appears here that is not in the underlying corpus",
+      "source_ref": null,
+      "locator": null,
+      "verification": "primary-verified",
+      "governance_ref": "docs/OVERRIDING-CONSTRAINTS.md"
+    },
+    {
+      "id": "C104",
+      "section": "methods",
+      "anchor": "Every statement about what a crew did, said or failed to do is attributed",
+      "source_ref": null,
+      "locator": "§3 non-goal 1",
+      "verification": "primary-verified",
+      "governance_ref": "docs/CHARTER.md"
+    },
+    {
+      "id": "C105",
+      "section": "methods",
+      "anchor": "No cockpit audio.",
+      "source_ref": null,
+      "locator": "§3 non-goal 3",
+      "verification": "primary-verified",
+      "governance_ref": "docs/CHARTER.md"
+    },
+    {
+      "id": "C106",
+      "section": "methods",
+      "anchor": "Crew appear by role only",
+      "source_ref": null,
+      "locator": "§3 non-goal 4",
+      "verification": "primary-verified",
+      "governance_ref": "docs/CHARTER.md"
+    },
+    {
+      "id": "C107",
+      "section": "methods",
+      "anchor": "Research cutoff 16 August 2026",
+      "source_ref": null,
+      "locator": "§3 non-goal 11",
+      "verification": "primary-verified",
+      "governance_ref": "docs/CHARTER.md"
+    },
+    {
+      "id": "C108",
+      "section": "methods",
+      "anchor": "The core path runs about twenty-five minutes",
+      "source_ref": null,
+      "locator": null,
+      "verification": "primary-verified",
+      "corpus_ref": "scripts/timing.js",
+      "note": "Measured, not asserted: 4,593 words / 220 wpm + 4 min interaction = 24.9 min."
+    },
+    {
+      "id": "C109",
+      "section": "onward",
+      "anchor": "Indonesia's aviation law via the national legal database",
+      "source_ref": "indonesia-uu-1-2009",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C110",
+      "section": "onward",
+      "anchor": "South Korea's investigation act via the national law information centre",
+      "source_ref": "korea-arair-act",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C111",
+      "section": "onward",
+      "anchor": "France's transport code via Légifrance",
+      "source_ref": "france-code-transports",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C112",
+      "section": "onward",
+      "anchor": "Brazil's aeronautical code via the presidential legislative site",
+      "source_ref": "brazil-cba-88",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C113",
+      "section": "onward",
+      "anchor": "The ICAO Annex that sets the international floor is purchase-only",
+      "source_ref": "icao-annex-13",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C114",
+      "section": "onward",
+      "anchor": "The Canadian statute is open and its section 28",
+      "source_ref": "canada-ctaisb-act",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C115",
+      "section": "onward",
+      "anchor": "The 1979 simulator study",
+      "source_ref": "nasa-tm-78482",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C116",
+      "section": "onward",
+      "anchor": "the workshop proceedings that named the discipline",
+      "source_ref": "nasa-cp-2120",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C117",
+      "section": "onward",
+      "anchor": "The canonical 1999 generational history is behind a journal paywall",
+      "source_ref": "helmreich-merritt-wilhelm-1999",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C118",
+      "section": "onward",
+      "anchor": "The 1990 effectiveness paper is genuinely open",
+      "source_ref": "helmreich-et-al-1990",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C119",
+      "section": "onward",
+      "anchor": "The investigating authority's report is open",
+      "source_ref": "ntsb-aar-00-01",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C120",
+      "section": "onward",
+      "anchor": "The general methodological critique of the national-culture framework is in a management journal",
+      "source_ref": "brewer-venaik-2014",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C121",
+      "section": "onward",
+      "anchor": "The aviation replication study is paywalled",
+      "source_ref": "merritt-2000",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C122",
+      "section": "onward",
+      "anchor": "The book-length critique of Western aviation concepts in East Asian contexts",
+      "source_ref": "jing-batteau-2015",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C123",
+      "section": "onward",
+      "anchor": "The most-read rebuttal is a blog post and free",
+      "source_ref": null,
+      "locator": null,
+      "verification": "not-documented",
+      "unmapped_ref": "UM-01",
+      "note": "No source record exists for the blog. Named in prose on both sides of the contested node; neither side is in the register."
+    },
+    {
+      "id": "C124",
+      "section": "onward",
+      "anchor": "section 28 is the most litigated provision in this area",
+      "source_ref": null,
+      "locator": null,
+      "verification": "not-documented",
+      "unmapped_ref": "UM-06",
+      "note": "Evaluative comparative claim. No source establishes relative litigation volume."
+    },
+    {
+      "id": "C125",
+      "section": "onward",
+      "anchor": "US and UK reports are open and reproducible",
+      "source_ref": "ntsb-aar-79-07",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C126",
+      "section": "onward",
+      "anchor": "Spain's are reusable under a public-sector information statute",
+      "source_ref": "ciaiac-a-102-103-1977",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C127",
+      "section": "onward",
+      "anchor": "Germany's are readable but restricted for reuse",
+      "source_ref": "bfu-uberlingen-2004",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C128",
+      "section": "onward",
+      "anchor": "Egypt's is reachable only through a foreign authority's archive",
+      "source_ref": "egypt-mca-flash-604",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C129",
+      "section": "onward",
+      "anchor": "Canada's commission volumes are in the government publications catalogue",
+      "source_ref": "moshansky-1992",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C130",
+      "section": "onward",
+      "anchor": "an appellate conviction in France was under appeal to a higher court",
+      "source_ref": "airbus-af447-appeal-2026",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C131",
+      "section": "onward",
+      "anchor": "an Indian investigation was projecting a draft report for October 2026",
+      "source_ref": "aaib-india-171-prelim",
+      "locator": null,
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C132",
+      "section": "divergence-gaps",
+      "anchor": "the Supreme Federal Court sustained the confidentiality provisions of the aeronautical code",
+      "source_ref": "brazil-stf-adi-5667",
+      "locator": "ADI 5667",
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C133",
+      "section": "divergence-gaps",
+      "anchor": "its CVR-protection rules were never separately established across three research rounds",
+      "source_ref": null,
+      "locator": null,
+      "verification": "not-documented",
+      "corpus_ref": "data/jurisdictions.json#gb"
+    },
+    {
+      "id": "C134",
+      "section": "divergence-gaps",
+      "anchor": "Australia, China and Russia are similarly blank on the protection side",
+      "source_ref": null,
+      "locator": null,
+      "verification": "not-documented",
+      "corpus_ref": "data/jurisdictions.json"
+    },
+    {
+      "id": "C135",
+      "section": "effectiveness",
+      "anchor": "Writing in 1990, Helmreich and colleagues stated that the question of CRM's effectiveness remained open",
+      "source_ref": "helmreich-et-al-1990",
+      "locator": "Flight Safety Digest 9(5), pp. 1-17",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C136",
+      "section": "effectiveness",
+      "anchor": "accidents are too rare and too multiply-caused for accident rates to validate a training intervention",
+      "source_ref": "helmreich-et-al-1990",
+      "locator": null,
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C137",
+      "section": "effectiveness",
+      "anchor": "Studies from adjacent fields that tried the same measurement produced contradictory results",
+      "source_ref": null,
+      "locator": null,
+      "verification": "not-documented",
+      "unmapped_ref": "UM-05",
+      "note": "The adjacent-field studies are described but no source records exist for them."
+    },
+    {
+      "id": "C138",
+      "section": "adjudication",
+      "anchor": "Both readings are compatible with the investigating authority's findings",
+      "source_ref": "ntsb-aar-00-01",
+      "locator": "Probable cause",
+      "verification": "primary-verified"
+    },
+    {
+      "id": "C139",
+      "section": "redaction-note",
+      "anchor": "their names are not needed for it",
+      "source_ref": null,
+      "locator": "§3 non-goal 4",
+      "verification": "primary-verified",
+      "governance_ref": "docs/CHARTER.md"
+    },
+    {
+      "id": "C140",
+      "section": "redaction-note",
+      "anchor": "The unaltered text of every quotation is held in this project's data and is never rendered",
+      "source_ref": null,
+      "locator": null,
+      "verification": "primary-verified",
+      "corpus_ref": "data/quotations.json"
+    },
+    {
+      "id": "C141",
+      "section": "redaction-note",
+      "anchor": "A build in which any other difference has crept in does not ship",
+      "source_ref": null,
+      "locator": null,
+      "verification": "primary-verified",
+      "corpus_ref": "scripts/validate.js#R5"
+    },
+    {
+      "id": "C901",
+      "section": "divergence",
+      "anchor": "Canada's privilege was litigated to its Supreme Court on a recording itself",
+      "source_ref": "canada-scc-carroll-byrne-2022",
+      "locator": "2022 SCC 48",
+      "verification": "secondary-only",
+      "note": "Added 18 Aug 2026. The spine previously stated the Brazilian finding had no counterpart."
+    },
+    {
+      "id": "C902",
+      "section": "divergence-gaps",
+      "anchor": "the court declined to protect it",
+      "source_ref": "canada-scc-carroll-byrne-2022",
+      "locator": "2022 SCC 48",
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C903",
+      "section": "divergence-gaps",
+      "anchor": "dismissing the challenge by majority in August 2024",
+      "source_ref": "brazil-stf-adi-5667",
+      "locator": "ADI 5667",
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C904",
+      "section": "the-culture-argument",
+      "anchor": "three seconds before it the same first officer had dismissed a sink-rate alert",
+      "source_ref": "ntsb-aar-00-01",
+      "locator": "Factual Information, approx. 0142:18",
+      "verification": "secondary-only",
+      "note": "Added 18 Aug 2026. Without this the section was true and misleadingly clean."
+    },
+    {
+      "id": "C905",
+      "section": "the-culture-argument",
+      "anchor": "The flight engineer questioned a warning aloud",
+      "source_ref": "ntsb-aar-00-01",
+      "locator": "Factual Information, approx. 0142:02",
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C906",
+      "section": "six-readings",
+      "anchor": "The Egyptian report stated no probable cause at all, listing four possible causes",
+      "source_ref": "egypt-mca-flash-604",
+      "locator": null,
+      "verification": "secondary-only"
+    },
+    {
+      "id": "C907",
+      "section": "the-instrument-arrives",
+      "anchor": "with legal implications the existing protection regimes were not designed for",
+      "source_ref": "faa-cvr-25hr-2026",
+      "locator": "91 FR 4447",
+      "verification": "secondary-only"
+    }
+  ]
+}

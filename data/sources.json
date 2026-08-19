@@ -1,0 +1,1588 @@
+{
+  "_meta": {
+    "description": "Source register. Every source_ref elsewhere in data/ must resolve to an id here. Licence status is a reproduce-or-cite determination made against each authority's own published terms; this project seeks no permissions, so cite-only is a design constraint rather than a pending task.",
+    "research_cutoff": "2026-08-16",
+    "compiled": "2026-08-18",
+    "audit_rounds": 3
+  },
+  "sources": [
+    {
+      "id": "ntsb-aar-79-07",
+      "citation": "National Transportation Safety Board, Aircraft Accident Report: United Airlines, Inc., McDonnell-Douglas DC-8-61, N8082U, Portland, Oregon, December 28, 1978",
+      "authority": "US National Transportation Safety Board",
+      "type": "accident-report",
+      "number": "NTSB-AAR-79-7",
+      "date": "1979-06-07",
+      "language": "en",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7907.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "US Government work, not subject to domestic copyright (17 U.S.C. §105)",
+        "attribution": "Source: U.S. National Transportation Safety Board (public domain)",
+        "carve_out": "Embedded third-party photographs and manufacturer diagrams may carry separate copyright."
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "Q01",
+        "U12",
+        "L01"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "ntsb-aar-00-01",
+      "citation": "National Transportation Safety Board, Controlled Flight Into Terrain, Korean Air Flight 801, Boeing 747-300, HL7468, Nimitz Hill, Guam, August 6, 1997",
+      "authority": "US National Transportation Safety Board",
+      "type": "accident-report",
+      "number": "NTSB/AAR-00/01",
+      "date": "2000-01-13",
+      "language": "en",
+      "url": "https://www.ntsb.gov/investigations/accidentreports/reports/aar0001.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "US Government work (17 U.S.C. §105)",
+        "attribution": "Source: U.S. National Transportation Safety Board (public domain)",
+        "carve_out": "Embedded third-party imagery."
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "Q26",
+        "C08",
+        "S01"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "ntsb-rec-a-79-047",
+      "citation": "National Transportation Safety Board, Safety Recommendation A-79-47 (issued with A-79-32 following United Airlines Flight 173)",
+      "authority": "US National Transportation Safety Board",
+      "type": "advisory",
+      "number": "A-79-47",
+      "date": "1979",
+      "language": "en",
+      "url": null,
+      "archive_url": null,
+      "access": "offline",
+      "licence": {
+        "status": "reproducible",
+        "basis": "US Government work (17 U.S.C. §105)",
+        "attribution": "Source: U.S. National Transportation Safety Board (public domain)",
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "Q31",
+        "C08-r2"
+      ],
+      "downgraded": false,
+      "_note": "Corrects the briefs' 'X-79-17', which does not match the NTSB A-79 series. Verbatim CRM wording confirmed. Direct NTSB CAROL URL still to be captured. Access downgraded from open: no resolving URL captured, so the citation is documented offline rather than linkable."
+    },
+    {
+      "id": "aaib-4-1990",
+      "citation": "Air Accidents Investigation Branch, Aircraft Accident Report 4/90: British Midland Airways Boeing 737-400 G-OBME, near Kegworth, Leicestershire, 8 January 1989",
+      "authority": "UK Air Accidents Investigation Branch",
+      "type": "accident-report",
+      "number": "AAR 4/90",
+      "date": "1990",
+      "language": "en",
+      "url": null,
+      "archive_url": null,
+      "access": "library",
+      "licence": {
+        "status": "reproducible",
+        "basis": "Crown copyright published under the Open Government Licence v3.0",
+        "attribution": "Contains public sector information licensed under the Open Government Licence v3.0",
+        "carve_out": "Photographs credited to third parties."
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "L02",
+        "Q07",
+        "Q29",
+        "C03"
+      ],
+      "downgraded": false,
+      "_note": "Access downgraded from open: no resolving URL captured, so the citation is documented offline rather than linkable."
+    },
+    {
+      "id": "ciaiac-a-102-103-1977",
+      "citation": "Comisión de Investigación de Accidentes e Incidentes de Aviación Civil, A-102/1977 y A-103/1977: Accidente ocurrido el 27 de marzo de 1977 a las aeronaves Boeing 747 PH-BUF de KLM y Boeing 747 N736PA de Pan Am en el aeropuerto de Los Rodeos, Tenerife",
+      "authority": "CIAIAC (Spain)",
+      "type": "accident-report",
+      "number": "A-102/1977, A-103/1977",
+      "date": "1978",
+      "language": "es",
+      "url": "https://www.transportes.gob.es/organos-colegiados/ciaiac/publicaciones/informes-relevantes",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "Ministerio de Transportes aviso legal; reuse of public-sector information under Ley 37/2007 and RD 1495/2011",
+        "attribution": "Origen de los datos: Ministerio de Transportes y Movilidad Sostenible",
+        "carve_out": "Documents containing personal data are excluded from the reuse grant."
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "L04",
+        "U11",
+        "TR-06"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "egypt-mca-flash-604",
+      "citation": "Egyptian Ministry of Civil Aviation, Final Report: Flash Airlines Flight 604, Boeing 737-300 SU-ZCF, Sharm el-Sheikh, 3 January 2004",
+      "authority": "Egyptian Ministry of Civil Aviation",
+      "type": "accident-report",
+      "number": null,
+      "date": "2006-03-25",
+      "language": "en",
+      "url": "https://bea.aero/fileadmin/documents/docspa/2004/su-f040103pa/",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "cite-only",
+        "basis": "No reproduction statement published by the issuing authority. Egyptian Law 82/2002 excludes official documents from copyright, but no authority-published grant exists; treated as cite-only.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "secondary-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "L03",
+        "Q30",
+        "U10"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "moshansky-1992",
+      "citation": "Commission of Inquiry into the Air Ontario Crash at Dryden, Ontario, Final Report, 3 vols., Ottawa: Minister of Supply and Services Canada, 1992",
+      "authority": "Commission of Inquiry (Canada)",
+      "type": "inquiry-report",
+      "number": "CP32-55/1992E; ISBN 0-660-14382-8",
+      "date": "1992",
+      "language": "en",
+      "url": "https://publications.gc.ca/site/eng/9.699856",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "cite-only",
+        "basis": "Crown copyright. Non-commercial reproduction terms not confirmed as extending to transcript appendices; treated as cite-only pending confirmation.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "L08",
+        "C09",
+        "Q03",
+        "Q04"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "jtsb-aaic-china-airlines-140",
+      "citation": "Aircraft Accident Investigation Commission, Aircraft Accident Investigation Report: China Airlines Airbus A300B4-622R B1816, Nagoya Airport, 26 April 1994",
+      "authority": "Aircraft Accident Investigation Commission (Japan), archived by JTSB",
+      "type": "accident-report",
+      "number": "B1816",
+      "date": "1996-07-19",
+      "language": "en",
+      "url": "https://jtsb.mlit.go.jp/eng-air_report/B1816.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "undetermined",
+        "basis": "Official English text published on a Japanese government domain; reproduction terms not established.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "F15"
+      ],
+      "downgraded": false,
+      "_note": "Resolves the corpus-eligibility risk: an official English version exists."
+    },
+    {
+      "id": "knkt-garuda-200",
+      "citation": "Komite Nasional Keselamatan Transportasi, Aircraft Accident Investigation Report: Garuda Indonesia Boeing 737-497 PK-GZC, Yogyakarta, 7 March 2007",
+      "authority": "KNKT / NTSC (Indonesia)",
+      "type": "accident-report",
+      "number": "KNKT/07.06/07.02.35",
+      "date": "2007-10-22",
+      "language": "en",
+      "url": "https://knkt.go.id/Repo/Files/Laporan/Penerbangan/2007/PK-GZC%20Final%20Report.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "cite-only",
+        "basis": "No reproduction licence published by KNKT; reports carry a safety-purpose disclaimer only, which is not a copyright grant.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "U14",
+        "Q16",
+        "L05"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "ttsb-asc-aor-16-06-001",
+      "citation": "Aviation Safety Council, Aviation Occurrence Report: TransAsia Airways Flight GE235, ATR72-212A B-22816, Taipei, 4 February 2015",
+      "authority": "Taiwan Transportation Safety Board (formerly Aviation Safety Council)",
+      "type": "accident-report",
+      "number": "ASC-AOR-16-06-001",
+      "date": "2016",
+      "language": "en",
+      "url": "https://www.ttsb.gov.tw/media/3209/asc-aor-16-06-001-en.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "undetermined",
+        "basis": "ROC Open Government Data License v1 is the national default but a TTSB-specific declaration was not retrieved.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "medium",
+      "audit_refs": [
+        "Q15",
+        "L05"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "lane-inquiry-1973",
+      "citation": "Report of the Public Inquiry into the Causes and Circumstances of the Accident near Staines on 18 June 1972, Commissioner Sir Geoffrey Lane, London: HMSO, 1973",
+      "authority": "UK public inquiry",
+      "type": "inquiry-report",
+      "number": null,
+      "date": "1973-04-14",
+      "language": "en",
+      "url": null,
+      "archive_url": null,
+      "access": "library",
+      "licence": {
+        "status": "reproducible",
+        "basis": "Crown copyright, Open Government Licence applies to Crown material of this class",
+        "attribution": "Contains public sector information licensed under the Open Government Licence v3.0",
+        "carve_out": null
+      },
+      "verification": "secondary-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "F11",
+        "B1"
+      ],
+      "downgraded": false,
+      "_note": "The commonly cited 'Civil Aircraft Accident Report 4/73' could not be confirmed as a separate publication and may be a conflation. Cite the Lane report as primary."
+    },
+    {
+      "id": "lockwood-1985",
+      "citation": "Final Report of the Board of Inquiry Investigating the Circumstances of an Accident Involving the Air Canada Boeing 767 Aircraft C-GAUN that Effected an Emergency Landing at Gimli, Manitoba on the 23rd Day of July, 1983, Ottawa: Minister of Supply and Services Canada, 1985",
+      "authority": "Board of Inquiry (Canada), Hon. George H. Lockwood",
+      "type": "inquiry-report",
+      "number": "T22-64/1985E",
+      "date": "1985",
+      "language": "en",
+      "url": "https://www.faa.gov/sites/faa.gov/files/2023-10/Final%20Report%20of%20the%20Board%20of%20Inquiry.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "cite-only",
+        "basis": "Canadian Crown copyright; non-commercial reproduction terms not confirmed.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "F12"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "gpiaa-22-accid-2001",
+      "citation": "Gabinete de Prevenção e Investigação de Acidentes com Aeronaves, Accident Investigation Final Report: All Engines-out Landing Due to Fuel Exhaustion, Air Transat Airbus A330-243 C-GITS, Lajes, Azores, 24 August 2001",
+      "authority": "GPIAA (Portugal)",
+      "type": "accident-report",
+      "number": "22/ACCID/2001",
+      "date": "2004-10-18",
+      "language": "en",
+      "url": "https://www.fss.aero/accident-reports/dvdfiles/PT/2001-08-24-PT.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "undetermined",
+        "basis": "No GPIAA reproduction statement retrieved.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "F13"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "nasa-tm-78482",
+      "citation": "Ruffell Smith, H.P., A Simulator Study of the Interaction of Pilot Workload with Errors, Vigilance, and Decisions, NASA Technical Memorandum 78482, January 1979",
+      "authority": "NASA Ames Research Center",
+      "type": "technical-report",
+      "number": "NASA TM-78482; NTRS 19790006598",
+      "date": "1979-01",
+      "language": "en",
+      "url": "https://ntrs.nasa.gov/citations/19790006598",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "US Government work (17 U.S.C. §105)",
+        "attribution": "Source: NASA (public domain)",
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "C04"
+      ],
+      "downgraded": false,
+      "_note": "Corrects the accession number 19790015893 given in one brief."
+    },
+    {
+      "id": "nasa-cp-2120",
+      "citation": "Cooper, G.E., White, M.D. & Lauber, J.K. (eds.), Resource Management on the Flight Deck: Proceedings of a NASA/Industry Workshop, NASA Conference Publication 2120, 1980",
+      "authority": "NASA Ames Research Center",
+      "type": "conference-paper",
+      "number": "NASA CP-2120; NTRS 19800013796",
+      "date": "1980-03-01",
+      "language": "en",
+      "url": "https://ntrs.nasa.gov/citations/19800013796",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "US Government work (17 U.S.C. §105)",
+        "attribution": "Source: NASA (public domain)",
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "U15"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "helmreich-merritt-wilhelm-1999",
+      "citation": "Helmreich, R.L., Merritt, A.C. & Wilhelm, J.A., 'The Evolution of Crew Resource Management Training in Commercial Aviation', International Journal of Aviation Psychology 9(1), 1999, pp. 19-32",
+      "authority": "International Journal of Aviation Psychology",
+      "type": "journal-article",
+      "number": "DOI 10.1207/s15327108ijap0901_2",
+      "date": "1999",
+      "language": "en",
+      "url": "https://www.faa.gov/sites/faa.gov/files/2022-11/crmhistory.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "cite-only",
+        "basis": "Taylor & Francis (formerly Lawrence Erlbaum) holds rights. The FAA-hosted PDF carries no publisher copyright line and is an unmarked reproduction of uncertain authorisation; not relied upon as a grant.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "C05",
+        "C06",
+        "Q17",
+        "Q32",
+        "L09",
+        "G3"
+      ],
+      "downgraded": false,
+      "_note": "Citation of record is the IJAP article. The FAA PDF is a mirror and is cited as one. Cite-only status forces the necessity test to operate as paraphrase-first."
+    },
+    {
+      "id": "helmreich-et-al-1990",
+      "citation": "Helmreich, R.L., Chidester, T.R., Foushee, H.C., Gregorich, S. & Wilhelm, J.A., 'How Effective is Cockpit Resource Management Training?', Flight Safety Digest 9(5), May 1990, pp. 1-17",
+      "authority": "Flight Safety Foundation",
+      "type": "journal-article",
+      "number": null,
+      "date": "1990-05",
+      "language": "en",
+      "url": "https://flightsafety.org/fsd/fsd_may90.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "cite-only",
+        "basis": "Flight Safety Foundation publication; no open reuse grant identified. Freely readable.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "Q06",
+        "CL-02"
+      ],
+      "downgraded": false,
+      "_note": "Open access confirmed; the effectiveness-question wording is in the freely available text. Cut candidate CL-02 is rescued."
+    },
+    {
+      "id": "predmore-1991",
+      "citation": "Predmore, S.C., 'Microcoding of Communications in Accident Investigation: Crew Coordination in United 811 and United 232', Proceedings of the International Symposium on Aviation Psychology, 1991",
+      "authority": "NASA/University of Texas Crew Performance Project, Austin",
+      "type": "conference-paper",
+      "number": "NTRS 19920062326",
+      "date": "1991",
+      "language": "en",
+      "url": "https://ntrs.nasa.gov/citations/19920062326",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "undetermined",
+        "basis": "Conference paper hosted on NTRS. Hosting does not make it a US Government work; copyright may vest in the symposium. Earlier classification as 'US Gov work' was wrong.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "medium",
+      "audit_refs": [
+        "Q14",
+        "L06"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "canada-ctaisb-act",
+      "citation": "Canadian Transportation Accident Investigation and Safety Board Act, S.C. 1989, c. 3 (R.S.C. C-23.4), section 28",
+      "authority": "Government of Canada",
+      "type": "statute",
+      "number": "C-23.4",
+      "date": "1989",
+      "language": "en",
+      "url": "https://laws-lois.justice.gc.ca/eng/acts/C-23.4/",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "Crown copyright; statutory text reproducible under Government of Canada reproduction terms with accuracy statement.",
+        "attribution": "Reproduced from the Canadian Transportation Accident Investigation and Safety Board Act, Government of Canada.",
+        "carve_out": null
+      },
+      "verification": "secondary-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "Q02",
+        "U13"
+      ],
+      "downgraded": false,
+      "_note": "s.28(2) prohibits communication/production; s.28(6) is the in-camera public-interest balancing test. The rendering 'any legal, disciplinary or other proceedings' does not match s.28(2)(b) and is a paraphrase presented as quotation."
+    },
+    {
+      "id": "korea-arair-act",
+      "citation": "항공·철도 사고조사에 관한 법률 (Aviation and Railway Accident Investigation Act), Republic of Korea, arts. 4, 28, 30, 31, 36",
+      "authority": "Republic of Korea",
+      "type": "statute",
+      "number": null,
+      "date": null,
+      "language": "ko",
+      "url": "https://www.law.go.kr",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "Statutory text; Korean National Law Information Center public text.",
+        "attribution": "Republic of Korea, National Law Information Center",
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "TR-01",
+        "F1"
+      ],
+      "downgraded": false,
+      "_note": "Art. 30 is a separation principle. Art. 28 is discretionary non-disclosure. No express evidentiary bar on CVR use. Korea Law Translation Center English is expressly non-official but faithful in substance."
+    },
+    {
+      "id": "japan-jtsb-act",
+      "citation": "運輸安全委員会設置法 (Act for Establishment of the Japan Transport Safety Board) and 航空法 (Civil Aeronautics Act), Japan",
+      "authority": "Government of Japan",
+      "type": "statute",
+      "number": null,
+      "date": null,
+      "language": "ja",
+      "url": "https://elaws.e-gov.go.jp",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "Statutory text, e-Gov public text.",
+        "attribution": "Government of Japan, e-Gov",
+        "carve_out": null
+      },
+      "verification": "secondary-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "TR-02",
+        "F2"
+      ],
+      "downgraded": false,
+      "_note": "No express CVR admissibility bar located. Disclosure operates through Information Disclosure Act Article 5 items 3, 5 and 6, confirmed by an administrative appeals record on a recorder-data request, in which the Transport Safety Board stated it had returned the data to its owner after publishing the report and no longer held it. Absence claim; moderate confidence."
+    },
+    {
+      "id": "indonesia-uu-1-2009",
+      "citation": "Undang-Undang Republik Indonesia Nomor 1 Tahun 2009 tentang Penerbangan, Pasal 357, 359(1), 359(2), 360, and Penjelasan",
+      "authority": "Republic of Indonesia",
+      "type": "statute",
+      "number": "UU 1/2009; LN 2009 No. 1; TLN No. 4956",
+      "date": "2009",
+      "language": "id",
+      "url": "https://peraturan.bpk.go.id/Details/54656/uu-no-1-tahun-2009",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "Statutory text, published by BPK.",
+        "attribution": "Republik Indonesia, UU No. 1 Tahun 2009",
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "TR-03",
+        "F3"
+      ],
+      "downgraded": false,
+      "_note": "Pasal 359(1) is an express evidentiary bar. The Penjelasan expressly names the cockpit voice recorder and its verbatim transcript among protected records. No official English translation exists."
+    },
+    {
+      "id": "france-code-transports",
+      "citation": "Code des transports, arts. L1621-11, L1621-16, L6222-3, L6232-10; Code de procédure pénale arts. 97 and 163",
+      "authority": "République française",
+      "type": "statute",
+      "number": null,
+      "date": null,
+      "language": "fr",
+      "url": "https://www.legifrance.gouv.fr",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "Statutory text, Légifrance.",
+        "attribution": "Légifrance, République française",
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "TR-05",
+        "F4-fr"
+      ],
+      "downgraded": false,
+      "_note": "L1621-11 carries the prior-judicial-seizure mechanism: recorders are seized by the judicial authority under CPP arts. 97 and 163, then copied by technical investigators under police supervision."
+    },
+    {
+      "id": "brazil-cba-88",
+      "citation": "Código Brasileiro de Aeronáutica (Lei 7.565/1986) as amended by Lei 12.970/2014, arts. 88-A to 88-R, especially 88-I §2 and 88-K",
+      "authority": "República Federativa do Brasil",
+      "type": "statute",
+      "number": "Lei 7.565/1986; Lei 12.970/2014",
+      "date": "2014",
+      "language": "pt",
+      "url": "https://www.planalto.gov.br",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "Statutory text, Planalto.",
+        "attribution": "Presidência da República, Brasil",
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "TR-04",
+        "E7"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "brazil-stf-adi-5667",
+      "citation": "Supremo Tribunal Federal, Ação Direta de Inconstitucionalidade 5667, relator Min. Nunes Marques, julgada em 14 de agosto de 2024, pedido julgado improcedente por maioria",
+      "authority": "Supremo Tribunal Federal (Brazil)",
+      "type": "court-decision",
+      "number": "ADI 5667",
+      "date": "2024-08-14",
+      "language": "pt",
+      "url": "https://noticias.stf.jus.br",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "Judicial decision, public record.",
+        "attribution": "Supremo Tribunal Federal, Brasil",
+        "carve_out": null
+      },
+      "verification": "secondary-only",
+      "confidence": "high",
+      "audit_refs": [
+        "S14",
+        "E7"
+      ],
+      "downgraded": false,
+      "_note": "Declared arts. 88-C, 88-D, 88-I §2, 88-K, 88-N and 88-P constitutional. Min. Flávio Dino partially dissenting. The relator's vote dates from the virtual session of 27 Aug-3 Sep 2021, after which another justice requested time; the September date attaches to that vote, not the judgment. SCOPE: the provisions protect SIPAER material generally — voluntary contributions, analyses, conclusions — not the cockpit voice recorder specifically."
+    },
+    {
+      "id": "eu-reg-996-2010",
+      "citation": "Regulation (EU) No 996/2010 of the European Parliament and of the Council of 20 October 2010 on the investigation and prevention of accidents and incidents in civil aviation, Article 14",
+      "authority": "European Union",
+      "type": "regulation",
+      "number": "996/2010",
+      "date": "2010-10-20",
+      "language": "en",
+      "url": "https://eur-lex.europa.eu",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "EUR-Lex reuse policy for EU legislative texts.",
+        "attribution": "© European Union, https://eur-lex.europa.eu",
+        "carve_out": null
+      },
+      "verification": "secondary-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "Q13"
+      ],
+      "downgraded": false,
+      "_note": "One brief attributed its quotation to a SKYbrary summary rather than the instrument. Relink to EUR-Lex before rendering."
+    },
+    {
+      "id": "faa-final-rule-1995",
+      "citation": "Federal Aviation Administration, 'Air Carrier and Commercial Operator Training Programs', final rule, 60 Fed. Reg. 65940 (20 December 1995), Amdt. Nos. 121-250 and 135-57, Docket No. 27993",
+      "authority": "US Federal Aviation Administration",
+      "type": "regulation",
+      "number": "60 FR 65940; 14 CFR 121.404",
+      "date": "1995-12-20",
+      "language": "en",
+      "url": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-G/part-121",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "US Government work (17 U.S.C. §105)",
+        "attribution": "Source: US Federal Aviation Administration",
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "F14"
+      ],
+      "downgraded": false,
+      "_note": "Closes the largest regulatory gap. Effective 19 March 1996. The briefs' 'March 1998 / March 1999' are credit and compliance cut-offs at §121.400-.404, not the rule date."
+    },
+    {
+      "id": "faa-sfar-58",
+      "citation": "Federal Aviation Administration, Special Federal Aviation Regulation No. 58, Advanced Qualification Program, 55 Fed. Reg. 40275 (2 October 1990); now 14 CFR Part 121 Subpart Y",
+      "authority": "US Federal Aviation Administration",
+      "type": "regulation",
+      "number": "SFAR 58; 14 CFR 121 Subpart Y",
+      "date": "1990-10-02",
+      "language": "en",
+      "url": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-G/part-121/subpart-Y",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "US Government work (17 U.S.C. §105)",
+        "attribution": "Source: US Federal Aviation Administration",
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "F14"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "caac-ac-121-fs-41r1",
+      "citation": "中国民用航空局, 咨询通告 AC-121-FS-41R1《机组资源管理（CRM）训练》, 民航规〔2022〕21号, 2022年6月29日",
+      "authority": "Civil Aviation Administration of China",
+      "type": "advisory",
+      "number": "AC-121-FS-41R1",
+      "date": "2022-06-29",
+      "language": "zh",
+      "url": null,
+      "archive_url": null,
+      "access": "offline",
+      "licence": {
+        "status": "undetermined",
+        "basis": "CAAC advisory circular; reproduction terms not established.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "E1",
+        "S06"
+      ],
+      "downgraded": false,
+      "_note": "A 2022 re-issue. The date CRM first became mandatory in China is not established by this document. Access downgraded from open: no resolving URL captured, so the citation is documented offline rather than linkable."
+    },
+    {
+      "id": "dgca-car-8-f-ii",
+      "citation": "Directorate General of Civil Aviation (India), Civil Aviation Requirements, Section 8 (Aircraft Operations), Series F, Part II: Flight Crew Training and Qualification Requirements, Issue I, 30 April 2013, effective 24 January 2018",
+      "authority": "DGCA (India)",
+      "type": "regulation",
+      "number": "CAR Sec 8 Series F Part II",
+      "date": "2013-04-30",
+      "language": "en",
+      "url": null,
+      "archive_url": null,
+      "access": "offline",
+      "licence": {
+        "status": "undetermined",
+        "basis": "DGCA regulatory text; reproduction terms not established.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "C02"
+      ],
+      "downgraded": false,
+      "_note": "Resolves the Section 8 vs Section 7 contradiction: the operative CRM mandate sits here. Section 7 governs licensing and cabin-crew training separately. Access downgraded from open: no resolving URL captured, so the citation is documented offline rather than linkable."
+    },
+    {
+      "id": "brazil-iac-060-1002",
+      "citation": "Departamento de Aviação Civil, Instrução de Aviação Civil IAC 060-1002, Treinamento em Gerenciamento de Recursos de Equipes (CRM), 18 de julho de 2003, aprovada pela Portaria DAC nº 905/STE de 13 de junho de 2003, publicada no Diário Oficial da União nº 116 de 18 de junho de 2003",
+      "authority": "DAC / ANAC (Brazil)",
+      "type": "regulation",
+      "number": "IAC 060-1002",
+      "date": "2003-07-18",
+      "language": "pt",
+      "url": "https://pergamum.anac.gov.br/pergamum/vinculos/IAC060-1002.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "undetermined",
+        "basis": "ANAC regulatory text; reproduction terms not established.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "C01"
+      ],
+      "downgraded": false,
+      "_note": "Resolves the apparent date contradiction: 18 June 2003 is the DOU publication of the approving Portaria; 18 July 2003 is the IAC's own date. Both are correct."
+    },
+    {
+      "id": "casa-casr-119-175",
+      "citation": "Civil Aviation Safety Regulations 1998 (Australia), Part 119, regulation 119.175; supported by CASA Advisory Circular AC 119-12; Part 121/133/135/91 suite commenced 2 December 2021",
+      "authority": "CASA (Australia)",
+      "type": "regulation",
+      "number": "CASR 119.175",
+      "date": "2021-12-02",
+      "language": "en",
+      "url": "https://www.casa.gov.au/human-factors-principles-and-non-technical-skills-training-and-assessment-air-transport-operations",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "undetermined",
+        "basis": "CASA regulatory text; reproduction terms not established.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "C07"
+      ],
+      "downgraded": false,
+      "_note": "Both instruments are operative at different levels; not a contradiction."
+    },
+    {
+      "id": "tc-ac-700-042",
+      "citation": "Transport Canada, Advisory Circular AC 700-042, Crew Resource Management, Issue 01 dated 31 January 2019 (superseded by Issue 02, 14 March 2020); CARs Subparts 702, 703, 704, 705",
+      "authority": "Transport Canada",
+      "type": "advisory",
+      "number": "AC 700-042",
+      "date": "2019-01-31",
+      "language": "en",
+      "url": "https://tc.canada.ca",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "Crown copyright, Government of Canada reproduction terms.",
+        "attribution": "Transport Canada",
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "C10"
+      ],
+      "downgraded": false,
+      "_note": "Effective 31 January 2019, compliance extended to 30 September 2019. Responds to TSB recommendation A09-02."
+    },
+    {
+      "id": "icao-annex-13",
+      "citation": "International Civil Aviation Organization, Annex 13 to the Convention on International Civil Aviation: Aircraft Accident and Incident Investigation, 13th edition, July 2024, Standard 5.12",
+      "authority": "ICAO",
+      "type": "standard",
+      "number": "Annex 13",
+      "date": "2024-07",
+      "language": "en",
+      "url": "https://store.icao.int/en/annex-13-aircraft-accident-and-incident-investigation",
+      "archive_url": null,
+      "access": "purchase",
+      "licence": {
+        "status": "cite-only",
+        "basis": "ICAO purchase-only publication, all rights reserved.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "secondary-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "Q12",
+        "U01",
+        "P05"
+      ],
+      "downgraded": false,
+      "_note": "Edition confirmed. Standard 5.12 text has not been read in the instrument itself; the earlier 'primary-verified' tier claim was self-contradicting and is corrected here."
+    },
+    {
+      "id": "icao-doc-9683",
+      "citation": "International Civil Aviation Organization, Human Factors Training Manual, Doc 9683-AN/950, First Edition, 1998",
+      "authority": "ICAO",
+      "type": "standard",
+      "number": "Doc 9683-AN/950",
+      "date": "1998",
+      "language": "en",
+      "url": "https://store.icao.int",
+      "archive_url": null,
+      "access": "purchase",
+      "licence": {
+        "status": "cite-only",
+        "basis": "ICAO publication, all rights reserved.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "A5",
+        "C11"
+      ],
+      "downgraded": false,
+      "_note": "Source for the claim that human factors entered Annex 1 in 1989, Annex 6 in 1995 and Annex 13 in 1994. The Annex 6 amendment number remains unestablished."
+    },
+    {
+      "id": "ifalpa-23pos28",
+      "citation": "International Federation of Air Line Pilots' Associations, Position Paper 23POS28, Protection of All Cockpit Recordings, 21 December 2023",
+      "authority": "IFALPA",
+      "type": "position-paper",
+      "number": "23POS28",
+      "date": "2023-12-21",
+      "language": "en",
+      "url": "https://www.ifalpa.org/media/4019/23pos28-protection-of-all-cockpit-recordings.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "IFALPA terms encourage reproduction in whole or part; sale and commercial use prohibited.",
+        "attribution": "IFALPA Position Paper 23POS28",
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "P06"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "faa-cvr-25hr-2026",
+      "citation": "Federal Aviation Administration, '25-Hour Cockpit Voice Recorder (CVR) Requirement, New Aircraft Production', final rule, 91 Fed. Reg. 4447 (2 February 2026), Docket FAA-2023-2270, RIN 2120-AL92; correction amendment 91 Fed. Reg. 25108 (8 May 2026)",
+      "authority": "US Federal Aviation Administration",
+      "type": "regulation",
+      "number": "91 FR 4447",
+      "date": "2026-02-02",
+      "language": "en",
+      "url": "https://www.federalregister.gov/documents/2026/02/02/2026-02110/25-hour-cockpit-voice-recorder-cvr-requirement-new-aircraft-production",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "US Government work (17 U.S.C. §105)",
+        "attribution": "Source: US Federal Aviation Administration",
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "P02",
+        "P07"
+      ],
+      "downgraded": false,
+      "_note": "Applies to new production. Retrofit by 2030 derives from the FAA Reauthorization Act of 2024, not this rule."
+    },
+    {
+      "id": "airbus-af447-appeal-2026",
+      "citation": "Airbus, 'AF447 Flight: Airbus to lodge appeal with the Court of Cassation following Paris Court of Appeal decision', press release, Toulouse, 21 May 2026",
+      "authority": "Airbus",
+      "type": "press",
+      "number": null,
+      "date": "2026-05-21",
+      "language": "en",
+      "url": "https://www.airbus.com/en/newsroom/press-releases/2026-05-af447-flight-airbus-to-lodge-appeal-with-the-court-of-cassation-following-paris-court-of-appeal",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "cite-only",
+        "basis": "Corporate press release, all rights reserved.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "P01",
+        "Q11"
+      ],
+      "downgraded": false,
+      "_note": "Cour d'appel de Paris convicted both companies 21 May 2026, maximum corporate fine €225,000 each. Appeal to the Cour de cassation pending; the conviction is not final."
+    },
+    {
+      "id": "brewer-venaik-2014",
+      "citation": "Brewer, P. & Venaik, S., 'The Ecological Fallacy in National Culture Research', Organization Studies 35(7), 2014, pp. 1063-1086, DOI 10.1177/0170840613517602",
+      "authority": "Organization Studies",
+      "type": "journal-article",
+      "number": "DOI 10.1177/0170840613517602",
+      "date": "2014",
+      "language": "en",
+      "url": "https://journals.sagepub.com/doi/10.1177/0170840613517602",
+      "archive_url": null,
+      "access": "paywalled",
+      "licence": {
+        "status": "cite-only",
+        "basis": "SAGE, all rights reserved.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "secondary-only",
+      "confidence": "high",
+      "audit_refs": [
+        "S02",
+        "G2"
+      ],
+      "downgraded": false,
+      "_note": "General, not aviation-specific. The aviation application of the ecological-fallacy critique remains unevidenced."
+    },
+    {
+      "id": "merritt-2000",
+      "citation": "Merritt, A., 'Culture in the Cockpit: Do Hofstede's Dimensions Replicate?', Journal of Cross-Cultural Psychology 31(3), 2000",
+      "authority": "Journal of Cross-Cultural Psychology",
+      "type": "journal-article",
+      "number": null,
+      "date": "2000",
+      "language": "en",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11543415/",
+      "archive_url": null,
+      "access": "paywalled",
+      "licence": {
+        "status": "cite-only",
+        "basis": "SAGE, all rights reserved.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "secondary-only",
+      "confidence": "high",
+      "audit_refs": [
+        "S02",
+        "G2"
+      ],
+      "downgraded": false,
+      "_note": "The aviation replication study the ecological-fallacy critique must be applied against. Supports national-culture influence on cockpit behaviour."
+    },
+    {
+      "id": "jing-batteau-2015",
+      "citation": "Jing, H.-S. & Batteau, A., The Dragon in the Cockpit: How Western Aviation Concepts Conflict with Chinese Value Systems, Ashgate/Routledge, 2015",
+      "authority": "Ashgate/Routledge",
+      "type": "book",
+      "number": null,
+      "date": "2015",
+      "language": "en",
+      "url": null,
+      "archive_url": null,
+      "access": "purchase",
+      "licence": {
+        "status": "cite-only",
+        "basis": "Publisher, all rights reserved.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "secondary-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "S01",
+        "G1"
+      ],
+      "downgraded": false,
+      "_note": "Scholarly alternative to the single blog critique carrying the counter-position on the cultural reading."
+    },
+    {
+      "id": "winter-et-al-2020",
+      "citation": "Winter, S.R. et al., 'A quantitative investigation on criminalization of airline pilots: Consumer and pilot perspectives', Safety Science 130, 2020, art. 104904, DOI 10.1016/j.ssci.2020.104904",
+      "authority": "Safety Science (Elsevier)",
+      "type": "journal-article",
+      "number": "DOI 10.1016/j.ssci.2020.104904",
+      "date": "2020",
+      "language": "en",
+      "url": "https://doi.org/10.1016/j.ssci.2020.104904",
+      "archive_url": null,
+      "access": "paywalled",
+      "licence": {
+        "status": "cite-only",
+        "basis": "Elsevier, all rights reserved.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "secondary-only",
+      "confidence": "high",
+      "audit_refs": [
+        "S13",
+        "E6"
+      ],
+      "downgraded": false,
+      "_note": "Identifies the previously unnamed Safety Science 2020 criminalisation study."
+    },
+    {
+      "id": "boeing-statsum-2024",
+      "citation": "Boeing, Statistical Summary of Commercial Jet Airplane Accidents, Worldwide Operations, 1959-2023, 57th edition, 2024",
+      "authority": "Boeing",
+      "type": "dataset",
+      "number": null,
+      "date": "2024",
+      "language": "en",
+      "url": "https://www.boeing.com/content/dam/boeing/v2/safety/statsum.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "cite-only",
+        "basis": "Boeing corporate publication, all rights reserved.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "U09",
+        "B7"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "annals-air-space-law",
+      "citation": "Annals of Air and Space Law / Annales de droit aérien et spatial, McGill Institute of Air and Space Law, ISSN 0701-158X, publisher William S. Hein & Co.",
+      "authority": "McGill Institute of Air and Space Law",
+      "type": "journal-article",
+      "number": "ISSN 0701-158X",
+      "date": null,
+      "language": "en",
+      "url": "https://www.mcgill.ca/iasl/publications/annals",
+      "archive_url": null,
+      "access": "library",
+      "licence": {
+        "status": "cite-only",
+        "basis": "Publisher, all rights reserved.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "primary-verified",
+      "confidence": "high",
+      "audit_refs": [
+        "U07",
+        "B6"
+      ],
+      "downgraded": false,
+      "_note": "Corrects the malformed ISSN '0065-arch' carried in the onward-apparatus brief."
+    },
+    {
+      "id": "wiener-kanki-helmreich-1993",
+      "citation": "Wiener, E.L., Kanki, B.G. & Helmreich, R.L. (eds.), Cockpit Resource Management, Academic Press, 1993, ISBN 9780127500256",
+      "authority": "Academic Press",
+      "type": "book",
+      "number": "ISBN 9780127500256",
+      "date": "1993",
+      "language": "en",
+      "url": null,
+      "archive_url": null,
+      "access": "purchase",
+      "licence": {
+        "status": "cite-only",
+        "basis": "Publisher, all rights reserved.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "secondary-only",
+      "confidence": "high",
+      "audit_refs": [
+        "U06"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "kanki-anca-chidester-2019",
+      "citation": "Kanki, B.G., Anca, J. & Chidester, T.R. (eds.), Crew Resource Management, 3rd edition, Academic Press/Elsevier, 2019, ISBN 9780128129951",
+      "authority": "Academic Press/Elsevier",
+      "type": "book",
+      "number": "ISBN 9780128129951",
+      "date": "2019",
+      "language": "en",
+      "url": null,
+      "archive_url": null,
+      "access": "purchase",
+      "licence": {
+        "status": "cite-only",
+        "basis": "Publisher, all rights reserved.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "secondary-only",
+      "confidence": "high",
+      "audit_refs": [
+        "U06"
+      ],
+      "downgraded": false,
+      "_note": "Separated from the 1993 Wiener/Kanki/Helmreich volume, which one brief conflated with this lineage."
+    },
+    {
+      "id": "beaty-1969",
+      "citation": "Beaty, D., The Human Factor in Aircraft Accidents, Secker & Warburg, 1969; revised as The Naked Pilot, 1991",
+      "authority": "Secker & Warburg",
+      "type": "book",
+      "number": null,
+      "date": "1969",
+      "language": "en",
+      "url": null,
+      "archive_url": null,
+      "access": "library",
+      "licence": {
+        "status": "cite-only",
+        "basis": "Publisher, all rights reserved.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "secondary-only",
+      "confidence": "low",
+      "audit_refs": [
+        "Q05",
+        "S04",
+        "CL-01"
+      ],
+      "downgraded": false,
+      "_note": "Thesis is documentable. The commonly quoted wording on pilot-blame verdicts is not traced to a page in either edition and should be treated as paraphrase."
+    },
+    {
+      "id": "cnbc-korean-air-turnaround",
+      "citation": "CNBC interview with the former Delta executive who led the Korean Air operational turnaround from 2000",
+      "authority": "CNBC",
+      "type": "press",
+      "number": null,
+      "date": null,
+      "language": "en",
+      "url": null,
+      "archive_url": null,
+      "access": "offline",
+      "licence": {
+        "status": "cite-only",
+        "basis": "Broadcaster, all rights reserved.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "secondary-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "Q18",
+        "S01"
+      ],
+      "downgraded": false,
+      "_note": "Access downgraded from open: no resolving URL captured, so the citation is documented offline rather than linkable."
+    },
+    {
+      "id": "ntsb-aar-73-14",
+      "citation": "National Transportation Safety Board, Aircraft Accident Report: Eastern Air Lines Inc., L-1011 N310EA, Miami, Florida, December 29, 1972",
+      "authority": "US National Transportation Safety Board",
+      "type": "accident-report",
+      "number": "NTSB-AAR-73-14",
+      "date": "1973-06-14",
+      "language": "en",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR7314.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "US Government work (17 U.S.C. §105)",
+        "attribution": "Source: U.S. National Transportation Safety Board (public domain)",
+        "carve_out": "Embedded third-party imagery."
+      },
+      "verification": "brief-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "F05"
+      ],
+      "downgraded": false,
+      "_note": "Report number carried from the briefs and not confirmed against the NTSB register."
+    },
+    {
+      "id": "cenipa-gol-1907",
+      "citation": "Centro de Investigação e Prevenção de Acidentes Aeronáuticos, Relatório Final: Boeing 737-8EH PR-GTD e Embraer Legacy 600 N600XL, 29 de setembro de 2006",
+      "authority": "CENIPA (Brazil)",
+      "type": "accident-report",
+      "number": null,
+      "date": "2008-12",
+      "language": "pt",
+      "url": null,
+      "archive_url": null,
+      "access": "offline",
+      "licence": {
+        "status": "undetermined",
+        "basis": "CENIPA reports carry a SIPAER safety-purpose disclaimer, which is not a copyright grant. gov.br content defaults to CC BY-ND 3.0 but no CENIPA-specific declaration was retrieved.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "brief-only",
+      "confidence": "low",
+      "audit_refs": [
+        "E8",
+        "S16"
+      ],
+      "downgraded": false,
+      "_note": "Report number and URL not captured. Required before any GOL 1907 finding renders."
+    },
+    {
+      "id": "bea-af447-final",
+      "citation": "Bureau d'Enquêtes et d'Analyses pour la sécurité de l'aviation civile, Rapport final: accident survenu le 1er juin 2009 à l'Airbus A330-203 immatriculé F-GZCP exploité par Air France, vol AF 447 Rio de Janeiro–Paris",
+      "authority": "BEA (France)",
+      "type": "accident-report",
+      "number": "f-cp090601",
+      "date": "2012-07",
+      "language": "fr",
+      "url": "https://bea.aero",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "undetermined",
+        "basis": "BEA reproduction terms not established.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "brief-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "P01"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "aaib-india-171-prelim",
+      "citation": "Aircraft Accident Investigation Bureau (India), Preliminary Report: Air India Flight AI-171, Boeing 787-8 VT-ANB, Ahmedabad, 12 June 2025",
+      "authority": "AAIB (India)",
+      "type": "accident-report",
+      "number": null,
+      "date": "2025-07",
+      "language": "en",
+      "url": null,
+      "archive_url": null,
+      "access": "offline",
+      "licence": {
+        "status": "undetermined",
+        "basis": "Reproduction terms not established.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "brief-only",
+      "confidence": "low",
+      "audit_refs": [
+        "P03",
+        "E04"
+      ],
+      "downgraded": false,
+      "_note": "Preliminary only. Draft final report projected October 2026, after the research cutoff."
+    },
+    {
+      "id": "ntsb-aar-90-06",
+      "citation": "National Transportation Safety Board, Aircraft Accident Report: United Airlines Flight 232, McDonnell Douglas DC-10-10, Sioux Gateway Airport, Sioux City, Iowa, July 19, 1989",
+      "authority": "US National Transportation Safety Board",
+      "type": "accident-report",
+      "number": "NTSB/AAR-90/06",
+      "date": "1990-11-01",
+      "language": "en",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9006.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "US Government work (17 U.S.C. §105)",
+        "attribution": "Source: U.S. National Transportation Safety Board (public domain)",
+        "carve_out": "Embedded third-party imagery."
+      },
+      "verification": "brief-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "Q28",
+        "F01"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "ntsb-aar-91-04",
+      "citation": "National Transportation Safety Board, Aircraft Accident Report: Avianca, The Airline of Colombia, Boeing 707-321B HK 2016, Cove Neck, New York, January 25, 1990",
+      "authority": "US National Transportation Safety Board",
+      "type": "accident-report",
+      "number": "NTSB/AAR-91/04",
+      "date": "1991-04-30",
+      "language": "en",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR9104.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "US Government work (17 U.S.C. §105)",
+        "attribution": "Source: U.S. National Transportation Safety Board (public domain)",
+        "carve_out": "Embedded third-party imagery."
+      },
+      "verification": "brief-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "Q27"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "ntsb-aar-82-08",
+      "citation": "National Transportation Safety Board, Aircraft Accident Report: Air Florida Inc., Boeing 737-222 N62AF, Collision with 14th Street Bridge, Washington DC, January 13, 1982",
+      "authority": "US National Transportation Safety Board",
+      "type": "accident-report",
+      "number": "NTSB-AAR-82-8",
+      "date": "1982-08-10",
+      "language": "en",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8208.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "US Government work (17 U.S.C. §105)",
+        "attribution": "Source: U.S. National Transportation Safety Board (public domain)",
+        "carve_out": "Embedded third-party imagery."
+      },
+      "verification": "brief-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "F06"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "ntsb-aar-10-01",
+      "citation": "National Transportation Safety Board, Aircraft Accident Report: Colgan Air Inc. Flight 3407, Bombardier DHC-8-400 N200WQ, Clarence Center, New York, February 12, 2009",
+      "authority": "US National Transportation Safety Board",
+      "type": "accident-report",
+      "number": "NTSB/AAR-10/01",
+      "date": "2010-02-02",
+      "language": "en",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1001.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "US Government work (17 U.S.C. §105)",
+        "attribution": "Source: U.S. National Transportation Safety Board (public domain)",
+        "carve_out": "Embedded third-party imagery."
+      },
+      "verification": "brief-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "F07"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "ntsb-aar-14-01",
+      "citation": "National Transportation Safety Board, Aircraft Accident Report: Asiana Airlines Flight 214, Boeing 777-200ER HL7742, San Francisco, California, July 6, 2013",
+      "authority": "US National Transportation Safety Board",
+      "type": "accident-report",
+      "number": "NTSB/AAR-14/01",
+      "date": "2014-06-24",
+      "language": "en",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1401.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "US Government work (17 U.S.C. §105)",
+        "attribution": "Source: U.S. National Transportation Safety Board (public domain)",
+        "carve_out": "Embedded third-party imagery."
+      },
+      "verification": "brief-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "F08"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "ntsb-aar-89-03",
+      "citation": "National Transportation Safety Board, Aircraft Accident Report: Aloha Airlines Flight 243, Boeing 737-200 N73711, near Maui, Hawaii, April 28, 1988",
+      "authority": "US National Transportation Safety Board",
+      "type": "accident-report",
+      "number": "NTSB/AAR-89/03",
+      "date": "1989-06-14",
+      "language": "en",
+      "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR8903.pdf",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "US Government work (17 U.S.C. §105)",
+        "attribution": "Source: U.S. National Transportation Safety Board (public domain)",
+        "carve_out": "Embedded third-party imagery."
+      },
+      "verification": "brief-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "F09"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "aaib-1-2010",
+      "citation": "Air Accidents Investigation Branch, Aircraft Accident Report 1/2010: Boeing 777-236ER G-YMMM, London Heathrow, 17 January 2008",
+      "authority": "UK Air Accidents Investigation Branch",
+      "type": "accident-report",
+      "number": "AAR 1/2010",
+      "date": "2010-02-09",
+      "language": "en",
+      "url": null,
+      "archive_url": null,
+      "access": "library",
+      "licence": {
+        "status": "reproducible",
+        "basis": "Crown copyright published under the Open Government Licence v3.0",
+        "attribution": "Contains public sector information licensed under the Open Government Licence v3.0",
+        "carve_out": "Third-party photographs."
+      },
+      "verification": "brief-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "F10"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "bfu-uberlingen-2004",
+      "citation": "Bundesstelle für Flugunfalluntersuchung, Untersuchungsbericht AX001-1-2/02: Kollision Tupolev TU154M und Boeing 757-200, Überlingen, 1. Juli 2002",
+      "authority": "BFU (Germany)",
+      "type": "accident-report",
+      "number": "AX001-1-2/02",
+      "date": "2004-05",
+      "language": "de",
+      "url": "https://www.bfu-web.de",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "cite-only",
+        "basis": "BFU Impressum restricts downloads to personal use; journalistic use free with attribution; any other use requires prior written permission, which this project does not seek.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "brief-only",
+      "confidence": "medium",
+      "audit_refs": [
+        "L05",
+        "D2"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "jtsb-jal-123",
+      "citation": "Aircraft Accident Investigation Commission (Japan), Aircraft Accident Investigation Report: Japan Air Lines Boeing 747 SR-100 JA8119, Gunma Prefecture, 12 August 1985",
+      "authority": "Aircraft Accident Investigation Commission (Japan)",
+      "type": "accident-report",
+      "number": "62-2",
+      "date": "1987-06-19",
+      "language": "ja",
+      "url": "https://jtsb.mlit.go.jp",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "undetermined",
+        "basis": "Reproduction terms not established.",
+        "attribution": null,
+        "carve_out": null
+      },
+      "verification": "brief-only",
+      "confidence": "low",
+      "audit_refs": [
+        "TR-02"
+      ],
+      "downgraded": false
+    },
+    {
+      "id": "canada-scc-carroll-byrne-2022",
+      "citation": "Canada (Transportation Safety Board) v. Carroll-Byrne, 2022 SCC 48 (25 November 2022)",
+      "authority": "Supreme Court of Canada",
+      "type": "court-decision",
+      "number": "2022 SCC 48",
+      "date": "2022-11-25",
+      "language": "en",
+      "url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/19563/index.do",
+      "archive_url": null,
+      "access": "open",
+      "licence": {
+        "status": "reproducible",
+        "basis": "Judicial decision, public record.",
+        "attribution": "Supreme Court of Canada",
+        "carve_out": null
+      },
+      "verification": "secondary-only",
+      "confidence": "high",
+      "audit_refs": [
+        "C027",
+        "C132",
+        "UM-06"
+      ],
+      "downgraded": false,
+      "_note": "Arising from Air Canada Flight 624, Halifax, March 2015. The manufacturer sought the recording under s.28(6); the Board opposed on statutory privilege. The motion judge examined it in camera, found the public interest in the proper administration of justice outweighed the privilege, and ordered release. Affirmed on appeal; the Supreme Court dismissed the Board's appeal 7-2. An express-bar regime's bar yielding in practice, on the CVR specifically — a direct counterpart to the Brazilian finding, which the divergence section currently says has none."
+    }
+  ]
+}

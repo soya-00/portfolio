@@ -1,0 +1,197 @@
+{
+  "_meta": {
+    "description": "Display label per accident. Prose names cases by place and year; data names them by operator and flight number. Prose wins on screen; the data label shows in the record detail so the two remain traceable. The transform is not mechanical — Kegworth takes the first component of location, Guam the last — so each is set explicitly.",
+    "join": "accidents.json[].id"
+  },
+  "labels": [
+    {
+      "id": "tenerife-1977",
+      "display": "Tenerife, 1977",
+      "data_label": "KLM Flight 4805 and Pan Am Flight 1736",
+      "sensitivity": "standard",
+      "tier": "deep"
+    },
+    {
+      "id": "united-173-1978",
+      "display": "Portland, 1978",
+      "data_label": "United Airlines Flight 173",
+      "sensitivity": "standard",
+      "tier": "deep"
+    },
+    {
+      "id": "kegworth-1989",
+      "display": "Kegworth, 1989",
+      "data_label": "British Midland Flight 92",
+      "sensitivity": "standard",
+      "tier": "deep"
+    },
+    {
+      "id": "air-ontario-1363-1989",
+      "display": "Dryden, 1989",
+      "data_label": "Air Ontario Flight 1363",
+      "sensitivity": "standard",
+      "tier": "deep"
+    },
+    {
+      "id": "korean-air-801-1997",
+      "display": "Guam, 1997",
+      "data_label": "Korean Air Flight 801",
+      "sensitivity": "elevated",
+      "tier": "deep"
+    },
+    {
+      "id": "flash-604-2004",
+      "display": "Sharm el-Sheikh, 2004",
+      "data_label": "Flash Airlines Flight 604",
+      "sensitivity": "elevated",
+      "tier": "deep"
+    },
+    {
+      "id": "staines-1972",
+      "display": "Staines, 1972",
+      "data_label": "British European Airways Flight 548",
+      "sensitivity": "standard",
+      "tier": "corpus"
+    },
+    {
+      "id": "eastern-401-1972",
+      "display": "Everglades, 1972",
+      "data_label": "Eastern Air Lines Flight 401",
+      "sensitivity": "standard",
+      "tier": "corpus"
+    },
+    {
+      "id": "air-florida-90-1982",
+      "display": "Washington, 1982",
+      "data_label": "Air Florida Flight 90",
+      "sensitivity": "standard",
+      "tier": "corpus"
+    },
+    {
+      "id": "air-canada-143-1983",
+      "display": "Gimli, 1983",
+      "data_label": "Air Canada Flight 143",
+      "sensitivity": "standard",
+      "tier": "corpus"
+    },
+    {
+      "id": "jal-123-1985",
+      "display": "Gunma, 1985",
+      "data_label": "Japan Air Lines Flight 123",
+      "sensitivity": "elevated",
+      "tier": "corpus"
+    },
+    {
+      "id": "aloha-243-1988",
+      "display": "Maui, 1988",
+      "data_label": "Aloha Airlines Flight 243",
+      "sensitivity": "standard",
+      "tier": "corpus"
+    },
+    {
+      "id": "united-232-1989",
+      "display": "Sioux City, 1989",
+      "data_label": "United Airlines Flight 232",
+      "sensitivity": "standard",
+      "tier": "corpus"
+    },
+    {
+      "id": "avianca-052-1990",
+      "display": "Cove Neck, 1990",
+      "data_label": "Avianca Flight 052",
+      "sensitivity": "standard",
+      "tier": "corpus"
+    },
+    {
+      "id": "china-airlines-140-1994",
+      "display": "Nagoya, 1994",
+      "data_label": "China Airlines Flight 140",
+      "sensitivity": "standard",
+      "tier": "corpus"
+    },
+    {
+      "id": "air-transat-236-2001",
+      "display": "Azores, 2001",
+      "data_label": "Air Transat Flight 236",
+      "sensitivity": "standard",
+      "tier": "corpus"
+    },
+    {
+      "id": "uberlingen-2002",
+      "display": "Überlingen, 2002",
+      "data_label": "Bashkirian Airlines Flight 2937 and DHL Flight 611",
+      "sensitivity": "elevated",
+      "tier": "corpus"
+    },
+    {
+      "id": "gol-1907-2006",
+      "display": "Mato Grosso, 2006",
+      "data_label": "GOL Transportes Aéreos Flight 1907",
+      "sensitivity": "elevated",
+      "tier": "corpus"
+    },
+    {
+      "id": "garuda-200-2007",
+      "display": "Yogyakarta, 2007",
+      "data_label": "Garuda Indonesia Flight 200",
+      "sensitivity": "standard",
+      "tier": "corpus"
+    },
+    {
+      "id": "ba038-2008",
+      "display": "Heathrow, 2008",
+      "data_label": "British Airways Flight 38",
+      "sensitivity": "standard",
+      "tier": "corpus"
+    },
+    {
+      "id": "colgan-3407-2009",
+      "display": "Buffalo, 2009",
+      "data_label": "Colgan Air Flight 3407",
+      "sensitivity": "standard",
+      "tier": "corpus"
+    },
+    {
+      "id": "air-france-447-2009",
+      "display": "Atlantic, 2009",
+      "data_label": "Air France Flight 447",
+      "sensitivity": "quarantined",
+      "tier": "corpus"
+    },
+    {
+      "id": "asiana-214-2013",
+      "display": "San Francisco, 2013",
+      "data_label": "Asiana Airlines Flight 214",
+      "sensitivity": "elevated",
+      "tier": "corpus"
+    },
+    {
+      "id": "transasia-235-2015",
+      "display": "Taipei, 2015",
+      "data_label": "TransAsia Airways Flight 235",
+      "sensitivity": "standard",
+      "tier": "corpus"
+    },
+    {
+      "id": "jeju-air-2216-2024",
+      "display": "Muan, 2024",
+      "data_label": "Jeju Air Flight 2216",
+      "sensitivity": "quarantined",
+      "tier": "context"
+    },
+    {
+      "id": "air-india-171-2025",
+      "display": "Ahmedabad, 2025",
+      "data_label": "Air India Flight 171",
+      "sensitivity": "quarantined",
+      "tier": "context"
+    },
+    {
+      "id": "germanwings-9525-2015",
+      "display": "French Alps, 2015",
+      "data_label": "Germanwings Flight 9525",
+      "sensitivity": "quarantined",
+      "tier": "excluded"
+    }
+  ]
+}

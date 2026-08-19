@@ -1,0 +1,197 @@
+{
+  "_meta": {
+    "description": "Quotation register. verbatim is stored and never rendered; rendered must be derivable from verbatim by applying only the declared redactions and elisions. status=pending-capture means the unredacted source text has not yet been retrieved, which is true of nearly every entry: the capture pass and the verification pass are the same pass and have not been run.",
+    "capture_status": "4 of 12 verified, 7 pending capture, 1 cut. The four verified are the open-access effectiveness statement and the three original-language statute quotations, which are the evidentiary spine of the divergence section. The seven pending are the ones that block gate rule R5 for rendering; the content is written paraphrase-first so their absence does not block the build."
+  },
+  "quotations": [
+    {
+      "id": "q-helmreich-1990-open-question",
+      "source_ref": "helmreich-et-al-1990",
+      "locator": "Flight Safety Digest 9(5), May 1990",
+      "verbatim": "It is our position, however, that the question remains open and that empirical evidence is just beginning to accumulate.",
+      "rendered": "It is our position, however, that the question remains open and that empirical evidence is just beginning to accumulate.",
+      "redactions": [],
+      "elisions": [],
+      "necessity": [
+        "c"
+      ],
+      "status": "verified",
+      "audit_ref": "Q06",
+      "_note": "The only verbatim-confirmed quotation in the corpus. Open-access text. Carries the claim that the field's own founders declined to assert effectiveness, which is load-bearing for the non-goal against arguing that CRM works."
+    },
+    {
+      "id": "q-ua173-probable-cause",
+      "source_ref": "ntsb-aar-79-07",
+      "locator": "p. 29",
+      "verbatim": null,
+      "rendered": null,
+      "redactions": [],
+      "elisions": [],
+      "necessity": [
+        "a",
+        "b"
+      ],
+      "status": "pending-capture",
+      "audit_ref": "Q01",
+      "_note": "Brief 1 truncated this at 'advisories', dropping the causal core. Brief 2's fuller rendering is the faithful one. Capture verbatim from the report before rendering."
+    },
+    {
+      "id": "q-ctaisb-s28-2b",
+      "source_ref": "canada-ctaisb-act",
+      "locator": "s.28(2)(b)",
+      "verbatim": null,
+      "rendered": null,
+      "redactions": [],
+      "elisions": [],
+      "necessity": [
+        "b"
+      ],
+      "status": "pending-capture",
+      "audit_ref": "Q02",
+      "_note": "The rendering 'any legal, disciplinary or other proceedings' does not match the statute and is a paraphrase presented as a quotation. Capture the actual text or render as attributed summary."
+    },
+    {
+      "id": "q-ntsb-a-79-047",
+      "source_ref": "ntsb-rec-a-79-047",
+      "locator": "Recommendation A-79-47",
+      "verbatim": null,
+      "rendered": null,
+      "redactions": [],
+      "elisions": [],
+      "necessity": [
+        "a"
+      ],
+      "status": "pending-capture",
+      "audit_ref": "Q31",
+      "_note": "Verbatim wording confirmed to contain both 'flight deck resource management' and the participative-management and assertiveness-training phrases. The recommendation letter text itself still to be captured. The hinge of the piece's central argument."
+    },
+    {
+      "id": "q-moshansky-pilot-in-command",
+      "source_ref": "moshansky-1992",
+      "locator": null,
+      "verbatim": null,
+      "rendered": null,
+      "redactions": [
+        {
+          "span": [
+            0,
+            0
+          ],
+          "original_type": "rank_and_name",
+          "replacement": "[the Captain]"
+        }
+      ],
+      "elisions": [],
+      "necessity": [
+        "a"
+      ],
+      "status": "pending-capture",
+      "audit_ref": "Q03",
+      "_note": "CAPTURE WARNING. The Commission's conclusion runs in two halves: the captain as pilot-in-command bears responsibility for the decision, AND it is equally clear that the air transportation system failed him by placing him in a situation without the tools to decide properly. Capturing only the first half reverses the meaning of the inquiry most celebrated for refusing individual-blame findings. Take both halves or neither. Source is cite-only, so this may end as attributed summary. Verified 18 August 2026."
+    },
+    {
+      "id": "q-kegworth-training-patterns",
+      "source_ref": "aaib-4-1990",
+      "locator": "Analysis, cabin and flight crew coordination",
+      "verbatim": null,
+      "rendered": null,
+      "redactions": [],
+      "elisions": [],
+      "necessity": [
+        "a"
+      ],
+      "status": "pending-capture",
+      "audit_ref": "Q07",
+      "_note": "Attribution resolved: AAIB in report 4/90, not the CAA. Some secondary sources misattribute it."
+    },
+    {
+      "id": "q-kegworth-premature-reaction",
+      "source_ref": "aaib-4-1990",
+      "locator": null,
+      "verbatim": null,
+      "rendered": null,
+      "redactions": [],
+      "elisions": [],
+      "necessity": [
+        "a"
+      ],
+      "status": "pending-capture",
+      "audit_ref": "Q29"
+    },
+    {
+      "id": "q-kal801-probable-cause",
+      "source_ref": "ntsb-aar-00-01",
+      "locator": "Probable cause",
+      "verbatim": null,
+      "rendered": null,
+      "redactions": [],
+      "elisions": [],
+      "necessity": [
+        "a",
+        "d"
+      ],
+      "status": "pending-capture",
+      "audit_ref": "Q26",
+      "_note": "Needed in the authority's own words because the piece's point is that the probable cause does not say what the popular account says it says."
+    },
+    {
+      "id": "q-indonesia-pasal-359-1",
+      "source_ref": "indonesia-uu-1-2009",
+      "locator": "Pasal 359 ayat (1)",
+      "verbatim": "Hasil investigasi tidak dapat digunakan sebagai alat bukti dalam proses peradilan",
+      "rendered": "Hasil investigasi tidak dapat digunakan sebagai alat bukti dalam proses peradilan",
+      "redactions": [],
+      "elisions": [],
+      "necessity": [
+        "b"
+      ],
+      "status": "verified",
+      "audit_ref": "TR-03",
+      "_note": "Original-language quotation. No official English translation exists, so any English rendering must be marked unofficial at the point the reader sees it."
+    },
+    {
+      "id": "q-korea-art-30-separation",
+      "source_ref": "korea-arair-act",
+      "locator": "Article 30",
+      "verbatim": "사고조사는 민·형사상 책임과 관련된 사법절차, 행정처분절차 또는 행정쟁송절차와 분리·수행되어야 한다",
+      "rendered": "사고조사는 민·형사상 책임과 관련된 사법절차, 행정처분절차 또는 행정쟁송절차와 분리·수행되어야 한다",
+      "redactions": [],
+      "elisions": [],
+      "necessity": [
+        "b"
+      ],
+      "status": "verified",
+      "audit_ref": "TR-01",
+      "_note": "The separation principle in the original. The government English service is expressly non-official, so the Korean controls and any English rendering is marked unofficial."
+    },
+    {
+      "id": "q-france-l1621-11-seizure",
+      "source_ref": "france-code-transports",
+      "locator": "Art. L1621-11, I.1",
+      "verbatim": "préalablement saisis par l'autorité judiciaire",
+      "rendered": "préalablement saisis par l'autorité judiciaire",
+      "redactions": [],
+      "elisions": [],
+      "necessity": [
+        "b"
+      ],
+      "status": "verified",
+      "audit_ref": "TR-05"
+    },
+    {
+      "id": "q-beaty-pilot-blame",
+      "source_ref": "beaty-1969",
+      "locator": null,
+      "verbatim": null,
+      "rendered": null,
+      "redactions": [],
+      "elisions": [],
+      "necessity": [
+        "c"
+      ],
+      "status": "cut",
+      "audit_ref": "CL-01",
+      "_note": "CUT. Not traced to a page in either the 1969 or the 1991 edition after searching catalogues, Google Books, and works citing Beaty. Not converted to paraphrase: a paraphrase of a quotation nobody could locate is a fabrication with the evidence removed. Beaty's thesis is separately documentable and survives."
+    }
+  ]
+}

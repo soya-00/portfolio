@@ -1,0 +1,427 @@
+{
+  "_meta": {
+    "description": "Comparative CVR-protection and CRM-mandate records. regime_class is the project's central analytic distinction and rests on original-language statutory reading, not on English summaries. No field may be null: an unestablished value must carry the explicit NOT-DOCUMENTED marker so a reader can tell 'no protection' from 'not established'.",
+    "regime_class_note": "express-bar = statute prohibits evidentiary use of recorder material. separation-principle = investigation is procedurally separated from liability but no express evidentiary bar exists. judicial-seizure = recorders pass through judicial custody before technical investigators obtain access. discretionary = release governed by general disclosure exemptions rather than an aviation-specific rule."
+  },
+  "jurisdictions": [
+    {
+      "id": "us",
+      "country": "United States",
+      "regime_class": "express-bar",
+      "language_of_record": "en",
+      "translation_status": "not-applicable",
+      "instrument": {
+        "value": "49 U.S.C. §§1114(c) and 1154",
+        "source_ref": "ntsb-aar-79-07",
+        "verification": "brief-only",
+        "note": "Statutory sections carried from the briefs; not re-read against the US Code in the external rounds."
+      },
+      "cvr_disclosure_bar": {
+        "value": "Public disclosure of CVR recordings barred; transcript released at public hearing",
+        "source_ref": "ntsb-aar-79-07",
+        "verification": "brief-only"
+      },
+      "cvr_evidentiary_bar": {
+        "value": "Discovery of the recording barred by §1154",
+        "source_ref": "ntsb-aar-79-07",
+        "verification": "brief-only"
+      },
+      "criminal_use": "NOT-DOCUMENTED",
+      "crm_mandate": {
+        "value": "14 CFR 121.404, created by the final rule at 60 FR 65940",
+        "source_ref": "faa-final-rule-1995",
+        "verification": "primary-verified"
+      },
+      "crm_mandate_first_date": {
+        "value": "1995-12-20 (effective 1996-03-19); compliance credit cut-offs 19 March 1998 for flightcrew and 19 March 1999 for flight attendants and dispatchers",
+        "source_ref": "faa-final-rule-1995",
+        "verification": "primary-verified"
+      },
+      "audit_refs": [
+        "F14"
+      ]
+    },
+    {
+      "id": "ca",
+      "country": "Canada",
+      "regime_class": "express-bar",
+      "language_of_record": "en",
+      "translation_status": "not-applicable",
+      "instrument": {
+        "value": "Canadian Transportation Accident Investigation and Safety Board Act, s.28",
+        "source_ref": "canada-ctaisb-act",
+        "verification": "secondary-only"
+      },
+      "cvr_disclosure_bar": {
+        "value": "s.28(2) prohibits communication or production of an on-board recording except as the section allows",
+        "source_ref": "canada-ctaisb-act",
+        "verification": "secondary-only"
+      },
+      "cvr_evidentiary_bar": {
+        "value": "Privileged; a court or coroner may order production only after in-camera examination where the public interest in the proper administration of justice outweighs the privilege (s.28(6))",
+        "source_ref": "canada-ctaisb-act",
+        "verification": "secondary-only"
+      },
+      "criminal_use": "NOT-DOCUMENTED",
+      "crm_mandate": {
+        "value": "CARs Subparts 702, 703, 704, 705; Advisory Circular AC 700-042",
+        "source_ref": "tc-ac-700-042",
+        "verification": "primary-verified"
+      },
+      "crm_mandate_first_date": {
+        "value": "Effective 31 January 2019, compliance extended to 30 September 2019",
+        "source_ref": "tc-ac-700-042",
+        "verification": "primary-verified"
+      },
+      "audit_refs": [
+        "Q02",
+        "C10"
+      ]
+    },
+    {
+      "id": "kr",
+      "country": "South Korea",
+      "regime_class": "separation-principle",
+      "language_of_record": "ko",
+      "translation_status": "original-read",
+      "instrument": {
+        "value": "항공·철도 사고조사에 관한 법률, arts. 28, 30, 31",
+        "source_ref": "korea-arair-act",
+        "verification": "primary-verified"
+      },
+      "cvr_disclosure_bar": {
+        "value": "Art. 28 permits the Committee to withhold information whose disclosure could affect accurate investigation, national security, or personal privacy; a 2013 amendment bars disclosure of the names of persons connected with the accident",
+        "source_ref": "korea-arair-act",
+        "verification": "primary-verified"
+      },
+      "cvr_evidentiary_bar": {
+        "value": "None. Art. 30 requires only that accident investigation be conducted separately from judicial procedures relating to civil and criminal liability, administrative disposition, and administrative appeal",
+        "source_ref": "korea-arair-act",
+        "verification": "primary-verified",
+        "note": "This is the finding: a separation principle, not an evidentiary bar. It is the sharpest contrast in the comparison and rests on the Korean text, since the government English service is expressly non-official."
+      },
+      "criminal_use": "NOT-DOCUMENTED",
+      "crm_mandate": "NOT-DOCUMENTED",
+      "crm_mandate_first_date": "NOT-DOCUMENTED",
+      "audit_refs": [
+        "TR-01",
+        "F1"
+      ]
+    },
+    {
+      "id": "jp",
+      "country": "Japan",
+      "regime_class": "discretionary",
+      "language_of_record": "ja",
+      "translation_status": "unofficial-translation",
+      "instrument": {
+        "value": "運輸安全委員会設置法 and 航空法",
+        "source_ref": "japan-jtsb-act",
+        "verification": "secondary-only"
+      },
+      "cvr_disclosure_bar": {
+        "value": "Access controlled through Information Disclosure Act Article 5, items 3, 5 and 6, rather than an aviation-specific rule",
+        "source_ref": "japan-jtsb-act",
+        "verification": "secondary-only",
+        "note": "Item 3 is a distinct ground and its omission understated the exemption's breadth. Corrected 18 August 2026 against an administrative appeals record on a recorder-data request, in which the Transport Safety Board also stated it had returned the data to its owner after publishing the report."
+      },
+      "cvr_evidentiary_bar": {
+        "value": "No express bar located in the Japanese text",
+        "source_ref": "japan-jtsb-act",
+        "verification": "secondary-only",
+        "note": "An absence claim. Established partly through non-official translation and therefore carries lower confidence than a positive finding. Must be rendered as 'no express bar was located', never as 'no bar exists'."
+      },
+      "criminal_use": "NOT-DOCUMENTED",
+      "crm_mandate": "NOT-DOCUMENTED",
+      "crm_mandate_first_date": "NOT-DOCUMENTED",
+      "audit_refs": [
+        "TR-02",
+        "F2"
+      ]
+    },
+    {
+      "id": "id",
+      "country": "Indonesia",
+      "regime_class": "express-bar",
+      "language_of_record": "id",
+      "translation_status": "original-read",
+      "instrument": {
+        "value": "UU No. 1 Tahun 2009 tentang Penerbangan, Pasal 357, 359, 360",
+        "source_ref": "indonesia-uu-1-2009",
+        "verification": "primary-verified"
+      },
+      "cvr_disclosure_bar": {
+        "value": "Pasal 359(2) permits announcement only of non-confidential results; the Penjelasan expressly names the cockpit voice recorder and its verbatim transcript among protected records",
+        "source_ref": "indonesia-uu-1-2009",
+        "verification": "primary-verified"
+      },
+      "cvr_evidentiary_bar": {
+        "value": "Pasal 359(1): investigation results cannot be used as evidence in judicial proceedings",
+        "source_ref": "indonesia-uu-1-2009",
+        "verification": "primary-verified",
+        "note": "The clearest express bar in the corpus, and doubly protective: inadmissible under 359(1) and confidential under 359(2) with the CVR named in the elucidation. No official English translation exists."
+      },
+      "criminal_use": "NOT-DOCUMENTED",
+      "crm_mandate": "NOT-DOCUMENTED",
+      "crm_mandate_first_date": "NOT-DOCUMENTED",
+      "audit_refs": [
+        "TR-03",
+        "F3",
+        "S08"
+      ]
+    },
+    {
+      "id": "fr",
+      "country": "France",
+      "regime_class": "judicial-seizure",
+      "language_of_record": "fr",
+      "translation_status": "original-read",
+      "instrument": {
+        "value": "Code des transports art. L1621-11; Code de procédure pénale arts. 97 and 163; professional secrecy under L1621-16",
+        "source_ref": "france-code-transports",
+        "verification": "primary-verified"
+      },
+      "cvr_disclosure_bar": {
+        "value": "Safety investigation personnel bound by professional secrecy (L1621-16, referencing Penal Code art. 226-13)",
+        "source_ref": "france-code-transports",
+        "verification": "primary-verified"
+      },
+      "cvr_evidentiary_bar": {
+        "value": "No bar. Where a judicial inquiry is opened, recorders are first seized by the judicial authority under CPP arts. 97 and 163, and technical investigators then copy the contents under the supervision of a judicial police officer",
+        "source_ref": "france-code-transports",
+        "verification": "primary-verified",
+        "note": "The inverse of the express-bar model: the criminal track has custody first and the safety investigation works from a copy."
+      },
+      "criminal_use": {
+        "value": "Recorder-derived material is available to the criminal track by design",
+        "source_ref": "france-code-transports",
+        "verification": "primary-verified"
+      },
+      "crm_mandate": "NOT-DOCUMENTED",
+      "crm_mandate_first_date": "NOT-DOCUMENTED",
+      "audit_refs": [
+        "TR-05",
+        "P01"
+      ]
+    },
+    {
+      "id": "br",
+      "country": "Brazil",
+      "regime_class": "express-bar",
+      "language_of_record": "pt",
+      "translation_status": "original-read",
+      "instrument": {
+        "value": "Código Brasileiro de Aeronáutica arts. 88-A to 88-R, introduced by Lei 12.970/2014",
+        "source_ref": "brazil-cba-88",
+        "verification": "primary-verified"
+      },
+      "cvr_disclosure_bar": {
+        "value": "SIPAER confidentiality across arts. 88-C, 88-D, 88-N, 88-P",
+        "source_ref": "brazil-cba-88",
+        "verification": "primary-verified"
+      },
+      "cvr_evidentiary_bar": {
+        "value": "Art. 88-I §2 limits use of voluntarily provided SIPAER material as evidence in judicial and administrative proceedings; art. 88-K governs judicial authorisation for access",
+        "source_ref": "brazil-cba-88",
+        "verification": "primary-verified"
+      },
+      "criminal_use": {
+        "value": "Scheme upheld as constitutional in ADI 5667; the STF declared arts. 88-C, 88-D, 88-I §2, 88-K, 88-N and 88-P constitutional",
+        "source_ref": "brazil-stf-adi-5667",
+        "verification": "secondary-only",
+        "note": "Brazil is the only jurisdiction in the corpus whose CVR-protection scheme has been tested and upheld against a constitutional challenge."
+      },
+      "crm_mandate": {
+        "value": "IAC 060-1002, Treinamento em Gerenciamento de Recursos de Equipes",
+        "source_ref": "brazil-iac-060-1002",
+        "verification": "primary-verified"
+      },
+      "crm_mandate_first_date": {
+        "value": "2003-07-18; approving Portaria DAC 905/STE published in DOU 116 of 18 June 2003",
+        "source_ref": "brazil-iac-060-1002",
+        "verification": "primary-verified"
+      },
+      "audit_refs": [
+        "C01",
+        "TR-04",
+        "E7"
+      ]
+    },
+    {
+      "id": "eu",
+      "country": "European Union",
+      "regime_class": "express-bar",
+      "language_of_record": "en",
+      "translation_status": "not-applicable",
+      "instrument": {
+        "value": "Regulation (EU) No 996/2010, Article 14",
+        "source_ref": "eu-reg-996-2010",
+        "verification": "secondary-only"
+      },
+      "cvr_disclosure_bar": {
+        "value": "Records shall not be made available or used for purposes other than safety investigation",
+        "source_ref": "eu-reg-996-2010",
+        "verification": "secondary-only",
+        "note": "Currently attributed via a secondary summary in one brief; relink to EUR-Lex before rendering."
+      },
+      "cvr_evidentiary_bar": "NOT-DOCUMENTED",
+      "criminal_use": "NOT-DOCUMENTED",
+      "crm_mandate": {
+        "value": "Commission Regulation (EU) No 965/2012, Part-ORO, ORO.FC.115, succeeding JAR-OPS 1 Subpart N via EU-OPS",
+        "source_ref": "eu-reg-996-2010",
+        "verification": "secondary-only",
+        "note": "Succession chain established; the ORO instrument itself is not yet a separate source record."
+      },
+      "crm_mandate_first_date": "NOT-DOCUMENTED",
+      "audit_refs": [
+        "Q13",
+        "L07"
+      ]
+    },
+    {
+      "id": "gb",
+      "country": "United Kingdom",
+      "regime_class": "NOT-DOCUMENTED",
+      "language_of_record": "en",
+      "translation_status": "not-applicable",
+      "instrument": "NOT-DOCUMENTED",
+      "cvr_disclosure_bar": "NOT-DOCUMENTED",
+      "cvr_evidentiary_bar": "NOT-DOCUMENTED",
+      "criminal_use": "NOT-DOCUMENTED",
+      "crm_mandate": "NOT-DOCUMENTED",
+      "crm_mandate_first_date": "NOT-DOCUMENTED",
+      "audit_refs": [],
+      "_note": "Placeholder. The UK is a deep-tier jurisdiction via Kegworth but its CVR-protection regime was never separately established in any research round. This is a visible hole in the comparison and must be filled or declared."
+    },
+    {
+      "id": "in",
+      "country": "India",
+      "regime_class": "NOT-DOCUMENTED",
+      "language_of_record": "en",
+      "translation_status": "not-applicable",
+      "instrument": {
+        "value": "Aircraft (Investigation of Accidents and Incidents) Rules, 2025, Rule 17",
+        "source_ref": "dgca-car-8-f-ii",
+        "verification": "secondary-only",
+        "note": "Rule 17 reported as prohibiting public disclosure of CVR and airborne image recordings; the sub-rule numbering is unconfirmed."
+      },
+      "cvr_disclosure_bar": {
+        "value": "Reported statutory prohibition on public disclosure under the 2025 Rules",
+        "source_ref": "dgca-car-8-f-ii",
+        "verification": "secondary-only"
+      },
+      "cvr_evidentiary_bar": "NOT-DOCUMENTED",
+      "criminal_use": "NOT-DOCUMENTED",
+      "crm_mandate": {
+        "value": "CAR Section 8, Series F, Part II",
+        "source_ref": "dgca-car-8-f-ii",
+        "verification": "primary-verified"
+      },
+      "crm_mandate_first_date": {
+        "value": "Issue I 30 April 2013, effective 24 January 2018",
+        "source_ref": "dgca-car-8-f-ii",
+        "verification": "primary-verified"
+      },
+      "audit_refs": [
+        "C02",
+        "P03"
+      ]
+    },
+    {
+      "id": "au",
+      "country": "Australia",
+      "regime_class": "NOT-DOCUMENTED",
+      "language_of_record": "en",
+      "translation_status": "not-applicable",
+      "instrument": "NOT-DOCUMENTED",
+      "cvr_disclosure_bar": "NOT-DOCUMENTED",
+      "cvr_evidentiary_bar": "NOT-DOCUMENTED",
+      "criminal_use": "NOT-DOCUMENTED",
+      "crm_mandate": {
+        "value": "CASR Part 119 reg 119.175, with the Part 121/133/135/91 suite commenced 2 December 2021",
+        "source_ref": "casa-casr-119-175",
+        "verification": "primary-verified",
+        "note": "Both levels operative; the apparent contradiction between briefs was two partial descriptions."
+      },
+      "crm_mandate_first_date": "NOT-DOCUMENTED",
+      "audit_refs": [
+        "C07"
+      ]
+    },
+    {
+      "id": "cn",
+      "country": "China",
+      "regime_class": "NOT-DOCUMENTED",
+      "language_of_record": "zh",
+      "translation_status": "original-read",
+      "instrument": "NOT-DOCUMENTED",
+      "cvr_disclosure_bar": "NOT-DOCUMENTED",
+      "cvr_evidentiary_bar": "NOT-DOCUMENTED",
+      "criminal_use": "NOT-DOCUMENTED",
+      "crm_mandate": {
+        "value": "CCAR-121, with advisory circular AC-121-FS-41R1",
+        "source_ref": "caac-ac-121-fs-41r1",
+        "verification": "primary-verified"
+      },
+      "crm_mandate_first_date": "NOT-DOCUMENTED",
+      "audit_refs": [
+        "E1"
+      ],
+      "_note": "AC-121-FS-41R1 is a 2022 re-issue. CRM was mandatory before it, but the origin date is not established."
+    },
+    {
+      "id": "ru",
+      "country": "Russia",
+      "regime_class": "NOT-DOCUMENTED",
+      "language_of_record": "ru",
+      "translation_status": "not-applicable",
+      "instrument": "NOT-DOCUMENTED",
+      "cvr_disclosure_bar": "NOT-DOCUMENTED",
+      "cvr_evidentiary_bar": "NOT-DOCUMENTED",
+      "criminal_use": "NOT-DOCUMENTED",
+      "crm_mandate": "NOT-DOCUMENTED",
+      "crm_mandate_first_date": "NOT-DOCUMENTED",
+      "audit_refs": [
+        "S09",
+        "E3"
+      ],
+      "_note": "Searched across three rounds and not established. The absence is the finding, and must be rendered as a failed search rather than as a negative finding about Russian regulation. Adoption appears operator-driven and ICAO-aligned, but that characterisation itself rests only on Russian-language blogs and is not usable."
+    },
+    {
+      "id": "icao",
+      "country": "ICAO (international standard)",
+      "regime_class": "express-bar",
+      "language_of_record": "en",
+      "translation_status": "not-applicable",
+      "instrument": {
+        "value": "Annex 13, Standard 5.12",
+        "source_ref": "icao-annex-13",
+        "verification": "secondary-only",
+        "note": "The instrument text has not been read; the tier is corrected from an earlier self-contradicting 'primary-verified' claim."
+      },
+      "cvr_disclosure_bar": {
+        "value": "Standard 5.12 restricts use of investigation records for purposes other than accident investigation",
+        "source_ref": "icao-annex-13",
+        "verification": "secondary-only"
+      },
+      "cvr_evidentiary_bar": "NOT-DOCUMENTED",
+      "criminal_use": "NOT-DOCUMENTED",
+      "crm_mandate": {
+        "value": "Human factors training entered Annex 1 in 1989 and Annex 6 in 1995; investigation human factors entered Annex 13 in 1994",
+        "source_ref": "icao-doc-9683",
+        "verification": "primary-verified",
+        "note": "Sourced to ICAO Doc 9683's own account. The Annex 6 amendment number is not established."
+      },
+      "crm_mandate_first_date": {
+        "value": "1995",
+        "source_ref": "icao-doc-9683",
+        "verification": "primary-verified"
+      },
+      "audit_refs": [
+        "Q12",
+        "A5",
+        "C11"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "description": "Claims resting on a single origin, which must read as 'X argues that…' rather than as fact. Not inferred from data — no field encodes it, and deriving it would originate a judgement. Each entry points at prose that already states the dependency.",
+    "rule": "Render a visible marker at the anchor; never present these as settled."
+  },
+  "claims": [
+    {
+      "id": "SO-01",
+      "section": "generations",
+      "anchor": "it remains a single lineage",
+      "origin": "One research group",
+      "attribution": "The generational chronology, the cross-cultural framing and the effectiveness caveats trace to a single research group, which is the discipline's principal advocate.",
+      "source_ref": "helmreich-merritt-wilhelm-1999",
+      "note": "No independent critical historiography of the schema was located across three rounds. The absence is stated in the section."
+    },
+    {
+      "id": "SO-02",
+      "section": "what-cannot-be-seen",
+      "anchor": "a single 1991 conference paper",
+      "origin": "One conference paper",
+      "attribution": "The corpus's counterfactual arm rests substantially on one 1991 conference paper microcoding communication in two survivable events.",
+      "source_ref": "predmore-1991",
+      "note": "The paper's copyright status is also ambiguous: hosted on a government repository but authored for a university symposium."
+    },
+    {
+      "id": "SO-03",
+      "section": "the-culture-argument",
+      "anchor": "a widely read blog rather than a journal",
+      "origin": "One blog post",
+      "attribution": "The most-read rebuttal to the cultural reading reached the public through a blog rather than a journal.",
+      "source_ref": "jing-batteau-2015",
+      "note": "A scholarly alternative exists and is cited alongside, but the blog is what actually travelled. The asymmetry between a bestseller and a blog post is itself part of the argument."
+    }
+  ]
+}

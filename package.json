@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "validate": "node scripts/validate.js",
+    "timing": "node scripts/timing.js",
+    "build": "npm run validate && tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
