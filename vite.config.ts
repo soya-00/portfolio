@@ -15,6 +15,7 @@ export default defineConfig({
         main: path.resolve(import.meta.dirname, "index.html"),
         tilt: path.resolve(import.meta.dirname, "tilt/index.html"),
         gals: path.resolve(import.meta.dirname, "gals/index.html"),
+        cvr: path.resolve(import.meta.dirname, "cvr/index.html"),
       },
     },
   },

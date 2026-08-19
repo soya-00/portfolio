@@ -1,0 +1,201 @@
+{
+  "_meta": {
+    "description": "Allowlist inverting the crew-name check from 'find the bad names', which cannot be specified, to 'justify every name', which can. The gate fails on any capitalised personal name not listed here. No crew member of any corpus accident may ever appear.",
+    "rule": "Crew appear by role only: Captain, First Officer, Flight Engineer, Controller.",
+    "terms_note": "permitted_terms holds non-personal proper nouns — operators, places, bodies, publications. They are listed so the two-capitalised-word check can stay on without drowning real findings in noise. A pair matching a permitted term is skipped; anything else warns for a human to confirm."
+  },
+  "permitted": [
+    {
+      "name": "Ruffell Smith",
+      "role": "Author, NASA TM-78482",
+      "basis": "Cited author, not crew"
+    },
+    {
+      "name": "Helmreich",
+      "role": "Author, CRM research literature",
+      "basis": "Cited author, not crew"
+    },
+    {
+      "name": "Merritt",
+      "role": "Author, CRM and cross-cultural literature",
+      "basis": "Cited author, not crew"
+    },
+    {
+      "name": "Wilhelm",
+      "role": "Author, CRM literature",
+      "basis": "Cited author, not crew"
+    },
+    {
+      "name": "Predmore",
+      "role": "Author, CVR microcoding study",
+      "basis": "Cited author, not crew"
+    },
+    {
+      "name": "Beaty",
+      "role": "Author, The Human Factor in Aircraft Accidents",
+      "basis": "Cited author, not crew"
+    },
+    {
+      "name": "Lauber",
+      "role": "Editor, NASA CP-2120; coined the term Cockpit Resource Management",
+      "basis": "Cited author, not crew of any corpus accident"
+    },
+    {
+      "name": "Cooper",
+      "role": "Editor, NASA CP-2120",
+      "basis": "Cited editor, not crew"
+    },
+    {
+      "name": "White",
+      "role": "Editor, NASA CP-2120",
+      "basis": "Cited editor, not crew"
+    },
+    {
+      "name": "Moshansky",
+      "role": "Commissioner, Air Ontario inquiry",
+      "basis": "Named commissioner; the inquiry is conventionally known by this name"
+    },
+    {
+      "name": "Lane",
+      "role": "Commissioner, Staines public inquiry",
+      "basis": "Named commissioner"
+    },
+    {
+      "name": "Lockwood",
+      "role": "Board of Inquiry member, Gimli",
+      "basis": "Named inquiry member"
+    },
+    {
+      "name": "Brewer",
+      "role": "Author, ecological fallacy critique",
+      "basis": "Cited author"
+    },
+    {
+      "name": "Venaik",
+      "role": "Author, ecological fallacy critique",
+      "basis": "Cited author"
+    },
+    {
+      "name": "Hofstede",
+      "role": "Originator of the national culture dimensions framework",
+      "basis": "Subject of critique, not crew"
+    },
+    {
+      "name": "Gladwell",
+      "role": "Author of a popular account the piece treats as an object of study",
+      "basis": "Cited author"
+    },
+    {
+      "name": "Jing",
+      "role": "Author, The Dragon in the Cockpit",
+      "basis": "Cited author"
+    },
+    {
+      "name": "Batteau",
+      "role": "Author, The Dragon in the Cockpit",
+      "basis": "Cited author"
+    },
+    {
+      "name": "Winter",
+      "role": "Author, Safety Science criminalisation study",
+      "basis": "Cited author"
+    },
+    {
+      "name": "Nunes Marques",
+      "role": "Relator, Brazilian Supremo Tribunal Federal, ADI 5667",
+      "basis": "Named judge in a published decision"
+    },
+    {
+      "name": "Kanki",
+      "role": "Editor, Crew Resource Management",
+      "basis": "Cited editor"
+    },
+    {
+      "name": "Wiener",
+      "role": "Editor, Cockpit Resource Management",
+      "basis": "Cited editor"
+    },
+    {
+      "name": "Anca",
+      "role": "Editor, Crew Resource Management",
+      "basis": "Cited editor"
+    },
+    {
+      "name": "Chidester",
+      "role": "Author and editor, CRM literature",
+      "basis": "Cited author"
+    },
+    {
+      "name": "Foushee",
+      "role": "Author, CRM literature",
+      "basis": "Cited author"
+    },
+    {
+      "name": "Gregorich",
+      "role": "Author, CRM literature",
+      "basis": "Cited author"
+    }
+  ],
+  "permitted_terms": [
+    "British Airways",
+    "British European",
+    "British Midland",
+    "Air Canada",
+    "Air France",
+    "Air India",
+    "Air Ontario",
+    "Air Transat",
+    "Air Florida",
+    "Korean Air",
+    "China Airlines",
+    "Garuda Indonesia",
+    "Japan Air",
+    "Jeju Air",
+    "Aloha Airlines",
+    "Asiana Airlines",
+    "Colgan Air",
+    "Eastern Air",
+    "United Airlines",
+    "Flash Airlines",
+    "TransAsia Airways",
+    "Bashkirian Airlines",
+    "Civil Aeronautics",
+    "Civil Aviation",
+    "Transport Safety",
+    "Transportation Safety",
+    "Safety Board",
+    "Accident Investigation",
+    "Aviation Safety",
+    "Supreme Federal",
+    "Federal Court",
+    "Court of",
+    "Training Manual",
+    "Flight Safety",
+    "Resource Management",
+    "Conference Publication",
+    "Technical Memorandum",
+    "Open Government",
+    "San Francisco",
+    "South Korea",
+    "North Sea",
+    "East Asian",
+    "French Alps",
+    "Mato Grosso",
+    "New York",
+    "Los Rodeos",
+    "Nimitz Hill",
+    "Sioux City",
+    "Cove Neck",
+    "Clarence Center",
+    "Sharm el",
+    "Ruffell Smith",
+    "United States",
+    "United Kingdom",
+    "European Union",
+    "Federal Register",
+    "Federal Aviation",
+    "Diário Oficial",
+    "Código Brasileiro",
+    "Los Angeles"
+  ]
+}

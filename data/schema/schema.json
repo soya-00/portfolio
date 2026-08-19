@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cvr-crm/schema",
+  "title": "CVR/CRM corpus schema",
+  "description": "Ground-truth data contract. The build may not originate a fact; every analytic field must carry a source_ref that resolves into sources.json. Verification vocabulary is deliberately narrow so that 'unknown' cannot masquerade as 'false'.",
+
+  "$defs": {
+
+    "verification": {
+      "description": "How the value in this record was established. primary-verified means the actual instrument, report, or article text was read. secondary-only means it rests on a summary, mirror, or third-party account. brief-only means it entered from the research briefs and has not been externally checked. not-documented means a genuine search failed and the absence is the finding.",
+      "enum": ["primary-verified", "official-translation-verified", "secondary-only", "brief-only", "not-documented"]
+    },
+
+    "confidence": { "enum": ["high", "medium", "low"] },
+
+    "access": {
+      "enum": ["open", "paywalled", "library", "purchase", "offline"]
+    },
+
+    "licence": {
+      "type": "object",
+      "description": "Reproduce-or-cite determination. This project seeks no permissions, so 'cite-only' is a design constraint, not a pending task.",
+      "required": ["status", "basis"],
+      "properties": {
+        "status": { "enum": ["reproducible", "cite-only", "undetermined"] },
+        "basis": { "type": "string", "description": "The authority's own published terms or statutory position that supports the status." },
+        "attribution": { "type": ["string", "null"], "description": "Exact attribution wording required when reproducing." },
+        "carve_out": { "type": ["string", "null"], "description": "Embedded third-party material excluded from the grant." }
+      }
+    },
+
+    "sourced_value": {
+      "type": "object",
+      "description": "Any factual value that will render on screen. Value plus provenance travel together so the gate can check them as one unit.",
+      "required": ["value", "source_ref", "verification"],
+      "properties": {
+        "value": {},
+        "source_ref": { "type": "string" },
+        "verification": { "$ref": "#/$defs/verification" },
+        "note": { "type": ["string", "null"] }
+      }
+    },
+
+    "jurisdiction_field": {
+      "description": "Never null. An unknown must be the explicit marker so a reader distinguishes 'no protection' from 'not established'.",
+      "oneOf": [
+        { "$ref": "#/$defs/sourced_value" },
+        { "const": "NOT-DOCUMENTED" }
+      ]
+    },
+
+    "source": {
+      "type": "object",
+      "required": ["id", "citation", "authority", "type", "access", "licence", "verification", "confidence"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "citation": { "type": "string" },
+        "authority": { "type": "string" },
+        "type": { "enum": ["accident-report", "inquiry-report", "statute", "regulation", "standard", "advisory", "journal-article", "conference-paper", "book", "position-paper", "press", "court-decision", "dataset", "technical-report"] },
+        "number": { "type": ["string", "null"] },
+        "date": { "type": ["string", "null"] },
+        "language": { "type": "string" },
+        "url": { "type": ["string", "null"] },
+        "archive_url": { "type": ["string", "null"] },
+        "access": { "$ref": "#/$defs/access" },
+        "licence": { "$ref": "#/$defs/licence" },
+        "verification": { "$ref": "#/$defs/verification" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "audit_refs": { "type": "array", "items": { "type": "string" } },
+        "downgraded": { "type": "boolean", "description": "True where this source supplied at least one demonstrably wrong value; every claim resting on it inherits reduced confidence." }
+      }
+    },
+
+    "quotation": {
+      "type": "object",
+      "description": "verbatim is stored and never rendered. rendered must be derivable from verbatim by applying only the declared redactions and elisions. Any other difference fails the build.",
+      "required": ["id", "source_ref", "status", "necessity"],
+      "properties": {
+        "id": { "type": "string" },
+        "source_ref": { "type": "string" },
+        "locator": { "type": ["string", "null"], "description": "Page, paragraph, or section within the source." },
+        "verbatim": { "type": ["string", "null"] },
+        "rendered": { "type": ["string", "null"] },
+        "redactions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["span", "original_type", "replacement"],
+            "properties": {
+              "span": { "type": "array", "items": { "type": "integer" }, "minItems": 2, "maxItems": 2 },
+              "original_type": { "enum": ["name", "rank_and_name", "pronoun", "identifier"] },
+              "replacement": { "type": "string" }
+            }
+          }
+        },
+        "elisions": {
+          "type": "array",
+          "maxItems": 1,
+          "description": "At most one internal elision per quotation. Two is a reassembly, not an elision.",
+          "items": {
+            "type": "object",
+            "required": ["span"],
+            "properties": { "span": { "type": "array", "items": { "type": "integer" }, "minItems": 2, "maxItems": 2 } }
+          }
+        },
+        "necessity": {
+          "type": "array",
+          "minItems": 1,
+          "description": "Why exact wording is required. a=wording is the object of analysis; b=paraphrase would alter legal or evidentiary meaning; c=wording is evidence of the author's own stance; d=contested formulation that must be shown in the parties' own words.",
+          "items": { "enum": ["a", "b", "c", "d"] }
+        },
+        "status": { "enum": ["verified", "pending-capture", "pending-verification", "cut"] },
+        "audit_ref": { "type": ["string", "null"] }
+      }
+    },
+
+    "accident": {
+      "type": "object",
+      "required": ["id", "date", "tier", "jurisdiction", "authority", "fatalities", "report", "selection_basis"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "label": { "type": "string", "description": "Operator and flight number only. No crew names anywhere." },
+        "date": { "type": "string" },
+        "location": { "type": "string" },
+        "jurisdiction": { "type": "string", "description": "ISO country code of the investigating authority." },
+        "authority": { "type": "string" },
+        "tier": { "enum": ["deep", "corpus", "context", "excluded"] },
+        "aircraft": { "type": "string" },
+        "fatalities": {
+          "type": "object",
+          "required": ["reported", "basis", "source_ref", "verification"],
+          "properties": {
+            "reported": { "type": ["integer", "null"] },
+            "basis": { "type": "string", "description": "What the cited report itself counted, in its own terms." },
+            "subsequent": { "type": ["integer", "null"], "description": "Deaths after the report's count, separately sourced." },
+            "subsequent_source_ref": { "type": ["string", "null"] },
+            "ground": { "type": ["integer", "null"], "description": "Included in reported; identified separately wherever present." },
+            "source_ref": { "type": "string" },
+            "verification": { "$ref": "#/$defs/verification" }
+          }
+        },
+        "report": {
+          "type": "object",
+          "required": ["source_ref", "number_verification"],
+          "properties": {
+            "source_ref": { "type": "string" },
+            "number_verification": { "$ref": "#/$defs/verification" }
+          }
+        },
+        "cvr_role": {
+          "type": "object",
+          "description": "What the investigating authority did with the recording, attributed. Never the project's own reading.",
+          "properties": {
+            "summary": { "type": ["string", "null"] },
+            "source_ref": { "type": ["string", "null"] },
+            "verification": { "$ref": "#/$defs/verification" }
+          }
+        },
+        "transcript": {
+          "type": "object",
+          "description": "Whether transcript material can be reproduced, which follows the report's licence, not the project's wishes.",
+          "properties": {
+            "reproducible": { "type": "boolean" },
+            "basis": { "type": "string" }
+          }
+        },
+        "selection_basis": { "type": "string", "description": "Why this accident is in the corpus. Published to the reader." },
+        "sensitivity": { "enum": ["standard", "elevated", "quarantined"], "description": "quarantined = unsettled matter, active proceedings, or living relatives organised; final-moments material collapsed by default." },
+        "audit_refs": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "jurisdiction": {
+      "type": "object",
+      "required": ["id", "country", "regime_class", "cvr_disclosure_bar", "cvr_evidentiary_bar", "crm_mandate"],
+      "properties": {
+        "id": { "type": "string" },
+        "country": { "type": "string" },
+        "regime_class": {
+          "description": "The spine of the comparison. separation-principle = investigation is procedurally separated from liability, but no express bar on evidentiary use. express-bar = statute prohibits use of recorder material as evidence. discretionary = release governed by disclosure exemptions rather than an aviation-specific rule.",
+          "enum": ["express-bar", "separation-principle", "discretionary", "judicial-seizure", "NOT-DOCUMENTED"]
+        },
+        "instrument": { "$ref": "#/$defs/jurisdiction_field" },
+        "cvr_disclosure_bar": { "$ref": "#/$defs/jurisdiction_field" },
+        "cvr_evidentiary_bar": { "$ref": "#/$defs/jurisdiction_field" },
+        "criminal_use": { "$ref": "#/$defs/jurisdiction_field" },
+        "crm_mandate": { "$ref": "#/$defs/jurisdiction_field" },
+        "crm_mandate_first_date": { "$ref": "#/$defs/jurisdiction_field" },
+        "language_of_record": { "type": "string" },
+        "translation_status": { "enum": ["original-read", "official-translation", "unofficial-translation", "not-applicable"] },
+        "audit_refs": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "cut": {
+      "type": "object",
+      "description": "The record of what the piece does not say. Rendered to the reader.",
+      "required": ["id", "claim", "reason", "searched", "status"],
+      "properties": {
+        "id": { "type": "string" },
+        "claim": { "type": "string" },
+        "reason": { "type": "string" },
+        "searched": { "type": "array", "items": { "type": "string" } },
+        "status": { "enum": ["cut", "prescribed", "rescued", "flagged"] },
+        "audit_ref": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

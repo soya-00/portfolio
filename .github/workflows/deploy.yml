@@ -29,7 +29,14 @@ jobs:
 
       - run: npm ci
 
-      # Type-checks and bundles; fails the run if either breaks.
+      # The corpus gate. Runs ahead of the build so a data or citation
+      # regression fails under its own name in the log rather than inside
+      # the bundler step. `npm run build` runs it again; that is deliberate.
+      - name: Validate corpus
+        run: npm run validate
+
+      # Type-checks, bundles, prerenders, and proves the rendered prose is
+      # word for word what content/ holds. Fails the run if any step breaks.
       - run: npm run build
 
       - uses: actions/configure-pages@v5

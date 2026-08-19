@@ -1,0 +1,1039 @@
+{
+  "_meta": {
+    "description": "Accident corpus. Crew appear by role only, never by name, in every field. Fatality figures follow the counting convention in conventions.json: the figure is the one the cited report states, on the basis that report used; later deaths are a separate sourced field. verification=brief-only means the value entered from the research briefs and has not been checked against the report.",
+    "tier_note": "deep = full treatment with transcript-level material where reproducible. corpus = record-level entry. context = referenced but not a corpus record. excluded = considered and rejected, with the reason published.",
+    "roster_status": "27 records: 6 deep, 18 corpus, 2 context, 1 excluded. Meets the charter floor of 25 corpus-eligible entries. Records added in the final pass carry verification=brief-only on fatality figures and report numbers and must be checked against the reports before those values render."
+  },
+  "accidents": [
+    {
+      "id": "tenerife-1977",
+      "label": "KLM Flight 4805 and Pan Am Flight 1736",
+      "date": "1977-03-27",
+      "location": "Los Rodeos Airport, Tenerife",
+      "jurisdiction": "es",
+      "authority": "CIAIAC (Spain)",
+      "tier": "deep",
+      "aircraft": "Two Boeing 747",
+      "fatalities": {
+        "reported": 583,
+        "basis": "Report total across both aircraft",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": null,
+        "source_ref": "ciaiac-a-102-103-1977",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "ciaiac-a-102-103-1977",
+        "number_verification": "primary-verified"
+      },
+      "cvr_role": {
+        "summary": "The Spanish report's conclusions rest on the KLM captain taking off without clearance, disregarding the tower's instruction to stand by, and not aborting when the other aircraft reported still being on the runway.",
+        "source_ref": "ciaiac-a-102-103-1977",
+        "verification": "primary-verified"
+      },
+      "transcript": {
+        "reproducible": true,
+        "basis": "Ley 37/2007 reuse; attribute to Ministerio de Transportes"
+      },
+      "selection_basis": "The earliest case in the corpus where recorded cockpit speech carried the causal argument, and the only one whose official text is Spanish while its English circulation runs through a union document.",
+      "sensitivity": "standard",
+      "audit_refs": [
+        "L04",
+        "TR-06"
+      ]
+    },
+    {
+      "id": "united-173-1978",
+      "label": "United Airlines Flight 173",
+      "date": "1978-12-28",
+      "location": "Portland, Oregon",
+      "jurisdiction": "us",
+      "authority": "US National Transportation Safety Board",
+      "tier": "deep",
+      "aircraft": "McDonnell-Douglas DC-8-61",
+      "fatalities": {
+        "reported": 10,
+        "basis": "Report count",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "ntsb-aar-79-07",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "ntsb-aar-79-07",
+        "number_verification": "primary-verified"
+      },
+      "cvr_role": {
+        "summary": "Probable cause rests on the captain's failure to monitor the fuel state and to respond to crewmember advisories regarding it, resulting in fuel exhaustion; the contributing factor is the other two crewmembers' failure either to comprehend the criticality of the fuel state or to communicate their concern successfully.",
+        "source_ref": "ntsb-aar-79-07",
+        "verification": "primary-verified"
+      },
+      "transcript": {
+        "reproducible": true,
+        "basis": "US Government work, 17 U.S.C. §105"
+      },
+      "selection_basis": "The case that produced recommendation A-79-47 and is conventionally treated as the origin of CRM. The piece uses it to test whether the recording or the recommendation did the work.",
+      "sensitivity": "standard",
+      "audit_refs": [
+        "Q01",
+        "Q31",
+        "U12"
+      ]
+    },
+    {
+      "id": "kegworth-1989",
+      "label": "British Midland Flight 92",
+      "date": "1989-01-08",
+      "location": "Kegworth, Leicestershire",
+      "jurisdiction": "gb",
+      "authority": "UK Air Accidents Investigation Branch",
+      "tier": "deep",
+      "aircraft": "Boeing 737-400",
+      "fatalities": {
+        "reported": 47,
+        "basis": "Includes deaths after the crash",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "aaib-4-1990",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "aaib-4-1990",
+        "number_verification": "primary-verified"
+      },
+      "cvr_role": {
+        "summary": "The AAIB found the crew reacted to the initial engine problem prematurely and in a way contrary to their training, and separately that present patterns of airline training did not provide specifically for coordination between cabin and flight crew.",
+        "source_ref": "aaib-4-1990",
+        "verification": "primary-verified"
+      },
+      "transcript": {
+        "reproducible": true,
+        "basis": "Open Government Licence v3.0"
+      },
+      "selection_basis": "The corpus case where the finding concerns communication that did not happen between cabin and flight deck, rather than within the cockpit.",
+      "sensitivity": "standard",
+      "audit_refs": [
+        "L02",
+        "Q07",
+        "Q29",
+        "C03",
+        "CL-03"
+      ]
+    },
+    {
+      "id": "air-ontario-1363-1989",
+      "label": "Air Ontario Flight 1363",
+      "date": "1989-03-10",
+      "location": "Dryden, Ontario",
+      "jurisdiction": "ca",
+      "authority": "Commission of Inquiry (Canada)",
+      "tier": "deep",
+      "aircraft": "Fokker F-28",
+      "fatalities": {
+        "reported": 24,
+        "basis": "Brief figure",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "moshansky-1992",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "moshansky-1992",
+        "number_verification": "primary-verified"
+      },
+      "cvr_role": {
+        "summary": "The Commission located crew conduct inside an organisational failure extending well beyond the flight deck.",
+        "source_ref": "moshansky-1992",
+        "verification": "secondary-only"
+      },
+      "transcript": {
+        "reproducible": false,
+        "basis": "Crown copyright; non-commercial terms not confirmed as extending to transcript appendices"
+      },
+      "selection_basis": "The corpus's widest frame: a commission of inquiry rather than a technical investigation, reading the same evidence as evidence about a system.",
+      "sensitivity": "standard",
+      "audit_refs": [
+        "L08",
+        "C09",
+        "Q03",
+        "Q04"
+      ],
+      "_note": "Same cite-only problem as Flash 604."
+    },
+    {
+      "id": "korean-air-801-1997",
+      "label": "Korean Air Flight 801",
+      "date": "1997-08-06",
+      "location": "Nimitz Hill, Guam",
+      "jurisdiction": "us",
+      "authority": "US National Transportation Safety Board",
+      "tier": "deep",
+      "aircraft": "Boeing 747-300",
+      "fatalities": {
+        "reported": 228,
+        "basis": "Report states: of the 254 persons on board, 228 were killed, and 23 passengers and 3 flight attendants survived with serious injuries",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "ntsb-aar-00-01",
+        "verification": "primary-verified"
+      },
+      "report": {
+        "source_ref": "ntsb-aar-00-01",
+        "number_verification": "primary-verified"
+      },
+      "cvr_role": {
+        "summary": "Probable cause rests on the captain's failure to brief and execute the nonprecision approach adequately and the first officer's and flight engineer's failure to monitor and cross-check its execution, with contributing factors including the captain's fatigue, the operator's inadequate flight crew training, and the FAA's inhibition of the minimum safe altitude warning system.",
+        "source_ref": "ntsb-aar-00-01",
+        "verification": "primary-verified"
+      },
+      "transcript": {
+        "reproducible": true,
+        "basis": "US Government work, 17 U.S.C. §105"
+      },
+      "selection_basis": "The corpus's contested node: a popular account attributes the accident to national culture, while the investigating authority's probable cause does not. The piece shows the disagreement and does not adjudicate it.",
+      "sensitivity": "elevated",
+      "audit_refs": [
+        "Q26",
+        "C08",
+        "S01",
+        "S02"
+      ]
+    },
+    {
+      "id": "flash-604-2004",
+      "label": "Flash Airlines Flight 604",
+      "date": "2004-01-03",
+      "location": "Sharm el-Sheikh",
+      "jurisdiction": "eg",
+      "authority": "Egyptian Ministry of Civil Aviation",
+      "tier": "deep",
+      "aircraft": "Boeing 737-300",
+      "fatalities": {
+        "reported": 148,
+        "basis": "Brief figure",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "egypt-mca-flash-604",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "egypt-mca-flash-604",
+        "number_verification": "brief-only"
+      },
+      "cvr_role": {
+        "summary": "The investigating authority and the participating foreign authorities differed publicly over the reading of the same recorded evidence.",
+        "source_ref": "egypt-mca-flash-604",
+        "verification": "secondary-only"
+      },
+      "transcript": {
+        "reproducible": false,
+        "basis": "No reproduction statement published by the issuing authority; cite-only"
+      },
+      "selection_basis": "The case where investigating authorities from different states disagreed, in public, about what the same recording showed. The disagreement is the point.",
+      "sensitivity": "elevated",
+      "audit_refs": [
+        "L03",
+        "Q30",
+        "U10"
+      ],
+      "_note": "Deep-tier status is now in question: transcript material cannot be reproduced. Editorial decision required on whether a cite-only case can hold a deep-tier slot."
+    },
+    {
+      "id": "staines-1972",
+      "label": "British European Airways Flight 548",
+      "date": "1972-06-18",
+      "location": "Staines, Surrey",
+      "jurisdiction": "gb",
+      "authority": "UK public inquiry",
+      "tier": "corpus",
+      "aircraft": "Hawker Siddeley Trident",
+      "fatalities": {
+        "reported": 118,
+        "basis": "Brief figure",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "lane-inquiry-1973",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "lane-inquiry-1973",
+        "number_verification": "secondary-only"
+      },
+      "cvr_role": {
+        "summary": "The inquiry found consistent failure by the handling pilot to achieve the appropriate speeds.",
+        "source_ref": "lane-inquiry-1973",
+        "verification": "secondary-only"
+      },
+      "transcript": {
+        "reproducible": true,
+        "basis": "Crown copyright, Open Government Licence"
+      },
+      "selection_basis": "Pre-CRM, and the case most often cited as showing what a hierarchical flight deck cost before anyone had a name for it.",
+      "sensitivity": "standard",
+      "audit_refs": [
+        "F11",
+        "B1"
+      ]
+    },
+    {
+      "id": "eastern-401-1972",
+      "label": "Eastern Air Lines Flight 401",
+      "date": "1972-12-29",
+      "location": "Florida Everglades",
+      "jurisdiction": "us",
+      "authority": "US National Transportation Safety Board",
+      "tier": "corpus",
+      "aircraft": "Lockheed L-1011",
+      "fatalities": {
+        "reported": 101,
+        "basis": "Brief figure",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "ntsb-aar-73-14",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "ntsb-aar-73-14",
+        "number_verification": "brief-only"
+      },
+      "cvr_role": {
+        "summary": null,
+        "source_ref": null,
+        "verification": "brief-only"
+      },
+      "transcript": {
+        "reproducible": true,
+        "basis": "US Government work"
+      },
+      "selection_basis": "The canonical distraction case, predating the vocabulary that would later be used to describe it.",
+      "sensitivity": "standard",
+      "audit_refs": [
+        "F05"
+      ]
+    },
+    {
+      "id": "air-florida-90-1982",
+      "label": "Air Florida Flight 90",
+      "date": "1982-01-13",
+      "location": "Washington DC",
+      "jurisdiction": "us",
+      "authority": "US National Transportation Safety Board",
+      "tier": "corpus",
+      "aircraft": "Boeing 737-222",
+      "fatalities": {
+        "reported": 78,
+        "basis": "Includes deaths on the ground",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 4,
+        "source_ref": "ntsb-aar-82-08",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "ntsb-aar-82-08",
+        "number_verification": "brief-only"
+      },
+      "cvr_role": {
+        "summary": null,
+        "source_ref": null,
+        "verification": "brief-only"
+      },
+      "transcript": {
+        "reproducible": true,
+        "basis": "US Government work, 17 U.S.C. §105"
+      },
+      "selection_basis": "One of the earliest US cases where the recording carried a finding about a junior crew member raising a concern that was not acted on.",
+      "sensitivity": "standard",
+      "audit_refs": [
+        "F06"
+      ]
+    },
+    {
+      "id": "air-canada-143-1983",
+      "label": "Air Canada Flight 143",
+      "date": "1983-07-23",
+      "location": "Gimli, Manitoba",
+      "jurisdiction": "ca",
+      "authority": "Board of Inquiry (Canada)",
+      "tier": "corpus",
+      "aircraft": "Boeing 767",
+      "fatalities": {
+        "reported": 0,
+        "basis": "No fatalities",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "lockwood-1985",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "lockwood-1985",
+        "number_verification": "primary-verified"
+      },
+      "cvr_role": {
+        "summary": null,
+        "source_ref": null,
+        "verification": "brief-only"
+      },
+      "transcript": {
+        "reproducible": false,
+        "basis": "Canadian Crown copyright; terms not confirmed"
+      },
+      "selection_basis": "One of the few well-documented cases where coordination is credited with a survivable outcome, and therefore load-bearing for the saves side of the corpus.",
+      "sensitivity": "standard",
+      "audit_refs": [
+        "F12"
+      ]
+    },
+    {
+      "id": "jal-123-1985",
+      "label": "Japan Air Lines Flight 123",
+      "date": "1985-08-12",
+      "location": "Gunma Prefecture",
+      "jurisdiction": "jp",
+      "authority": "Aircraft Accident Investigation Commission (Japan)",
+      "tier": "corpus",
+      "aircraft": "Boeing 747 SR-100",
+      "fatalities": {
+        "reported": 520,
+        "basis": "Brief figure",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "jtsb-jal-123",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "jtsb-jal-123",
+        "number_verification": "brief-only"
+      },
+      "cvr_role": {
+        "summary": null,
+        "source_ref": null,
+        "verification": "brief-only"
+      },
+      "transcript": {
+        "reproducible": false,
+        "basis": "Reproduction terms not established"
+      },
+      "selection_basis": "A Japanese investigation whose recorded material became the subject of a long public argument about disclosure, in the jurisdiction where no express evidentiary bar was located.",
+      "sensitivity": "elevated",
+      "audit_refs": [
+        "TR-02"
+      ]
+    },
+    {
+      "id": "aloha-243-1988",
+      "label": "Aloha Airlines Flight 243",
+      "date": "1988-04-28",
+      "location": "near Maui, Hawaii",
+      "jurisdiction": "us",
+      "authority": "US National Transportation Safety Board",
+      "tier": "corpus",
+      "aircraft": "Boeing 737-200",
+      "fatalities": {
+        "reported": 1,
+        "basis": "Brief figure",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "ntsb-aar-89-03",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "ntsb-aar-89-03",
+        "number_verification": "brief-only"
+      },
+      "cvr_role": {
+        "summary": null,
+        "source_ref": null,
+        "verification": "brief-only"
+      },
+      "transcript": {
+        "reproducible": true,
+        "basis": "US Government work, 17 U.S.C. §105"
+      },
+      "selection_basis": "A survivable structural failure investigated with the same recorded evidence, included because the corpus needs cases that did not end in a hull loss.",
+      "sensitivity": "standard",
+      "audit_refs": [
+        "F09"
+      ]
+    },
+    {
+      "id": "united-232-1989",
+      "label": "United Airlines Flight 232",
+      "date": "1989-07-19",
+      "location": "Sioux City, Iowa",
+      "jurisdiction": "us",
+      "authority": "US National Transportation Safety Board",
+      "tier": "corpus",
+      "aircraft": "McDonnell Douglas DC-10-10",
+      "fatalities": {
+        "reported": 112,
+        "basis": "Brief figure; the report's own count and later totals differ and must be reconciled under the fatality convention",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "ntsb-aar-90-06",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "ntsb-aar-90-06",
+        "number_verification": "brief-only"
+      },
+      "cvr_role": {
+        "summary": null,
+        "source_ref": "ntsb-aar-90-06",
+        "verification": "brief-only"
+      },
+      "transcript": {
+        "reproducible": true,
+        "basis": "US Government work, 17 U.S.C. §105"
+      },
+      "selection_basis": "The corpus's principal save: a crew that lost hydraulic control and was credited by later published analysis with coordination that improved the outcome.",
+      "sensitivity": "standard",
+      "audit_refs": [
+        "Q28",
+        "F01",
+        "Q14"
+      ]
+    },
+    {
+      "id": "avianca-052-1990",
+      "label": "Avianca Flight 052",
+      "date": "1990-01-25",
+      "location": "Cove Neck, New York",
+      "jurisdiction": "us",
+      "authority": "US National Transportation Safety Board",
+      "tier": "corpus",
+      "aircraft": "Boeing 707-321B",
+      "fatalities": {
+        "reported": 73,
+        "basis": "Brief figure",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "ntsb-aar-91-04",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "ntsb-aar-91-04",
+        "number_verification": "brief-only"
+      },
+      "cvr_role": {
+        "summary": null,
+        "source_ref": "ntsb-aar-91-04",
+        "verification": "brief-only"
+      },
+      "transcript": {
+        "reproducible": true,
+        "basis": "US Government work, 17 U.S.C. §105"
+      },
+      "selection_basis": "A fuel-exhaustion case turning on how a concern was phrased across a language and procedural boundary, and the standing substitute if a deep-tier slot is vacated.",
+      "sensitivity": "standard",
+      "audit_refs": [
+        "Q27",
+        "L02"
+      ]
+    },
+    {
+      "id": "china-airlines-140-1994",
+      "label": "China Airlines Flight 140",
+      "date": "1994-04-26",
+      "location": "Nagoya",
+      "jurisdiction": "jp",
+      "authority": "Aircraft Accident Investigation Commission (Japan)",
+      "tier": "corpus",
+      "aircraft": "Airbus A300B4-622R",
+      "fatalities": {
+        "reported": 264,
+        "basis": "Brief figure",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "jtsb-aaic-china-airlines-140",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "jtsb-aaic-china-airlines-140",
+        "number_verification": "primary-verified"
+      },
+      "cvr_role": {
+        "summary": null,
+        "source_ref": null,
+        "verification": "brief-only"
+      },
+      "transcript": {
+        "reproducible": false,
+        "basis": "Reproduction terms not established for the Japanese authority's English text"
+      },
+      "selection_basis": "A Japanese investigation of a Taiwanese operator's accident, and one of the few non-Anglophone authorities with an official English report.",
+      "sensitivity": "standard",
+      "audit_refs": [
+        "F15"
+      ],
+      "_note": "Corpus eligibility resolved: an official English AAIC report exists on the JTSB archive."
+    },
+    {
+      "id": "air-transat-236-2001",
+      "label": "Air Transat Flight 236",
+      "date": "2001-08-24",
+      "location": "Lajes, Azores",
+      "jurisdiction": "pt",
+      "authority": "GPIAA (Portugal)",
+      "tier": "corpus",
+      "aircraft": "Airbus A330-243",
+      "fatalities": {
+        "reported": 0,
+        "basis": "No fatalities",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "gpiaa-22-accid-2001",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "gpiaa-22-accid-2001",
+        "number_verification": "primary-verified"
+      },
+      "cvr_role": {
+        "summary": null,
+        "source_ref": null,
+        "verification": "brief-only"
+      },
+      "transcript": {
+        "reproducible": false,
+        "basis": "No GPIAA reproduction statement retrieved"
+      },
+      "selection_basis": "A survivable outcome investigated as thoroughly as a fatal one, which is what makes the corpus's denominator problem visible.",
+      "sensitivity": "standard",
+      "audit_refs": [
+        "F13"
+      ]
+    },
+    {
+      "id": "uberlingen-2002",
+      "label": "Bashkirian Airlines Flight 2937 and DHL Flight 611",
+      "date": "2002-07-01",
+      "location": "Überlingen",
+      "jurisdiction": "de",
+      "authority": "BFU (Germany)",
+      "tier": "corpus",
+      "aircraft": "Tupolev TU154M and Boeing 757-200",
+      "fatalities": {
+        "reported": 71,
+        "basis": "Brief figure",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "bfu-uberlingen-2004",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "bfu-uberlingen-2004",
+        "number_verification": "brief-only"
+      },
+      "cvr_role": {
+        "summary": null,
+        "source_ref": null,
+        "verification": "brief-only"
+      },
+      "transcript": {
+        "reproducible": false,
+        "basis": "BFU restricts reproduction to personal and journalistic use; this project seeks no permission"
+      },
+      "selection_basis": "A German investigation of a collision involving crews of three nationalities and a single controller, and the corpus case whose aftermath most directly concerns criminalisation.",
+      "sensitivity": "elevated",
+      "audit_refs": [
+        "L05",
+        "D2"
+      ]
+    },
+    {
+      "id": "gol-1907-2006",
+      "label": "GOL Transportes Aéreos Flight 1907",
+      "date": "2006-09-29",
+      "location": "Mato Grosso",
+      "jurisdiction": "br",
+      "authority": "CENIPA (Brazil)",
+      "tier": "corpus",
+      "aircraft": "Boeing 737-800 and Embraer Legacy 600",
+      "fatalities": {
+        "reported": 154,
+        "basis": "Brief figure",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "cenipa-gol-1907",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "cenipa-gol-1907",
+        "number_verification": "brief-only"
+      },
+      "cvr_role": {
+        "summary": "The accident produced criminal proceedings in two separate justice systems: the foreign pilots were convicted in the federal courts and their sentence ultimately declared extinct without being served, while of the air traffic controllers one was convicted in the military justice system and the rest were acquitted, an acquittal upheld on appeal.",
+        "source_ref": "brazil-stf-adi-5667",
+        "verification": "secondary-only"
+      },
+      "transcript": {
+        "reproducible": false,
+        "basis": "CENIPA reproduction terms not established"
+      },
+      "selection_basis": "The accident behind Brazil's statutory scheme, and the corpus's clearest illustration of what happens when the same evidence enters two justice systems at once.",
+      "sensitivity": "elevated",
+      "audit_refs": [
+        "S16",
+        "E7",
+        "E8"
+      ]
+    },
+    {
+      "id": "garuda-200-2007",
+      "label": "Garuda Indonesia Flight 200",
+      "date": "2007-03-07",
+      "location": "Yogyakarta",
+      "jurisdiction": "id",
+      "authority": "KNKT / NTSC (Indonesia)",
+      "tier": "corpus",
+      "aircraft": "Boeing 737-497",
+      "fatalities": {
+        "reported": 21,
+        "basis": "Brief figure",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "knkt-garuda-200",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "knkt-garuda-200",
+        "number_verification": "primary-verified"
+      },
+      "cvr_role": {
+        "summary": null,
+        "source_ref": "knkt-garuda-200",
+        "verification": "brief-only"
+      },
+      "transcript": {
+        "reproducible": false,
+        "basis": "No KNKT reproduction licence; safety-purpose disclaimer is not a copyright grant"
+      },
+      "selection_basis": "An Indonesian authority reading recorded evidence in a jurisdiction whose statute contains the corpus's clearest express evidentiary bar.",
+      "sensitivity": "standard",
+      "audit_refs": [
+        "U14",
+        "Q16",
+        "S08"
+      ]
+    },
+    {
+      "id": "ba038-2008",
+      "label": "British Airways Flight 38",
+      "date": "2008-01-17",
+      "location": "London Heathrow",
+      "jurisdiction": "gb",
+      "authority": "UK Air Accidents Investigation Branch",
+      "tier": "corpus",
+      "aircraft": "Boeing 777-236ER",
+      "fatalities": {
+        "reported": 0,
+        "basis": "No fatalities",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "aaib-1-2010",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "aaib-1-2010",
+        "number_verification": "brief-only"
+      },
+      "cvr_role": {
+        "summary": null,
+        "source_ref": null,
+        "verification": "brief-only"
+      },
+      "transcript": {
+        "reproducible": true,
+        "basis": "Open Government Licence v3.0"
+      },
+      "selection_basis": "A survivable outcome in the jurisdiction whose reports are the most freely reproducible in the corpus, and a counterweight to a roster otherwise weighted to hull losses.",
+      "sensitivity": "standard",
+      "audit_refs": [
+        "F10"
+      ]
+    },
+    {
+      "id": "colgan-3407-2009",
+      "label": "Colgan Air Flight 3407",
+      "date": "2009-02-12",
+      "location": "Clarence Center, New York",
+      "jurisdiction": "us",
+      "authority": "US National Transportation Safety Board",
+      "tier": "corpus",
+      "aircraft": "Bombardier DHC-8-400",
+      "fatalities": {
+        "reported": 50,
+        "basis": "Includes one death on the ground",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 1,
+        "source_ref": "ntsb-aar-10-01",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "ntsb-aar-10-01",
+        "number_verification": "brief-only"
+      },
+      "cvr_role": {
+        "summary": null,
+        "source_ref": null,
+        "verification": "brief-only"
+      },
+      "transcript": {
+        "reproducible": true,
+        "basis": "US Government work, 17 U.S.C. §105"
+      },
+      "selection_basis": "A late US case where the recording supported findings about fatigue and non-operational conversation, showing what the same instrument was being asked to establish three decades on.",
+      "sensitivity": "standard",
+      "audit_refs": [
+        "F07"
+      ]
+    },
+    {
+      "id": "air-france-447-2009",
+      "label": "Air France Flight 447",
+      "date": "2009-06-01",
+      "location": "Atlantic Ocean",
+      "jurisdiction": "fr",
+      "authority": "BEA (France)",
+      "tier": "corpus",
+      "aircraft": "Airbus A330-203",
+      "fatalities": {
+        "reported": 228,
+        "basis": "All on board",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "bea-af447-final",
+        "verification": "secondary-only"
+      },
+      "report": {
+        "source_ref": "bea-af447-final",
+        "number_verification": "brief-only"
+      },
+      "cvr_role": {
+        "summary": "The Paris Court of Appeal convicted both the operator and the manufacturer of involuntary manslaughter on 21 May 2026, imposing the maximum corporate fine on each; both have lodged appeals to the Cour de cassation, so the conviction is not final.",
+        "source_ref": "bea-af447-final",
+        "verification": "primary-verified"
+      },
+      "transcript": {
+        "reproducible": false,
+        "basis": "BEA report terms not established; French regime places recorders in judicial custody first"
+      },
+      "selection_basis": "The jurisdiction where the criminal track has custody of the recorders before the safety investigators do, and the only corpus case with a live appellate proceeding at the research cutoff.",
+      "sensitivity": "quarantined",
+      "audit_refs": [
+        "P01",
+        "Q11"
+      ]
+    },
+    {
+      "id": "asiana-214-2013",
+      "label": "Asiana Airlines Flight 214",
+      "date": "2013-07-06",
+      "location": "San Francisco",
+      "jurisdiction": "us",
+      "authority": "US National Transportation Safety Board",
+      "tier": "corpus",
+      "aircraft": "Boeing 777-200ER",
+      "fatalities": {
+        "reported": 3,
+        "basis": "Brief figure",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "ntsb-aar-14-01",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "ntsb-aar-14-01",
+        "number_verification": "brief-only"
+      },
+      "cvr_role": {
+        "summary": null,
+        "source_ref": null,
+        "verification": "brief-only"
+      },
+      "transcript": {
+        "reproducible": true,
+        "basis": "US Government work, 17 U.S.C. §105"
+      },
+      "selection_basis": "Included because the popular reception repeated the cultural reading applied to an earlier accident by the same operator's nationality, while the investigating authority's findings did not.",
+      "sensitivity": "elevated",
+      "audit_refs": [
+        "S01"
+      ]
+    },
+    {
+      "id": "transasia-235-2015",
+      "label": "TransAsia Airways Flight 235",
+      "date": "2015-02-04",
+      "location": "Taipei",
+      "jurisdiction": "tw",
+      "authority": "Aviation Safety Council (Taiwan)",
+      "tier": "corpus",
+      "aircraft": "ATR72-212A",
+      "fatalities": {
+        "reported": 43,
+        "basis": "Brief figure",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "ttsb-asc-aor-16-06-001",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "ttsb-asc-aor-16-06-001",
+        "number_verification": "primary-verified"
+      },
+      "cvr_role": {
+        "summary": null,
+        "source_ref": "ttsb-asc-aor-16-06-001",
+        "verification": "brief-only"
+      },
+      "transcript": {
+        "reproducible": false,
+        "basis": "ROC Open Government Data License is the national default but no TTSB-specific declaration was retrieved"
+      },
+      "selection_basis": "A non-Anglophone authority publishing in English, whose report wording shows the marks of its own drafting rather than a translation house.",
+      "sensitivity": "standard",
+      "audit_refs": [
+        "Q15"
+      ]
+    },
+    {
+      "id": "jeju-air-2216-2024",
+      "label": "Jeju Air Flight 2216",
+      "date": "2024-12-29",
+      "location": "Muan",
+      "jurisdiction": "kr",
+      "authority": "ARAIB (South Korea)",
+      "tier": "context",
+      "aircraft": "Boeing 737-800",
+      "fatalities": {
+        "reported": 179,
+        "basis": "Brief figure",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "korea-arair-act",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "korea-arair-act",
+        "number_verification": "brief-only"
+      },
+      "cvr_role": {
+        "summary": "Findings published in January 2026 concerned the localiser embankment rather than crew coordination.",
+        "source_ref": "korea-arair-act",
+        "verification": "secondary-only"
+      },
+      "transcript": {
+        "reproducible": false,
+        "basis": "Investigation ongoing"
+      },
+      "selection_basis": "Context only. Included because it sits in the jurisdiction whose statute the piece reads most closely, not because its findings concern crew coordination.",
+      "sensitivity": "quarantined",
+      "audit_refs": [
+        "P04"
+      ]
+    },
+    {
+      "id": "air-india-171-2025",
+      "label": "Air India Flight 171",
+      "date": "2025-06-12",
+      "location": "Ahmedabad",
+      "jurisdiction": "in",
+      "authority": "AAIB (India)",
+      "tier": "context",
+      "aircraft": "Boeing 787-8",
+      "fatalities": {
+        "reported": null,
+        "basis": "Not established from a primary report; investigation ongoing",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": null,
+        "source_ref": "aaib-india-171-prelim",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "aaib-india-171-prelim",
+        "number_verification": "brief-only"
+      },
+      "cvr_role": {
+        "summary": "The investigating authority has asserted a statutory prohibition on public disclosure of cockpit voice and airborne image recordings, with a draft final report projected for October 2026.",
+        "source_ref": "aaib-india-171-prelim",
+        "verification": "secondary-only"
+      },
+      "transcript": {
+        "reproducible": false,
+        "basis": "No final report; disclosure statutorily barred"
+      },
+      "selection_basis": "Present as a live illustration of disclosure law operating in real time, not as a corpus record. Explicitly quarantined.",
+      "sensitivity": "quarantined",
+      "audit_refs": [
+        "P03",
+        "E04"
+      ]
+    },
+    {
+      "id": "germanwings-9525-2015",
+      "label": "Germanwings Flight 9525",
+      "date": "2015-03-24",
+      "location": "French Alps",
+      "jurisdiction": "fr",
+      "authority": "BEA (France)",
+      "tier": "excluded",
+      "aircraft": "Airbus A320-211",
+      "fatalities": {
+        "reported": 150,
+        "basis": "Brief figure",
+        "subsequent": null,
+        "subsequent_source_ref": null,
+        "ground": 0,
+        "source_ref": "france-code-transports",
+        "verification": "brief-only"
+      },
+      "report": {
+        "source_ref": "france-code-transports",
+        "number_verification": "brief-only"
+      },
+      "cvr_role": {
+        "summary": null,
+        "source_ref": null,
+        "verification": "brief-only"
+      },
+      "transcript": {
+        "reproducible": false,
+        "basis": "Not applicable; excluded"
+      },
+      "selection_basis": "EXCLUDED. Not a crew-coordination case, and the material available in public circulation consists largely of leaked descriptions of recording content, which the piece does not reproduce or describe.",
+      "sensitivity": "quarantined",
+      "audit_refs": [
+        "E03",
+        "Q10",
+        "CL-07"
+      ]
+    }
+  ]
+}
