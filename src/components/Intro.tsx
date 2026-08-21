@@ -6,22 +6,15 @@ export default function Intro() {
       <Reveal>
         <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
           <p>
-            I am seventeen, in my final year of the IB Diploma in Vietnam, and
-            bilingual in Vietnamese and English.
+            I do not usually start from a plan. I start from friction. Something
+            makes me think in a shape I did not choose, or slows me down where
+            there is no reason to be slow, and only later does it become a project
+            I can name.
           </p>
           <p>
-            I am usually building from something that feels slightly misaligned
-            rather than from a clear plan, and I tend to notice it first as
-            friction in how I am forced to think, or in how a system makes me
-            slow down in places where I do not want to be slowed down, and only
-            later does it become something I can name as a direction or a
-            project.
-          </p>
-          <p>
-            Building each one gave me a different way to find out whether the
-            original idea held up once it had to deal with storage, identity,
-            evidence, uncertainty and the ordinary edge cases that disappear
-            from a sketch.
+            An idea is easy to defend on paper. Building it is where I
+            find out whether it survives storage, identity, evidence, uncertainty
+            and the edge cases that disappear from a sketch.
           </p>
           <p>
             Next I want to work further into natural language processing and
