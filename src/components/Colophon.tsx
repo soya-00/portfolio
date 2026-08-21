@@ -14,7 +14,7 @@ export default function Colophon() {
             system is allowed to do, and write down the constraints that the
             implementation has to survive. I use AI as an implementation partner
             throughout that process, and it currently handles most of the
-            production code as well as much of the debugging, testing, and
+            production code as well as much of the debugging and
             repository documentation, areas where I have less experience. The
             important distinction is that the system's purpose, boundaries, and
             behavior are decisions I make; the implementation is where I use AI
@@ -25,7 +25,7 @@ export default function Colophon() {
             the foundations. I do this one subject at a time, in short and deep
             bursts, rather than following a linear syllabus. For example, I use
             Nand2Tetris for architecture, Stanford&apos;s Mathematical Thinking
-            for formal reasoning, and I am now moving into algorithms and data
+            for formal reasoning, and I am now moving into advanced algorithms and data
             structures.
           </p>
           <p>
