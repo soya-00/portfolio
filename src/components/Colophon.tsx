@@ -7,13 +7,16 @@ export default function Colophon() {
       <Reveal>
         <div className="space-y-6 leading-relaxed text-muted-foreground">
           <p>
-            I integrate AI in implementation, but the work starts earlier than
+            My interest is in research rather than in shipping software, so the
+            projects here are instruments — things built to make a question
+            answerable only. As such, I naturally
+            integrate AI in implementation, but the work starts earlier than
             the code. I choose the problem and define its scope. I sketch the
             interaction and decide what the system is allowed to do. I also
             write down the constraints that the implementation has to survive.
             Meanwhile, AI writes most of the production code. It also handles
             much of the debugging and testing, and it helps with repository
-            documentation, both areas where I lack real experience in.
+            documentation, two areas where I lack real experience in.
           </p>
           <p>
             Interface design happens before the model gets involved. Evidently,
