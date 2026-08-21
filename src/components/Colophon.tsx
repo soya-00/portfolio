@@ -19,32 +19,6 @@ export default function Colophon() {
             documentation, two areas where I lack real experience in.
           </p>
           <p>
-            Interface design happens before the model gets involved. Evidently,
-            I begin by sketching on paper first, since it allows the interaction
-            to exist without implementation pressure. For instance, I then move
-            into Figma and work through the interaction in more detail, refining
-            how each state behaves before any code exists. After that, I bring
-            the decision into code, and only then does the model suggest
-            implementations, which I can still reject when they solve the wrong
-            problem.
-          </p>
-          <p>
-            A class-code fix in GALS preserved readable identifiers by carrying
-            part of an older code forward. However, this made the student
-            identity depend on the class identity, so I removed it. In doing so,
-            I found another leak in the export path. Meanwhile, a growth
-            timeline in Tilt made the journal easier to measure, but at the same
-            time it made it harder to keep as a journal, so it left the roadmap.
-          </p>
-          <p>
-            Verification starts from those constraints and works back through
-            the implementation. Furthermore, a compile passing does not settle
-            an interaction question, since a technically valid fix can still
-            violate an identity boundary. On the other hand, a feature can be
-            removed after implementation when the result turns out to change the
-            category of the system, rather than simply improving it.
-          </p>
-          <p>
             Alongside the projects, I am teaching myself computer science from
             the foundations. I do this one subject at a time, in short and deep
             bursts, rather than following a linear syllabus. For example, I use
