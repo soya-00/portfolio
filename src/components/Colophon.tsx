@@ -9,14 +9,16 @@ export default function Colophon() {
           <p>
             My interest is in research rather than in shipping software, so the
             projects here are instruments — things built to make a question
-            answerable only. As such, I naturally
-            integrate AI in implementation, but the work starts earlier than
-            the code. I choose the problem and define its scope. I sketch the
-            interaction and decide what the system is allowed to do. I also
-            write down the constraints that the implementation has to survive.
-            Meanwhile, AI writes most of the production code. It also handles
-            much of the debugging and testing, and it helps with repository
-            documentation, two areas where I lack real experience in.
+            answerable. The work starts before the code: I choose the problem
+            and define its scope, sketch the interaction and decide what the
+            system is allowed to do, and write down the constraints that the
+            implementation has to survive. I use AI as an implementation partner
+            throughout that process, and it currently handles most of the
+            production code as well as much of the debugging, testing, and
+            repository documentation, areas where I have less experience. The
+            important distinction is that the system's purpose, boundaries, and
+            behavior are decisions I make; the implementation is where I use AI
+            to extend what I can build.
           </p>
           <p>
             Alongside the projects, I am teaching myself computer science from
