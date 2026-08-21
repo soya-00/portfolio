@@ -51,7 +51,7 @@ export default function Research() {
         <p className="mb-12 leading-relaxed text-muted-foreground">
           Four things sit here and only one of them is finished, and because an
           unfinished project is easy to write up as though it were already a
-          result, I would rather say where each one actually stands. The
+          result, I would rather say where each one actually stands. Even the
           finished one is dated rather than maintained, and it says so on the
           page.
         </p>

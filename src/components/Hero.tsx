@@ -7,15 +7,19 @@ export default function Hero() {
         <Typewriter
           segments={[
             { text: "I build instruments for thinking, " },
-            { text: "down to the kernel.", className: "text-foreground/60" },
+            {
+              text: "then test the assumptions behind them.",
+              className: "text-foreground/60",
+            },
           ]}
         />
       </h1>
 
       <p className="animate-fade-rise-delay mt-10 max-w-xl text-base leading-relaxed text-foreground/80 sm:text-lg">
-        Seventeen and in my final year of the IB Diploma in Vietnam, I work
-        across operating systems, computational linguistics and accessibility
-        research, heading toward machine learning, flight decks and philosophy.
+        Seventeen, in my final year of the IB Diploma in Vietnam. I work across
+        journaling, career education and personal computing, usually starting
+        with a problem, building around it, and changing the system when the
+        first version exposes an assumption I had not accounted for.
       </p>
 
       <a
