@@ -289,7 +289,7 @@ export default function Piece() {
                 id="apparatus-heading"
                 className="font-display mt-3 text-2xl font-bold uppercase tracking-[0.04em] text-foreground"
               >
-                What this does not say
+                Sources and apparatus
               </h2>
 
               {/* The two registers a reader is owed: what was refused, and
