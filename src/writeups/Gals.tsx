@@ -12,11 +12,46 @@ import Figure from "@/components/Figure";
 
 const SECTIONS: CaseSection[] = [
   {
+    id: "origin",
+    label: "Origin",
+    title: "Where this started",
+    body: (
+      <>
+        <p>
+          Around age nine I ran a program I had written and understood almost
+          immediately that I had found a kind of problem solving I could keep
+          doing for a very long time. Years later I started a computer science
+          club at school, and watching other students meet programming for the
+          first time through exercises that felt abstract or procedural showed
+          me that most of them had never had an equivalent moment, where the
+          logic of a system clicks into place and changes what you think a
+          computer is actually doing. Consequently, I stopped treating that
+          moment as something everybody eventually gets and started treating its
+          absence as the problem.
+        </p>
+        <p>
+          I built GALS for the STEAM for ALL competition run by Genderation
+          Vietnam with Tuva Communication and UN Women, where it reached the
+          national top 25. However, the competition set the deadline rather than
+          the design, since the question I was actually working on was whether a
+          piece of software can put a student inside a profession’s reasoning
+          for long enough that they find out something about themselves.
+        </p>
+        <p>
+          Reading a description cannot do that. For example, a student can read
+          that an epidemiologist investigates disease outbreaks and come away
+          knowing nothing about whether they would want to spend a career doing
+          it. Therefore, GALS hands over the problem and the role at the same
+          time and asks the student to decide what to do with incomplete
+          information.
+        </p>
+      </>
+    ),
+  },
+  {
     id: "premise",
     label: "Premise",
     title: "Premise",
-    kicker:
-      "Careers get taught as descriptions. Nobody picks a job from a description.",
     body: (
       <>
         <p>
@@ -32,13 +67,13 @@ const SECTIONS: CaseSection[] = [
           blame, and you are the epidemiologist who has to work it out.
         </p>
         <p>
-          The four stages are Design Thinking — understand, empathize, create,
-          reflect — but the framework is only scaffolding. What makes a scenario
-          worth anything is that the evidence inside it behaves the way evidence
-          behaves in that profession. Every scenario ends on deliberately
-          ambiguous evidence with a planted confounder the student has to notice
-          unaided: three straight weeks of heat, exams that just finished, no
-          control group.
+          I used Design Thinking for the four stages — understand, empathize,
+          create, reflect — although the framework is only scaffolding. A
+          scenario is worth something when the evidence inside it behaves the
+          way evidence behaves in that profession. Therefore, I ended every
+          scenario on deliberately ambiguous evidence with a planted confounder
+          the student has to notice unaided: three straight weeks of heat, exams
+          that just finished, no control group.
         </p>
 
         <DataTable
@@ -56,33 +91,31 @@ const SECTIONS: CaseSection[] = [
 
         <p>
           Three of the five protagonists are women in careers that Vietnamese
-          students default to reading as male. That is not set dressing —
+          students default to reading as male. That is not set dressing, since
           putting Hằng in energy engineering is the most direct lever the
           product has on gender assumption in STEAM, and it costs nothing to
           pull.
         </p>
 
         <p>
-          Ngọc&apos;s scenario hands her nine hundred million to divide across
-          two hundred and forty applications, and the question the app puts in
-          front of her is which parts of an application reflect a real situation
-          and which reflect a student&apos;s ability to describe one. The
-          evidence rail down the right is where that becomes answerable rather
-          than rhetorical, because among the lines accumulating there is the
-          fact that twelve applications share a single handwriting — a teacher
-          filled them in — and that those twelve read as markedly more
-          convincing than the rest.
+          Ngọc’s scenario hands her nine hundred million to divide across two
+          hundred and forty applications, and the question I put in front of her
+          is which parts of an application reflect a real situation and which
+          reflect a student’s ability to describe one. Evidence accumulating
+          down the right-hand rail is where that becomes answerable rather than
+          rhetorical, because among those lines is the fact that twelve
+          applications share a single handwriting — a teacher filled them in —
+          and that those twelve read as markedly more convincing than the rest.
         </p>
         <p>
-          Nothing in the interface tells her what to do with that. The
-          confounder is placed where she can find it, and finding it is the
-          exercise.
+          Nothing in the interface tells her what to do with that. I placed the
+          confounder where she can find it, since finding it is the exercise.
         </p>
 
         <Figure
           src="03scenario.png"
-          alt="A GALS scenario workspace in Vietnamese: the student is in role as Ngọc, a data analyst, on question 2 of 5 of the empathize stage, asked what in an application set reflects real circumstances and what reflects presentation skill. The assistant asks a question back, and a right-hand rail lists accumulated facts including twelve applications sharing one handwriting."
-          caption="Prototype interface, not final — one question, the role on the left, and the evidence rail accumulating on the right"
+          alt="A GALS scenario workspace in Vietnamese: the student is in role as Ngọc, a data analyst, on question 2 of 5 of the empathize stage, asked what in an application set reflects real circumstances and what reflects presentation skill. Assistant asks a question back, and a right-hand rail lists accumulated facts including twelve applications sharing one handwriting."
+          caption="Prototype interface, with one question, the role on the left, and the evidence rail accumulating on the right"
         />
       </>
     ),
@@ -91,16 +124,16 @@ const SECTIONS: CaseSection[] = [
     id: "principles",
     label: "Four principles",
     title: "Principles",
-    kicker: "Four rules that decided most of the arguments",
     body: (
       <>
         <p>
-          Each one is cheap to write and expensive to keep. The right-hand
-          column is what each rule actually cost.
+          I wrote four rules early and they decided most of the arguments
+          afterwards. Each one is cheap to write and expensive to keep, so the
+          right-hand column records what each rule actually cost.
         </p>
 
         <DataTable
-          head={["Rule", "What it forbids", "What it cost"]}
+          head={["Rule", "Forbids", "Cost"]}
           minWidth="40rem"
           rows={[
             [
@@ -109,41 +142,40 @@ const SECTIONS: CaseSection[] = [
               "Teachers get counts and stage state, never a leaderboard. A grade-level badge in the original mockup was cut for being a rank in disguise.",
             ],
             [
-              "A tool, not a course",
+              "A tool rather than a course",
               "No lesson 1 → lesson 2, no prerequisite gates",
               "Every screen has to make sense as an entry point, and every scenario has to be restartable and abandonable without breaking teacher-side reporting.",
             ],
             [
               "Private by default",
               "Nothing visible to a teacher unless the student joined their class",
-              "Authorization is re-checked on write, not just on read. Sharing is a second deliberate action, never a side effect.",
+              "Authorization is re-checked on write rather than only on read. Sharing is a second deliberate action, never a side effect.",
             ],
             [
               "Each career thinks differently",
               "No scenario may resolve into “interview users, then design an app”",
-              "Two required fields per stage — domain_skills and creation_output — and the AI prompt reads them, so the assistant can’t flatten a chemist into a startup founder.",
+              "Two required fields per stage — domain_skills and creation_output — and the AI prompt reads them, so the assistant cannot flatten a chemist into a startup founder.",
             ],
           ]}
         />
 
         <p>
-          The second rule is the one that surfaces most often in the interface,
-          because once there is no lesson one and no prerequisite gate the home
-          screen cannot behave like a syllabus: it opens on whatever the student
-          left unfinished, and the five branches underneath it carry only their
-          state — one done, one in progress, three not yet opened — instead of
-          an order to work through. A teacher&apos;s note sits beside them
-          marked as readable by that student alone, which puts the
-          private-by-default rule in the one place a student is likely to
-          actually read it.
+          Second rule surfaces most often in the interface, because once there
+          is no lesson one and no prerequisite gate the home screen cannot
+          behave like a syllabus. Consequently, it opens on whatever the student
+          left unfinished, and the five branches underneath carry only their
+          state — one done, one in progress, three not yet opened — rather than
+          an order to work through. A teacher’s note sits beside them marked
+          readable by that student alone, which puts the private-by-default rule
+          in the one place a student is likely to actually read it.
         </p>
 
         <Note label="Enforcement">
-          The no-grading rule is not a guideline in a doc.{" "}
+          I did not leave the no-grading rule as a guideline in a document.{" "}
           <span className="text-foreground/90">tests/test_no_grading.py</span>{" "}
           sweeps every rendered student page for scoring vocabulary and fails
-          the build if it appears. A principle that only lives in a README stops
-          being true within a month.
+          the build if it appears, since a principle that only lives in a README
+          stops being true within a month.
         </Note>
       </>
     ),
@@ -152,20 +184,20 @@ const SECTIONS: CaseSection[] = [
     id: "scenario-format",
     label: "Scenario format",
     title: "Content architecture",
-    kicker: "The single decision the whole product rests on",
     body: (
       <>
         <p>
-          A scenario is an ordered sequence of beats rather than a description
-          with questions attached, and getting that shape right early is the
-          reason five very different careers were able to share one engine.
+          I made a scenario an ordered sequence of beats rather than a
+          description with questions attached, and getting that shape right
+          early is the reason five very different careers were able to share one
+          engine.
         </p>
         <p>
-          Each scenario is four stages; each stage is an ordered array of beats
-          alternating narrative context with questions. The beat labels differ
-          per scenario — An’s case uses &ldquo;Câu hỏi nhỏ 1–3&rdquo;, Hoa’s
-          uses &ldquo;Mục tiêu của các bên&rdquo; and &ldquo;Trường hợp ngoại
-          lệ&rdquo;.
+          Each scenario is four stages, and each stage is an ordered array of
+          beats alternating narrative context with questions. Beat labels differ
+          per scenario. For example, An’s case uses &ldquo;Câu hỏi nhỏ
+          1–3&rdquo; while Hoa’s uses &ldquo;Mục tiêu của các bên&rdquo; and
+          &ldquo;Trường hợp ngoại lệ&rdquo;.
         </p>
 
         <Decision
@@ -178,8 +210,8 @@ const SECTIONS: CaseSection[] = [
         <Decision
           title="Server-rendered HTML, no SPA"
           chose="FastAPI + Jinja2 + HTMX, self-hosted, no CDN."
-          rejected="React or Vue; and CDN delivery for fonts and HTMX."
-          why="The app is forms and reading. A client framework costs weak school hardware and complicates screen readers. A blocked CDN in a school computer room takes the whole lesson down."
+          rejected="React or Vue, and CDN delivery for fonts and HTMX."
+          why="This app is forms and reading. A client framework costs weak school hardware and complicates screen readers. A blocked CDN in a school computer room takes the whole lesson down."
         />
 
         <Stats
@@ -193,12 +225,12 @@ const SECTIONS: CaseSection[] = [
 
         <H3>A validator that refuses to load bad content</H3>
         <p>
-          When the right-hand evidence rail was added, each context beat gained
-          a facts array — a few short lines pulled out of the prose, mostly
-          numbers and conditions. The scenario loader raises on any context beat
-          that lacks them. Content rules that depend on an author remembering do
-          not survive contact with a deadline; a loader that refuses to start
-          does.
+          When I added the right-hand evidence rail, each context beat gained a
+          facts array — a few short lines pulled out of the prose, mostly
+          numbers and conditions. Therefore, I made the scenario loader raise on
+          any context beat that lacks them. Content rules depending on an author
+          remembering do not survive contact with a deadline, whereas a loader
+          that refuses to start does.
         </p>
       </>
     ),
@@ -207,13 +239,12 @@ const SECTIONS: CaseSection[] = [
     id: "one-question",
     label: "One question at a time",
     title: "Interaction",
-    kicker: "The redesign that removed a feature instead of adding one",
     body: (
       <>
         <p>
-          The thinking space used to scroll like a chat log, and the fix turned
-          out to be showing less of it at once rather than organizing more of
-          it.
+          I redesigned the thinking space by removing a feature rather than
+          adding one. It used to scroll like a chat log, and the fix turned out
+          to be showing less of it at once rather than organizing more of it.
         </p>
 
         <BeforeAfter
@@ -229,7 +260,7 @@ const SECTIONS: CaseSection[] = [
                 {
                   label: "Problem",
                   value:
-                    "The question you were actually answering sat at the very bottom, below everything you had already written.",
+                    "Question you were actually answering sat at the very bottom, below everything you had already written.",
                 },
               ],
             },
@@ -254,80 +285,80 @@ const SECTIONS: CaseSection[] = [
         <H3>Two smaller cuts in the same pass</H3>
         <p>
           Context beats stopped being a click. They used to require pressing
-          &ldquo;I’ve read this&rdquo; before advancing. That click produced no
-          thought. The narrative now accumulates in the facts rail and the
-          student moves question to question. The journal still records
-          everything; the beats simply no longer consume a turn.
+          &ldquo;I’ve read this&rdquo; before advancing, and that click produced
+          no thought. Narrative now accumulates in the facts rail while the
+          student moves question to question. Journal still records everything,
+          and the beats simply no longer consume a turn.
         </p>
         <p>
-          The facts rail summarizes rather than reprints. The first build dumped
-          whole context paragraphs into the right column — correct content, read
-          as a wall of text, and a student skips a wall of text. Full prose
-          moved behind a disclosure.
+          Facts rail summarizes rather than reprints. My first build dumped
+          whole context paragraphs into the right column, which was correct
+          content that read as a wall of text, and a student skips a wall of
+          text. Consequently, full prose moved behind a disclosure.
         </p>
         <p>
-          Hints are questions, not answers. Three per stage, shared across all
-          five scenarios, written at the level of how to think. A test forbids
-          digits inside a hint: a hint that quotes one scenario’s numbers has
-          leaked into the wrong layer.
+          Hints are questions rather than answers. Three per stage, shared
+          across all five scenarios, written at the level of how to think. A
+          test forbids digits inside a hint, since a hint quoting one scenario’s
+          numbers has leaked into the wrong layer.
         </p>
 
         <Note label="Deviating from the mockups">
-          Three places the build deliberately diverges from the approved
-          designs: the yellow &ldquo;Level 2&rdquo; badge beside a student’s
-          name became a role chip, because a level number attached to a learner
-          is the ranking the product promised not to have; &ldquo;Files from
-          teacher&rdquo; with PDF sizes became a task list, because the app
-          stores no files and a fake download button invents a feature; and
-          English UI words became Vietnamese, because the interface is
-          Vietnamese-only.
+          I diverged from the approved designs in three places. A yellow
+          &ldquo;Level 2&rdquo; badge beside a student’s name became a role
+          chip, because a level number attached to a learner is the ranking the
+          product promised not to have. &ldquo;Files from teacher&rdquo; with
+          PDF sizes became a task list, because the app stores no files and a
+          fake download button invents a feature. English UI words became
+          Vietnamese, because the interface is Vietnamese-only.
         </Note>
       </>
     ),
   },
   {
     id: "teacher",
-    label: "The teacher side",
-    title: "The teacher side",
-    kicker: "Reporting that refuses to become a ranking",
+    label: "Teacher side",
+    title: "Teacher side",
     body: (
       <>
         <p>
-          The hard part of a teacher view in a product with no grades is that
-          every obvious design decision reintroduces one.
+          Hard part of a teacher view in a product with no grades is that every
+          obvious design decision reintroduces one.
         </p>
         <p>
           Progress drills down in three steps — STEAM branch → assigned scenario
           → the pupils working on it — and stops at a four-segment stage tracker
-          per student, with a status of not started, in progress, or done. The
-          list sorts by name, never by completion, and says so on the page:
-          going fast or slow does not tell you who is thinking well.
+          per student, with a status of not started, in progress, or done. I
+          made the list sort by name rather than by completion, and say so on
+          the page, since going fast or slow does not tell you who is thinking
+          well.
         </p>
         <p>
-          Teacher feedback is framed in the interface as a private message
-          rather than an assessment, and authorization is checked again inside
-          the write path rather than trusted from the submitted form.
+          Furthermore, I framed teacher feedback in the interface as a private
+          message rather than an assessment, and authorization is checked again
+          inside the write path rather than trusted from the submitted form.
         </p>
 
         <Figure
           src="05hoso.png"
           alt="A GALS competency profile in Vietnamese: counts of scenarios entered and answers written, a private message from a teacher, the app's reflection on how the student reasoned, and a portfolio entry with its own separate sharing control."
-          caption="Prototype interface, not final — the profile: a teacher's private message, the student's own words, and sharing as a separate control"
+          caption="Prototype interface, showing a teacher's private message, the student's own words, and sharing as a separate control"
         />
 
         <H3>Export designed around what it must not contain</H3>
         <p>
-          Teachers can export a class as a ZIP of CSVs — journal metadata, their
-          own feedback, assigned work. The interesting work was the exclusion
-          list. Journal text, student-authored entry titles, portfolio
-          descriptions, AI synthesis and real names are all deliberately absent,
-          because a spreadsheet of children’s reflective writing is the single
-          easiest way for this product to cause harm. Pupils appear as stable
-          pseudonymous codes derived from class membership order.
+          Teachers can export a class as a ZIP of CSVs covering journal
+          metadata, their own feedback and assigned work. Interesting work was
+          the exclusion list. Journal text, student-authored entry titles,
+          portfolio descriptions, AI synthesis and real names are all
+          deliberately absent, because a spreadsheet of children’s reflective
+          writing is the single easiest way for this product to cause harm.
+          Pupils appear as stable pseudonymous codes derived from class
+          membership order.
         </p>
         <p>
-          Two details that only matter in Vietnamese school reality: files are
-          written with a UTF-8 BOM so Excel renders diacritics instead of
+          Two details only matter in Vietnamese school reality. Files are
+          written with a UTF-8 BOM so Excel renders diacritics rather than
           mojibake, and any cell beginning{" "}
           <span className="text-foreground/90">=</span>,{" "}
           <span className="text-foreground/90">+</span>,{" "}
@@ -336,27 +367,74 @@ const SECTIONS: CaseSection[] = [
           spreadsheet formula injection.
         </p>
         <p>
-          Printable classroom packs exist for the same reason: not every school
-          has a computer room. Each scenario prints with a teacher guide, one
-          stage per page, ruled lines for handwriting. Even the printer is
-          optional — reading the context aloud and copying the question onto the
-          board still runs the lesson.
+          Printable classroom packs exist for the same reason, since not every
+          school has a computer room. Each scenario prints with a teacher guide,
+          one stage per page, ruled lines for handwriting. Even the printer is
+          optional, because reading the context aloud and copying the question
+          onto the board still runs the lesson.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: "identifiers",
+    label: "Identity boundaries",
+    title: "Identity boundaries",
+    body: (
+      <>
+        <p>
+          Class codes rotate, which is what a shared secret is supposed to do,
+          and rotating one broke the identifiers built on top of it. Pupil codes
+          derived from class membership shifted underneath existing records, so
+          work already done stopped resolving to the student who had done it, in
+          the middle of a course.
+        </p>
+        <p>
+          Proposed fix was to freeze a{" "}
+          <span className="text-foreground/90">roster_prefix</span> at
+          enrollment and carry it forward, which preserved readable pseudonymous
+          identifiers of the form{" "}
+          <span className="text-foreground/90">GALS-11A2-01</span> and left
+          every existing record valid. Technically that solution was sound, and
+          it was cheaper than the alternative by a wide margin.
+        </p>
+        <p>
+          However, I rejected it, because it kept a student’s identifier derived
+          from the class code even after the code changed, and I did not want
+          the identifier to encode or reveal which class it came from at all.
+          Class identity and student identity are separate things with separate
+          lifecycles, and a readable identifier that quietly carries the class
+          code forward makes them the same thing again in a form that is harder
+          to notice. Therefore, I separated them completely and accepted the
+          migration cost.
+        </p>
+        <p>
+          Applying the stricter boundary then exposed a second defect I had not
+          been looking for. Exported CSVs still contained the live class code,
+          which meant the rotatable secret was sitting in an archival file that
+          persists beyond the lifetime of the class it belonged to. A rotation
+          is worth nothing if last term’s code is still readable in a
+          spreadsheet on a teacher’s laptop.
+        </p>
+        <p>
+          As such, the smallest fix to the observed defect and the correct fix
+          pointed in different directions, and only the stricter principle
+          surfaced the leak.
         </p>
       </>
     ),
   },
   {
     id: "filter",
-    label: "The input filter",
+    label: "Input filter",
     title: "Safety engineering",
-    kicker: "Two kinds of mistake with opposite costs",
     body: (
       <>
         <p>
-          A server-side filter screens every input before it reaches the model:
+          I screen every input server-side before it reaches the model:
           profanity, keyboard mash, prompt injection, distress signals, and
-          over-length. The interesting part is not the categories. It is that
-          two of them need tuning in opposite directions.
+          over-length. Interesting part is not the categories, since two of them
+          need tuning in opposite directions.
         </p>
 
         <DataTable
@@ -377,7 +455,7 @@ const SECTIONS: CaseSection[] = [
             [
               "Profanity",
               "One swear gets through",
-              "The app accuses a child who did nothing wrong",
+              "App accuses a child who did nothing wrong",
               "Precision",
             ],
           ]}
@@ -385,25 +463,25 @@ const SECTIONS: CaseSection[] = [
 
         <H3>Three failures only Vietnamese text could produce</H3>
         <p>
-          Stripping Vietnamese diacritics before matching makes &ldquo;các&rdquo;
-          — one of the most common words in the language — collide with a
-          vulgarity, &ldquo;buổi&rdquo; collide with another, and &ldquo;từ
-          từ&rdquo; collide with the unaccented spelling of &ldquo;tự tử&rdquo;
-          (suicide). A student writing &ldquo;các bạn&rdquo; gets flagged for
-          swearing. A student writing &ldquo;từ từ đã&rdquo; gets the crisis
-          message.
+          My first version stripped Vietnamese diacritics before matching, which
+          makes &ldquo;các&rdquo; — one of the most common words in the language
+          — collide with a vulgarity, &ldquo;buổi&rdquo; collide with another,
+          and &ldquo;từ từ&rdquo; collide with the unaccented spelling of
+          &ldquo;tự tử&rdquo; (suicide). Consequently, a student writing
+          &ldquo;các bạn&rdquo; gets flagged for swearing, and a student writing
+          &ldquo;từ từ đã&rdquo; gets the crisis message.
         </p>
         <p>
-          Matching with diacritics intact fixes that and opens the reverse hole:
-          every unaccented distress phrase sails through.{" "}
+          Matching with diacritics intact fixes that and opens the reverse hole,
+          since every unaccented distress phrase sails through. For example,{" "}
           <span className="text-foreground/90">em muon chet qua</span> returns
-          clean — and most Vietnamese teenagers type without diacritics, so the
+          clean, and most Vietnamese teenagers type without diacritics, so the
           most vulnerable group ends up with the weakest cover.
         </p>
         <p>
-          And <span className="text-foreground/90">muốn chết</span> is ordinary
-          hyperbole. &ldquo;Bài này khó muốn chết&rdquo; (this homework is
-          deadly hard) would fire the crisis message and the 111 helpline, so
+          Furthermore, <span className="text-foreground/90">muốn chết</span> is
+          ordinary hyperbole. &ldquo;Bài này khó muốn chết&rdquo; (this homework
+          is deadly hard) would fire the crisis message and the 111 helpline, so
           students meet the product’s most serious moment while complaining
           about homework, and learn to dismiss it.
         </p>
@@ -412,7 +490,7 @@ const SECTIONS: CaseSection[] = [
         <ul className="list-disc space-y-2 pl-5 marker:text-accent/60">
           <li>
             Unaccented forms are added only for phrases with no innocent
-            homograph. The rejected list is written down with reasons so nobody
+            homograph. I wrote the rejected list down with reasons so nobody
             re-adds it: du ma (đủ mà), cho chet (cho chết), mat day (mất dây),
             bo may (bộ máy), con di (con đi).
           </li>
@@ -428,40 +506,40 @@ const SECTIONS: CaseSection[] = [
           <li>
             Matching is on word boundaries. Substring matching means
             &ldquo;được cho là&rdquo; contains a slur and &ldquo;là do người
-            nộp&rdquo; contains another — caught by a test that runs the
+            nộp&rdquo; contains another, which a test caught by running the
             product’s own five scenarios through its own filter.
           </li>
         </ul>
 
-        <Note label="Stated in the product, not just internally">
+        <Note label="Stated in the product, rather than only internally">
           This is not a safety feature and is not described as one. It is phrase
           matching, so it misses. GALS does not detect crisis, does not notify a
           teacher, a parent or a school, and is not a counseling service.
-          Building a detector creates a duty simply by existing — the control
+          Building a detector creates a duty simply by existing, so the control
           for that sits in how the product is described far more than in the
-          code, and that language is carried verbatim into the school agreement
-          and the terms of use. The adult in the classroom is the safeguard.
+          code, and I carried that language verbatim into the school agreement
+          and the terms of use. Adult in the classroom is the safeguard.
         </Note>
 
         <p>
-          One documented gap, written down rather than hidden:{" "}
+          I wrote one gap down rather than hiding it:{" "}
           <span className="text-foreground/90">em buồn quá muốn chết</span> does
-          not fire, because the preceding word is quá. The alternative is firing
-          on &ldquo;đói muốn chết&rdquo;, which desensitizes students to the one
+          not fire, because the preceding word is quá. Alternative is firing on
+          &ldquo;đói muốn chết&rdquo;, which desensitizes students to the one
           message that must be heard.
         </p>
 
-        <H3>What telemetry is allowed to know</H3>
+        <H3>Telemetry, and its limits</H3>
         <p>
           Counts only — <span className="text-foreground/90">screen.crisis</span>{" "}
           = 12 and nothing else. No text, no author, no class, no timestamp.
           With zero telemetry there would be no way to tell whether the filter is
-          working: silence could mean &ldquo;nobody needed it&rdquo; or &ldquo;it
-          misses everything&rdquo;. One number separates those, and a number
-          identifies nobody.
+          working, since silence could mean &ldquo;nobody needed it&rdquo; or
+          &ldquo;it misses everything&rdquo;. One number separates those, and a
+          number identifies nobody.
         </p>
         <p>
-          That counter is deliberately not surfaced to teachers. &ldquo;Your
+          I deliberately do not surface that counter to teachers. &ldquo;Your
           class had 3 hits&rdquo; creates anxiety with no available action, and
           in a class of thirty it is narrow enough to guess who.
         </p>
@@ -472,32 +550,31 @@ const SECTIONS: CaseSection[] = [
     id: "ai",
     label: "Five AI decisions",
     title: "AI integration",
-    kicker: "Five decisions about the model",
     body: (
       <>
         <p>
-          The assistant asks questions back. It never scores, ranks, or supplies
-          an answer.
+          Assistant asks questions back. It never scores, ranks, or supplies an
+          answer.
         </p>
 
         <Decision
-          title="The product is complete with the model switched off"
+          title="Product is complete with the model switched off"
           chose="A scripted mode covering every screen, with the interface saying outright when it is active."
-          why="Built for resilience on a school network, and it doubles as the answer when a computer room's connection fails mid-lesson. A scripted path that covers every screen is also what lets the offline mode stay a real fallback rather than a degraded one."
+          why="Built for resilience on a school network, and it doubles as the answer when a computer room's connection fails mid-lesson. A scripted path covering every screen is also what lets the offline mode stay a real fallback rather than a degraded one."
         />
         <Decision
-          title="The AI proposes, the student decides"
-          chose="In freeform mode the model may end a turn with a marker line. The server strips it and renders a button: “Add this idea to your portfolio?”"
-          why="Accepting still files it as private. Publishing takes a second, separate action. The model never writes to a student’s record on its own."
+          title="AI proposes, the student decides"
+          chose="In freeform mode the model may end a turn with a marker line. Server strips it and renders a button: “Add this idea to your portfolio?”"
+          why="Accepting still files it as private. Publishing takes a second, separate action. Model never writes to a student’s record on its own."
         />
         <Decision
           title="No emoji, enforced in code"
-          chose="The system prompt forbids emoji, and every response is stripped of emoji again before rendering."
-          why="A prompt is a request; code is a guarantee. Inputs that are only emoji or text smileys get their own honest reply instead."
+          chose="System prompt forbids emoji, and every response is stripped of emoji again before rendering."
+          why="A prompt is a request and code is a guarantee. Inputs that are only emoji or text smileys get their own honest reply instead."
         />
         <Decision
           title="Safety configured explicitly"
-          chose="The provider's moderation step is an explicit call in our own pipeline, stacked on the phrase filter, rather than relying on model-side defaults."
+          chose="Provider's moderation step is an explicit call in my own pipeline, stacked on the phrase filter, rather than relying on model-side defaults."
           why="A product for minors should not inherit whatever configuration the vendor happens to ship this quarter."
         />
         <Decision
@@ -507,11 +584,11 @@ const SECTIONS: CaseSection[] = [
         />
 
         <Note label="Minimum viable payload">
-          What crosses the boundary is bounded at both ends, since chat is
-          capped at 30 messages per session and input at 2,000 characters, so a
-          single session cannot quietly accumulate into a corpus. The key lives
-          in the deploy environment, never in the repository, and never reaches
-          the browser.
+          I bounded what crosses the boundary at both ends, since chat is capped
+          at 30 messages per session and input at 2,000 characters, so a single
+          session cannot quietly accumulate into a corpus. Key lives in the
+          deploy environment, never in the repository, and never reaches the
+          browser.
         </Note>
       </>
     ),
@@ -520,7 +597,6 @@ const SECTIONS: CaseSection[] = [
     id: "compliance",
     label: "Compliance posture",
     title: "Compliance posture",
-    kicker: "Designing against the law the product will actually launch under",
     body: (
       <>
         <p>
@@ -529,23 +605,24 @@ const SECTIONS: CaseSection[] = [
           puts it near the strict end of both.
         </p>
 
-        <H3>The finding that shapes everything else</H3>
+        <H3>Finding that shapes everything else</H3>
         <p>
           Decree 356/2025 Art. 4 lists private life, personal secrets and family
           secrets, and health status, among sensitive personal data. A GALS
-          reflective journal is, by design, exactly that — the whole pedagogical
-          point is that students write about how they think and feel.
+          reflective journal is, by design, exactly that, since the whole
+          pedagogical point is that students write about how they think and
+          feel.
         </p>
         <p>
           That single classification moves GALS from the light end of the
-          obligation set to the heavy end. Its sharpest consequence: the
+          obligation set to the heavy end. Its sharpest consequence is that the
           five-year deferral of impact-assessment and data-protection-officer
           duties available to small organizations does not apply to anyone
-          processing sensitive data. The build plans on the assumption that no
-          exemption is available.
+          processing sensitive data. Therefore, I plan the build on the
+          assumption that no exemption is available.
         </p>
 
-        <H3>The framework in force</H3>
+        <H3>Framework in force</H3>
         <DataTable
           head={["Instrument", "In force", "Bearing on GALS"]}
           minWidth="42rem"
@@ -553,7 +630,7 @@ const SECTIONS: CaseSection[] = [
             [
               "Personal Data Protection Law 91/2025/QH15",
               "1 Jan 2026",
-              "The governing statute.",
+              "Governing statute.",
             ],
             [
               "Decree 356/2025/NĐ-CP",
@@ -568,7 +645,7 @@ const SECTIONS: CaseSection[] = [
             [
               "Cybersecurity Law 116/2025/QH15",
               "1 Jul 2026",
-              "Data localization and system-log duties; child-protection provisions.",
+              "Data localization and system-log duties, plus child-protection provisions.",
             ],
             [
               "Decree 147/2024/NĐ-CP",
@@ -583,9 +660,9 @@ const SECTIONS: CaseSection[] = [
           ]}
         />
 
-        <H3>Two dossiers that get filed, not written</H3>
+        <H3>Two dossiers that get filed rather than written</H3>
         <p>
-          The easy mistake is to read the impact assessments as internal
+          Easy mistake is to read the impact assessments as internal
           documentation. They are filings to a state authority, with forms and
           deadlines.
         </p>
@@ -596,12 +673,12 @@ const SECTIONS: CaseSection[] = [
           rows={[
             [
               "Processing impact assessment",
-              "The moment processing begins",
-              "One original to A05 within 60 days; result in ~15 days",
+              "Moment processing begins",
+              "One original to A05 within 60 days, result in ~15 days",
             ],
             [
               "Cross-border transfer assessment",
-              "The first transfer",
+              "First transfer",
               "Form 01a/01b within 60 days — triggered by the model call and by offshore hosting",
             ],
           ]}
@@ -612,25 +689,25 @@ const SECTIONS: CaseSection[] = [
           controller, processor or third party. Breach notification is 72 hours,
           with the incident file kept five years. Penalties reach 5% of
           prior-year turnover for transfer violations and VND 3 billion
-          otherwise; how that applies to a zero-revenue non-profit is recorded
-          as an open question rather than assumed to be a safe harbor.
+          otherwise, and how that applies to a zero-revenue non-profit is
+          recorded as an open question rather than assumed to be a safe harbor.
         </p>
 
-        <H3>What the vendor choice has to satisfy</H3>
+        <H3>Conditions the vendor choice has to satisfy</H3>
         <p>
           Sending a student’s sentence to a model is a cross-border transfer of
           a minor’s data, so the vendor decision is a compliance decision before
           it is a quality one. Three conditions were non-negotiable: terms that
-          contemplate minors in a school deployment, a no-training commitment —
-          several providers’ free tiers use prompts to improve their products —
-          and zero data retention, so the transfer leaves nothing behind on the
-          other side.
+          contemplate minors in a school deployment, a no-training commitment,
+          since several providers’ free tiers use prompts to improve their
+          products, and zero data retention, so the transfer leaves nothing
+          behind on the other side.
         </p>
         <p>
-          The settled vendor is OpenAI, on a paid account with Zero Data
-          Retention enabled, owned by the named responsible adult, under a hard
-          spend cap. Only the current question and the current answer are sent,
-          and only from the role-play store, Kho A — the reflective store never
+          Settled vendor is OpenAI, on a paid account with Zero Data Retention
+          enabled, owned by the named responsible adult, under a hard spend cap.
+          Only the current question and the current answer are sent, and only
+          from the role-play store, Kho A, since the reflective store never
           leaves the country at all.
         </p>
 
@@ -638,36 +715,36 @@ const SECTIONS: CaseSection[] = [
           Because only Kho A crosses the border, the transfer dossier describes
           anonymous role-play professional writing and nothing else. Had
           reflective journals been in scope, the same filing would have had to
-          cover minors’ personal writing — a materially harder document to write
-          and a materially worse one to defend. The architecture decision and
-          the compliance decision are the same decision. The scripted offline
-          mode stays as a first-class fallback: it was built for network
-          resilience, and it means a class can run a full lesson with no
-          transfer at all.
+          cover minors’ personal writing, which is a materially harder document
+          to write and a materially worse one to defend. Architecture decision
+          and the compliance decision are the same decision. Scripted offline
+          mode stays as a first-class fallback, since it was built for network
+          resilience and it means a class can run a full lesson with no transfer
+          at all.
         </Note>
 
-        <H3>The tension the architecture has to resolve</H3>
+        <H3>Tension the architecture has to resolve</H3>
         <p>
-          Two good ideas collide. The privacy architecture is that GALS never
-          learns a real name: the teacher issues anonymous codes and keeps the
-          code-to-pupil mapping on paper, with the school as data controller and
-          GALS as processor under contract.
+          Two good ideas collide. My privacy architecture is that GALS never
+          learns a real name, since the teacher issues anonymous codes and keeps
+          the code-to-pupil mapping on paper, with the school as data controller
+          and GALS as processor under contract.
         </p>
         <p>
-          But if class feeds, shared profile entries and public links place GALS
-          inside the definition of a mạng xã hội under Decree 147/2024, accounts
-          must be verified against a Vietnamese mobile number or personal
-          identification number, and only verified accounts may post or share. A
-          service cannot be an unverified-pseudonym platform and a licensed
-          social network at once. Which side of that classification GALS falls
-          on is a design decision with legal consequences, and it was settled
-          before the architecture hardened rather than after.
+          However, if class feeds, shared profile entries and public links place
+          GALS inside the definition of a mạng xã hội under Decree 147/2024,
+          accounts must be verified against a Vietnamese mobile number or
+          personal identification number, and only verified accounts may post or
+          share. A service cannot be an unverified-pseudonym platform and a
+          licensed social network at once. Which side of that classification
+          GALS falls on is a design decision with legal consequences, so I
+          settled it before the architecture hardened rather than after.
         </p>
         <p>
-          Underneath both: hosting location is a localization question under the
+          Underneath both, hosting location is a localization question under the
           2025 Cybersecurity Law rather than only an uptime one, and
-          log-retention duties pull directly against data minimization — so the
-          retention schedule is chosen deliberately and written down.
+          log-retention duties pull directly against data minimization, so I
+          chose the retention schedule deliberately and wrote it down.
         </p>
 
         <H3>Under the AI Law</H3>
@@ -678,22 +755,22 @@ const SECTIONS: CaseSection[] = [
             rather than a design habit.
           </li>
           <li>
-            Risk-tier self-assessment. Education is a named sector; the working
-            assumption is medium-to-high, with the reasoning written to be
-            defended.
+            Risk-tier self-assessment. Education is a named sector, and the
+            working assumption is medium-to-high, with the reasoning written to
+            be defended.
           </li>
           <li>
             Deployer liability. Where a high-risk system is operated correctly
             and damage still occurs, the deployer compensates and may recover
             from the provider only if the parties agreed it. In the
-            school-as-controller model the school is likely the deployer — so
-            the recovery clause has to sit in the school agreement, or the
-            school carries it alone. A school’s legal reviewers will notice.
+            school-as-controller model the school is likely the deployer, so the
+            recovery clause has to sit in the school agreement, or the school
+            carries it alone. A school’s legal reviewers will notice.
           </li>
           <li>
-            Prohibited practices. The &ldquo;AI asks, never answers&rdquo;
-            design holds up here, and the rationale is written as a compliance
-            artifact rather than a README boast.
+            Prohibited practices. My &ldquo;AI asks, never answers&rdquo; design
+            holds up here, and the rationale is written as a compliance artifact
+            rather than a README boast.
           </li>
         </ul>
 
@@ -701,16 +778,16 @@ const SECTIONS: CaseSection[] = [
         <p>
           Consent has to be verifiable, time-stamped and specific to what was
           agreed, with pre-ticked boxes prohibited and an explicit notice that
-          this data category is sensitive — written so a 16-year-old can read
-          it. For under-16s the legal representative exercises the rights.
+          this data category is sensitive, written so a 16-year-old can read it.
+          For under-16s the legal representative exercises the rights.
         </p>
         <p>
-          The share link is the sharpest edge. An unguessable URL is
-          publication, not privacy, and publishing the private-life information
-          of a child aged 7 or over requires the consent of both the child and
-          the legal representative. So sharing is off by default and released
-          only through adult approval, and the image field is allow-listed
-          rather than accepting an arbitrary URL behind a{" "}
+          Share link is the sharpest edge. An unguessable URL is publication
+          rather than privacy, and publishing the private-life information of a
+          child aged 7 or over requires the consent of both the child and the
+          legal representative. Therefore, sharing is off by default and
+          released only through adult approval, and the image field is
+          allow-listed rather than accepting an arbitrary URL behind a{" "}
           <span className="text-foreground/90">javascript:</span> block.
         </p>
         <p>
@@ -724,20 +801,39 @@ const SECTIONS: CaseSection[] = [
 
         <Figure
           src="02trangcanhan.png"
-          alt="The GALS account menu open in Vietnamese, listing personal profile, display and accessibility, privacy, download my data, and log out."
-          caption="Prototype interface, not final — privacy and data download sit in the ordinary account menu"
+          alt="GALS account menu open in Vietnamese, listing personal profile, display and accessibility, privacy, download my data, and log out."
+          caption="Prototype interface, with privacy and data download in the ordinary account menu"
         />
 
         <Note label="Scope of that work">
-          The compliance document was written by the product side, not by a
-          lawyer, and says so on the page. It exists to establish what to ask —
+          I wrote the compliance document from the product side rather than as a
+          lawyer, and the page says so. It exists to establish what to ask, so
           it carries fifteen drafted questions for counsel and six items
           recorded as unresolved rather than guessed at, including whether
           enterprise cloud terms lift the under-18 restriction and how
-          turnover-linked penalties apply to a non-profit with no turnover. The
-          route is a Vietnamese lawyer plus the school, since schools already
+          turnover-linked penalties apply to a non-profit with no turnover.
+          Route is a Vietnamese lawyer plus the school, since schools already
           hold the consent relationship with parents.
         </Note>
+
+        <H3>Where the design and the build disagree</H3>
+        <p>
+          Reviewing the legal position changed my account of what GALS currently
+          is. Privacy properties above describe the design, and several of them
+          are not yet properties of the running system. Public demo still runs a
+          shared-account build, student writing is stored on the server, and
+          consent capture exists in the codebase rather than in the deployment
+          anybody can reach today. Consequently, the prototype is not safe for
+          real student use, and I state that in the repository rather than
+          leaving a reader to infer it from a version number.
+        </p>
+        <p>
+          Recent legal work also reopened a question I had treated as settled,
+          which is whether the assistant can be used with minors at all under
+          the vendor terms actually available to me. I have not resolved it.
+          Until it is resolved, the scripted offline mode is the only path I
+          would put in front of a class.
+        </p>
       </>
     ),
   },
@@ -745,21 +841,21 @@ const SECTIONS: CaseSection[] = [
     id: "access",
     label: "Access & the token layer",
     title: "Accessibility & design system",
-    kicker: "Measuring the palette instead of trusting it",
     body: (
       <>
         <p>
-          Light, dark, and high contrast are one token layer. Raw values sit on{" "}
-          <span className="text-foreground/90">:root</span>; Tailwind v4’s{" "}
-          <span className="text-foreground/90">@theme inline</span> points
+          I measured the palette rather than trusting it. Light, dark, and high
+          contrast are one token layer, with raw values on{" "}
+          <span className="text-foreground/90">:root</span> and Tailwind v4’s{" "}
+          <span className="text-foreground/90">@theme inline</span> pointing
           utility names at them, so no component carries a{" "}
           <span className="text-foreground/90">dark:</span> variant.
         </p>
         <p>
-          The dark surfaces run hue 30 at 3–4% saturation — enough warmth to
-          keep the paper character, not enough to read brown. Surfaces get
-          lighter as they stack, so a popover reads as floating rather than as a
-          hole punched in the card.
+          Dark surfaces run hue 30 at 3–4% saturation, which is enough warmth to
+          keep the paper character without reading brown. Surfaces get lighter as
+          they stack, so a popover reads as floating rather than as a hole
+          punched in the card.
         </p>
 
         <Swatches
@@ -777,12 +873,12 @@ const SECTIONS: CaseSection[] = [
           ]}
         />
 
-        <H3>What measuring found</H3>
+        <H3>Failures the measurement found</H3>
         <p>
-          Contrast is computed in Python against the real stylesheet rather than
-          judged by eye. Doing that surfaced four failures that had nothing to
-          do with dark mode — they were sitting in the light palette the whole
-          time.
+          I compute contrast in Python against the real stylesheet rather than
+          judging it by eye. Doing that surfaced four failures that had nothing
+          to do with dark mode, since they were sitting in the light palette the
+          whole time.
         </p>
 
         <DataTable
@@ -807,21 +903,21 @@ const SECTIONS: CaseSection[] = [
         />
 
         <Note label="Flagged rather than quietly shipped">
-          Two brand colors — amber and art — are too light to carry white text
-          at all (2.9 : 1 and 3.8 : 1). Darkening them enough would lose the
-          colors. They are restricted to text and light washes instead, and a
+          Two brand colors, amber and art, are too light to carry white text at
+          all (2.9 : 1 and 3.8 : 1). Darkening them enough would lose the
+          colors, so I restricted them to text and light washes instead, and a
           test fails the build if either is ever used as a solid fill behind
           text. Naming the failure beats hiding it.
         </Note>
 
-        <H3>The rest of the access work</H3>
+        <H3>Remaining access work</H3>
         <ul className="list-disc space-y-2 pl-5 marker:text-accent/60">
           <li>
             Skip link, landmarks, heading order, a label on every input,
             aria-live on the HTMX-updated chat, aria-current on the open item.
           </li>
           <li>
-            Stage state is spoken, not only colored — &ldquo;done&rdquo;,
+            Stage state is spoken rather than only colored — &ldquo;done&rdquo;,
             &ldquo;in progress&rdquo;, &ldquo;not started&rdquo; exist as text
             for screen readers.
           </li>
@@ -842,7 +938,7 @@ const SECTIONS: CaseSection[] = [
           </li>
           <li>
             Forced-colors handling, and a print block that forces the light
-            palette — printing a dark theme wastes a cartridge.
+            palette, since printing a dark theme wastes a cartridge.
           </li>
         </ul>
       </>
@@ -852,14 +948,13 @@ const SECTIONS: CaseSection[] = [
     id: "verification",
     label: "Build & verification",
     title: "Build & verification",
-    kicker: "222 tests, each one guarding a decision",
     body: (
       <>
         <p>
-          The suite is not coverage theater. Most files exist because something
-          specific broke, or because a rule would rot without a guard, and the
-          suites below are the ones where that origin is worth writing down
-          rather than the whole list.
+          I wrote 222 tests, and the suite is not coverage theater. Most files
+          exist because something specific broke, or because a rule would rot
+          without a guard, and the suites below are the ones where that origin
+          is worth writing down rather than the whole list.
         </p>
 
         <DataTable
@@ -891,7 +986,7 @@ const SECTIONS: CaseSection[] = [
             [
               "test_css_build",
               "10",
-              "Classes survive Tailwind’s static scan; both themes define every token",
+              "Classes survive Tailwind’s static scan, and both themes define every token",
             ],
             [
               "test_tuong_phan_mau",
@@ -901,12 +996,12 @@ const SECTIONS: CaseSection[] = [
             [
               "test_gemini_offline",
               "9",
-              "Scripted mode is complete; emoji stripped; no answer leaks",
+              "Scripted mode is complete, emoji stripped, no answer leaks",
             ],
             [
               "test_workspace_flow",
               "6",
-              "One question at a time; blocked input does not advance",
+              "One question at a time, and blocked input does not advance",
             ],
             ["test_a11y_markers", "6", "Landmarks, labels, live regions present"],
             ["test_privacy", "4", "Cross-tenant reads and writes refused"],
@@ -929,43 +1024,44 @@ const SECTIONS: CaseSection[] = [
         />
 
         <p>
-          One name in that list is historical rather than descriptive:{" "}
+          One name in that list is historical rather than descriptive, since{" "}
           <span className="text-foreground/90">test_gemini_offline</span> is
-          named for the demo&apos;s use of the Gemini API, and what it actually
+          named for the demo&apos;s use of the Gemini API and what it actually
           guards is the offline path, which does not depend on which vendor sits
           behind it.
         </p>
 
         <H3>Performance work with a number attached</H3>
         <p>
-          The teacher export looked instant on small data. Measured against a
-          200-pupil class it ran 1,043 queries in 456 ms — the class roster was
-          lazy-loading one query per pupil. Eager loading with{" "}
+          Teacher export looked instant on small data. Measured against a
+          200-pupil class it ran 1,043 queries in 456 ms, because the class
+          roster was lazy-loading one query per pupil. Eager loading with{" "}
           <span className="text-foreground/90">selectinload</span> and batching
-          per class brought it to 46 queries in 79 ms. Query-count ceilings are
-          now asserted in the test suite, so the regression cannot come back
-          silently.
+          per class brought it to 46 queries in 79 ms. Therefore, I now assert
+          query-count ceilings in the test suite, so the regression cannot come
+          back silently.
         </p>
 
         <H3>Two verification habits worth keeping</H3>
         <p>
-          Test the decompressed artifact. The first version of the export leak
-          test searched the raw ZIP bytes for student writing. ZIP is
+          Test the decompressed artifact. My first version of the export leak
+          test searched the raw ZIP bytes for student writing, and ZIP is
           deflate-compressed, so that test would have passed over a real leak.
           It now reads each member out and decodes it.
         </p>
         <p>
           Run the product’s content through the product’s own filter. That is
-          what caught the substring collisions in the scenario prose. A filter
-          tested only against a wordlist is tested against the wrong corpus.
+          what caught the substring collisions in the scenario prose, since a
+          filter tested only against a wordlist is tested against the wrong
+          corpus.
         </p>
 
         <H3>Build and deploy shape</H3>
         <p>
-          Python-only deploy: the Tailwind output is committed, so the deploy
+          Python-only deploy, since I commit the Tailwind output and the deploy
           environment never needs Node. Fonts and HTMX are self-hosted for the
-          same reason the CDN was rejected — a school network that blocks or
-          throttles a third-party host should not be able to break a lesson.
+          same reason I rejected the CDN, because a school network that blocks
+          or throttles a third-party host should not be able to break a lesson.
         </p>
       </>
     ),
@@ -974,12 +1070,11 @@ const SECTIONS: CaseSection[] = [
     id: "defects",
     label: "Defect ledger",
     title: "Defect ledger",
-    kicker: "Bugs that turned into rules",
     body: (
       <>
         <p>
-          Kept in the repository as a standing table. Every entry is here
-          because it was invisible, not because it was hard.
+          I keep this in the repository as a standing table. Every entry is here
+          because it was invisible rather than because it was hard.
         </p>
 
         <DataTable
@@ -993,12 +1088,12 @@ const SECTIONS: CaseSection[] = [
             ],
             [
               "Substring phrase matching",
-              "“được cho là” contains a slur; “là do người nộp” contains another",
+              "“được cho là” contains a slur, and “là do người nộp” contains another",
               "Match on word boundaries, and run the product’s own content through its own filter",
             ],
             [
               "Fixing false alarms opened misses",
-              "False alarms are loud; misses are silent",
+              "False alarms are loud, and misses are silent",
               "Every filter change pins both directions in tests",
             ],
             [
@@ -1009,12 +1104,12 @@ const SECTIONS: CaseSection[] = [
             [
               "Vowel class missing Vietnamese diacritics",
               "nghĩ, phòng, đựng counted as “no vowels”, so ordinary sentences were flagged as gibberish",
-              "Strip diacritics before testing for vowels; never hand-enumerate a character class",
+              "Strip diacritics before testing for vowels, and never hand-enumerate a character class",
             ],
             [
               "A comment-stripping regex ate /**/",
               "@source \"app/**/*.html\" silently became a wrong path and the build still ran",
-              "Verify the class actually appears in the built CSS, not that the build exited zero",
+              "Verify the class actually appears in the built CSS, rather than that the build exited zero",
             ],
             [
               "Library version recalled from memory",
@@ -1027,16 +1122,47 @@ const SECTIONS: CaseSection[] = [
     ),
   },
   {
-    id: "remains",
-    label: "What remains",
-    title: "What remains",
-    kicker: "Two things the build cannot answer on its own",
+    id: "authorship",
+    label: "Authorship",
+    title: "Division of labor on this project",
     body: (
       <>
         <p>
-          The data layer is done, and so are accounts and consent capture — in
-          the codebase; the public demo still runs the shared-account build. The
-          filings, the school agreement and hosting are not. That work is
+          AI implemented most of GALS, and the decisions above were mine. I
+          chose the problem, wrote the five scenarios and their evidence, set the
+          four principles, designed the interaction, and decided what the
+          assistant is forbidden to do. AI wrote most of the production code and
+          much of the test suite, and it drafted the Vietnamese design log.
+        </p>
+        <p>
+          Roster-prefix fix above is the clearest case of the boundary under
+          load, since the model’s solution was correct on the terms the bug
+          presented and I rejected it on terms the bug did not mention.
+          Similarly, I cut the &ldquo;Level 2&rdquo; badge and the fake file list
+          from an approved mockup, and I kept scoring vocabulary away from
+          student screens by making it a build failure rather than a review
+          item.
+        </p>
+        <p>
+          However, several things I would not have found alone came out of
+          implementation work. Query-count ceilings, the decompressed-artifact
+          test, and the word-boundary matching rule all emerged from debugging
+          rather than from design, which is the area where my own experience is
+          thinnest.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: "remains",
+    label: "Still open",
+    title: "Still open",
+    body: (
+      <>
+        <p>
+          Data layer is done, and so are accounts and consent capture in the
+          codebase, although the public demo still runs the shared-account
+          build. Filings, the school agreement and hosting are not. That work is
           administrative rather than technical, but the pilot cannot start
           without it.
         </p>
@@ -1048,20 +1174,20 @@ const SECTIONS: CaseSection[] = [
         <Decision
           title="Supervised testing with real students"
           chose="A supervised pilot with two classes at one partner school, the assistant live, teacher in the room throughout."
-          why="Every design decision here was made against a model of how a 16-year-old reads a screen. That model has not met thirty of them at once. Watching for where students stall inside a stage, whether the facts rail actually gets read, and whether “no grades” survives contact with pupils who have been graded on everything else."
+          why="Every design decision here was made against a model of how a 16-year-old reads a screen, and that model has not met thirty of them at once. Watching for where students stall inside a stage, whether the facts rail actually gets read, and whether “no grades” survives contact with pupils who have been graded on everything else."
         />
 
         <Decision
           title="Assistive technology on real devices"
           chose="VoiceOver on iOS and TalkBack on Android, both with a Vietnamese voice, walked through a full four-stage scenario."
-          why="Semantics are correct at source level and asserted in the test suite. That is not the same as having listened to it. Watching for whether spoken stage state reads naturally in Vietnamese, and how the live region behaves when an answer and a reply land together."
+          why="Semantics are correct at source level and asserted in the test suite, which is not the same as having listened to it. Watching for whether spoken stage state reads naturally in Vietnamese, and how the live region behaves when an answer and a reply land together."
         />
 
         <Note label="Why these two are last rather than skipped">
           They are the only remaining questions a test suite structurally cannot
           answer. A contrast ratio can be computed, a query count can be capped,
-          a filter can be run against the product’s own prose — but whether a
-          Vietnamese screen-reader voice makes the stage tracker
+          and a filter can be run against the product’s own prose. However,
+          whether a Vietnamese screen-reader voice makes the stage tracker
           comprehensible, and whether a real class engages with a tool that
           refuses to score them, are findings you can only get from the room.
         </Note>
@@ -1082,7 +1208,8 @@ export default function GalsWriteup() {
         },
         {
           label: "Stage",
-          value: "Built, compliance-ready, preparing for a supervised school pilot",
+          value:
+            "Built, mostly compliance-ready, preparing for a supervised school pilot",
         },
         {
           label: "Stack",
@@ -1112,8 +1239,8 @@ export default function GalsWriteup() {
             works through in role across four thinking stages.
           </p>
           <p>
-            No score, no ranking, no model answer — and how that shaped almost
-            every other decision.
+            No score, no ranking, no model answer, and every other decision
+            below follows from that one.
           </p>
         </>
       }

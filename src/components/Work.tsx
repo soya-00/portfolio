@@ -127,7 +127,7 @@ export default function Work() {
       <Project
         bay="HOLDING"
         name="Tilt"
-        kicker="A thinking instrument for macOS."
+        kicker="A journal that notices things, so writing stays the only job."
         stack="Python · FastAPI · SQLite · React · Tauri"
         status="Early but real. Unsigned — notarization needs a paid Apple Developer account, so there is no installer yet."
         checked="697 tests — 511 pytest, 186 vitest — run by CI on every push."
@@ -141,30 +141,41 @@ export default function Work() {
         ]}
       >
         <p>
-          Tilt is a journal that notices things, which in practice means you
-          write into a single stream with no folders to choose and no filing to
-          keep up with, and what the application hands back is understanding
-          rather than organization — what you were circling, where today echoes
-          something you wrote in March, where you now contradict yourself.{" "}
-          <span className="text-foreground">
-            There are no todos, no boards and no due dates anywhere in it,
-            because anything carrying a deadline outranks everything that does
-            not.
-          </span>
+          Tilt grew out of the same problem I kept encountering in other
+          knowledge tools: Obsidian gave me a place to write and left the
+          structure to me, Notion made that structure easy enough to become part
+          of the work itself, and Pile suggested that a journal could do more of
+          the noticing afterwards, so I spent roughly a year thinking about my
+          own version before Distill appeared and gave me another reference
+          point to work from.
+        </p>
+        <p>
+          Tilt therefore starts with one stream rather than a hierarchy of
+          folders, and an entry remains an entry rather than becoming a task,
+          board item or filing decision simply because the system can classify
+          it, with recurring thoughts, related entries and contradictions
+          appearing later as things to inspect.
         </p>
 
         <Figure
           src="constellationdark.png"
           alt="Tilt showing a stream of journal entries linked by 'builds on' and 'echoes' relations, with a constellation graph of 29 connected thoughts beside it."
-          caption="The constellation, and two entries the app connected on its own"
+          caption="Constellation view, with two entries connected by the system"
         />
 
         <p>
-          Markdown files on disk are the source of truth and the database is
-          treated as a cache I have to be able to delete, which costs real work
-          on every feature but means the journal outlives the application
-          holding it. Before I demoed it to anyone I audited it and wrote the
-          result down, and the document opens by refusing to posture:
+          Anything the system derives begins as a proposal, which means a
+          connection can sit there waiting to be accepted without silently
+          becoming part of the journal, while Markdown remains readable on disk
+          and SQLite can be discarded and rebuilt from it, so the database holds
+          a view of the journal rather than becoming the only place where the
+          journal exists.
+        </p>
+        <p>
+          That decision reached into imports and screenshots as well, since
+          files can seed the system without an API key or another network
+          request and a dismissed proposal does not leave behind some
+          database-only state that the original files can no longer describe.
         </p>
 
         <PullQuote cite="Tilt — SECURITY.md">
@@ -173,21 +184,27 @@ export default function Work() {
         </PullQuote>
 
         <p>
-          What follows is what held, six defects that did not and were fixed,
-          and two findings that testing withdrew — kept in the document rather
-          than deleted, so the next reader does not spend an afternoon raising
-          them again. Each of the six is interesting less for being hard than
-          for how long it stayed invisible, which is why that document is the
-          artifact I would point a reader at first.
+          A security review then found an entry ID escaping its intended path,
+          an import capable of replacing the existing journal before a failed
+          extraction had finished, and concurrent writes that could overwrite
+          the same frontmatter without either copy noticing, which meant each
+          fix had to reach the point where the assumption actually failed rather
+          than stopping at a broader statement about security.
+        </p>
+        <p>
+          A growth timeline reached the roadmap and then left it, because I
+          wanted to inspect how thoughts changed over time and found that
+          turning those changes into a progress measure pulled the journal back
+          toward the productivity systems it was supposed to avoid.
         </p>
       </Project>
 
       <Project
         bay="ACTIVE"
         name="GALS"
-        kicker="Try out a career before you have to choose one."
+        kicker="Try a career before you have to choose one."
         stack="FastAPI · Jinja2 · HTMX · Tailwind v4 · Postgres · OpenAI"
-        status="Built and compliance-ready. Accounts and consent capture done in the codebase; the public demo still runs the shared-account build. Preparing for a supervised school pilot."
+        status="Built, mostly compliance-ready. Accounts and consent capture are done in the codebase, while the public demo still runs the shared-account build. Preparing for a supervised school pilot."
         checked="222 tests, run by CI on every push."
         writeup="gals"
         links={[
@@ -200,44 +217,74 @@ export default function Work() {
         ]}
       >
         <p>
-          A web application for Vietnamese high-school students, built on the
-          observation that reading a description of a career tells you almost
-          nothing about whether you would want to do it, so instead you take the
-          role of someone holding the job and work through a real situation from
-          it, with an AI assistant sitting alongside you that{" "}
-          <span className="text-foreground">
-            only ever asks questions back and never solves anything for you.
-          </span>
+          Around age nine I ran a program I had written and understood almost
+          immediately that I had found a kind of problem solving I could keep
+          doing for a very long time. Years later, while running a computer
+          science club at school and watching other students encounter
+          programming for the first time through exercises that felt abstract or
+          procedural rather than meaningful, I noticed that most of them had
+          never had an equivalent &ldquo;eureka&rdquo; moment where the logic of
+          a system suddenly clicks into place and changes how you think about
+          what a computer is actually doing. That gap is where GALS started.
+        </p>
+        <p>
+          A career description can tell a student that an epidemiologist
+          investigates disease or that an energy engineer works with complex
+          systems, but reading that description still leaves the student outside
+          the problem, so GALS puts them inside a situation first and asks them
+          to decide what to do with incomplete information.
         </p>
 
         <Figure
           src="03scenario.png"
-          alt="A GALS scenario workspace in Vietnamese: the student is in role as Ngọc, a data analyst, on question 2 of 5 of the empathize stage, asked what in an application set reflects real circumstances and what reflects presentation skill. The assistant asks a question back, and a right-hand rail lists accumulated facts including twelve applications sharing one handwriting."
-          caption="Prototype interface, not final — one question at a time, with the evidence rail on the right"
+          alt="A GALS scenario workspace in Vietnamese: the student is in role as Ngọc, a data analyst, on question 2 of 5 of the empathize stage, asked what in an application set reflects real circumstances and what reflects presentation skill. Assistant asks a question back, and a right-hand rail lists accumulated facts including twelve applications sharing one handwriting."
+          caption="Prototype interface, with one question at a time and the evidence rail on the right"
         />
 
         <p>
-          GALS has no scores, no rankings and no model answers, since grading
-          would turn career exploration into an examination and an examination
-          is the thing these students already have too much of. Each profession
-          also gets its own shape of evidence and its own output, so that an
-          energy engineer produces a system plan where an epidemiologist
-          produces an investigation plan, because if every job resolves into
-          &ldquo;interview users, then design an app&rdquo; then the student has
-          quietly learned that all professions are product design.
+          Each profession gets its own scenario, evidence and output, so an
+          epidemiology case can require one kind of reasoning while an energy
+          system or cybersecurity incident requires another. I kept that
+          variation in the data rather than forcing every profession through one
+          generic interaction simply because the generic version would have been
+          easier to reproduce.
         </p>
         <p>
-          It was built for a competition and its documentation is in Vietnamese,
-          and because it is aimed at minors I wrote its limits down at length
-          rather than leaving them to be found later, in a document that keeps
-          what the design intends separate from what the build actually does.
+          Scores, rankings and model answers never made it into the design
+          because a student reaching a different conclusion should leave the
+          system with another line of reasoning to examine rather than a number
+          telling them how close they came to an expected response.
+        </p>
+        <p>
+          Meanwhile, AI sits inside the scenario and asks questions, offers
+          another angle or introduces information, but the student chooses what
+          to do with it and what eventually becomes part of their response.
         </p>
 
         <Figure
           src="05hoso.png"
           alt="A GALS competency profile in Vietnamese: counts of scenarios entered and answers written, a private message from a teacher, the app's reflection on how the student reasoned, and a portfolio entry with its own separate sharing control."
-          caption="Prototype interface, not final — the profile: a teacher's private message, and sharing as a separate control"
+          caption="Prototype rather than final interface, showing a teacher's private message and a separate sharing control"
         />
+
+        <p>
+          GALS reached the national top 25 of STEAM for ALL held by Genderation
+          Vietnam x Tuva Communication x UN Women.
+        </p>
+        <p>
+          Later testing produced a more useful failure when a class-code
+          rotation bug surfaced, and the first instinctive fix was to preserve
+          readability of student identifiers by carrying part of the old code
+          forward so that existing records would not break mid-course. Although
+          that resolved the immediate operational issue, it also made me notice
+          a deeper constraint I had not properly enforced, because I did not
+          actually want a student&apos;s identifier to encode or reveal which
+          class it had originated from in the first place. Once I changed that
+          boundary and separated identity from class context more strictly, it
+          exposed another, more subtle leak in the export path, where the live
+          class code was still being written into a file that was meant to
+          persist beyond the lifetime of the class itself.
+        </p>
 
         <p className="text-muted-foreground/80">
           Screens are in Vietnamese because the students are.
@@ -247,12 +294,16 @@ export default function Work() {
       <Project
         bay="INCOMING"
         name="BLOC OS"
-        kicker="A kernel, and the prototype that specified it."
-        stack="C · AArch64 assembly · QEMU · Raspberry Pi 5"
-        status="A few milestones in. Boots under QEMU; far from the interface."
-        checked="Every milestone has to run under QEMU before the next one starts."
+        kicker="A flight deck for daily work, headed for its own hardware."
+        stack="Python · pygame-ce · faster-whisper · Raspberry Pi 5"
+        status="v0.2 rebuild in progress, aimed at a Raspberry Pi 5 appliance."
+        checked="Subsystems are being rebuilt one at a time, with the interaction model and data model changing as each pass exposes another problem."
+        writeup="bloc"
         links={[
-          { label: "Repository", href: "https://github.com/soya-00/bloc-os" },
+          {
+            label: "Repository",
+            href: "https://github.com/soya-00/bloc-os-beta",
+          },
           {
             label: "DECISIONS.md",
             href: "https://github.com/soya-00/bloc-os-beta/blob/main/docs/DECISIONS.md",
@@ -264,38 +315,41 @@ export default function Work() {
         ]}
       >
         <p>
-          I built the first version entirely in Python, on purpose, because{" "}
-          <span className="text-foreground">
-            the question I needed answered was whether the interface was worth
-            committing to at all
-          </span>{" "}
-          — flight strips, single-key commands, a thermal printer, a dispatch
-          call routed through Whisper — and Python answered that in weeks where
-          asking the same question in C would have cost months before I learned
-          anything about the design.
+          BLOC came from six years of working in Python and several months of
+          playing Ace Combat, Project Wingman and Nuclear Option, where I kept
+          returning to the flight deck because information was arranged for
+          scanning, controls stayed close to the task at hand, and the operator
+          could work through an instrument panel without turning the screen into
+          a collection of windows.
         </p>
         <p>
-          It did what a prototype is for. Four specification documents came out
-          of it and carried into this repository, covering the design system,
-          the record format, the interaction contract and the status vocabulary,
-          while about ten thousand lines of Python did not carry across and were
-          never meant to.
+          I wanted to see whether that interaction model could survive in
+          something as ordinary as a personal working environment, so I built a
+          Python and pygame prototype and started treating calendars, tasks and
+          boards as problems in the interface rather than as separate
+          applications that happened to share a screen.
+        </p>
+        <Figure
+          src="10autoflight.png"
+          alt="Full-screen radar scope over the London TMA showing sixteen live aircraft contacts with callsigns, flight levels and speeds, plotted against airports, waypoints and a sector boundary. A left rail holds the day's tasks as flight strips in INCOMING, ACTIVE and LANDED bays, and a right rail lists the same items as objectives with day progress at 32 percent."
+          caption="Interface design based on the initial DEMO"
+        />
+
+        <p>
+          The first prototype grew to roughly 5,400 lines, with no mouse, no
+          windows, a boot sequence, an instrument strip, single-key systems,
+          live traffic on a radar scope and tasks rendered as flight strips over
+          the London TMA using pygame, and AI later handled much of the
+          implementation and debugging while I kept changing the interaction
+          itself when the prototype made its weak points obvious.
         </p>
         <p>
-          What exists now is a bare-metal AArch64 kernel for the Raspberry Pi 5,
-          which builds for three boards, boots under QEMU, prints over UART,
-          drops from EL2 to EL1 and then deliberately faults itself three times
-          to prove the exception vector table catches what it should.{" "}
-          <span className="text-foreground">
-            It is a long way from the interface it is being built for, and the
-            roadmap says so rather than implying otherwise.
-          </span>
-        </p>
-        <p>
-          That interface follows analog flight decks, with annunciator panels
-          and an information hierarchy you read at a glance instead of parsing,
-          and it counts as a design system rather than a theme because it was
-          written after building three prototypes and comparing them:
+          The current rebuild is much smaller conceptually, with four modes
+          replacing the original fourteen top-level commands and contextual soft
+          keys exposing the controls relevant to the current mode while the
+          global key set remains fixed, and tasks, boards and agenda blocks now
+          resolve to one flight-strip record that can appear in several views
+          without being copied into three different models.
         </p>
 
         <PullQuote cite="BLOC — DESIGN.md">
@@ -306,18 +360,11 @@ export default function Work() {
         </PullQuote>
 
         <p>
-          The related rule, that anything conveyed by color is also conveyed by
-          something else, is marked non-negotiable. The prototype that produced
-          these specifications is still public as{" "}
-          <a
-            href="https://github.com/soya-00/bloc-os-beta"
-            target="_blank"
-            rel="noreferrer"
-            className="text-foreground underline decoration-accent/50 underline-offset-4 transition-colors hover:decoration-accent"
-          >
-            bloc-os-beta
-          </a>
-          , together with the log of what it settled.
+          Color is therefore only one part of the visual state, because a
+          daylight condition, a theme change or an inability to distinguish two
+          colors should still leave the user with the same information. This is
+          why the interface carries state through labels, position and control
+          behavior as well as through the palette.
         </p>
       </Project>
     </Section>

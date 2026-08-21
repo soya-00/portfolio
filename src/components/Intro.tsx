@@ -10,23 +10,23 @@ export default function Intro() {
             bilingual in Vietnamese and English.
           </p>
           <p>
-            A journal, a learning tool and a kernel do not obviously belong on
-            the same page, but the reason I keep returning to all three is
-            that{" "}
-            <span className="text-foreground">
-              each one is an instrument for thinking
-            </span>{" "}
-            — a tool built to make reasoning visible, either to the person doing
-            it or to the machine underneath. Because I cannot trust my own
-            account of a decision several months after making it, each project
-            also carries a log of what was decided and why, including the
-            decisions that turned out to be wrong. The instruments are the part
-            you can run, while the logs are the part that shows how I got there.
+            I am usually building from something that feels slightly misaligned
+            rather than from a clear plan, and I tend to notice it first as
+            friction in how I am forced to think, or in how a system makes me
+            slow down in places where I do not want to be slowed down, and only
+            later does it become something I can name as a direction or a
+            project.
           </p>
           <p>
-            What I want to do next is research in natural language processing
-            and machine learning, and to carry on studying philosophy alongside
-            it rather than after it.
+            Building each one gave me a different way to find out whether the
+            original idea held up once it had to deal with storage, identity,
+            evidence, uncertainty and the ordinary edge cases that disappear
+            from a sketch.
+          </p>
+          <p>
+            Next I want to work further into natural language processing and
+            machine learning, while continuing to study philosophy alongside
+            computer science.
           </p>
         </div>
       </Reveal>

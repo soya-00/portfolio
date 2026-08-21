@@ -9,26 +9,54 @@ export default function Colophon() {
           <p>
             My interest is in research rather than in shipping software, so the
             projects here are instruments — things built to make a question
-            answerable — and at the implementation level they are AI-assisted.{" "}
-            <span className="text-foreground">
-              I say that outright because attribution is the part of research
-              practice nobody can afford to be casual about,
-            </span>{" "}
-            and keeping track of what is mine, what is borrowed and what a tool
-            produced is a habit that only holds up later if it is practiced
-            somewhere the stakes are low.
+            answerable only. As such, I naturally
+            integrate AI in implementation, but the work starts earlier than
+            the code. I choose the problem and define its scope. I sketch the
+            interaction and decide what the system is allowed to do. I also
+            write down the constraints that the implementation has to survive.
+            Meanwhile, AI writes most of the production code. It also handles
+            much of the debugging and testing, and it helps with repository
+            documentation, two areas where I lack real experience in.
           </p>
           <p>
-            Alongside that I am teaching myself computer science from the
-            foundations, working on one subject at a time in short and deep
-            bursts rather than marching through a syllabus, which so far has
-            meant Nand2Tetris for computer architecture, Mathematical Thinking
-            through Stanford, and algorithms and data structures now.
+            Interface design happens before the model gets involved. Evidently,
+            I begin by sketching on paper first, since it allows the interaction
+            to exist without implementation pressure. For instance, I then move
+            into Figma and work through the interaction in more detail, refining
+            how each state behaves before any code exists. After that, I bring
+            the decision into code, and only then does the model suggest
+            implementations, which I can still reject when they solve the wrong
+            problem.
           </p>
           <p>
-            Operating systems runs underneath all of it, studied in C through
-            OSTEP and Operating System Concepts, together with human factors on
-            the flight deck, which is where BLOC&apos;s interface comes from.
+            A class-code fix in GALS preserved readable identifiers by carrying
+            part of an older code forward. However, this made the student
+            identity depend on the class identity, so I removed it. In doing so,
+            I found another leak in the export path. Meanwhile, a growth
+            timeline in Tilt made the journal easier to measure, but at the same
+            time it made it harder to keep as a journal, so it left the roadmap.
+          </p>
+          <p>
+            Verification starts from those constraints and works back through
+            the implementation. Furthermore, a compile passing does not settle
+            an interaction question, since a technically valid fix can still
+            violate an identity boundary. On the other hand, a feature can be
+            removed after implementation when the result turns out to change the
+            category of the system, rather than simply improving it.
+          </p>
+          <p>
+            Alongside the projects, I am teaching myself computer science from
+            the foundations. I do this one subject at a time, in short and deep
+            bursts, rather than following a linear syllabus. For example, I use
+            Nand2Tetris for architecture, Stanford&apos;s Mathematical Thinking
+            for formal reasoning, and I am now moving into algorithms and data
+            structures.
+          </p>
+          <p>
+            Operating systems runs underneath much of this work. So I am
+            studying C through OSTEP and Operating System Concepts. At the same
+            time, I continue reading about human factors on the flight deck,
+            which is where the original interface decisions for BLOC came from.
           </p>
         </div>
       </Reveal>

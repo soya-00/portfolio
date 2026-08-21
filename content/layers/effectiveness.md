@@ -1,11 +1,11 @@
 ---
 layer: true
 slug: effectiveness
-title: The effectiveness question
+title: An effectiveness question
 parent: 07-generations
 ---
 
-# The effectiveness question
+# An effectiveness question
 
 One thing the founding researchers were explicit about. Writing in 1990, Helmreich and colleagues stated that the question of CRM's effectiveness remained open and that empirical evidence was just beginning to accumulate. Their reasoning was methodological: accidents are too rare and too multiply-caused for accident rates to validate a training intervention.
 

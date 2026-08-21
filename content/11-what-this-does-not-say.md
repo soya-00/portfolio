@@ -24,15 +24,15 @@ Ten claims were examined and did not survive. Each is listed with what was searc
 
 **Rescued, meaning searched again and found:**
 
-- The founding researchers' 1990 statement that the effectiveness question remained open. The journal issue is open-access and the wording is in the freely available text.
+- Founding researchers' 1990 statement that the effectiveness question remained open. Journal issue is open-access and the wording sits in the freely available text.
 - Indonesian regulatory causation, re-sourced from an EU operating ban regulation and a US category downgrade after the original material was found to rest partly on generated text, which is not evidence at any confidence level.
 - Union and safety-agency statements previously quoted without attribution.
 
 **Flagged and retained with the limitation visible:**
 
-- That an aviation-specific critique exists of applying national culture scores to individual cockpit conduct. Two rounds, not located. The general critique is real and is cited as general.
+- That an aviation-specific critique exists of applying national culture scores to individual cockpit conduct. Two rounds, not located. General critique is real and is cited as general.
 - That the insurance industry drove CRM adoption. No evidence found, and that absence is reported in the section above and not buried here.
-- Two phrases quoted from a 2026 appellate judgment. The conviction, the fine and the pending further appeal are all confirmed, although one phrase was not located and does not appear.
+- Two phrases quoted from a 2026 appellate judgment. Conviction, fine and pending further appeal are all confirmed, although one phrase was not located and does not appear.
 
 ## Why publish this
 
