@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import BackdropPhoto from "@/components/BackdropPhoto";
 
 export type MetaCol = { label: string; value: string };
 export type PageLink = { label: string; href: string };
@@ -9,16 +10,9 @@ export type PageLink = { label: string; href: string };
  * lay out their own columns.
  */
 export function PageFrame({ children }: { children: ReactNode }) {
-  const home = import.meta.env.BASE_URL;
-
   return (
     <div className="relative">
-      <img
-        src={`${home}landing-page.png`}
-        alt=""
-        aria-hidden="true"
-        className="fixed inset-0 z-0 h-full w-full object-cover"
-      />
+      <BackdropPhoto />
 
       {/* Same panel as the index page. */}
       <main className="console relative z-10 mx-auto w-full max-w-4xl border-x border-white/[0.07]">

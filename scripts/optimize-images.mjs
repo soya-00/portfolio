@@ -1,0 +1,163 @@
+/**
+ * Screenshot pipeline.
+ *
+ * The masters in assets-src/ are what the screen recorder produced: 2400 to
+ * 2900 pixels wide, PNG, and between a quarter and one and a half megabytes
+ * each. Nothing on the site renders wider than the 768px text column, so every
+ * one of them was shipping two to four times the pixels it could ever use, and
+ * shipping them in the worst format for the job.
+ *
+ * This writes the derivatives that public/ actually serves — AVIF, WebP and a
+ * JPEG floor, at the widths the layout asks for — and a manifest of intrinsic
+ * sizes that Figure reads so no call site has to hand-write a width.
+ *
+ * Run it by hand with `npm run images` when a master changes, and commit what
+ * it writes. It is deliberately not part of `npm run build`: the output is
+ * checked in, so a build has nothing to recompute, and CI has no reason to
+ * spend a minute of every run re-encoding files that did not change.
+ */
+
+import sharp from "sharp";
+import { readdir, writeFile, mkdir } from "node:fs/promises";
+import { statSync } from "node:fs";
+import path from "node:path";
+
+const ROOT = path.resolve(import.meta.dirname, "..");
+const SRC = path.join(ROOT, "assets-src");
+const OUT = path.join(ROOT, "public");
+const MANIFEST = path.join(ROOT, "src", "lib", "image-manifest.ts");
+
+/**
+ * hsl(48 9% 8%), the --background token in src/index.css.
+ *
+ * Only JPEG needs this. It has no alpha channel, and one master is RGBA, so
+ * without a flatten colour it would composite onto white and burn a bright
+ * edge into a page that is nearly black.
+ */
+const PAGE_BACKGROUND = { r: 22, g: 22, b: 19 };
+
+/**
+ * Two quality profiles, because these are two different kinds of picture.
+ *
+ * The screenshots are interface captures full of small text, which is exactly
+ * what lossy encoders smear first, so they are kept high. The landing photo is
+ * a photograph, and on every page below the hero it sits behind a panel at 88%
+ * opacity — so it can be pushed much harder than it looks like it can.
+ */
+const PHOTO = { avif: 46, webp: 72, jpeg: 74 };
+const SCREENSHOT = { avif: 62, webp: 82, jpeg: 82 };
+
+/** Anything not named here is a screenshot at the default widths. */
+const OVERRIDES = {
+  "landing-page.png": {
+    quality: PHOTO,
+    // Full-bleed background, so it is sized to the viewport rather than to the
+    // text column. 768 would be visibly soft on a phone at 3x.
+    widths: [1024, 1408],
+  },
+};
+
+/**
+ * The text column is max-w-3xl — 768 CSS pixels — so 1536 is the widest any
+ * figure can use, at 2x. Anything narrower than that ships at its own size.
+ */
+function defaultWidths(intrinsicWidth) {
+  const set = new Set([...[768, 1536].filter((w) => w < intrinsicWidth), Math.min(intrinsicWidth, 1536)]);
+  return [...set].sort((a, b) => a - b);
+}
+
+const kb = (n) => (n / 1024).toFixed(0).padStart(5) + " KB";
+
+await mkdir(OUT, { recursive: true });
+
+const masters = (await readdir(SRC)).filter((f) => f.endsWith(".png")).sort();
+if (masters.length === 0) {
+  console.error(`  no masters found in ${path.relative(ROOT, SRC)}`);
+  process.exit(1);
+}
+
+const manifest = {};
+let before = 0;
+let after = 0;
+
+console.log("\n  IMAGE DERIVATIVES\n  " + "─".repeat(64));
+
+for (const file of masters) {
+  const from = path.join(SRC, file);
+  const base = file.replace(/\.png$/, "");
+  const image = sharp(from);
+  const meta = await image.metadata();
+
+  const override = OVERRIDES[file] ?? {};
+  const quality = override.quality ?? SCREENSHOT;
+  const widths = override.widths ?? defaultWidths(meta.width);
+
+  const masterBytes = statSync(from).size;
+  before += masterBytes;
+  let written = 0;
+
+  for (const width of widths) {
+    // withoutEnlargement guards a master that is narrower than a listed width.
+    const resized = () =>
+      sharp(from).resize({ width, withoutEnlargement: true });
+
+    const avif = path.join(OUT, `${base}-${width}.avif`);
+    const webp = path.join(OUT, `${base}-${width}.webp`);
+    const jpeg = path.join(OUT, `${base}-${width}.jpg`);
+
+    await resized().avif({ quality: quality.avif, effort: 6 }).toFile(avif);
+    await resized().webp({ quality: quality.webp, effort: 6 }).toFile(webp);
+    await resized()
+      .flatten({ background: PAGE_BACKGROUND })
+      .jpeg({ quality: quality.jpeg, mozjpeg: true })
+      .toFile(jpeg);
+
+    for (const f of [avif, webp, jpeg]) written += statSync(f).size;
+  }
+
+  after += written;
+  manifest[file] = { width: meta.width, height: meta.height, widths };
+
+  const smallest = statSync(path.join(OUT, `${base}-${widths[0]}.avif`)).size;
+  console.log(
+    `  ${base.padEnd(22)} ${String(meta.width).padStart(4)}x${String(meta.height).padEnd(5)} ` +
+      `${kb(masterBytes)} -> ${kb(smallest)} avif   [${widths.join(", ")}]`
+  );
+}
+
+const entries = Object.entries(manifest)
+  .map(
+    ([file, m]) =>
+      `  ${JSON.stringify(file)}: { width: ${m.width}, height: ${m.height}, widths: [${m.widths.join(", ")}] },`
+  )
+  .join("\n");
+
+await writeFile(
+  MANIFEST,
+  `// Generated by scripts/optimize-images.mjs. Do not edit by hand.
+//
+// Intrinsic sizes for every master in assets-src/, and the widths each one was
+// encoded at. Figure reads this so a caller never hand-writes a dimension and
+// the numbers cannot drift away from the files they describe.
+
+export type ImageMeta = {
+  width: number;
+  height: number;
+  widths: readonly number[];
+};
+
+export const IMAGES = {
+${entries}
+} as const satisfies Record<string, ImageMeta>;
+
+/** Every filename Figure will accept — a typo becomes a type error. */
+export type ImageName = keyof typeof IMAGES;
+`,
+  "utf8"
+);
+
+console.log("  " + "─".repeat(64));
+console.log(
+  `  ${masters.length} masters  ${kb(before)}  ->  ${kb(after)} across all formats and widths`
+);
+console.log(`  manifest: ${path.relative(ROOT, MANIFEST)}\n`);
