@@ -47,16 +47,6 @@ function Entry({ title, state, delay, writeup, children }: EntryProps) {
 export default function Research() {
   return (
     <Section id="research" label="Research" title="Open problems">
-      <Reveal>
-        <p className="mb-12 leading-relaxed text-muted-foreground">
-          Four things sit here and only one of them is finished, and because an
-          unfinished project is easy to write up as though it were already a
-          result, I would rather say where each one actually stands. Even the
-          finished one is dated rather than maintained, and it says so on the
-          page.
-        </p>
-      </Reveal>
-
       <Entry title="MentalFallacy" state="Mid-rescope" delay={0}>
         I am working on detecting logical fallacies and cognitive distortions in
         natural text, which so far has meant labeling a Reddit corpus, running
