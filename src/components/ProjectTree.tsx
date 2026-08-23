@@ -61,6 +61,8 @@ function LeafRow({ leaf, last }: { leaf: Leaf; last: boolean }) {
 
 export default function ProjectTree() {
   return (
+    // Not a ScrollRegion: the leaves are links, so this box is already reached
+    // and scrolled by tabbing. See Navbar for the same call.
     <div className="font-display overflow-x-auto text-[13px] leading-[2]">
       <div className="min-w-[22rem]">
         <p className="text-accent">soya</p>

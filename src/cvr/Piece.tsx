@@ -154,7 +154,7 @@ export default function Piece() {
                       href={`#${s.slug}`}
                       className="font-display flex gap-3 py-2 text-[12px] uppercase tracking-[0.12em] text-foreground/80 transition-colors hover:text-foreground"
                     >
-                      <span className="text-muted-foreground/60">
+                      <span className="text-muted-foreground/75">
                         {num(s.section ?? 0)}
                       </span>
                       <span className="underline decoration-transparent underline-offset-4 transition-colors hover:decoration-accent">
@@ -178,7 +178,7 @@ export default function Piece() {
             <div className="flex items-baseline gap-3">
               <span className="font-display text-[11px] uppercase tracking-[0.14em] text-accent">
                 {num(active)}
-                <span className="text-muted-foreground/50">
+                <span className="text-muted-foreground/75">
                   /{num(sections.length - 1)}
                 </span>
               </span>

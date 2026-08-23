@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ScrollRegion from "@/components/ScrollRegion";
 import { cn } from "@/lib/utils";
 import { VERIFICATION_LABEL } from "@/cvr/lib/citations";
 import {
@@ -222,9 +223,9 @@ export default function EvidenceMatrix({
             showCorpus ? "block" : "hidden"
           )}
         >
-          <div className="overflow-x-auto">
+          <ScrollRegion labelledBy="corpus-grid-caption">
             <table className="w-full min-w-[34rem] border-collapse text-left text-sm">
-              <caption className="sr-only">
+              <caption id="corpus-grid-caption" className="sr-only">
                 Records in the corpus by investigating authority and decade.
               </caption>
               <thead>
@@ -280,7 +281,7 @@ export default function EvidenceMatrix({
                 ))}
               </tbody>
             </table>
-          </div>
+          </ScrollRegion>
           <p className="mt-3 max-w-[68ch] text-xs leading-relaxed text-muted-foreground/70">
             Authority and decade are the only two dimensions with a sourced
             schema field, so they are the only two shown.{" "}

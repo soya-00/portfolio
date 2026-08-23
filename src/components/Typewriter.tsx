@@ -15,9 +15,13 @@ type TypewriterProps = {
  *
  * Every character is in the DOM from the first frame and only its opacity
  * changes, so the line never reflows as it fills — appending text would
- * re-wrap and shift the whole hero on each keystroke. The full string is
- * exposed to assistive technology through aria-label, and the animated spans
- * are hidden from it.
+ * re-wrap and shift the whole hero on each keystroke.
+ *
+ * The name comes from a visually-hidden copy of the string rather than from
+ * aria-label. ARIA prohibits aria-label on a span, which has no role, and
+ * screen readers are free to ignore it there; since every animated character
+ * is aria-hidden, a dropped label would leave the page's only h1 with no
+ * accessible name at all.
  */
 export default function Typewriter({
   segments,
@@ -55,7 +59,8 @@ export default function Typewriter({
   let index = 0;
 
   return (
-    <span aria-label={full} className={className}>
+    <span className={className}>
+      <span className="sr-only">{full}</span>
       <span aria-hidden="true">
         {segments.map((segment, s) => (
           <span key={s} className={segment.className}>

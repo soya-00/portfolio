@@ -51,7 +51,7 @@ export function CutList() {
               <p className="font-display flex items-baseline gap-2 text-[11px] uppercase tracking-[0.14em] text-accent">
                 <span aria-hidden="true">{STATUS_GLYPH[g.status]}</span>
                 {STATUS_LABEL[g.status]}
-                <span className="tabular-nums text-muted-foreground/60">
+                <span className="tabular-nums text-muted-foreground/75">
                   {g.members.length}
                 </span>
               </p>
@@ -71,7 +71,7 @@ export function CutList() {
                     <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
                       {c.reason}
                     </p>
-                    <p className="font-display mt-1.5 text-[10px] uppercase tracking-[0.14em] text-muted-foreground/60">
+                    <p className="font-display mt-1.5 text-[10px] uppercase tracking-[0.14em] text-muted-foreground/75">
                       {c.id} · searched: {c.searched.join(" · ")}
                     </p>
                   </li>

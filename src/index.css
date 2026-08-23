@@ -32,7 +32,12 @@
 
     --surface: 48 8% 12%;
     --muted: 48 8% 12%;
-    --muted-foreground: 45 7% 62%;
+    /* 72%, not the 62% this started at. Secondary text is written as
+       muted-foreground at 60-85% opacity, and at 62% every tier below /75
+       came in under 4.5:1 on the console panel — 697 failing nodes, most of
+       them the 10px tracked labels that are hardest to read anyway. At 72%
+       every tier from /70 up clears AA. */
+    --muted-foreground: 45 7% 72%;
 
     --primary: 45 20% 96%;
     --primary-foreground: 48 9% 8%;

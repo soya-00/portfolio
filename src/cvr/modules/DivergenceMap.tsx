@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import ScrollRegion from "@/components/ScrollRegion";
 import {
   FIELDS,
   REGIME_LABEL,
@@ -83,7 +84,12 @@ export default function DivergenceMap() {
         ))}
       </ul>
 
-      <div className="mt-4 overflow-x-auto border border-border/60 bg-background/40">
+      {/* Named short rather than pointed at the svg's own label: that label
+          runs to a paragraph, and a region announces its name in full. */}
+      <ScrollRegion
+        label="Jurisdiction map"
+        className="mt-4 border border-border/60 bg-background/40"
+      >
         <svg
           ref={ref}
           viewBox="0 14 360 122"
@@ -178,7 +184,7 @@ export default function DivergenceMap() {
             );
           })}
         </svg>
-      </div>
+      </ScrollRegion>
 
       <p className="mt-3 max-w-[68ch] text-xs leading-relaxed text-muted-foreground/70">
         Unmarked territory means unstudied and not unprotected. Every country

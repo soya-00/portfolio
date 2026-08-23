@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ScrollRegion from "@/components/ScrollRegion";
 import { cn } from "@/lib/utils";
 import {
   LANGUAGE_NAME,
@@ -144,9 +145,9 @@ export default function TheDocument({
             Only what cannot be quoted
           </button>
 
-          <div className="mt-4 overflow-x-auto">
+          <ScrollRegion labelledBy="document-status-caption" className="mt-4">
             <table className="w-full min-w-[46rem] border-collapse text-left text-sm">
-              <caption className="sr-only">
+              <caption id="document-status-caption" className="sr-only">
                 Reproduction status for each record in the corpus, with the
                 legal ground for it.
               </caption>
@@ -193,7 +194,7 @@ export default function TheDocument({
                 ))}
               </tbody>
             </table>
-          </div>
+          </ScrollRegion>
 
           <p className="mt-4 text-xs leading-relaxed text-muted-foreground/70">
             {grounds.length} distinct grounds across {ledger.length} records.

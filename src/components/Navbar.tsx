@@ -29,7 +29,11 @@ export default function Navbar() {
         </a>
 
         {/* A status line rather than a menu: always visible, scrolling
-            sideways on narrow screens instead of collapsing out of reach. */}
+            sideways on narrow screens instead of collapsing out of reach.
+
+            Not a ScrollRegion, deliberately: every child is a link, so tabbing
+            through them already scrolls this box into range. A tabIndex here
+            would only add a stop that lands on nothing. */}
         <div className="no-scrollbar flex flex-1 items-center gap-6 overflow-x-auto whitespace-nowrap">
           {NAV_LINKS.map(({ label, id }) => (
             <a

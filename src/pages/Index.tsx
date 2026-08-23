@@ -17,14 +17,20 @@ export default function Index() {
         className="fixed inset-0 z-0 h-full w-full object-cover"
       />
 
-      <div className="relative z-10 flex min-h-screen flex-col">
-        <Hero />
-        <StatusStrip />
-      </div>
-
+      {/* Navbar is the page's banner and it is fixed, so putting it first in
+          the DOM costs nothing visually and gets the tab order right: masthead,
+          then headline, then the console. Hero and the status line sit inside
+          main rather than beside it — left outside, they belonged to no
+          landmark, and the h1 was unreachable by the shortcut a screen reader
+          user navigates with. */}
       <Navbar />
 
       <main className="relative z-10">
+        <div className="flex min-h-screen flex-col">
+          <Hero />
+          <StatusStrip />
+        </div>
+
         <div className="console relative mx-auto w-full max-w-4xl border-x border-white/[0.07] pb-24">
           <Intro />
           <Work />

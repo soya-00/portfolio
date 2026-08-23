@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import ScrollRegion from "@/components/ScrollRegion";
 import { cn } from "@/lib/utils";
 import { VERIFICATION_LABEL } from "@/cvr/lib/citations";
 import {
@@ -164,7 +165,12 @@ export default function OriginChain({
       </p>
 
       <div className="module-interactive">
-        <div className="mt-6 overflow-x-auto border border-border/60 bg-background/40">
+        {/* Named short rather than pointed at the svg's own label: that label
+            runs to a paragraph, and a region announces its name in full. */}
+        <ScrollRegion
+          label="Document chain"
+          className="mt-6 border border-border/60 bg-background/40"
+        >
           <svg
             ref={ref}
             viewBox="0 0 320 132"
@@ -279,7 +285,7 @@ export default function OriginChain({
               />
             </g>
           </svg>
-        </div>
+        </ScrollRegion>
 
         <p className="mt-3 max-w-[68ch] text-xs leading-relaxed text-muted-foreground/70">
           {openQuestion.detail}

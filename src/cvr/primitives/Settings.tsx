@@ -206,7 +206,7 @@ export default function Settings({
           </fieldset>
         ))}
 
-        <p className="text-xs leading-relaxed text-muted-foreground/60 sm:col-span-2">
+        <p className="text-xs leading-relaxed text-muted-foreground/75 sm:col-span-2">
           {ready
             ? "Settings persist in this browser. With storage blocked they apply for this visit only."
             : "Settings apply once scripting is available. Without it the piece renders at its defaults, which lose no content."}

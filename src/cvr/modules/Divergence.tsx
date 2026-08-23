@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ScrollRegion from "@/components/ScrollRegion";
 import { cn } from "@/lib/utils";
 import { VERIFICATION_LABEL } from "@/cvr/lib/citations";
 import {
@@ -256,9 +257,9 @@ export default function Divergence({
               </li>
             </ul>
 
-            <div className="mt-4 overflow-x-auto">
+            <ScrollRegion labelledBy="divergence-grid-caption" className="mt-4">
               <table className="w-full min-w-[46rem] table-fixed border-collapse text-left text-sm">
-                <caption className="sr-only">
+                <caption id="divergence-grid-caption" className="sr-only">
                   Fourteen jurisdictions against six fields. Each cell shows
                   how well that field is established, or that it was never
                   established at all.
@@ -277,7 +278,7 @@ export default function Divergence({
                         <span className="font-display block text-[9px] font-normal uppercase leading-tight tracking-[0.12em] text-muted-foreground/80">
                           {FIELD_LABEL[f]}
                         </span>
-                        <span className="font-display block text-[8px] font-normal uppercase tracking-[0.1em] text-muted-foreground/50">
+                        <span className="font-display block text-[8px] font-normal uppercase tracking-[0.1em] text-muted-foreground/75">
                           {FIELD_GROUP[f]}
                         </span>
                       </th>
@@ -305,7 +306,7 @@ export default function Divergence({
                   ))}
                 </tbody>
               </table>
-            </div>
+            </ScrollRegion>
 
             <p className="mt-4 max-w-[68ch] text-xs leading-relaxed text-muted-foreground/70">
               The whole protection side is blank for{" "}
@@ -328,7 +329,7 @@ export default function Divergence({
                 <div key={g.regime} className="bg-background px-5 py-4">
                   <p className="font-display text-[11px] uppercase tracking-[0.14em] text-accent">
                     {REGIME_LABEL[g.regime]}
-                    <span className="ml-2 tabular-nums text-muted-foreground/60">
+                    <span className="ml-2 tabular-nums text-muted-foreground/75">
                       {g.members.length}
                     </span>
                   </p>
@@ -437,7 +438,7 @@ export default function Divergence({
                               )}
                             </span>
                             {c.note && (
-                              <span className="mt-1 block text-xs leading-relaxed text-muted-foreground/60">
+                              <span className="mt-1 block text-xs leading-relaxed text-muted-foreground/75">
                                 {c.note}
                               </span>
                             )}
