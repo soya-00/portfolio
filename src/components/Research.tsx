@@ -67,12 +67,10 @@ export default function Research() {
       </Entry>
 
       <Entry title="Extended Essay" state="In progress" delay={0.12}>
-        Whether a Monte Carlo estimate of pi reproduces exactly and whether it
-        is correct turn out to be separate properties, since a generator
-        carrying a structural defect will return bit-identical results on every
-        run while converging, at the expected rate, on the wrong value.
-        Reproducibility gets treated as evidence of validity far more often than
-        it earns, and that gap is what the essay is about.
+        Reproducibility is treated as a proxy for validity far more often than
+        it earns. This essay separates the two, using Monte Carlo estimates of π
+        across increasing dimensionality to show a generator that returns
+        identical wrong answers, perfectly, every time.
       </Entry>
 
       <Entry title="CVR" state="Completed" delay={0.18} writeup="cvr">
