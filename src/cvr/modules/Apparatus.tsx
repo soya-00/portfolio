@@ -20,12 +20,12 @@ import {
 /**
  * The cut list and the source register.
  *
- * Neither is a visualisation and neither should be. A cut list is a set of
+ * Neither is a visualization and neither should be. A cut list is a set of
  * refusals with reasons, and a source register is a bibliography: both are
  * identity and reason rather than magnitude, which `choosing-a-form` sends
  * to a table. The only numbers are the tallies, and those are stat pairs.
  *
- * The register prints the licence and the verification tier on every entry,
+ * The register prints the license and the verification tier on every entry,
  * because a reader who has been promised source resolution is owed the
  * grade of each one. Thirteen entries have no URL, which is said in place
  * rather than left as an absent link.

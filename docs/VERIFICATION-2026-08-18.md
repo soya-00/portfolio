@@ -13,7 +13,7 @@
 | C024 | No express evidentiary bar in Japanese law | **Confirmed, moderate confidence** — one citation correction |
 | C027 / C132 | Brazil's scheme upheld on constitutional challenge | **Confirmed as to outcome — two overstatements and three factual corrections** |
 | C034 / C035 | States disagreed publicly over Sharm el-Sheikh | **Confirmed, and stronger than written** |
-| C036 | Dryden's organisational framing | **Confirmed, and stronger than written** — but surfaces a quotation problem |
+| C036 | Dryden's organizational framing | **Confirmed, and stronger than written** — but surfaces a quotation problem |
 
 Nothing was contradicted. Two claims need editorial change and one of those is significant.
 
@@ -28,7 +28,7 @@ Nothing was contradicted. Two claims need editorial change and one of those is s
 He spoke, and so did the flight engineer. From the report's factual and analysis sections, in the final ninety seconds:
 
 - About 0141:59, descending through 1,100 ft, the **first officer** said *"not in sight?"*
-- About 0142:00 a GPWS "five hundred" callout; about two seconds later the **flight engineer** said *"eh?"* — the report characterises the tone as astonished
+- About 0142:00 a GPWS "five hundred" callout; about two seconds later the **flight engineer** said *"eh?"* — the report characterizes the tone as astonished
 - About 0142:19, descending through 730 ft, the flight engineer called *"two hundred"* and the **first officer** said *"let's make a missed approach"*
 - About one second later the flight engineer said *"not in sight"* and the first officer *"not in sight, missed approach"*
 
@@ -112,7 +112,7 @@ The French authority issued a separate statement identifying errors and omission
 
 **Two additions the corpus does not have.**
 
-The French authority noted that CRM training was not mandatory in Egypt at the time and that the operator had no CRM programme. That is directly on the piece's subject and is currently absent.
+The French authority noted that CRM training was not mandatory in Egypt at the time and that the operator had no CRM program. That is directly on the piece's subject and is currently absent.
 
 The record also supports a reading that the junior pilot did not effectively challenge the captain — which makes this a second corpus case bearing on the authority-gradient question, alongside Guam.
 
@@ -128,7 +128,7 @@ The record also supports a reading that the junior pilot did not effectively cha
 
 The Commission issued **191 recommendations, all of which were accepted**. It is described in the safety and healthcare-safety literature as a landmark, and is credited with shifting Canadian practice away from individual-blame investigation and toward the systemic approach that later became safety management systems.
 
-Its organisational scope is as the corpus describes and wider: commercial deregulation and competitive pressure, the airline's management decisions and scheduling, the decision to route the aircraft through an airport without appropriate ground equipment, the unserviceable auxiliary power unit that prevented de-icing with an engine running, absent manuals and inadequate de-icing training, and the regulator's oversight. A multidisciplinary team including human-factors specialists interviewed over 160 witnesses across roughly twenty months.
+Its organizational scope is as the corpus describes and wider: commercial deregulation and competitive pressure, the airline's management decisions and scheduling, the decision to route the aircraft through an airport without appropriate ground equipment, the unserviceable auxiliary power unit that prevented de-icing with an engine running, absent manuals and inadequate de-icing training, and the regulator's oversight. A multidisciplinary team including human-factors specialists interviewed over 160 witnesses across roughly twenty months.
 
 **CRM training appears among the recommendations.** The corpus does not record this and should.
 
@@ -140,7 +140,7 @@ The Commission's own conclusion, as reproduced in secondary sources including th
 
 This is the sharpest practical illustration of why the ellipsis convention exists. Whoever performs the verbatim capture must take both halves or neither.
 
-**On "the widest frame any authority applied."** Defensible, and still a characterisation rather than a sourced finding. It is the project's comparative judgement across its own corpus, and nobody published it. It belongs in the unmapped register alongside the taxonomy. **Added as UM-15.**
+**On "the widest frame any authority applied."** Defensible, and still a characterization rather than a sourced finding. It is the project's comparative judgment across its own corpus, and nobody published it. It belongs in the unmapped register alongside the taxonomy. **Added as UM-15.**
 
 ---
 
@@ -151,7 +151,7 @@ This is the sharpest practical illustration of why the ellipsis convention exist
 - Brazil judgment date corrected to 14 August 2024; the September 2021 date reattached to the relator's virtual-session vote; the partial dissent recorded.
 - Japanese disclosure exemptions corrected to items 3, 5 and 6.
 - Carroll-Byrne added to the source register.
-- UM-15 added to the unmapped register for the "widest frame" characterisation.
+- UM-15 added to the unmapped register for the "widest frame" characterization.
 - UM-06 downgraded from cut-candidate to retain-and-cite.
 
 ### Handed back — claim decisions

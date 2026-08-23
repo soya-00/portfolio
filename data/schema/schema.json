@@ -165,7 +165,7 @@
           }
         },
         "selection_basis": { "type": "string", "description": "Why this accident is in the corpus. Published to the reader." },
-        "sensitivity": { "enum": ["standard", "elevated", "quarantined"], "description": "quarantined = unsettled matter, active proceedings, or living relatives organised; final-moments material collapsed by default." },
+        "sensitivity": { "enum": ["standard", "elevated", "quarantined"], "description": "quarantined = unsettled matter, active proceedings, or living relatives organized; final-moments material collapsed by default." },
         "audit_refs": { "type": "array", "items": { "type": "string" } }
       }
     },

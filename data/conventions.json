@@ -3,7 +3,7 @@
 
   "fatality_counting": {
     "rule": "The figure reported is the figure in the cited official report, as that report states it. Deaths occurring after the report's count are given in a separate sourced field and shown to the reader as a separate statement. Ground fatalities are included in the headline figure and identified as such wherever present.",
-    "rationale": "Any convention that harmonises figures across accidents requires arithmetic judgments the reports did not make, which is original analysis. Deferring to each report and showing the discrepancy is both more honest and consistent with the non-goal against second-guessing official findings.",
+    "rationale": "Any convention that harmonizes figures across accidents requires arithmetic judgments the reports did not make, which is original analysis. Deferring to each report and showing the discrepancy is both more honest and consistent with the non-goal against second-guessing official findings.",
     "affected": ["korean-air-801-1997", "kegworth-1989", "united-232", "colgan-3407", "air-florida-90", "air-india-171-2025"]
   },
 

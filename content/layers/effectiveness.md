@@ -13,6 +13,6 @@ That position is the reason this piece makes no claim about whether CRM works. I
 
 ## Why the piece will not resolve it
 
-Accident rates cannot validate a training intervention: accidents are rare, multiply caused, and confounded by every other safety change of the same decades. Studies from adjacent fields that tried the same measurement produced contradictory results, some large and some null, with none randomised. Reporting one of those as the answer would be a choice dressed as a finding.
+Accident rates cannot validate a training intervention: accidents are rare, multiply caused, and confounded by every other safety change of the same decades. Studies from adjacent fields that tried the same measurement produced contradictory results, some large and some null, with none randomized. Reporting one of those as the answer would be a choice dressed as a finding.
 
 Where effectiveness evidence bears on a historical decision, it appears here as what the actors at the time believed and what later evaluation found, and nothing beyond that.

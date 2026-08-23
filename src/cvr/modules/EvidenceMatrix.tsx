@@ -20,12 +20,12 @@ import EvidenceMatrixText from "@/cvr/modules/EvidenceMatrix.text";
  *
  * FORM. An ordered comparison across one scale, so a ranked row chart. The
  * bar length and the ramp step both encode documentation strength, which is
- * the only place in this piece where a colour ramp is justified: the scale is
+ * the only place in this piece where a color ramp is justified: the scale is
  * ordinal, reordering it changes the claim, and `color-formula` sends exactly
  * that case to one hue with monotone lightness.
  *
  * The ramp is validated rather than eyeballed. See index.css for the command
- * and its output. Colour still never travels alone: every step also carries a
+ * and its output. Color still never travels alone: every step also carries a
  * filled-block glyph and its written label.
  *
  * WHAT THE FIGURE MUST NOT SAY. A ranked chart invites the reading that the

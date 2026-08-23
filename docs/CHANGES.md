@@ -12,7 +12,7 @@ Eight defects were identified in an integration review. All were real. This reco
 
 **R5 blocked a build that never intended to render the records it blocked on.** Correct in principle — the piece cannot render a quotation nobody has read — and wrong in placement. The report's own warning applies: a build that fails on things nothing uses teaches people to disable it. The strictness moved rather than disappeared. R5 now warns on pending captures; **R11** fails the build if any rendered component references a quotation that is not verified.
 
-**R7 did not enforce what its own comment promised.** The comment described two patterns — a rank plus a name, and two adjacent capitalised words — and only the first was implemented, so a bare two-word name passed silently. It also scanned only three data arrays and never opened `content/`, which is where most of the piece's words are. Both patterns now run across every markdown file. Zero name findings, which confirms the content was already clean; the check should still exist.
+**R7 did not enforce what its own comment promised.** The comment described two patterns — a rank plus a name, and two adjacent capitalized words — and only the first was implemented, so a bare two-word name passed silently. It also scanned only three data arrays and never opened `content/`, which is where most of the piece's words are. Both patterns now run across every markdown file. Zero name findings, which confirms the content was already clean; the check should still exist.
 
 A `permitted_terms` list was added alongside the existing name allowlist. Without it the completed check produced 23 warnings, every one a false positive on an operator, a place or a sentence-initial word — and 23 lines of noise is how a rule gets ignored. Markdown headings and emphasis markers are now stripped before the scan, since they were breaking the sentence-boundary test.
 
@@ -22,11 +22,11 @@ A `permitted_terms` list was added alongside the existing name allowlist. Withou
 
 **`content/citations.json`** — 72 entries: 62 prose anchors mapped to sources, 10 keyed to cut-list ids. A sidecar, so `content/` stays untouched ground truth. Each anchor is a verbatim phrase that must appear exactly once in its section; R12 checks both that and source resolution.
 
-Status is **draft**. Anchor matching and reference resolution are mechanical and now gate-enforced. Which source backs which sentence is editorial judgement and wants a read-through before publication.
+Status is **draft**. Anchor matching and reference resolution are mechanical and now gate-enforced. Which source backs which sentence is editorial judgment and wants a read-through before publication.
 
 **`content/labels.json`** — 27 display labels. Prose names cases by place and year, data by operator and flight number, and the transform is not mechanical: Kegworth takes the first component of `location`, Guam the last. Each is set explicitly. Also supplies the join key the sensitivity spec was missing.
 
-**`content/single-origin.json`** — 3 claims resting on a single origin. Not inferred: `sources.downgraded` is false on all 61 records and no schema field encodes it, so deriving it would have originated a judgement. Each entry points at prose that already states the dependency.
+**`content/single-origin.json`** — 3 claims resting on a single origin. Not inferred: `sources.downgraded` is false on all 61 records and no schema field encodes it, so deriving it would have originated a judgment. Each entry points at prose that already states the dependency.
 
 ## Second review round
 
@@ -40,7 +40,7 @@ The metadata had deferred `12-onward` as "generated at build". It cannot be. The
 
 Nine of the fourteen are closable with a record or a cut. Five are not, and that is the register's real finding: the piece's central thesis, its four-model taxonomy and its denominator argument are the author's reasoning rather than sourced claims. A publication promising that every factual assertion resolves has to be able to say which of its sentences are not factual assertions.
 
-Two entries are corrections rather than gaps. The union-magazine claim had been mis-mapped to the NASA workshop proceedings — a different document, body and year — and the mapping was removed rather than repaired, since no record for the magazine exists. And neither the popular account at the centre of section 08 nor its best-known rebuttal has a source record, so the contested node the piece builds a section around has no register entry on either side.
+Two entries are corrections rather than gaps. The union-magazine claim had been mis-mapped to the NASA workshop proceedings — a different document, body and year — and the mapping was removed rather than repaired, since no record for the magazine exists. And neither the popular account at the center of section 08 nor its best-known rebuttal has a source record, so the contested node the piece builds a section around has no register entry on either side.
 
 **R12 now fails rather than warns** when a section has no citations mapped.
 
@@ -78,4 +78,4 @@ The three claim decisions from the verification round were left to the author an
 
 **Thirteen sources still have no URL**, including two that carry the piece's central claim. They are marked `offline` and render as full citations with authority, number and date rather than as broken links. The gate permits this deliberately: R1 fails only on `open` access with no URL.
 
-**All six deep-tier cases are retained.** Two are cite-only. The asymmetry is disclosed to the reader in section 06 — a reader who finds more textual detail on the American and British cases is seeing copyright law rather than editorial judgement — rather than hidden by quietly writing less about the affected cases.
+**All six deep-tier cases are retained.** Two are cite-only. The asymmetry is disclosed to the reader in section 06 — a reader who finds more textual detail on the American and British cases is seeing copyright law rather than editorial judgment — rather than hidden by quietly writing less about the affected cases.

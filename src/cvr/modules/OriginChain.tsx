@@ -176,7 +176,7 @@ export default function OriginChain({
             viewBox="0 0 320 132"
             className="block h-auto w-full min-w-[42rem]"
             role="img"
-            aria-label="A diagram of five documents in sequence, from the recording of December 1978 through the finding, the recommendation, the workshop and the first programme of 1981, with a simulator study of January 1979 joining the workshop as a separate input, and a renaming claim drawn off the chain and struck through as cut. The same content is listed beneath the diagram."
+            aria-label="A diagram of five documents in sequence, from the recording of December 1978 through the finding, the recommendation, the workshop and the first program of 1981, with a simulator study of January 1979 joining the workshop as a separate input, and a renaming claim drawn off the chain and struck through as cut. The same content is listed beneath the diagram."
           >
             {/* The open question, drawn across the chain it qualifies. */}
             <g style={step(0)}>

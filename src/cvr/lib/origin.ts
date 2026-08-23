@@ -4,7 +4,7 @@ import { sources } from "@/cvr/lib/citations";
  * The chain from a recording to a training discipline.
  *
  * ORDER. The sequence is stated in the prose — "the sequence therefore runs
- * from recording to finding, recommendation, workshop and programme" — and
+ * from recording to finding, recommendation, workshop and program" — and
  * the nodes below reproduce that order and nothing else. They are NOT placed
  * on a metric time axis. Two of the dates overlap to the month and one
  * carries only a year, so a measured axis would have to invent an ordering
@@ -68,11 +68,11 @@ export const nodes: Node[] = [
     strand: "chain",
   },
   {
-    id: "programme",
-    label: "The first programme",
+    id: "program",
+    label: "The first program",
     when: "1981",
     detail:
-      "The first comprehensive US programme was launched by an airline on a management-training model imported from outside aviation. The vocabulary that spread was organisational and not forensic.",
+      "The first comprehensive US program was launched by an airline on a management-training model imported from outside aviation. The vocabulary that spread was organizational and not forensic.",
     sourceRef: "helmreich-merritt-wilhelm-1999",
     strand: "chain",
   },

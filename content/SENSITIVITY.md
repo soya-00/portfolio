@@ -6,9 +6,9 @@ Keys final-moments passages and unsettled matters to a reader-facing control who
 
 **standard** — Historical case, concluded investigation, no live proceedings. Renders normally.
 
-**elevated** — Contains material describing the final minutes, or concerns a matter where surviving relatives are organized and publicly active. Final-moments passages sit behind a control that is collapsed by default and labelled so the reader knows what expanding it will show. A reader may set the control to remain collapsed throughout, and the piece must remain complete and lose no argument if they do.
+**elevated** — Contains material describing the final minutes, or concerns a matter where surviving relatives are organized and publicly active. Final-moments passages sit behind a control that is collapsed by default and labeled so the reader knows what expanding it will show. A reader may set the control to remain collapsed throughout, and the piece must remain complete and lose no argument if they do.
 
-**quarantined** — Unsettled matter, active proceedings, or an investigation not concluded at the research cutoff. Rendered only as procedural fact — what body is investigating, what stage it has reached, what the law permits to be disclosed. No findings, no characterisation of crew conduct, no description of recording content.
+**quarantined** — Unsettled matter, active proceedings, or an investigation not concluded at the research cutoff. Rendered only as procedural fact — what body is investigating, what stage it has reached, what the law permits to be disclosed. No findings, no characterization of crew conduct, no description of recording content.
 
 ## Assignments
 
@@ -27,4 +27,4 @@ Keys final-moments passages and unsettled matters to a reader-facing control who
 
 ## Rule the levels serve
 
-Charter forbids hosting, linking, embedding or describing cockpit audio. A reported description of recording content — a prosecutor's characterisation, a leaked summary, a preliminary report's paraphrase — sits at the edge of that rule. Ruling applied here: **reported descriptions of recording content are inside the prohibition.** They are not reproduced, summarized or characterised. Where the existence of such a description is itself the subject — as in the section on leaks — the fact that a leak occurred is stated and its content is not.
+Charter forbids hosting, linking, embedding or describing cockpit audio. A reported description of recording content — a prosecutor's characterization, a leaked summary, a preliminary report's paraphrase — sits at the edge of that rule. Ruling applied here: **reported descriptions of recording content are inside the prohibition.** They are not reproduced, summarized or characterized. Where the existence of such a description is itself the subject — as in the section on leaks — the fact that a leak occurred is stated and its content is not.

@@ -31,7 +31,7 @@ const MANIFEST = path.join(ROOT, "src", "lib", "image-manifest.ts");
  * hsl(48 9% 8%), the --background token in src/index.css.
  *
  * Only JPEG needs this. It has no alpha channel, and one master is RGBA, so
- * without a flatten colour it would composite onto white and burn a bright
+ * without a flatten color it would composite onto white and burn a bright
  * edge into a page that is nearly black.
  */
 const PAGE_BACKGROUND = { r: 22, g: 22, b: 19 };

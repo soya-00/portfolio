@@ -30,7 +30,7 @@ export const bootWillPlay = () => {
   try {
     decided = window.sessionStorage.getItem(BOOT_SEEN_KEY) !== "1";
   } catch {
-    // Blocked storage: play it rather than desynchronising the two.
+    // Blocked storage: play it rather than desynchronizing the two.
     decided = true;
   }
   return decided;

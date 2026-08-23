@@ -70,7 +70,7 @@ export function toBlocks(body: string): Block[] {
 }
 
 /** Which emphases apply to a run. They nest: the register bolds a line that
- *  contains an inline code span, so a flat tokeniser would print backticks. */
+ *  contains an inline code span, so a flat tokenizer would print backticks. */
 type Fmt = { strong?: boolean; em?: boolean; code?: boolean };
 
 /** A leaf run of text, carrying its own offset in the raw source. */
@@ -133,7 +133,7 @@ function wrap(fmt: Fmt, text: string, key: string): ReactNode {
 /**
  * Renders a raw block with its citation markers injected.
  *
- * Emphasis is tokenised first and markers are placed *through* that token
+ * Emphasis is tokenized first and markers are placed *through* that token
  * stream, because slicing the raw string at an anchor boundary can cut an
  * emphasis span in half and leave literal asterisks on the page. Several
  * anchors in the corpus do exactly that — one ends inside a bold sentence in

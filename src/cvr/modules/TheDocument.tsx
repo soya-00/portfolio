@@ -21,9 +21,9 @@ import TheDocumentText from "@/cvr/modules/TheDocument.text";
  * Not a chart. The job here is identity and reason, not magnitude: thirteen
  * against fourteen is a stat pair, and the thing worth reading is the
  * nineteen distinct legal grounds behind the split. So it is a ledger, and
- * the reasons are quoted from the corpus rather than summarised.
+ * the reasons are quoted from the corpus rather than summarized.
  *
- * Every state carries a glyph and a word as well as its colour, so nothing
+ * Every state carries a glyph and a word as well as its color, so nothing
  * depends on hue — which is the portfolio's own standing rule and the
  * charter's.
  */
@@ -68,7 +68,7 @@ export default function TheDocument({
         A reader cannot be handed a transcript here. Which of these records
         yields quotable text is settled by copyright law and, in two cases, by
         an investigation that has not finished — not by what the recording
-        contained or by any judgement of ours.
+        contained or by any judgment of ours.
       </p>
 
       <div className="module-interactive">

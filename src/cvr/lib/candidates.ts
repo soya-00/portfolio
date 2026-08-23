@@ -23,7 +23,7 @@ export const STRENGTH_LABEL: Record<Strength, string> = {
   1: "Not documented",
 };
 
-/** Filled blocks, so the ordering survives without colour. */
+/** Filled blocks, so the ordering survives without color. */
 export const STRENGTH_RAMP: Record<Strength, string> = {
   4: "▰▰▰▰",
   3: "▰▰▰▱",
@@ -49,7 +49,7 @@ export const candidates: Candidate[] = [
     strength: 4,
     verdict: "Traceable end to end, and each step has a document number.",
     evidence:
-      "A 1979 recommendation to the regulator, a NASA workshop the same year, the first airline programme in 1981, a 1990 rule creating an optional qualification path, and a 1995 final rule effective March 1996 making CRM binding for US scheduled operators, with compliance phased to 1998 and 1999.",
+      "A 1979 recommendation to the regulator, a NASA workshop the same year, the first airline program in 1981, a 1990 rule creating an optional qualification path, and a 1995 final rule effective March 1996 making CRM binding for US scheduled operators, with compliance phased to 1998 and 1999.",
     leaves: "Regulatory action leaves document numbers.",
     sourceRefs: ["ntsb-rec-a-79-047", "faa-sfar-58", "faa-final-rule-1995"],
   },
@@ -59,7 +59,7 @@ export const candidates: Candidate[] = [
     strength: 3,
     verdict: "Documented, and on both sides of the recording question.",
     evidence:
-      "The term itself was published in a pilots' union magazine by the NASA researcher who coined it, and the union was involved in the first US programme. Union bodies have also been consistently against the recording, opposing cockpit image recorders on privacy, misinterpretation and litigation grounds across four decades.",
+      "The term itself was published in a pilots' union magazine by the NASA researcher who coined it, and the union was involved in the first US program. Union bodies have also been consistently against the recording, opposing cockpit image recorders on privacy, misinterpretation and litigation grounds across four decades.",
     leaves: "Union advocacy leaves published position papers.",
     sourceRefs: ["ifalpa-23pos28"],
     flag:
@@ -96,7 +96,7 @@ export const candidates: Candidate[] = [
     strength: "untestable",
     verdict: "Untestable as posed, which is not the same as unevidenced.",
     evidence:
-      "The management-grid lineage of the first programmes is documented. Whether that constitutes a cause is not a question the record can answer.",
+      "The management-grid lineage of the first programs is documented. Whether that constitutes a cause is not a question the record can answer.",
     leaves: "No document would settle it either way.",
     sourceRefs: ["helmreich-merritt-wilhelm-1999"],
   },

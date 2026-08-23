@@ -14,7 +14,7 @@ Four research briefs — a CRM history, an accident corpus, a comparative law an
 
 **Round 2 (external).** Retrieval across all priority bands. Resolved the majority of blocking items and produced two corrections that had propagated through every brief.
 
-**Round 3 (external, gap-closing).** Original-language statute reading, licence determination per authority, and the counter-position searches that round 2 could not complete.
+**Round 3 (external, gap-closing).** Original-language statute reading, license determination per authority, and the counter-position searches that round 2 could not complete.
 
 Governing rule throughout: **the audit may fix sources; it may not fix claims.** Locating a working URL, an open-access version, or the primary text behind a secondary summary is mechanical work with a verifiable right answer. Deciding what a claim should say once its source turns out to be wrong is editorial judgment, and an auditor that rewrites claims stops finding problems and starts smoothing them over.
 
@@ -68,7 +68,7 @@ The most consequential single result. The overriding constraints require the pie
 
 Searching the scholarly literature, a safety foundation's archive, insurer primary sources and international-body material produced **no evidence that the aviation insurance industry drove CRM adoption**. The canonical histories trace every driver and never mention insurers. Where insurers discuss CRM they treat improved coordination as a *cause* of better loss experience — reversing the direction of the hypothesis.
 
-By contrast the union role is documented: the term was published in a pilots' union magazine by the researcher who coined it, and the union was involved in the first US programme. Manufacturer influence is weak and mostly later.
+By contrast the union role is documented: the term was published in a pilots' union magazine by the researcher who coined it, and the union was involved in the first US program. Manufacturer influence is weak and mostly later.
 
 This absence is reported in the publication as a finding, with the reasoning made explicit: an absence produced by documentation asymmetry is not evidence of absence, and a piece that omitted the section would deliver the institutional account as though the field had been surveyed and the institutions had won.
 
@@ -82,14 +82,14 @@ Verified against each authority's own published terms rather than an assumption 
 | UK AAIB | **Reproducible** — Open Government Licence v3.0, attribution required |
 | Spain CIAIAC | **Reproducible** — reuse under Ley 37/2007, attribution required |
 | Germany BFU | **Cite-only** — personal and journalistic use only |
-| Indonesia KNKT | **Cite-only** — no reproduction licence published |
+| Indonesia KNKT | **Cite-only** — no reproduction license published |
 | Egypt MCA | **Cite-only** — no reproduction statement published |
 | Canada (Crown) | **Cite-only** — terms not confirmed for transcript appendices |
 | ICAO | **Cite-only** — purchase-only, all rights reserved |
 
 **Two of six deep-tier cases came back cite-only.** Transcript-level treatment is available for four and not the other two, and the availability tracks the issuing state's licensing policy rather than the significance of the investigation. This is disclosed to the reader rather than hidden by quietly writing less about the affected cases.
 
-A widespread error was corrected here: several licence values had been recorded as "Spanish Gov work", "Indonesian Gov work" and so on. None of those states has a US-style public domain for official works, and none of the entries recorded actual terms.
+A widespread error was corrected here: several license values had been recorded as "Spanish Gov work", "Indonesian Gov work" and so on. None of those states has a US-style public domain for official works, and none of the entries recorded actual terms.
 
 ### 3.4 Corpus eligibility resolved
 
@@ -131,7 +131,7 @@ Two design choices are worth recording. **R5 is a derivation proof, not a patter
 
 **CRM history — good, with declared limits.** The strongest self-auditing in the set: an explicit gap list, a standalone list of widely repeated and poorly sourced claims, confidence ratings tracking documentation quality rather than importance. Weaknesses are concentration rather than error — roughly ten quotations from one advocacy-laden source, and a heavy single-lineage dependence it names but does not mitigate.
 
-**Accident corpus — usable body, unusable source table.** Careful case analysis and an honest red team. But two entries had prose where URLs belong, five licence values were country assumptions, one licence was inferred from an unrelated document, one was misclassified by hosting, and nine report numbers were unverified. Rebuilt from scratch rather than patched.
+**Accident corpus — usable body, unusable source table.** Careful case analysis and an honest red team. But two entries had prose where URLs belong, five license values were country assumptions, one license was inferred from an unrelated document, one was misclassified by hosting, and nine report numbers were unverified. Rebuilt from scratch rather than patched.
 
 **Law and ethics — the strongest research in the set.** The verification-tier system is the right instrument and the translation flagging is the model the other briefs should follow. Undercut in two places: the tier system was violated once, on the anchor provision, and nine quotation fragments across four sources carried no document-level attribution.
 

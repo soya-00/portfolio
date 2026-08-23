@@ -36,11 +36,11 @@ export default function DenominatorText() {
         <p>
           There is no denominator. Nobody investigates the flights where a
           first officer raised a concern and the captain acted on it, and no
-          authority publishes a report on the approach that was stabilised
+          authority publishes a report on the approach that was stabilized
           because somebody called it. Those recordings are overwritten, on a
           loop, within hours. The evidence of coordination working is
           destroyed by design, and the evidence of it failing is preserved,
-          transcribed, analysed and published.
+          transcribed, analyzed and published.
         </p>
         <p>
           So the accident corpus can establish that poor coordination appears

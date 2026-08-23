@@ -146,7 +146,7 @@
         "number_verification": "primary-verified"
       },
       "cvr_role": {
-        "summary": "The Commission located crew conduct inside an organisational failure extending well beyond the flight deck.",
+        "summary": "The Commission located crew conduct inside an organizational failure extending well beyond the flight deck.",
         "source_ref": "moshansky-1992",
         "verification": "secondary-only"
       },
@@ -650,7 +650,7 @@
         "reproducible": false,
         "basis": "BFU restricts reproduction to personal and journalistic use; this project seeks no permission"
       },
-      "selection_basis": "A German investigation of a collision involving crews of three nationalities and a single controller, and the corpus case whose aftermath most directly concerns criminalisation.",
+      "selection_basis": "A German investigation of a collision involving crews of three nationalities and a single controller, and the corpus case whose aftermath most directly concerns criminalization.",
       "sensitivity": "elevated",
       "audit_refs": [
         "L05",
@@ -944,7 +944,7 @@
         "number_verification": "brief-only"
       },
       "cvr_role": {
-        "summary": "Findings published in January 2026 concerned the localiser embankment rather than crew coordination.",
+        "summary": "Findings published in January 2026 concerned the localizer embankment rather than crew coordination.",
         "source_ref": "korea-arair-act",
         "verification": "secondary-only"
       },

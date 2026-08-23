@@ -45,7 +45,7 @@ export default function DivergenceText() {
           project briefs and never re-read.
         </p>
         <p>
-          The four-model classification that organises the comparison is this
+          The four-model classification that organizes the comparison is this
           project's own and is published nowhere. Each individual statutory
           reading can be checked; the scheme they are sorted into cannot.
         </p>

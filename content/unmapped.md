@@ -31,7 +31,7 @@ Neither document has a source record. Register carries the scholarly alternative
 
 Section 08 states that *"the first officer called for a missed approach,"* and this is the factual pivot of the counter-argument. It is currently cited to the authority's report at `secondary-only`, on the cockpit voice recorder factual record.
 
-That citation has not been verified against the report. It is the single most load-bearing unverified fact in the piece, because if the utterance is not in the factual record as described, the counter-position loses its strongest empirical leg and the section becomes unbalanced in favour of the popular account.
+That citation has not been verified against the report. It is the single most load-bearing unverified fact in the piece, because if the utterance is not in the factual record as described, the counter-position loses its strongest empirical leg and the section becomes unbalanced in favor of the popular account.
 
 **Closes when:** the factual record is read. High priority, above most items on the quotation-capture list.
 
@@ -57,7 +57,7 @@ In the first citation draft I mapped it to the NASA workshop proceedings. That w
 
 **UM-05 · The adjacent-field effectiveness studies.**
 
-Effectiveness layer says *"Studies from adjacent fields that tried the same measurement produced contradictory results, some large and some null, with none randomised."* Three studies are being characterised and none is cited.
+Effectiveness layer says *"Studies from adjacent fields that tried the same measurement produced contradictory results, some large and some null, with none randomized."* Three studies are being characterized and none is cited.
 
 Rhetorical work here is real: the contradiction is what justifies the piece declining to answer the effectiveness question. An uncited contradiction cannot carry that weight.
 
@@ -101,13 +101,13 @@ These are the piece's reasoning and not its facts. They are listed because the c
 
 This is the sharpest tension in the project. Charter forbids original analysis. A taxonomy is original analysis. Defense is that it organizes verified readings without generating new ones, although a reader entitled to check sources cannot check the scheme, and that should be visible and not assumed.
 
-**UM-15 · "Widest frame any authority here applied."** Section 06's characterisation of the Dryden commission. Verification confirmed the underlying facts comfortably, with 191 recommendations, all accepted, spanning deregulation, airline management, scheduling, equipment, training and regulatory oversight, and the inquiry is treated in the literature as a landmark in systemic investigation. But *widest* is a comparative judgement across this corpus, made by this project, and published nowhere. Same class as UM-11.
+**UM-15 · "Widest frame any authority here applied."** Section 06's characterization of the Dryden commission. Verification confirmed the underlying facts comfortably, with 191 recommendations, all accepted, spanning deregulation, airline management, scheduling, equipment, training and regulatory oversight, and the inquiry is treated in the literature as a landmark in systemic investigation. But *widest* is a comparative judgment across this corpus, made by this project, and published nowhere. Same class as UM-11.
 
 **UM-12 · "A cockpit voice recorder is a strange object in legal terms."** Section 02's framing of the surveillance bargain. Authorial, and unsupported.
 
 ---
 
-## Absences characterised without a source for the absence
+## Absences characterized without a source for the absence
 
 **UM-13 · Confidential reporting systems.**
 
