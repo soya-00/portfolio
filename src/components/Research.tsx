@@ -47,16 +47,6 @@ function Entry({ title, state, delay, writeup, children }: EntryProps) {
 export default function Research() {
   return (
     <Section id="research" label="Research" title="Open problems">
-      <Reveal>
-        <p className="mb-12 leading-relaxed text-muted-foreground">
-          Four things sit here and only one of them is finished, and because an
-          unfinished project is easy to write up as though it were already a
-          result, I would rather say where each one actually stands. Even the
-          finished one is dated rather than maintained, and it says so on the
-          page.
-        </p>
-      </Reveal>
-
       <Entry title="MentalFallacy" state="Mid-rescope" delay={0}>
         I am working on detecting logical fallacies and cognitive distortions in
         natural text, which so far has meant labeling a Reddit corpus, running
@@ -77,12 +67,10 @@ export default function Research() {
       </Entry>
 
       <Entry title="Extended Essay" state="In progress" delay={0.12}>
-        Whether a Monte Carlo estimate of pi reproduces exactly and whether it
-        is correct turn out to be separate properties, since a generator
-        carrying a structural defect will return bit-identical results on every
-        run while converging, at the expected rate, on the wrong value.
-        Reproducibility gets treated as evidence of validity far more often than
-        it earns, and that gap is what the essay is about.
+        Reproducibility is treated as a proxy for validity far more often than
+        it earns. This essay separates the two, using Monte Carlo estimates of π
+        across increasing dimensionality to show a generator that returns
+        identical wrong answers, perfectly, every time.
       </Entry>
 
       <Entry title="CVR" state="Completed" delay={0.18} writeup="cvr">
