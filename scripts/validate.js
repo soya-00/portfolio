@@ -185,7 +185,7 @@ const allowedTerms = new Set(read('permitted-names.json').permitted_terms || [])
     'Memorandum','Digest','Science','Studies','Journal','Psychology','Union','States','Kingdom','Republic','Law',
     'Article','Rules','Regulation','Code','Act','Annex','Human','Factors','Cockpit','Recorder','Data','Report']);
 
-  // Both halves of the promised shape: rank + name, and two adjacent capitalised words.
+  // Both halves of the promised shape: rank + name, and two adjacent capitalized words.
   const rank = /\b(Capt(?:ain)?|First Officer|F\/O|Flight Engineer|Cmdr|Commander)\s+([A-Z][a-z]+)/g;
   const pair = /\b([A-Z][a-z]{2,})\s+([A-Z][a-z]{2,})\b/g;
   for (const [text, where] of surfaces) {
@@ -201,7 +201,7 @@ const allowedTerms = new Set(read('permitted-names.json').permitted_terms || [])
       if (allowedTerms.has(m[0])) continue;
       // Sentence-initial capitals are not name shapes.
       if (/(^|[.!?:]\s+|\n)$/.test(text.slice(Math.max(0, m.index - 3), m.index))) continue;
-      warn('R7', `${where}: capitalised pair "${m[0]}" is not on the allowlist — confirm it is not a crew name`);
+      warn('R7', `${where}: capitalized pair "${m[0]}" is not on the allowlist — confirm it is not a crew name`);
     }
   }
 }

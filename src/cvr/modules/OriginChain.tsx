@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import ScrollRegion from "@/components/ScrollRegion";
 import { cn } from "@/lib/utils";
 import { VERIFICATION_LABEL } from "@/cvr/lib/citations";
 import {
@@ -164,13 +165,18 @@ export default function OriginChain({
       </p>
 
       <div className="module-interactive">
-        <div className="mt-6 overflow-x-auto border border-border/60 bg-background/40">
+        {/* Named short rather than pointed at the svg's own label: that label
+            runs to a paragraph, and a region announces its name in full. */}
+        <ScrollRegion
+          label="Document chain"
+          className="mt-6 border border-border/60 bg-background/40"
+        >
           <svg
             ref={ref}
             viewBox="0 0 320 132"
             className="block h-auto w-full min-w-[42rem]"
             role="img"
-            aria-label="A diagram of five documents in sequence, from the recording of December 1978 through the finding, the recommendation, the workshop and the first programme of 1981, with a simulator study of January 1979 joining the workshop as a separate input, and a renaming claim drawn off the chain and struck through as cut. The same content is listed beneath the diagram."
+            aria-label="A diagram of five documents in sequence, from the recording of December 1978 through the finding, the recommendation, the workshop and the first program of 1981, with a simulator study of January 1979 joining the workshop as a separate input, and a renaming claim drawn off the chain and struck through as cut. The same content is listed beneath the diagram."
           >
             {/* The open question, drawn across the chain it qualifies. */}
             <g style={step(0)}>
@@ -279,7 +285,7 @@ export default function OriginChain({
               />
             </g>
           </svg>
-        </div>
+        </ScrollRegion>
 
         <p className="mt-3 max-w-[68ch] text-xs leading-relaxed text-muted-foreground/70">
           {openQuestion.detail}

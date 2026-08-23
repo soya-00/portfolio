@@ -1,4 +1,5 @@
-import type { ReactNode } from "react";
+import { useId, type ReactNode } from "react";
+import ScrollRegion from "@/components/ScrollRegion";
 
 /**
  * A data table in the terminal register: OffBit column labels, hairline rules,
@@ -15,24 +16,39 @@ export function DataTable({
   caption?: string;
   minWidth?: string;
 }) {
+  const captionId = useId();
+
   return (
     <figure className="my-8">
-      <div className="overflow-x-auto">
+      {/* With no caption to point at, the column labels are the next best
+          name and they are already on the page — better than announcing an
+          unnamed box, and better than inventing a title for it. */}
+      <ScrollRegion
+        labelledBy={caption ? captionId : undefined}
+        label={caption ? undefined : head.filter(Boolean).join(", ")}
+      >
         <table
           className="w-full border-collapse text-left text-[13px]"
           style={{ minWidth }}
         >
           <thead>
             <tr className="border-y border-border">
-              {head.map((h) => (
-                <th
-                  key={h}
-                  scope="col"
-                  className="font-display py-2 pr-6 align-bottom text-[10px] font-normal uppercase tracking-[0.16em] text-muted-foreground/70 last:pr-0"
-                >
-                  {h}
-                </th>
-              ))}
+              {head.map((h, i) =>
+                // A blank column label is the corner cell above a column of
+                // row labels. That cell is a td; an empty th claims to name a
+                // column and then names nothing.
+                h ? (
+                  <th
+                    key={h}
+                    scope="col"
+                    className="font-display py-2 pr-6 align-bottom text-[10px] font-normal uppercase tracking-[0.16em] text-muted-foreground/75 last:pr-0"
+                  >
+                    {h}
+                  </th>
+                ) : (
+                  <td key={i} className="py-2 pr-6 last:pr-0" />
+                )
+              )}
             </tr>
           </thead>
           <tbody>
@@ -52,9 +68,12 @@ export function DataTable({
             ))}
           </tbody>
         </table>
-      </div>
+      </ScrollRegion>
       {caption && (
-        <figcaption className="font-display mt-3 text-[11px] uppercase tracking-[0.14em] text-muted-foreground">
+        <figcaption
+          id={captionId}
+          className="font-display mt-3 text-[11px] uppercase tracking-[0.14em] text-muted-foreground"
+        >
           {caption}
         </figcaption>
       )}

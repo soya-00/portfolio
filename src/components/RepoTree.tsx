@@ -1,3 +1,5 @@
+import { useId } from "react";
+import ScrollRegion from "@/components/ScrollRegion";
 import { cn } from "@/lib/utils";
 
 export type TreeNode = {
@@ -48,16 +50,25 @@ export default function RepoTree({
   nodes: TreeNode[];
   caption?: string;
 }) {
+  const captionId = useId();
+
   return (
     <figure className="my-10">
-      <div className="overflow-x-auto border-y border-border/60 py-6">
+      <ScrollRegion
+        labelledBy={caption ? captionId : undefined}
+        label={caption ? undefined : root}
+        className="border-y border-border/60 py-6"
+      >
         <div className="font-display min-w-[20rem] text-[13px] leading-[2]">
           <p className="text-accent">{root}</p>
           <Nodes nodes={nodes} />
         </div>
-      </div>
+      </ScrollRegion>
       {caption && (
-        <figcaption className="font-display mt-3 text-[11px] uppercase tracking-[0.14em] text-muted-foreground">
+        <figcaption
+          id={captionId}
+          className="font-display mt-3 text-[11px] uppercase tracking-[0.14em] text-muted-foreground"
+        >
           {caption}
         </figcaption>
       )}

@@ -116,7 +116,7 @@ export default function CaseStudyPage({
                     href={`#${s.id}`}
                     className="font-display flex gap-3 py-2 text-[12px] uppercase tracking-[0.12em] text-foreground/80 transition-colors hover:text-foreground"
                   >
-                    <span className="text-muted-foreground/60">{num(i)}</span>
+                    <span className="text-muted-foreground/75">{num(i)}</span>
                     <span className="underline decoration-transparent underline-offset-4 transition-colors hover:decoration-accent">
                       {s.label}
                     </span>
@@ -137,7 +137,7 @@ export default function CaseStudyPage({
           <div className="flex items-baseline gap-3">
             <span className="font-display text-[11px] uppercase tracking-[0.14em] text-accent">
               {num(active)}
-              <span className="text-muted-foreground/50">
+              <span className="text-muted-foreground/75">
                 /{num(sections.length - 1)}
               </span>
             </span>
@@ -145,8 +145,14 @@ export default function CaseStudyPage({
               {here?.label}
             </span>
             <span className="font-display flex shrink-0 gap-3 text-[11px] uppercase tracking-[0.14em]">
+              {/* pointer-events-none stops the mouse and nothing else: without
+                  aria-disabled and tabIndex the spent arrow still took focus
+                  and still jumped to #top. Being genuinely inactive is also
+                  what exempts it from the contrast floor. */}
               <a
                 href={prev ? `#${prev.id}` : "#top"}
+                aria-disabled={prev ? undefined : true}
+                tabIndex={prev ? undefined : -1}
                 className={cn(
                   "transition-colors",
                   prev
@@ -159,6 +165,8 @@ export default function CaseStudyPage({
               </a>
               <a
                 href={next ? `#${next.id}` : "#top"}
+                aria-disabled={next ? undefined : true}
+                tabIndex={next ? undefined : -1}
                 className={cn(
                   "transition-colors",
                   next

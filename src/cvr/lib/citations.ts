@@ -122,9 +122,9 @@ export const KIND_LABEL: Record<CitationKind, string> = {
 };
 
 /**
- * Non-colour marker per kind. The palette carries one accent, and the
- * charter requires every colour distinction to have a redundant encoding, so
- * the glyph is the primary channel and colour never carries meaning alone.
+ * Non-color marker per kind. The palette carries one accent, and the
+ * charter requires every color distinction to have a redundant encoding, so
+ * the glyph is the primary channel and color never carries meaning alone.
  */
 export const KIND_GLYPH: Record<CitationKind, string> = {
   source: "§",

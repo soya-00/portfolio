@@ -15,7 +15,7 @@ Every section is directly linkable and readable cold. No gating, no required seq
 | 6 | `06-six-readings.md` | six-readings | 490 | six-case selector |
 | 7 | `07-generations.md` | generations | 423 | generational schema, marked as one lineage |
 | 8 | `08-the-culture-argument.md` | the-culture-argument | 453 | two-column contested node |
-| 9 | `09-what-cannot-be-seen.md` | what-cannot-be-seen | 410 | denominator visualisation |
+| 9 | `09-what-cannot-be-seen.md` | what-cannot-be-seen | 410 | denominator visualization |
 | 10 | `10-causes-we-cannot-evidence.md` | causes-we-cannot-evidence | 439 | five-candidate evidence matrix |
 
 ## Apparatus — always reachable, outside the timed path
@@ -65,4 +65,4 @@ Motion off · largest text size · 200% zoom · all layers collapsed · sensitiv
 
 ## Four textual equivalents required
 
-Jurisdiction comparison · origin-chain diagram · denominator visualisation · five-candidate evidence matrix. Each must be discoverable by a screen-reader user who has not been told it exists.
+Jurisdiction comparison · origin-chain diagram · denominator visualization · five-candidate evidence matrix. Each must be discoverable by a screen-reader user who has not been told it exists.

@@ -20,12 +20,12 @@ import {
 /**
  * The cut list and the source register.
  *
- * Neither is a visualisation and neither should be. A cut list is a set of
+ * Neither is a visualization and neither should be. A cut list is a set of
  * refusals with reasons, and a source register is a bibliography: both are
  * identity and reason rather than magnitude, which `choosing-a-form` sends
  * to a table. The only numbers are the tallies, and those are stat pairs.
  *
- * The register prints the licence and the verification tier on every entry,
+ * The register prints the license and the verification tier on every entry,
  * because a reader who has been promised source resolution is owed the
  * grade of each one. Thirteen entries have no URL, which is said in place
  * rather than left as an absent link.
@@ -51,7 +51,7 @@ export function CutList() {
               <p className="font-display flex items-baseline gap-2 text-[11px] uppercase tracking-[0.14em] text-accent">
                 <span aria-hidden="true">{STATUS_GLYPH[g.status]}</span>
                 {STATUS_LABEL[g.status]}
-                <span className="tabular-nums text-muted-foreground/60">
+                <span className="tabular-nums text-muted-foreground/75">
                   {g.members.length}
                 </span>
               </p>
@@ -71,7 +71,7 @@ export function CutList() {
                     <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
                       {c.reason}
                     </p>
-                    <p className="font-display mt-1.5 text-[10px] uppercase tracking-[0.14em] text-muted-foreground/60">
+                    <p className="font-display mt-1.5 text-[10px] uppercase tracking-[0.14em] text-muted-foreground/75">
                       {c.id} · searched: {c.searched.join(" · ")}
                     </p>
                   </li>

@@ -221,7 +221,7 @@
         "verification": "primary-verified"
       },
       "cvr_evidentiary_bar": {
-        "value": "Art. 88-I §2 limits use of voluntarily provided SIPAER material as evidence in judicial and administrative proceedings; art. 88-K governs judicial authorisation for access",
+        "value": "Art. 88-I §2 limits use of voluntarily provided SIPAER material as evidence in judicial and administrative proceedings; art. 88-K governs judicial authorization for access",
         "source_ref": "brazil-cba-88",
         "verification": "primary-verified"
       },
@@ -385,7 +385,7 @@
         "S09",
         "E3"
       ],
-      "_note": "Searched across three rounds and not established. The absence is the finding, and must be rendered as a failed search rather than as a negative finding about Russian regulation. Adoption appears operator-driven and ICAO-aligned, but that characterisation itself rests only on Russian-language blogs and is not usable."
+      "_note": "Searched across three rounds and not established. The absence is the finding, and must be rendered as a failed search rather than as a negative finding about Russian regulation. Adoption appears operator-driven and ICAO-aligned, but that characterization itself rests only on Russian-language blogs and is not usable."
     },
     {
       "id": "icao",

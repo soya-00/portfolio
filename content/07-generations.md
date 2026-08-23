@@ -10,7 +10,7 @@ reading_time_min: 3
 
 Almost every account of CRM's history organizes it into generations: a first generation of assertiveness and management style, a second broadening to crew, a third integrating technical training, a fourth folding into regulator-approved qualification programs, a fifth reframing the whole thing around error management.
 
-That schema comes from a 1999 paper by Helmreich, Merritt and Wilhelm, and it is the most reproduced piece of writing in the field. Its provenance should be stated plainly: a periodisation written by the discipline's own principal researchers, published while the fifth generation they were describing was the one they advocated.
+That schema comes from a 1999 paper by Helmreich, Merritt and Wilhelm, and it is the most reproduced piece of writing in the field. Its provenance should be stated plainly: a periodization written by the discipline's own principal researchers, published while the fifth generation they were describing was the one they advocated.
 
 That is not a criticism of the work, which is careful and hedged, and the hedges are in the paper. Its authors write that the origins are *usually traced* to the 1979 workshop, which concedes the conventional attribution instead of asserting it. They call the generational metaphor loose, comparing the lifespan of a CRM generation to a fruit fly's. They record a reservation that later broadening may have diluted the original focus. And on export failures they concede that training delivered from the United States went badly where the concepts were incongruent with the pilots' own culture.
 

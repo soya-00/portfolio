@@ -23,7 +23,7 @@ import {
  *
  * Five kinds, because a claim resting on a statute and a claim resting on the
  * author's own reasoning are not the same object and must not look the same.
- * The glyph carries the distinction; colour never carries it alone.
+ * The glyph carries the distinction; color never carries it alone.
  */
 export default function Cite({ c }: { c: Citation }) {
   const glyph = KIND_GLYPH[c.kind];

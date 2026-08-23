@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "description": "Allowlist inverting the crew-name check from 'find the bad names', which cannot be specified, to 'justify every name', which can. The gate fails on any capitalised personal name not listed here. No crew member of any corpus accident may ever appear.",
+    "description": "Allowlist inverting the crew-name check from 'find the bad names', which cannot be specified, to 'justify every name', which can. The gate fails on any capitalized personal name not listed here. No crew member of any corpus accident may ever appear.",
     "rule": "Crew appear by role only: Captain, First Officer, Flight Engineer, Controller.",
-    "terms_note": "permitted_terms holds non-personal proper nouns — operators, places, bodies, publications. They are listed so the two-capitalised-word check can stay on without drowning real findings in noise. A pair matching a permitted term is skipped; anything else warns for a human to confirm."
+    "terms_note": "permitted_terms holds non-personal proper nouns — operators, places, bodies, publications. They are listed so the two-capitalized-word check can stay on without drowning real findings in noise. A pair matching a permitted term is skipped; anything else warns for a human to confirm."
   },
   "permitted": [
     {
@@ -97,7 +97,7 @@
     },
     {
       "name": "Winter",
-      "role": "Author, Safety Science criminalisation study",
+      "role": "Author, Safety Science criminalization study",
       "basis": "Cited author"
     },
     {

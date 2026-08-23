@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ScrollRegion from "@/components/ScrollRegion";
 import { cn } from "@/lib/utils";
 import {
   LANGUAGE_NAME,
@@ -20,9 +21,9 @@ import TheDocumentText from "@/cvr/modules/TheDocument.text";
  * Not a chart. The job here is identity and reason, not magnitude: thirteen
  * against fourteen is a stat pair, and the thing worth reading is the
  * nineteen distinct legal grounds behind the split. So it is a ledger, and
- * the reasons are quoted from the corpus rather than summarised.
+ * the reasons are quoted from the corpus rather than summarized.
  *
- * Every state carries a glyph and a word as well as its colour, so nothing
+ * Every state carries a glyph and a word as well as its color, so nothing
  * depends on hue — which is the portfolio's own standing rule and the
  * charter's.
  */
@@ -67,7 +68,7 @@ export default function TheDocument({
         A reader cannot be handed a transcript here. Which of these records
         yields quotable text is settled by copyright law and, in two cases, by
         an investigation that has not finished — not by what the recording
-        contained or by any judgement of ours.
+        contained or by any judgment of ours.
       </p>
 
       <div className="module-interactive">
@@ -144,9 +145,9 @@ export default function TheDocument({
             Only what cannot be quoted
           </button>
 
-          <div className="mt-4 overflow-x-auto">
+          <ScrollRegion labelledBy="document-status-caption" className="mt-4">
             <table className="w-full min-w-[46rem] border-collapse text-left text-sm">
-              <caption className="sr-only">
+              <caption id="document-status-caption" className="sr-only">
                 Reproduction status for each record in the corpus, with the
                 legal ground for it.
               </caption>
@@ -193,7 +194,7 @@ export default function TheDocument({
                 ))}
               </tbody>
             </table>
-          </div>
+          </ScrollRegion>
 
           <p className="mt-4 text-xs leading-relaxed text-muted-foreground/70">
             {grounds.length} distinct grounds across {ledger.length} records.

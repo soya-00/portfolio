@@ -403,7 +403,7 @@
       "access": "open",
       "licence": {
         "status": "cite-only",
-        "basis": "Taylor & Francis (formerly Lawrence Erlbaum) holds rights. The FAA-hosted PDF carries no publisher copyright line and is an unmarked reproduction of uncertain authorisation; not relied upon as a grant.",
+        "basis": "Taylor & Francis (formerly Lawrence Erlbaum) holds rights. The FAA-hosted PDF carries no publisher copyright line and is an unmarked reproduction of uncertain authorization; not relied upon as a grant.",
         "attribution": null,
         "carve_out": null
       },
@@ -1031,7 +1031,7 @@
         "G2"
       ],
       "downgraded": false,
-      "_note": "The aviation replication study the ecological-fallacy critique must be applied against. Supports national-culture influence on cockpit behaviour."
+      "_note": "The aviation replication study the ecological-fallacy critique must be applied against. Supports national-culture influence on cockpit behavior."
     },
     {
       "id": "jing-batteau-2015",
@@ -1083,7 +1083,7 @@
         "E6"
       ],
       "downgraded": false,
-      "_note": "Identifies the previously unnamed Safety Science 2020 criminalisation study."
+      "_note": "Identifies the previously unnamed Safety Science 2020 criminalization study."
     },
     {
       "id": "boeing-statsum-2024",

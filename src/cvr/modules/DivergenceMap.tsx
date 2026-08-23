@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import ScrollRegion from "@/components/ScrollRegion";
 import {
   FIELDS,
   REGIME_LABEL,
@@ -16,7 +17,7 @@ import {
  * The comparison, placed.
  *
  * FORM. A schematic world, and not a choropleth. A choropleth would need a
- * colour class per regime and would fill territory the research never
+ * color class per regime and would fill territory the research never
  * examined, which is the module's stated failure mode wearing a map's
  * clothes. Here the ground is empty, every mark is a record, and the reader
  * is told in the legend that unmarked territory means unstudied.
@@ -83,7 +84,12 @@ export default function DivergenceMap() {
         ))}
       </ul>
 
-      <div className="mt-4 overflow-x-auto border border-border/60 bg-background/40">
+      {/* Named short rather than pointed at the svg's own label: that label
+          runs to a paragraph, and a region announces its name in full. */}
+      <ScrollRegion
+        label="Jurisdiction map"
+        className="mt-4 border border-border/60 bg-background/40"
+      >
         <svg
           ref={ref}
           viewBox="0 14 360 122"
@@ -178,12 +184,12 @@ export default function DivergenceMap() {
             );
           })}
         </svg>
-      </div>
+      </ScrollRegion>
 
       <p className="mt-3 max-w-[68ch] text-xs leading-relaxed text-muted-foreground/70">
         Unmarked territory means unstudied and not unprotected. Every country
         outside the fourteen records was never examined here, so the map
-        leaves it blank instead of giving it a colour a reader would take as
+        leaves it blank instead of giving it a color a reader would take as
         a finding. The ring shows how many of the six fields are established
         for that jurisdiction, and the figure beside each name says the same
         thing in numerals.

@@ -39,7 +39,7 @@ export const DEFAULTS: ReaderSettings = {
 function load(): ReaderSettings {
   if (typeof window === "undefined") return DEFAULTS;
   const base = { ...DEFAULTS };
-  // Initialise from the system preference, overridable in both directions.
+  // Initialize from the system preference, overridable in both directions.
   if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
     base.motion = "reduced";
   }
@@ -191,7 +191,7 @@ export default function Settings({
                     )}
                   >
                     {/* The state is carried by a glyph as well as the fill, so
-                        it never depends on colour alone. */}
+                        it never depends on color alone. */}
                     <span aria-hidden="true" className="mr-1.5">
                       {active ? "◼" : "◻"}
                     </span>
@@ -206,7 +206,7 @@ export default function Settings({
           </fieldset>
         ))}
 
-        <p className="text-xs leading-relaxed text-muted-foreground/60 sm:col-span-2">
+        <p className="text-xs leading-relaxed text-muted-foreground/75 sm:col-span-2">
           {ready
             ? "Settings persist in this browser. With storage blocked they apply for this visit only."
             : "Settings apply once scripting is available. Without it the piece renders at its defaults, which lose no content."}

@@ -185,10 +185,10 @@ export default function Denominator({
             <p className="mt-4 max-w-[42ch] text-sm leading-relaxed text-muted-foreground">
               Nobody investigates the flights where a first officer raised a
               concern and the captain acted on it. No authority publishes a
-              report on the approach that was stabilised because somebody
+              report on the approach that was stabilized because somebody
               called it. The evidence of coordination working is destroyed by
               design, and the evidence of it failing is preserved,
-              transcribed, analysed and published.
+              transcribed, analyzed and published.
             </p>
 
             {/* The loop. Uniform ticks, cleared by an advancing head. */}

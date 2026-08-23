@@ -92,7 +92,7 @@ export default function BootSequence() {
       )}
       style={{ transitionDuration: `${FADE}ms` }}
     >
-      {/* Centred as a block; the text inside stays flush left, the way a
+      {/* Centered as a block; the text inside stays flush left, the way a
           console writes it. */}
       <div className="font-display w-full max-w-xl px-6 text-left">
         <p

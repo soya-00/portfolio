@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ScrollRegion from "@/components/ScrollRegion";
 import { cn } from "@/lib/utils";
 import { VERIFICATION_LABEL } from "@/cvr/lib/citations";
 import {
@@ -19,12 +20,12 @@ import EvidenceMatrixText from "@/cvr/modules/EvidenceMatrix.text";
  *
  * FORM. An ordered comparison across one scale, so a ranked row chart. The
  * bar length and the ramp step both encode documentation strength, which is
- * the only place in this piece where a colour ramp is justified: the scale is
+ * the only place in this piece where a color ramp is justified: the scale is
  * ordinal, reordering it changes the claim, and `color-formula` sends exactly
  * that case to one hue with monotone lightness.
  *
  * The ramp is validated rather than eyeballed. See index.css for the command
- * and its output. Colour still never travels alone: every step also carries a
+ * and its output. Color still never travels alone: every step also carries a
  * filled-block glyph and its written label.
  *
  * WHAT THE FIGURE MUST NOT SAY. A ranked chart invites the reading that the
@@ -222,9 +223,9 @@ export default function EvidenceMatrix({
             showCorpus ? "block" : "hidden"
           )}
         >
-          <div className="overflow-x-auto">
+          <ScrollRegion labelledBy="corpus-grid-caption">
             <table className="w-full min-w-[34rem] border-collapse text-left text-sm">
-              <caption className="sr-only">
+              <caption id="corpus-grid-caption" className="sr-only">
                 Records in the corpus by investigating authority and decade.
               </caption>
               <thead>
@@ -280,7 +281,7 @@ export default function EvidenceMatrix({
                 ))}
               </tbody>
             </table>
-          </div>
+          </ScrollRegion>
           <p className="mt-3 max-w-[68ch] text-xs leading-relaxed text-muted-foreground/70">
             Authority and decade are the only two dimensions with a sourced
             schema field, so they are the only two shown.{" "}

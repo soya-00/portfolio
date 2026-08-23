@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ScrollRegion from "@/components/ScrollRegion";
 import { cn } from "@/lib/utils";
 import { VERIFICATION_LABEL } from "@/cvr/lib/citations";
 import {
@@ -32,9 +33,9 @@ import DivergenceText from "@/cvr/modules/Divergence.text";
  * chart. Nothing here has a magnitude to plot: "Article 359(1)" is not more
  * or less than "no bar located", it is a different kind of thing.
  *
- * COLOUR. State is carried by glyph, by fill pattern and by a written label,
+ * COLOR. State is carried by glyph, by fill pattern and by a written label,
  * and by hue last or not at all. Two independent reasons land on the same
- * rule. The portfolio holds one accent, so a five-way colour split would have
+ * rule. The portfolio holds one accent, so a five-way color split would have
  * to invent four hues the design system does not have. And a categorical
  * palette stops being separable somewhere around seven meaning-bearing
  * classes anyway, which is roughly where this lands once absence is counted.
@@ -44,7 +45,7 @@ import DivergenceText from "@/cvr/modules/Divergence.text";
  * The one ordinal dimension is how well a documented cell is established,
  * running primary, official translation, secondary, brief. That takes a
  * monotone ramp of filled blocks, which is a ramp in glyph rather than in
- * colour.
+ * color.
  *
  * ABSENCE IS NOT THE BOTTOM OF THAT RAMP. It is a different kind, and it
  * gets a different treatment: hatched fill, an em rule, and the words "not
@@ -151,7 +152,7 @@ export default function Divergence({
 
       {/* BR2 / UM-11. Persistent, in every view, and above the data rather
           than under it: the reader meets the caveat before the grid, because
-          the grid's own organising axis is the thing being qualified. */}
+          the grid's own organizing axis is the thing being qualified. */}
       <div className="mt-5 max-w-[68ch] border-l-2 border-accent/60 pl-4 text-sm leading-relaxed">
         <p className="font-display text-[10px] uppercase tracking-[0.16em] text-accent">
           The axis of this comparison is unsourced
@@ -159,7 +160,7 @@ export default function Divergence({
         <p className="mt-1.5 text-muted-foreground">
           Each statutory reading below was made against the instrument in its
           own language and can be checked. The four-model classification that
-          organises them is this project's own, and it is published nowhere.
+          organizes them is this project's own, and it is published nowhere.
           A reader entitled to check sources can check every row and cannot
           check the scheme the rows are sorted into.
         </p>
@@ -256,9 +257,9 @@ export default function Divergence({
               </li>
             </ul>
 
-            <div className="mt-4 overflow-x-auto">
+            <ScrollRegion labelledBy="divergence-grid-caption" className="mt-4">
               <table className="w-full min-w-[46rem] table-fixed border-collapse text-left text-sm">
-                <caption className="sr-only">
+                <caption id="divergence-grid-caption" className="sr-only">
                   Fourteen jurisdictions against six fields. Each cell shows
                   how well that field is established, or that it was never
                   established at all.
@@ -277,7 +278,7 @@ export default function Divergence({
                         <span className="font-display block text-[9px] font-normal uppercase leading-tight tracking-[0.12em] text-muted-foreground/80">
                           {FIELD_LABEL[f]}
                         </span>
-                        <span className="font-display block text-[8px] font-normal uppercase tracking-[0.1em] text-muted-foreground/50">
+                        <span className="font-display block text-[8px] font-normal uppercase tracking-[0.1em] text-muted-foreground/75">
                           {FIELD_GROUP[f]}
                         </span>
                       </th>
@@ -305,7 +306,7 @@ export default function Divergence({
                   ))}
                 </tbody>
               </table>
-            </div>
+            </ScrollRegion>
 
             <p className="mt-4 max-w-[68ch] text-xs leading-relaxed text-muted-foreground/70">
               The whole protection side is blank for{" "}
@@ -328,7 +329,7 @@ export default function Divergence({
                 <div key={g.regime} className="bg-background px-5 py-4">
                   <p className="font-display text-[11px] uppercase tracking-[0.14em] text-accent">
                     {REGIME_LABEL[g.regime]}
-                    <span className="ml-2 tabular-nums text-muted-foreground/60">
+                    <span className="ml-2 tabular-nums text-muted-foreground/75">
                       {g.members.length}
                     </span>
                   </p>
@@ -437,7 +438,7 @@ export default function Divergence({
                               )}
                             </span>
                             {c.note && (
-                              <span className="mt-1 block text-xs leading-relaxed text-muted-foreground/60">
+                              <span className="mt-1 block text-xs leading-relaxed text-muted-foreground/75">
                                 {c.note}
                               </span>
                             )}

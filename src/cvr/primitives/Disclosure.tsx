@@ -5,12 +5,12 @@ import type { ReactNode } from "react";
  * sensitivity-gated passages, and the textual equivalent beside each module.
  *
  * A native <details>, for the same reasons the citation is one. It is
- * labelled, keyboard-operable, has its state announced without any ARIA of
+ * labeled, keyboard-operable, has its state announced without any ARIA of
  * ours, is deep-linkable by id, and — the part that matters most — it is
  * collapsed by default with JavaScript disabled, which is exactly the default
  * the sensitivity setting requires.
  *
- * Deeper layers read as optional: visually subordinate, clearly labelled with
+ * Deeper layers read as optional: visually subordinate, clearly labeled with
  * what is inside, and never hiding anything the core argument depends on.
  */
 export default function Disclosure({

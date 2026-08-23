@@ -97,7 +97,7 @@ export type Reproduced = {
 
 /**
  * Two gates, not one. R11 already blocks anything unverified from rendering;
- * this adds the licence check, because a quotation can be verified and still
+ * this adds the license check, because a quotation can be verified and still
  * not reproducible. The 1990 effectiveness quotation is exactly that case —
  * verified word for word, sitting on a cite-only source — so it is described
  * rather than shown.

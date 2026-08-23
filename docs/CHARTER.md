@@ -4,7 +4,7 @@ An interactive case study showing how investigators in different countries read 
 
 2. Audience
 
-Primary — the reader the piece is built for. A researcher or academic in human factors, aviation safety, safety science, or science and technology studies who already knows what CRM is, can name the canonical accidents, and has read at least some of the foundational literature. What they do not have is the international picture: they know the US and possibly the UK story, and they do not know when Japan mandated CRM, what Brazil's programme was called, or that CVR legal protection varies enough that the same evidence is admissible in one country's criminal court and inadmissible in another's. This reader is not here to learn the basics. They are here for the comparison, and they will check the sources.
+Primary — the reader the piece is built for. A researcher or academic in human factors, aviation safety, safety science, or science and technology studies who already knows what CRM is, can name the canonical accidents, and has read at least some of the foundational literature. What they do not have is the international picture: they know the US and possibly the UK story, and they do not know when Japan mandated CRM, what Brazil's program was called, or that CVR legal protection varies enough that the same evidence is admissible in one country's criminal court and inadmissible in another's. This reader is not here to learn the basics. They are here for the comparison, and they will check the sources.
 
 Secondary. An informed general reader — someone who reads long-form journalism, has no aviation background, and arrived from a link. They need jargon defined on first use and no prior knowledge assumed, and they must be able to finish the core path without opening a single deeper layer.
 
@@ -15,13 +15,13 @@ Explicitly not the audience. Working pilots seeking training material, accident 
 3. Non-goals
 This does not produce original analysis of transcripts. Every analytic claim — that a concern was raised, that it was hedged, that it went unacknowledged — is attributed to a named investigating authority or a peer-reviewed study, and that attribution is visible to the reader at the point of the claim. Where the literature disagrees, the piece shows the disagreement and does not adjudicate it.
 This is not a comprehensive accident database. It is a bounded corpus of roughly twenty-five to thirty accidents chosen to illustrate documented patterns, and the selection criteria are published within the piece. It will never be complete, will not be updated as new accidents occur, and is not a substitute for the authorities' own databases.
-This does not host, link to, embed, or describe cockpit audio. No recordings, no reconstructions, no simulated audio, no waveforms, no audio-derived visualisations. Transcripts are treated as documents.
+This does not host, link to, embed, or describe cockpit audio. No recordings, no reconstructions, no simulated audio, no waveforms, no audio-derived visualizations. Transcripts are treated as documents.
 This does not name individual crew members anywhere a reader can see. Crew appear by role only — Captain, First Officer, Flight Engineer, Controller — in body text, transcripts, annotations, alt text, accessible names, page titles, and metadata. Names remain in the cited source documents, where readers who need them can find them.
 This is not a training product. No quizzes, no scoring, no progress certification, no assessment, no learning objectives, no gamification. The reader consumes and navigates; they are not evaluated.
 This does not argue that CRM works. The effectiveness question is a large, contested empirical literature of its own, and the piece neither claims CRM reduced accidents nor claims it did not. Where effectiveness evidence is relevant to a historical decision, it is reported as what the actors at the time believed and what later evaluation found.
 This does not second-guess official findings. No re-litigation of probable cause, no alternative theories, no engagement with contested-cause controversies except where the contest itself is documented in the published record and is the point being made.
 This does not conduct original data collection. No interviews, no records requests, no correspondence with authorities, no archival visits. It works from published, publicly accessible material, and where that material is thin the piece says so rather than filling the gap.
-This does not commemorate. It is not a memorial and does not tell victims' stories. People appear as sources of recorded speech that investigators analysed, which is a deliberately narrow frame and a limitation the piece states openly rather than disguises.
+This does not commemorate. It is not a memorial and does not tell victims' stories. People appear as sources of recorded speech that investigators analyzed, which is a deliberately narrow frame and a limitation the piece states openly rather than disguises.
 This does not cover military or general aviation as a parallel track. Commercial air transport only. Military aviation psychology appears solely as pre-history for CRM's origins.
 This is not maintained. It is a dated publication with a stated research cutoff, not a living resource. Link rot will happen and the piece is designed to fail gracefully rather than to be curated indefinitely.
 4. Done-condition
@@ -56,7 +56,7 @@ Sensitivity markers → reader control. content/SENSITIVITY.md keys final-moment
 
 6. Deferred
 Item	Condition that pulls it in
-Non-English interface and content localisation	A partner institution or collaborator commits to translation review; machine translation of this material is not acceptable at any quality bar.
+Non-English interface and content localization	A partner institution or collaborator commits to translation review; machine translation of this material is not acceptable at any quality bar.
 Deep-tier accidents beyond six	The Stage 5 timing measurement shows the core path landing under 20 minutes with room to spare.
 Original coding of transcripts against a published scheme	Named academic supervision and institutional ethics review are in place — never on the strength of a portfolio project alone.
 Saves and near-misses as their own chapter rather than corpus records	The research finds enough publicly reported cases to sustain a chapter; currently uncertain and a genuine gap in the public record.
