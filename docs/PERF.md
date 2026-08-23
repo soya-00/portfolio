@@ -52,10 +52,10 @@ before the 0.000 was believed.
 ## What changed
 
 The masters moved to `assets-src/`, which does not ship. `public/` now holds
-what `npm run images` writes: AVIF, WebP and a JPEG floor, at 768 and 1536 for
-figures. The text column is `max-w-3xl`, so 1536 covers it at twice the pixel
-density, and every master had been two to four times larger than it could ever
-render.
+the derivatives `npm run images` writes, AVIF and WebP with a JPEG floor
+beneath them, at 768 and 1536 for figures. The text column is `max-w-3xl`, so
+1536 covers it at twice the pixel density, and every master had been two to
+four times larger than it could ever render.
 
 `01homepage.png`, at 676 KB, was referenced nowhere in `src/`, in any
 `index.html`, or in `data/`, `content/` and `docs/`. It had been shipping in
